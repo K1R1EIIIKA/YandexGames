@@ -1,0 +1,57 @@
+using System.Collections;
+using _Scripts.Infrastructure.Core.SceneTransitions;
+using _Scripts.Infrastructure.Factory;
+using _Scripts.Infrastructure.Services.PersistantProgress;
+using UnityEngine;
+
+namespace _Scripts.Infrastructure.Core.States
+{
+    public class LoadLevelState : IPayloadedState<string>
+    {
+        private readonly GameStateMachine _gameStateMachine;
+        private readonly SceneLoader _sceneLoader;
+        private readonly LoadingCurtain _loadingCurtain;
+        private GameFactory _gameFactory;
+        private ProgressService _progressService;
+
+        public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, LoadingCurtain loadingCurtain)
+        {
+            _gameStateMachine = gameStateMachine;
+            _sceneLoader = sceneLoader;
+            _loadingCurtain = loadingCurtain;
+        }
+
+        public void Enter(string payload)
+        {
+            _loadingCurtain.Show();
+            _gameFactory.CleanUp();
+            _sceneLoader.Load(payload, OnLoadComplete);
+        }
+
+        public void Exit()
+        {
+            _loadingCurtain.Hide();
+        }
+
+        private void OnLoadComplete()
+        {
+            InitGameWorld();
+            InformProgressReaders();
+            _gameStateMachine.Enter<GameLoopState>();
+        }
+
+        private void InformProgressReaders()
+        {
+            foreach (var progressReader in _gameFactory.ProgressReaders)
+                progressReader.LoadProgress(_progressService.Progress);
+
+            Debug.Log("Informing progress readers");
+        }
+
+        private void InitGameWorld()
+        {
+            //Object creating and initializing (progress + gamefactory)
+        }
+    }
+    
+}
