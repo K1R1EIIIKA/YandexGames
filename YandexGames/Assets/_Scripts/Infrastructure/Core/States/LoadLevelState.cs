@@ -3,6 +3,7 @@ using _Scripts.Infrastructure.Core.SceneTransitions;
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using UnityEngine;
+using Zenject;
 
 namespace _Scripts.Infrastructure.Core.States
 {
@@ -11,21 +12,29 @@ namespace _Scripts.Infrastructure.Core.States
         private readonly GameStateMachine _gameStateMachine;
         private readonly SceneLoader _sceneLoader;
         private readonly LoadingCurtain _loadingCurtain;
-        private GameFactory _gameFactory;
-        private ProgressService _progressService;
 
-        public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, LoadingCurtain loadingCurtain)
+        private GameFactory _gameFactory;
+        private IPersistantProgressService _progressService;
+
+        [Inject]
+        public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, LoadingCurtain loadingCurtain,
+            GameFactory gameFactory, IPersistantProgressService progressService)
         {
             _gameStateMachine = gameStateMachine;
             _sceneLoader = sceneLoader;
             _loadingCurtain = loadingCurtain;
+            _gameFactory = gameFactory;
+            _progressService = progressService;
+
+            Debug.Log("LoadLevelState was initialized");
         }
 
-        public void Enter(string payload)
+        public async void Enter(string payload)
         {
             _loadingCurtain.Show();
             _gameFactory.CleanUp();
-            _sceneLoader.Load(payload, OnLoadComplete);
+            await _sceneLoader.SwitchSceneWithUnload(payload);
+            OnLoadComplete();
         }
 
         public void Exit()
@@ -53,5 +62,4 @@ namespace _Scripts.Infrastructure.Core.States
             //Object creating and initializing (progress + gamefactory)
         }
     }
-    
 }

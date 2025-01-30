@@ -2,16 +2,18 @@
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using UnityEngine;
+using Zenject;
 
 namespace _Scripts.Infrastructure.Services.SaveLoad
 {
     public class SaveLoadService : ISaveLoadService
     {
         private const string ProgressKey = "Progress";
-        private readonly IGameFactory _gameFactory;
-        private readonly IPersistantProgressService _progressService;
+        private IGameFactory _gameFactory;
+        private IPersistantProgressService _progressService;
 
-        public SaveLoadService(IPersistantProgressService progressService, IGameFactory gameFactory)
+        [Inject]
+        public void Construct(IPersistantProgressService progressService, IGameFactory gameFactory)
         {
             _progressService = progressService;
             _gameFactory = gameFactory;

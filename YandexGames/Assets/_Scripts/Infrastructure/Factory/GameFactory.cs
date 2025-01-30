@@ -3,17 +3,19 @@ using _Scripts.Infrastructure.AssetManager;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using _Scripts.Infrastructure.Services.StaticData;
 using UnityEngine;
+using Zenject;
 
 namespace _Scripts.Infrastructure.Factory
 {
     public class GameFactory : IGameFactory
     {
-        private readonly IAssetProvider _assetProvider;
-        private readonly IStaticDataService _staticDataService;
+        private IAssetProvider _assetProvider;
+        private IStaticDataService _staticDataService;
         public List<ISavedProgressReader> ProgressReaders { get; } = new();
         public List<ISavedProgress> ProgressWriters { get; } = new();
 
-        public GameFactory(IAssetProvider assetProvider, IStaticDataService staticDataService)
+        [Inject]
+        public void Construct(IAssetProvider assetProvider, IStaticDataService staticDataService)
         {
             _assetProvider = assetProvider;
             _staticDataService = staticDataService;

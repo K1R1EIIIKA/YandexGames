@@ -1,15 +1,17 @@
 
 using _Scripts.Infrastructure.Core.SceneTransitions;
+using Zenject;
 
 namespace _Scripts.Infrastructure.Core.States
 {
     public class BootstrapState : IState
     {
-        private const string Initial = "Initial";
+        private const string InitialSceneName = "Initial";
 
         private readonly GameStateMachine _gameStateMachine;
         private SceneLoader _sceneLoader;
 
+        [Inject]
         public BootstrapState(GameStateMachine gameStateMachine, SceneLoader sceneLoader)
         {
             _gameStateMachine = gameStateMachine;
@@ -18,9 +20,10 @@ namespace _Scripts.Infrastructure.Core.States
             RegisterServices();
         }
 
-        public void Enter()
+        public async void Enter()
         {
-            _sceneLoader.Load(Initial, EnterLoadLevel);
+            await _sceneLoader.SwitchSceneWithUnload(InitialSceneName);
+            EnterLoadLevel();
         }
 
         public void Exit()

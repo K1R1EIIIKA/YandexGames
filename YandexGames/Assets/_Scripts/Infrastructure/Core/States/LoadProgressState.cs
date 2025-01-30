@@ -3,28 +3,32 @@ using _Scripts.Infrastructure.Core.SceneTransitions;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using _Scripts.Infrastructure.Services.SaveLoad;
 using UnityEngine;
+using Zenject;
 
 namespace _Scripts.Infrastructure.Core.States
 {
     public class LoadProgressState : IState
     {
-        private const string FirstSceneName = "GameScene";
+        private const string FirstSceneName = "KirillScene";
 
-        private readonly GameStateMachine _gameStateMachine;
-        private readonly IPersistantProgressService _progressService;
-        private readonly ISaveLoadService _saveLoadService;
+        private GameStateMachine _gameStateMachine;
+        private IPersistantProgressService _progressService;
+        private ISaveLoadService _saveLoadService;
 
-        public LoadProgressState(GameStateMachine gameStateMachine, SceneLoader sceneLoader)
+        [Inject]
+        public LoadProgressState(GameStateMachine gameStateMachine, IPersistantProgressService progressService,
+            ISaveLoadService saveLoadService)
         {
+            _progressService = progressService;
+            _saveLoadService = saveLoadService;
             _gameStateMachine = gameStateMachine;
-
+            Debug.Log("Load Progress State initialized");
         }
 
         public void Enter()
         {
             LoadProgressOrInitNew();
-            Debug.Log("Switch to next scene");
-            // _gameStateMachine.Enter<LoadLevelState, string>(_progressService.Progress.TowerData.SceneName);
+            _gameStateMachine.Enter<LoadLevelState, string>(_progressService.Progress.LevelsProgress.SceneNameName);
         }
 
         public void Exit()

@@ -5,11 +5,11 @@ namespace _Scripts.Data
     [Serializable]
     public class PlayerProgress         //Class with game data, that must be saved
     {
-        public ExampleDataClass Progress;
+        public ExampleDataClass LevelsProgress;
 
         public PlayerProgress(string sceneName)
         {
-            Progress = new ExampleDataClass(sceneName);
+            LevelsProgress = new ExampleDataClass(sceneName);
         }
     }
 

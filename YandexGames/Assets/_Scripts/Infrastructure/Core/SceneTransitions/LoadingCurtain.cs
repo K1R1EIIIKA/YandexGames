@@ -7,10 +7,10 @@ namespace _Scripts.Infrastructure.Core.SceneTransitions
     {
         [SerializeField] private CanvasGroup Curtain;
 
-        private void Awake()
-        {
-            DontDestroyOnLoad(this);
-        }
+        // private void Awake()
+        // {
+        //     DontDestroyOnLoad(this);
+        // }
 
         public void Show()
         {
