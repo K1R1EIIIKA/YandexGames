@@ -13,5 +13,7 @@ namespace _Scripts.Infrastructure.Factory
         void RegisterProgressWatchers(GameObject registeredWatcher);
         void Register(ISavedProgressReader progressReader);
         void CleanUp();
+        List<GameObject> CreateObjectCards();
+        GameObject CreateObjectCard();
     }
 }

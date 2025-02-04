@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace _Scripts.Data
 {
@@ -16,11 +17,13 @@ namespace _Scripts.Data
     [Serializable]
     public class ExampleDataClass
     {
-        public String SceneNameName;
+        public String SceneName;
+        public List<CardData> Cards;
 
         public ExampleDataClass(string sceneName)
         {
-            SceneNameName = sceneName;
+            SceneName = sceneName;
+            Cards = new List<CardData>();
         }
     }
 }

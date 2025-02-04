@@ -9,7 +9,7 @@ namespace _Scripts.Infrastructure.Core.States
 {
     public class LoadProgressState : IState
     {
-        private const string FirstSceneName = "KirillScene";
+        private const string FirstSceneName = "Inventory";
 
         private GameStateMachine _gameStateMachine;
         private IPersistantProgressService _progressService;
@@ -28,7 +28,7 @@ namespace _Scripts.Infrastructure.Core.States
         public void Enter()
         {
             LoadProgressOrInitNew();
-            _gameStateMachine.Enter<LoadLevelState, string>(_progressService.Progress.LevelsProgress.SceneNameName);
+            _gameStateMachine.Enter<LoadLevelState, string>(_progressService.Progress.LevelsProgress.SceneName);
         }
 
         public void Exit()
@@ -38,6 +38,7 @@ namespace _Scripts.Infrastructure.Core.States
         private void LoadProgressOrInitNew()
         {
             _progressService.Progress = _saveLoadService.LoadProgress() ?? NewProgress();
+            Debug.Log("Progress Initalized");
         }
 
         private PlayerProgress NewProgress()
