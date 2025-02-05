@@ -7,12 +7,25 @@ namespace _Scripts.Data
     {
         public string Id;
         public string Name;
-        public string ImagePath;
+        public string ImageName;
         public int Cost;
         public Rare Rare;
         public bool IsOpen;
-        
-        
+
+        public CardData(string id, string name, string imageName, int cost, Rare rare, bool isOpen)
+        {
+            Id = id;
+            Name = name;
+            ImageName = imageName;
+            Cost = cost;
+            Rare = rare;
+            IsOpen = isOpen;
+        }
+
+        public CardData()
+        {
+                
+        }
     }
 
     public enum Rare

@@ -13,16 +13,16 @@ namespace _Scripts.Controller
 {
     public class InventoryController : MonoBehaviour, ISavedProgress
     {
-        [SerializeField] private GridLayoutGroup gridLayout;
-        [SerializeField] private CardView cardPrefab;
+        [SerializeField] private GridLayoutGroup _gridLayout;
+        [SerializeField] private CardView _cardViewPrefab;
 
-        private List<GameObject> cards;
+        private List<GameObject> _cards;
         private IGameFactory _gameFactory;
 
-        [Header("Test")] [SerializeField] List<Sprite> cardSprites;
-        [Inject] private IPersistantProgressService _progressService;
-        private List<CardData> cardDatas = new List<CardData>();
+        private List<CardData> _cardDatas = new List<CardData>();
         [Inject] private ISaveLoadService _saveLoadService;
+
+        [Header("Test")] [SerializeField] List<Sprite> cardSprites;
 
         [Inject]
         public void Construct(IGameFactory gameFactory)
@@ -32,33 +32,32 @@ namespace _Scripts.Controller
 
         private void Awake()
         {
-            //получить данные из прогресса - геймфактори
-            //создать все объекты в инвентарь - геймфактори
-            //проинициализировать всю хуйню - геймфактори
-
             _gameFactory.Register(this);
-            cards = _gameFactory.CreateObjectCards();
-            Debug.Log(cards.Count);
+            _cards = _gameFactory.CreateObjectCards();
+            Debug.Log(_cards.Count);
 
-            if (cards.Count == 0)
+            if (_cards.Count == 0)
             {
                 foreach (Sprite cardSprite in cardSprites)
                 {
                     GameObject cardObject = _gameFactory.CreateObjectCard();
                     CardView cardView = cardObject.GetComponent<CardView>();
                     cardView.Initialize(Color.cyan, cardSprite, cardSprite.name);
-                    CardData cardData = new CardData();
-                    cardData.Rare = Rare.SuperMegaRare;
-                    cardData.Name = cardSprite.name;
-                    cards.Add(cardObject);
-                    cardDatas.Add(cardData);
+
+                    CardData cardData = new CardData(_cardDatas.Count.ToString(), cardSprite.name, cardSprite.name, 15,
+                        Rare.Advertisement, true);
+                    _cards.Add(cardObject);
+                    _cardDatas.Add(cardData);
                 }
+
+               
+
                 _saveLoadService.SaveProgress();
             }
 
-            foreach (GameObject card in cards)
+            foreach (GameObject card in _cards)
             {
-                card.transform.SetParent(gridLayout.transform);
+                card.transform.SetParent(_gridLayout.transform);
             }
         }
 
@@ -68,7 +67,7 @@ namespace _Scripts.Controller
 
         public void UpdateProgress(PlayerProgress progress)
         {
-            progress.LevelsProgress.Cards = cardDatas;
+            progress.LevelsProgress.Cards = _cardDatas;
         }
     }
 }

@@ -48,7 +48,7 @@ namespace _Scripts.Infrastructure.Factory
                 GameObject card = _assetProvider.Instantiate("Prefabs/UI/Inventory/CardExample");
                 CardView cardView = card.GetComponent<CardView>();
                 Color cardBackground = cardData.Rare.ToHexColor().ToColor();
-                cardView.Initialize(cardBackground, SpriteExtensions.LoadSprite(cardData.ImagePath), cardData.Name);
+                cardView.Initialize(cardBackground, CardSpritesLibrary.LoadSprite(cardData.ImageName), cardData.Name);
                 objectCards.Add(card);
             }
 
