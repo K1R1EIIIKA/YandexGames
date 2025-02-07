@@ -41,7 +41,7 @@ namespace _Scripts.Infrastructure.Factory
         public List<GameObject> CreateObjectCards()
         {
             List<GameObject> objectCards = new();
-            List<CardData> cardsData = _progressService.Progress.LevelsProgress.Cards;
+            List<CardData> cardsData = _progressService.Progress.LevelsProgress.PlayerCards;
 
             foreach (CardData cardData in cardsData)
             {

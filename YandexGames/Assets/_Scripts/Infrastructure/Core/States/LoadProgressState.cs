@@ -28,7 +28,7 @@ namespace _Scripts.Infrastructure.Core.States
         public void Enter()
         {
             LoadProgressOrInitNew();
-            _gameStateMachine.Enter<LoadLevelState, string>(_progressService.Progress.LevelsProgress.SceneName);
+            _gameStateMachine.Enter<LoadLevelState, string>(FirstSceneName);
         }
 
         public void Exit()
@@ -38,7 +38,7 @@ namespace _Scripts.Infrastructure.Core.States
         private void LoadProgressOrInitNew()
         {
             _progressService.Progress = _saveLoadService.LoadProgress() ?? NewProgress();
-            Debug.Log("Progress Initalized");
+            Debug.Log("Progress Initialized");
         }
 
         private PlayerProgress NewProgress()

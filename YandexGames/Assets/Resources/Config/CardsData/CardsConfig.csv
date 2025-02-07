@@ -1,0 +1,7 @@
+Id,Name,ImageName,Cost,Rare,IsOpen
+,Fish,Fish,5,Common,FALSE
+,Cat,Cat,15,Uncommon,FALSE
+,Dog,Dog,200,Epic,FALSE
+,Cool,Cool,1000,Legendary,FALSE
+,Ghoul,Ghoul,20,Advertisement,FALSE
+,Sprite,Sprite,20,Advertisement,FALSE

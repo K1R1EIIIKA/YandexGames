@@ -17,5 +17,11 @@ namespace _Scripts.View
             objectImage.color = Color.white;
             objectName.text = name;
         }
+
+        public void SetViewToClosed()
+        {
+            objectImage.color = Color.black;
+            objectName.text = "Не найдено";
+        }
     }
 }

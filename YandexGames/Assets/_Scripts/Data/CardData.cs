@@ -26,14 +26,18 @@ namespace _Scripts.Data
         {
                 
         }
+        public override string ToString()
+        {
+            return $"Id: {Id}, Name: {Name}, ImageName: {ImageName}, Cost: {Cost}, Rare: {Rare}, IsOpen: {IsOpen}";
+        }
     }
 
     public enum Rare
     {
         Common,
         Uncommon,
-        SuperRare,
-        SuperMegaRare,
+        Epic,
+        Legendary,
         Advertisement,
     }
 }

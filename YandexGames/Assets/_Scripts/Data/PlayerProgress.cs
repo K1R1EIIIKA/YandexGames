@@ -18,12 +18,14 @@ namespace _Scripts.Data
     public class ExampleDataClass
     {
         public String SceneName;
-        public List<CardData> Cards;
+        public List<CardData> PlayerCards;
+        public List<CardData> AllCardsSet;
 
         public ExampleDataClass(string sceneName)
         {
             SceneName = sceneName;
-            Cards = new List<CardData>();
+            PlayerCards = new List<CardData>();
+            AllCardsSet = new List<CardData>();
         }
     }
 }

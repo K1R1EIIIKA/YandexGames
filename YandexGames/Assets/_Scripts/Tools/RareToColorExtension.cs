@@ -14,9 +14,9 @@ namespace _Scripts.Tools
                     return "#97A7CA";
                 case Rare.Uncommon:
                     return "#293B85";
-                case Rare.SuperRare:
+                case Rare.Epic:
                     return "#8F104E";
-                case Rare.SuperMegaRare:
+                case Rare.Legendary:
                     return "#CAD714";
                 case Rare.Advertisement:
                     return "#1A8E33";
