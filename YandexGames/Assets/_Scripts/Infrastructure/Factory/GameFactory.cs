@@ -45,7 +45,7 @@ namespace _Scripts.Infrastructure.Factory
 
             foreach (CardData cardData in cardsData)
             {
-                GameObject card = _assetProvider.Instantiate("Prefabs/UI/Inventory/CardExample");
+                GameObject card = _assetProvider.Instantiate("Prefabs/UI/Collection/CardExample");
                 CardView cardView = card.GetComponent<CardView>();
                 Color cardBackground = cardData.Rare.ToHexColor().ToColor();
                 cardView.Initialize(cardBackground, CardSpritesLibrary.LoadSprite(cardData.ImageName), cardData.Name);
@@ -57,7 +57,7 @@ namespace _Scripts.Infrastructure.Factory
 
         public GameObject CreateObjectCard()
         {
-            GameObject card = _assetProvider.Instantiate("Prefabs/UI/Inventory/CardExample");
+            GameObject card = _assetProvider.Instantiate("Prefabs/UI/Collection/CardExample");
 
             return card;
         }

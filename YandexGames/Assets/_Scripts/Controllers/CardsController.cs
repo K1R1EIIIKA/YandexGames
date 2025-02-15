@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using _Scripts.Data;
 using _Scripts.Infrastructure.Factory;
@@ -11,34 +10,53 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace _Scripts.Controller
+namespace _Scripts.Controllers
 {
-    public class InventoryController : MonoBehaviour, ISavedProgress
+    public class CardsController : ISavedProgress, ICardController, IInitializable
     {
-        [SerializeField] private GridLayoutGroup _gridLayout;
-        [SerializeField] private CardView _cardViewPrefab;
-
-        private List<GameObject> _cards = new List<GameObject>();
-        private IGameFactory _gameFactory;
-
-        private List<CardData> _playerCardsData = new List<CardData>();
-        private List<CardData> _allCardsSet = new List<CardData>();
-        [Inject] private ISaveLoadService _saveLoadService;
-
-        [Header("Test")] [SerializeField] List<Sprite> cardSprites;
-        [SerializeField] private Button _collectionViewActivateButton;
         private const string CARDS_CONFIGURATION_FILE_NAME = "CardsConfig";
 
+        private List<CardData> _allCardsSet = new List<CardData>();
+        private List<CardData> _playerCardsData = new List<CardData>();
+
+        private List<GameObject> _cards = new List<GameObject>();
+
+        private IGameFactory _gameFactory;
+        private ISaveLoadService _saveLoadService;
+
+        private GridLayoutGroup _gridLayout;
+
         [Inject]
-        public void Construct(IGameFactory gameFactory)
+        public CardsController(ISaveLoadService saveLoadService, IGameFactory gameFactory)
         {
             _gameFactory = gameFactory;
+            _saveLoadService = saveLoadService;
+
+            _gameFactory.Register(this);
+            Debug.Log("Card Controller Initialized");
         }
 
-        private void Awake()
+        public void Construct(GridLayoutGroup gridLayout)
         {
-            _gameFactory.Register(this);
-            _collectionViewActivateButton.onClick.AddListener(ShowAllCards);
+            _gridLayout = gridLayout;
+        }
+
+        public void Initialize()
+        {
+        }
+
+        public void ShowPlayerCards()
+        {
+            ClearCards();
+
+            CreateCardsView(_playerCardsData);
+        }
+
+        public void ShowAllCards()
+        {
+            ClearCards();
+
+            CreateCardsView(_allCardsSet);
         }
 
         public void UpdateProgress(PlayerProgress progress)
@@ -61,14 +79,15 @@ namespace _Scripts.Controller
         {
             if (_playerCardsData.Count == 0)
             {
-                foreach (Sprite cardSprite in cardSprites)
+                for (int i = 0; i < 3; i++)
                 {
                     GameObject cardObject = _gameFactory.CreateObjectCard();
                     CardView cardView = cardObject.GetComponent<CardView>();
-                    cardView.Initialize(Color.cyan, cardSprite, cardSprite.name);
 
-                    CardData cardData = new CardData(_playerCardsData.Count.ToString(), cardSprite.name,
-                        cardSprite.name, 15, Rare.Advertisement, true);
+                    CardData cardData = new CardData(_playerCardsData.Count.ToString(), _allCardsSet[i].Name,
+                        _allCardsSet[i].ImageName, _allCardsSet[i].Cost, _allCardsSet[i].Rare, true);
+
+                    cardView.Initialize(Color.cyan, CardSpritesLibrary.LoadSprite(cardData.ImageName), cardData.Name);
 
                     _cards.Add(cardObject);
                     _playerCardsData.Add(cardData);
@@ -92,20 +111,6 @@ namespace _Scripts.Controller
                     cardData.IsOpen = true;
                 }
             }
-        }
-
-        private void ShowPlayerCards()
-        {
-            ClearCards();
-
-            CreateCardsView(_playerCardsData);
-        }
-
-        private void ShowAllCards()
-        {
-            ClearCards();
-
-            CreateCardsView(_allCardsSet);
         }
 
         private void CreateCardsView(List<CardData> cardsSet)
@@ -140,7 +145,7 @@ namespace _Scripts.Controller
 
             foreach (GameObject card in _cards)
             {
-                Destroy(card);
+                Object.Destroy(card);
             }
 
             _cards.Clear();
