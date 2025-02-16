@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using _Scripts.Data.Cards;
 
 namespace _Scripts.Data
 {

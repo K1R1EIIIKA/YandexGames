@@ -44,10 +44,10 @@ namespace _Scripts.Infrastructure.Core.States
             _states?.Clear();
         }
 
-        public void Enter<TState, TPayload>(TPayload payload) where TState : class, IPayloadedState<TPayload>
+        public void Enter<TState, TPayload>(TPayload payload, Action onLoad = null) where TState : class, IPayloadedState<TPayload>
         {
             var state = ChangeState<TState>();
-            state.Enter(payload);
+            state.Enter(payload, onLoad);
         }
 
         private TState ChangeState<TState>() where TState : class, IExitableState

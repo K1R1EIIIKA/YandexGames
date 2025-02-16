@@ -9,7 +9,7 @@ namespace _Scripts.Infrastructure.Core.States
 {
     public class LoadProgressState : IState
     {
-        private const string FirstSceneName = "Inventory";
+        private const string FirstSceneName = "MainScreen";
 
         private GameStateMachine _gameStateMachine;
         private IPersistantProgressService _progressService;

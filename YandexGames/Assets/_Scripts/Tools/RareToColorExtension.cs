@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using _Scripts.Data;
+using _Scripts.Data.Cards;
 using UnityEngine;
 
 namespace _Scripts.Tools

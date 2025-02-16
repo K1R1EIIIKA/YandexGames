@@ -10,6 +10,8 @@ namespace _Scripts.Editor
         {
             PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
+
+            Debug.Log("Prefs cleared");
         }
     }
 }

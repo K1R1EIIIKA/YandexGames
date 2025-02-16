@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using _Scripts.Data;
+using _Scripts.Data.Cards;
 using UnityEngine;
 
 namespace _Scripts.Tools

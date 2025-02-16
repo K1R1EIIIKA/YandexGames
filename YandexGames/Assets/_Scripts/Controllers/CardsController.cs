@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using _Scripts.Data;
+using _Scripts.Data.Cards;
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using _Scripts.Infrastructure.Services.SaveLoad;
@@ -34,6 +35,11 @@ namespace _Scripts.Controllers
 
             _gameFactory.Register(this);
             Debug.Log("Card Controller Initialized");
+        }
+
+        public ISavedProgress GetSavedProgress()
+        {
+            return this;
         }
 
         public void Construct(GridLayoutGroup gridLayout)

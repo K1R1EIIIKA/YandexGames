@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using _Scripts.Data;
+using _Scripts.Data.Cards;
 using _Scripts.Infrastructure.AssetManager;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using _Scripts.Infrastructure.Services.StaticData;

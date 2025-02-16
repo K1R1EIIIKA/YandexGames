@@ -1,4 +1,3 @@
-using _Scripts.Infrastructure.Core.SceneTransitions;
 using _Scripts.Infrastructure.Core.States;
 using UnityEngine;
 using Zenject;
