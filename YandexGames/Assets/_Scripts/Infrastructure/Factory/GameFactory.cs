@@ -1,7 +1,11 @@
 using System.Collections.Generic;
+using _Scripts.Data;
+using _Scripts.Data.Cards;
 using _Scripts.Infrastructure.AssetManager;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using _Scripts.Infrastructure.Services.StaticData;
+using _Scripts.Tools;
+using _Scripts.View;
 using UnityEngine;
 using Zenject;
 
@@ -11,14 +15,20 @@ namespace _Scripts.Infrastructure.Factory
     {
         private IAssetProvider _assetProvider;
         private IStaticDataService _staticDataService;
+        private IPersistantProgressService _progressService;
         public List<ISavedProgressReader> ProgressReaders { get; } = new();
         public List<ISavedProgress> ProgressWriters { get; } = new();
 
         [Inject]
-        public void Construct(IAssetProvider assetProvider, IStaticDataService staticDataService)
+        public void Construct(IAssetProvider assetProvider, IStaticDataService staticDataService,
+            IPersistantProgressService progressService)
         {
+            _progressService = progressService;
             _assetProvider = assetProvider;
             _staticDataService = staticDataService;
+            
+            Debug.Log("GameFactory was constructed");
+            Debug.Log(_progressService.Progress);
         }
 
         public void RegisterProgressWatchers(GameObject registeredWatcher)
@@ -27,6 +37,31 @@ namespace _Scripts.Infrastructure.Factory
             {
                 Register(progressReader);
             }
+        }
+
+        public List<GameObject> CreateObjectCards()
+        {
+            // List<GameObject> objectCards = new();
+            // List<CardData> cardsData = _progressService.Progress.LevelsProgress.PlayerCards;
+            //
+            // foreach (CardData cardData in cardsData)
+            // {
+            //     GameObject card = _assetProvider.Instantiate("Prefabs/UI/Collection/CardExample");
+            //     CardView cardView = card.GetComponent<CardView>();
+            //     Color cardBackground = cardData.Rare.ToHexColor().ToColor();
+            //     cardView.Initialize(cardBackground, CardSpritesLibrary.LoadSprite(cardData.ImageName), cardData.Name);
+            //     objectCards.Add(card);
+            // }
+            //
+            // return objectCards;
+            return new List<GameObject>();
+        }
+
+        public GameObject CreateObjectCard()
+        {
+            GameObject card = _assetProvider.Instantiate("Prefabs/UI/Collection/CardExample");
+
+            return card;
         }
 
         public void Register(ISavedProgressReader progressReader)

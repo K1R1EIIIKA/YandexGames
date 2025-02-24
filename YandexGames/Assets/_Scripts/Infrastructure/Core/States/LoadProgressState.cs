@@ -1,5 +1,5 @@
 using _Scripts.Data;
-using _Scripts.Infrastructure.Core.SceneTransitions;
+using _Scripts.Enums;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using _Scripts.Infrastructure.Services.SaveLoad;
 using UnityEngine;
@@ -9,8 +9,6 @@ namespace _Scripts.Infrastructure.Core.States
 {
     public class LoadProgressState : IState
     {
-        private const string FirstSceneName = "KirillScene";
-
         private GameStateMachine _gameStateMachine;
         private IPersistantProgressService _progressService;
         private ISaveLoadService _saveLoadService;
@@ -28,7 +26,7 @@ namespace _Scripts.Infrastructure.Core.States
         public void Enter()
         {
             LoadProgressOrInitNew();
-            _gameStateMachine.Enter<LoadLevelState, string>(_progressService.Progress.LevelsProgress.SceneNameName);
+            _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.MainScreen);
         }
 
         public void Exit()
@@ -38,11 +36,12 @@ namespace _Scripts.Infrastructure.Core.States
         private void LoadProgressOrInitNew()
         {
             _progressService.Progress = _saveLoadService.LoadProgress() ?? NewProgress();
+            Debug.Log("Progress Initialized");
         }
 
         private PlayerProgress NewProgress()
         {
-            return new PlayerProgress(FirstSceneName);
+            return new PlayerProgress(SceneNames.MainScreen);
         }
     }
 }

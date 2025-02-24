@@ -4,6 +4,6 @@ namespace _Scripts.Infrastructure.Services.PersistantProgress
 {
     public interface ISavedProgressReader
     {
-        void LoadProgress(PlayerProgress progress);
+        public void LoadProgress(PlayerProgress progress);
     }
 }

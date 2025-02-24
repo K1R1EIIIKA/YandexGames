@@ -61,7 +61,7 @@ namespace _Scripts.Infrastructure.Core.SceneTransitions
 
         public async UniTask SwitchSceneWithUnload(string nextSceneName)
         {
-            await UniTask.WaitForSeconds(2);
+            //await UniTask.WaitForSeconds(2);
             if (SceneManager.GetActiveScene().name == nextSceneName)
             {
                 return;

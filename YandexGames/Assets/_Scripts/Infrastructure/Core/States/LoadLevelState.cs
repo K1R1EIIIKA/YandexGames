@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Linq;
 using _Scripts.Infrastructure.Core.SceneTransitions;
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
@@ -29,12 +31,14 @@ namespace _Scripts.Infrastructure.Core.States
             Debug.Log("LoadLevelState was initialized");
         }
 
-        public async void Enter(string payload)
+        public async void Enter(string payload, Action onLoad)
         {
             _loadingCurtain.Show();
             _gameFactory.CleanUp();
             await _sceneLoader.SwitchSceneWithUnload(payload);
             OnLoadComplete();
+
+            onLoad?.Invoke();
         }
 
         public void Exit()
@@ -52,7 +56,9 @@ namespace _Scripts.Infrastructure.Core.States
         private void InformProgressReaders()
         {
             foreach (var progressReader in _gameFactory.ProgressReaders)
+            {
                 progressReader.LoadProgress(_progressService.Progress);
+            }
 
             Debug.Log("Informing progress readers");
         }
