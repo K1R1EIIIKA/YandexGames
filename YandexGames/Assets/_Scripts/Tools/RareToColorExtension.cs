@@ -1,29 +1,47 @@
-﻿using System.Collections.Generic;
-using _Scripts.Data;
-using _Scripts.Data.Cards;
+﻿using _Scripts.Data.Cards;
 using UnityEngine;
 
 namespace _Scripts.Tools
 {
     public static class RareToColorExtension
     {
-        public static string ToHexColor(this Rare rare)
+        public static string ToHexColor(this Rarity rarity)
         {
-            switch (rare)
+            switch (rarity)
             {
-                case Rare.Common:
-                    return "#97A7CA";
-                case Rare.Uncommon:
-                    return "#293B85";
-                case Rare.Epic:
-                    return "#8F104E";
-                case Rare.Legendary:
-                    return "#CAD714";
-                case Rare.Advertisement:
-                    return "#1A8E33";
+                case Rarity.Common:
+                    return "#C7CFE1";
+                case Rarity.Rare:
+                    return "#1969BF";
+                case Rarity.SuperRare:
+                    return "#D51A14";
+                case Rarity.SuperMegaRare:
+                    return "#FFC300";
+                case Rarity.Special:
+                    return "#9A04EA";
                 default:
                     Debug.LogWarning("RareToColorExtension::ToColor: Unknown Rare");
                     return "#FFFFFF";
+            }
+        }
+
+        public static string ToColorName(this Rarity rarity)
+        {
+            switch (rarity)
+            {
+                case Rarity.Common:
+                    return "Обычный";
+                case Rarity.Rare:
+                    return "Редкий";
+                case Rarity.SuperRare:
+                    return "Супер редкий";
+                case Rarity.SuperMegaRare:
+                    return "Супер мега редкий";
+                case Rarity.Special:
+                    return "Особый";
+                default:
+                    Debug.LogWarning("RareToColorExtension::ToColor: Unknown Rare");
+                    return "Неизвестный";
             }
         }
     }

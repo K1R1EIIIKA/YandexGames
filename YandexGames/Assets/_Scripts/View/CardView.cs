@@ -1,4 +1,6 @@
-﻿using TMPro;
+﻿using _Scripts.Data.Cards;
+using _Scripts.Tools;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +18,14 @@ namespace _Scripts.View
             objectImage.sprite = sprite;
             objectImage.color = Color.white;
             objectName.text = name;
+        }
+
+        public void Initialize(CardData cardData)
+        {
+            backgroundImage.color = cardData.Rarity.ToHexColor().ToColor();
+            objectImage.sprite = cardData.Image;
+            objectImage.color = Color.white;
+            objectName.text = cardData.Name;
         }
 
         public void SetViewToClosed()

@@ -278,6 +278,20 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.vanbassum.wakatime": {
+      "version": "https://github.com/vanBassum/Wakatime.Unity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "503ffcaaa99956f4861011aef4426ba6b0853ff8"
+    },
+    "studio.beardy.grid-layout-group": {
+      "version": "https://github.com/mrbeardy/BeardyGridLayout.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "8b1d7f44366b24df55dae32c674cf70adc6d04b7"
+    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,

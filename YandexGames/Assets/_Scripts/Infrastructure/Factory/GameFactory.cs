@@ -41,19 +41,20 @@ namespace _Scripts.Infrastructure.Factory
 
         public List<GameObject> CreateObjectCards()
         {
-            List<GameObject> objectCards = new();
-            List<CardData> cardsData = _progressService.Progress.LevelsProgress.PlayerCards;
-
-            foreach (CardData cardData in cardsData)
-            {
-                GameObject card = _assetProvider.Instantiate("Prefabs/UI/Collection/CardExample");
-                CardView cardView = card.GetComponent<CardView>();
-                Color cardBackground = cardData.Rare.ToHexColor().ToColor();
-                cardView.Initialize(cardBackground, CardSpritesLibrary.LoadSprite(cardData.ImageName), cardData.Name);
-                objectCards.Add(card);
-            }
-
-            return objectCards;
+            // List<GameObject> objectCards = new();
+            // List<CardData> cardsData = _progressService.Progress.LevelsProgress.PlayerCards;
+            //
+            // foreach (CardData cardData in cardsData)
+            // {
+            //     GameObject card = _assetProvider.Instantiate("Prefabs/UI/Collection/CardExample");
+            //     CardView cardView = card.GetComponent<CardView>();
+            //     Color cardBackground = cardData.Rare.ToHexColor().ToColor();
+            //     cardView.Initialize(cardBackground, CardSpritesLibrary.LoadSprite(cardData.ImageName), cardData.Name);
+            //     objectCards.Add(card);
+            // }
+            //
+            // return objectCards;
+            return new List<GameObject>();
         }
 
         public GameObject CreateObjectCard()

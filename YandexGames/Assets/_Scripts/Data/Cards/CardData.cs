@@ -1,43 +1,32 @@
 ﻿using System;
+using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace _Scripts.Data.Cards
 {
-    [Serializable]
-    public class CardData
+    public class CardData : ScriptableObject
     {
         public string Id;
         public string Name;
-        public string ImageName;
+        public Sprite Image;
         public int Cost;
-        public Rare Rare;
+        [FormerlySerializedAs("Rare")] public Rarity Rarity;
         public bool IsOpen;
 
-        public CardData(string id, string name, string imageName, int cost, Rare rare, bool isOpen)
-        {
-            Id = id;
-            Name = name;
-            ImageName = imageName;
-            Cost = cost;
-            Rare = rare;
-            IsOpen = isOpen;
-        }
-
-        public CardData()
-        {
-                
-        }
         public override string ToString()
         {
-            return $"Id: {Id}, Name: {Name}, ImageName: {ImageName}, Cost: {Cost}, Rare: {Rare}, IsOpen: {IsOpen}";
+            return $"Id: {Id}, Name: {Name}, ImageName: {Image}, Cost: {Cost}, Rare: {Rarity}, IsOpen: {IsOpen}";
         }
     }
 
-    public enum Rare
+    [Serializable]
+    public enum Rarity
     {
         Common,
-        Uncommon,
-        Epic,
-        Legendary,
-        Advertisement,
+        Rare,
+        SuperRare,
+        SuperMegaRare,
+        Special,
     }
 }

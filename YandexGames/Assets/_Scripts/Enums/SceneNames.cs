@@ -4,5 +4,6 @@
     {
         public const string MainScreen = "MainScreen";
         public const string Inventory = "Inventory";
+        public const string BoxOpening = "BoxOpening";
     }
 }

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4123b41d224737b52719ab219d689a, type: 3}
+  m_Name: "\u041A\u043E\u0440\u043E\u0431\u043A\u0430 \u0441 \u0430\u043C\u043D\u044F\u043C\u0430\u043C\u0438"
+  m_EditorClassIdentifier: 
+  Id: 
+  Name: "\u041A\u043E\u0440\u043E\u0431\u043A\u0430 \u0441 \u0430\u043C\u043D\u044F\u043C\u0430\u043C\u0438"
+  CaseImage: {fileID: 488019178, guid: 5da958314232bad458f389beca6c4e59, type: 3}
+  LootCountRange: {x: 2, y: 3}
+  CoinsRange: {x: 5, y: 20}
+  CardPool:
+  - {fileID: 11400000, guid: 3e734c4e32b57e04a9d70c8ef286db68, type: 2}
+  - {fileID: 11400000, guid: 56411bd599f1efa4c83d961a9a3a55b5, type: 2}
+  DropChancesSerializedDictionary:
+    _serializedList:
+    - Key: 0
+      Value: 100
+  Price: 50

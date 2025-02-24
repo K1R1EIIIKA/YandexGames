@@ -72,51 +72,51 @@ namespace _Scripts.Controllers
 
         public void LoadProgress(PlayerProgress progress)
         {
-            _playerCardsData = progress.LevelsProgress.PlayerCards;
-            _allCardsSet = CardCSVHandler.ReadCSV(CARDS_CONFIGURATION_FILE_NAME);
-
-            TestInventoryFilling();
-            CheckConfigOnMistakes();
-
-            ShowPlayerCards();
+            // _playerCardsData = progress.LevelsProgress.PlayerCards;
+            // _allCardsSet = CardCSVHandler.ReadCSV(CARDS_CONFIGURATION_FILE_NAME);
+            //
+            // TestInventoryFilling();
+            // CheckConfigOnMistakes();
+            //
+            // ShowPlayerCards();
         }
 
         private void TestInventoryFilling()
         {
-            if (_playerCardsData.Count == 0)
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    GameObject cardObject = _gameFactory.CreateObjectCard();
-                    CardView cardView = cardObject.GetComponent<CardView>();
-
-                    CardData cardData = new CardData(_playerCardsData.Count.ToString(), _allCardsSet[i].Name,
-                        _allCardsSet[i].ImageName, _allCardsSet[i].Cost, _allCardsSet[i].Rare, true);
-
-                    cardView.Initialize(Color.cyan, CardSpritesLibrary.LoadSprite(cardData.ImageName), cardData.Name);
-
-                    _cards.Add(cardObject);
-                    _playerCardsData.Add(cardData);
-                    cardObject.transform.SetParent(_gridLayout.transform);
-                }
-
-                _saveLoadService.SaveProgress();
-            }
+            // if (_playerCardsData.Count == 0)
+            // {
+            //     for (int i = 0; i < 3; i++)
+            //     {
+            //         GameObject cardObject = _gameFactory.CreateObjectCard();
+            //         CardView cardView = cardObject.GetComponent<CardView>();
+            //
+            //         CardData cardData = new CardData(_playerCardsData.Count.ToString(), _allCardsSet[i].Name,
+            //             _allCardsSet[i].ImageName, _allCardsSet[i].Cost, _allCardsSet[i].Rare, true);
+            //
+            //         cardView.Initialize(Color.cyan, CardSpritesLibrary.LoadSprite(cardData.ImageName), cardData.Name);
+            //
+            //         _cards.Add(cardObject);
+            //         _playerCardsData.Add(cardData);
+            //         cardObject.transform.SetParent(_gridLayout.transform);
+            //     }
+            //
+            //     _saveLoadService.SaveProgress();
+            // }
         }
 
         private void CheckConfigOnMistakes()
         {
-            List<string> playersUniqueCardNames = _playerCardsData.Select(x => x.ImageName).Distinct().ToList();
-
-            foreach (string playersUniqueCardName in playersUniqueCardNames)
-            {
-                CardData cardData = _allCardsSet.FirstOrDefault(x => x.ImageName == playersUniqueCardName);
-
-                if (cardData != null)
-                {
-                    cardData.IsOpen = true;
-                }
-            }
+            // List<string> playersUniqueCardNames = _playerCardsData.Select(x => x.ImageName).Distinct().ToList();
+            //
+            // foreach (string playersUniqueCardName in playersUniqueCardNames)
+            // {
+            //     CardData cardData = _allCardsSet.FirstOrDefault(x => x.ImageName == playersUniqueCardName);
+            //
+            //     if (cardData != null)
+            //     {
+            //         cardData.IsOpen = true;
+            //     }
+            // }
         }
 
         private void CreateCardsView(List<CardData> cardsSet)
@@ -131,18 +131,19 @@ namespace _Scripts.Controllers
 
         private GameObject CreateCardView(CardData cardData)
         {
-            GameObject cardObject = _gameFactory.CreateObjectCard();
-            CardView cardView = cardObject.GetComponent<CardView>();
-
-            cardView.Initialize(cardData.Rare.ToHexColor().ToColor(), CardSpritesLibrary.LoadSprite(cardData.ImageName),
-                cardData.Name);
-
-            if (!cardData.IsOpen)
-            {
-                cardView.SetViewToClosed();
-            }
-
-            return cardObject;
+            // GameObject cardObject = _gameFactory.CreateObjectCard();
+            // CardView cardView = cardObject.GetComponent<CardView>();
+            //
+            // cardView.Initialize(cardData.Rare.ToHexColor().ToColor(), CardSpritesLibrary.LoadSprite(cardData.ImageName),
+            //     cardData.Name);
+            //
+            // if (!cardData.IsOpen)
+            // {
+            //     cardView.SetViewToClosed();
+            // }
+            //
+            // return cardObject;
+            return null;
         }
 
         private void ClearCards()
