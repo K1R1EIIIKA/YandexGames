@@ -115,8 +115,10 @@ namespace _Scripts.Controllers
             for (int i = 0; i < _itemsCountValue-1; i++)
             {
                 var card = _caseData.GetRandomCard();
+                card.IsOpen = true;
                 _cardsLoot.Add(card);
             }
+            _transactionController.AddPlayerCards(_cardsLoot);
 
             SortCards();
 

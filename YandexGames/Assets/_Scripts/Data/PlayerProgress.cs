@@ -14,16 +14,6 @@ namespace _Scripts.Data
             LevelsProgress = new ExampleDataClass(sceneName);
         }
 
-        public void AddPlayerCards(List<CardData> cards)
-        {
-            LevelsProgress.PlayerCards.AddRange(cards);
-        }
-
-        public void AddPlayerCard(CardData card)
-        {
-            LevelsProgress.PlayerCards.Add(card);
-        }
-
         public override string ToString()
         {
             return $"PlayerProgress: {LevelsProgress.SceneName}, Money: {LevelsProgress.Money}, PlayerCards: {LevelsProgress.PlayerCards.Count}, AllCardsSet: {LevelsProgress.AllCardsSet.Count}";

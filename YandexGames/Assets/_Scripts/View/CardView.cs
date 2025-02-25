@@ -12,12 +12,12 @@ namespace _Scripts.View
         [SerializeField] private Image objectImage;
         [SerializeField] private TMP_Text objectName;
 
-        public void Initialize(Color color, Sprite sprite, string name)
+        public void Initialize(Color color, Sprite sprite)
         {
             backgroundImage.color = color;
             objectImage.sprite = sprite;
             objectImage.color = Color.white;
-            objectName.text = name;
+            // objectName.text = name;
         }
 
         public void Initialize(CardData cardData)

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: f1edf547-3714-4a26-8a09-65f5a5d03207
   Name: "\u0413\u0443\u043B\u044C\u043D\u044F\u043C"
-  Image: {fileID: 21300000, guid: 98855de03cb171f40be27b7902eec2fe, type: 3}
+  Image: {fileID: 21300000, guid: fce38c2a4f49a9a4b86b96cfa5d129f6, type: 3}
   Cost: 525252
   Rarity: 3
   IsOpen: 0

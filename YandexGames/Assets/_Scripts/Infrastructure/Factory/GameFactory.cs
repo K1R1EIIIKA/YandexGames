@@ -56,7 +56,7 @@ namespace _Scripts.Infrastructure.Factory
 
         public GameObject CreateObjectCard()
         {
-            GameObject card = _assetProvider.Instantiate("Prefabs/UI/Collection/CardExample");
+            GameObject card = _assetProvider.Instantiate("Prefabs/UI/Collection/SmallCard");
 
             return card;
         }
