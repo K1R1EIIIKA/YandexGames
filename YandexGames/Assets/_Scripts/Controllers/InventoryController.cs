@@ -23,7 +23,7 @@ namespace _Scripts.Controllers
         {
             _cardsController.Initialize();
 
-            _gameFactory.Register(_cardsController.GetSavedProgress());
+            // _gameFactory.Register(_cardsController.GetSavedProgress());
             InventoryTabsController.Instance.Initialize();
         }
 

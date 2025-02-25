@@ -7,5 +7,6 @@ namespace _Scripts.Infrastructure.Services.SaveLoad
         PlayerProgress LoadProgress();
 
         void SaveProgress();
+        void SaveProgressWithoutWriting();
     }
 }

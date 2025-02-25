@@ -1,4 +1,5 @@
-﻿using _Scripts.Controllers;
+﻿using System;
+using _Scripts.Controllers;
 using _Scripts.Data.Cases;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
@@ -15,12 +16,15 @@ namespace _Scripts.Infrastructure.Inventory
 
         private DiContainer _container;
         private GameStateMachine _gameStateMachine;
+        private TransactionController _transactionController;
 
         [Inject]
-        public void Construct(DiContainer container, GameStateMachine gameStateMachine)
+        public void Construct(DiContainer container, GameStateMachine gameStateMachine,
+            TransactionController transactionController)
         {
             _container = container;
             _gameStateMachine = gameStateMachine;
+            _transactionController = transactionController;
         }
 
         public void InitializeCases(RectTransform container, CaseLocationType caseType)
@@ -29,7 +33,7 @@ namespace _Scripts.Infrastructure.Inventory
             {
                 CaseLocationType.MainScreen => _caseRepository.MainScreenCases,
                 CaseLocationType.Shop => _caseRepository.ShopCases,
-                _ => throw new System.ArgumentOutOfRangeException()
+                _ => throw new ArgumentOutOfRangeException()
             };
 
             container.DestroyAllChildren();
@@ -52,12 +56,21 @@ namespace _Scripts.Infrastructure.Inventory
             }
         }
 
-        public void OpenCaseScene(CaseData caseData)
+        public void TryOpenCase(CaseData caseData)
         {
-            _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.BoxOpening, () =>
+            if (caseData is MoneyCaseData moneyCaseData)
             {
-                BoxOpeningController.Instance.Initialize(caseData);
-            });
+                if (_transactionController.SpendMoney(moneyCaseData.Price))
+                {
+                    _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.BoxOpening,
+                        () => { BoxOpeningController.Instance.Initialize(caseData); });
+                }
+
+                else
+                {
+                    Debug.Log("Not enough money");
+                }
+            }
         }
     }
 }

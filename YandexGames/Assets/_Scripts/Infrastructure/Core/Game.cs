@@ -14,6 +14,7 @@ namespace _Scripts.Infrastructure.Core
         {
             StateMachine = stateMachine;
             _container = container;
+
             Debug.Log("Game was initalized");
         }
     }

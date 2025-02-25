@@ -4,6 +4,7 @@ using System.Linq;
 using _Scripts.Infrastructure.Core.SceneTransitions;
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
+using _Scripts.Infrastructure.Services.SaveLoad;
 using UnityEngine;
 using Zenject;
 
@@ -17,24 +18,28 @@ namespace _Scripts.Infrastructure.Core.States
 
         private GameFactory _gameFactory;
         private IPersistantProgressService _progressService;
+        private ISaveLoadService _saveLoadService;
 
         [Inject]
         public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, LoadingCurtain loadingCurtain,
-            GameFactory gameFactory, IPersistantProgressService progressService)
+            GameFactory gameFactory, IPersistantProgressService progressService, ISaveLoadService saveLoadService)
         {
             _gameStateMachine = gameStateMachine;
             _sceneLoader = sceneLoader;
             _loadingCurtain = loadingCurtain;
             _gameFactory = gameFactory;
             _progressService = progressService;
+            _saveLoadService = saveLoadService;
 
             Debug.Log("LoadLevelState was initialized");
         }
 
         public async void Enter(string payload, Action onLoad)
         {
+            // _saveLoadService.SaveProgress();
+
             _loadingCurtain.Show();
-            _gameFactory.CleanUp();
+            _gameFactory.CleanDublicates();
             await _sceneLoader.SwitchSceneWithUnload(payload);
             OnLoadComplete();
 
