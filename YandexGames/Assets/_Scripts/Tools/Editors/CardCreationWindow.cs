@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CardCreationWindow : EditorWindow
 {
     private static Rarity _selectedRarity;
-    private static Action<CardData> onCardCreated;
+    private static Action<CardObject> onCardCreated;
 
     private string cardName = "Новая карточка";
     private Sprite image;
@@ -17,7 +17,7 @@ public class CardCreationWindow : EditorWindow
     private const float MinHeight = 100f;
     private const float MaxHeight = 300f;
 
-    public static void ShowWindow(Rarity rarity, Action<CardData> callback)
+    public static void ShowWindow(Rarity rarity, Action<CardObject> callback)
     {
         _selectedRarity = rarity;
         onCardCreated = callback;
@@ -51,13 +51,12 @@ public class CardCreationWindow : EditorWindow
 
     private void CreateCard()
     {
-        CardData newCard = CreateInstance<CardData>();
+        CardObject newCard = CreateInstance<CardObject>();
         newCard.Id = Guid.NewGuid().ToString();
         newCard.Name = cardName;
         newCard.Image = image;
         newCard.Cost = cost;
         newCard.Rarity = _selectedRarity;
-        newCard.IsOpen = false;
 
         string path = $"Assets/Resources/Cards/{cardName}.asset";
         AssetDatabase.CreateAsset(newCard, path);

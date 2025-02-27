@@ -1,4 +1,5 @@
 ﻿using System;
+using _Scripts.Controllers;
 using _Scripts.Infrastructure.AssetManager;
 using _Scripts.Infrastructure.Core;
 using _Scripts.Infrastructure.Core.SceneTransitions;
@@ -15,6 +16,7 @@ namespace _Scripts.Installers
     public class ProjectInstaller : MonoInstaller
     {
         [SerializeField] private LoadingCurtain _loadingCurtain;
+
         public override void InstallBindings()
         {
             BindStateMachine();
@@ -33,7 +35,7 @@ namespace _Scripts.Installers
         {
             Container.Bind<SceneLoader>().To<SceneLoader>().AsSingle().NonLazy();
             Container.Bind<LoadingCurtain>().FromComponentInNewPrefab(_loadingCurtain).AsSingle().NonLazy();
-            
+
             Container.Bind<StateFactory>().To<StateFactory>().AsTransient().NonLazy();
 
             Container.Bind<PayloadedStateFactory<string>>().FromNew().AsTransient().NonLazy();
@@ -47,6 +49,7 @@ namespace _Scripts.Installers
             Container.Bind<IPersistantProgressService>().To<ProgressService>().AsSingle().NonLazy();
             Container.Bind<ISaveLoadService>().To<SaveLoadService>().AsSingle().NonLazy();
             Container.Bind<IStaticDataService>().To<StaticDataService>().AsSingle().NonLazy();
+            Container.Bind<TransactionController>().AsSingle().NonLazy();
         }
     }
 }

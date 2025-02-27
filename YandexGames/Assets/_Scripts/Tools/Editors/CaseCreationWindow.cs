@@ -11,7 +11,7 @@ using Unity.VisualScripting;
 public class CaseCreationWindow : EditorWindow
 {
     private string caseName = "Новый кейс";
-    private Dictionary<Rarity, List<CardData>> selectedCards = new();
+    private Dictionary<Rarity, List<CardObject>> selectedCards = new();
     private Dictionary<Rarity, float> dropChances = new();
     private Vector2 scrollPos;
 
@@ -29,7 +29,7 @@ public class CaseCreationWindow : EditorWindow
     {
         foreach (Rarity rare in System.Enum.GetValues(typeof(Rarity)))
         {
-            selectedCards[rare] = new List<CardData>();
+            selectedCards[rare] = new List<CardObject>();
             dropChances[rare] = 0;
         }
     }

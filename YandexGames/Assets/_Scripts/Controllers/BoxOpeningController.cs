@@ -3,6 +3,7 @@ using _Scripts.Data.Cards;
 using _Scripts.Data.Cases;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
+using _Scripts.ScriptableObjects;
 using _Scripts.Tools;
 using _Scripts.UI;
 using TMPro;
@@ -39,13 +40,15 @@ namespace _Scripts.Controllers
         private List<CardData> _cardsLoot = new();
 
         private GameStateMachine _gameStateMachine;
+        private TransactionController _transactionController;
 
         public static BoxOpeningController Instance { get; private set; }
 
         [Inject]
-        public void Construct(GameStateMachine gameStateMachine)
+        public void Construct(GameStateMachine gameStateMachine, TransactionController transactionController)
         {
             _gameStateMachine = gameStateMachine;
+            _transactionController = transactionController;
         }
 
         private void Awake()
@@ -105,12 +108,15 @@ namespace _Scripts.Controllers
 
             SetContainer(ContainerType.Money);
             _moneyLoot = _caseData.GetRandomCoins();
+            _transactionController.AddMoney(_moneyLoot);
 
             for (int i = 0; i < _itemsCountValue-1; i++)
             {
                 var card = _caseData.GetRandomCard();
+                card.IsOpen = true;
                 _cardsLoot.Add(card);
             }
+            _transactionController.AddPlayerCards(_cardsLoot);
 
             SortCards();
 

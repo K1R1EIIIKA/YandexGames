@@ -1,4 +1,5 @@
 ﻿using _Scripts.Data.Cases;
+using _Scripts.ScriptableObjects;
 using _Scripts.View;
 using TMPro;
 using UnityEngine;
@@ -63,7 +64,7 @@ namespace _Scripts.Infrastructure.Inventory
 
         private void OpenCase()
         {
-            _caseManager.OpenCaseScene(_caseData);
+            _caseManager.TryOpenCase(_caseData);
         }
 
         private void ShowCaseInfo()

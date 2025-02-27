@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CaseRepository
   m_EditorClassIdentifier: 
   _mainScreenCases:
+  - {fileID: 11400000, guid: a715f4fd918333a44bbaaf83d2e7eb31, type: 2}
   - {fileID: 11400000, guid: 4c8f4e8126a2e1e43a06ee56c21e3b10, type: 2}
   - {fileID: 11400000, guid: 253861249600fba4b9b1ca3d4d83642a, type: 2}
   _shopCases: []

@@ -1,4 +1,5 @@
 ﻿using _Scripts.Data.Cards;
+using _Scripts.ScriptableObjects;
 using UnityEngine;
 
 namespace _Scripts.Data.Cases

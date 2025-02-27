@@ -6,7 +6,7 @@ using _Scripts.Tools;
 using AYellowpaper.SerializedCollections;
 using UnityEngine;
 
-namespace _Scripts.Data.Cases
+namespace _Scripts.ScriptableObjects
 {
     [Serializable]
     public abstract class CaseData : ScriptableObject
@@ -16,7 +16,7 @@ namespace _Scripts.Data.Cases
         public Sprite CaseImage;
         public Vector2Int LootCountRange;
         public Vector2Int CoinsRange;
-        public List<CardData> CardPool;
+        public List<CardObject> CardPool;
 
         [SerializedDictionary("Rarity", "Drop Chance")]
         public SerializedDictionary<Rarity, float> DropChancesSerializedDictionary = new();
@@ -45,7 +45,7 @@ namespace _Scripts.Data.Cases
             {
                 if (DropChances.TryGetValue(card.Rarity, out float chance))
                 {
-                    weightedCards.Add((card, chance));
+                    weightedCards.Add((card.ToCardData(), chance));
                 }
             }
 

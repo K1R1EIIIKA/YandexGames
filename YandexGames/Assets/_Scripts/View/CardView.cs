@@ -12,20 +12,12 @@ namespace _Scripts.View
         [SerializeField] private Image objectImage;
         [SerializeField] private TMP_Text objectName;
 
-        public void Initialize(Color color, Sprite sprite, string name)
+        public void Initialize(CardData cardObject)
         {
-            backgroundImage.color = color;
-            objectImage.sprite = sprite;
+            backgroundImage.color = cardObject.Rarity.ToHexColor().ToColor();
+            objectImage.sprite = cardObject.ToCardObject().Image;
             objectImage.color = Color.white;
-            objectName.text = name;
-        }
-
-        public void Initialize(CardData cardData)
-        {
-            backgroundImage.color = cardData.Rarity.ToHexColor().ToColor();
-            objectImage.sprite = cardData.Image;
-            objectImage.color = Color.white;
-            objectName.text = cardData.Name;
+            objectName.text = cardObject.Name;
         }
 
         public void SetViewToClosed()

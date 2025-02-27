@@ -1,11 +1,8 @@
 using System.Collections.Generic;
-using _Scripts.Data;
-using _Scripts.Data.Cards;
+using System.Linq;
 using _Scripts.Infrastructure.AssetManager;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using _Scripts.Infrastructure.Services.StaticData;
-using _Scripts.Tools;
-using _Scripts.View;
 using UnityEngine;
 using Zenject;
 
@@ -16,8 +13,8 @@ namespace _Scripts.Infrastructure.Factory
         private IAssetProvider _assetProvider;
         private IStaticDataService _staticDataService;
         private IPersistantProgressService _progressService;
-        public List<ISavedProgressReader> ProgressReaders { get; } = new();
-        public List<ISavedProgress> ProgressWriters { get; } = new();
+        public List<ISavedProgressReader> ProgressReaders { get; private set; } = new();
+        public List<ISavedProgress> ProgressWriters { get; private set; } = new();
 
         [Inject]
         public void Construct(IAssetProvider assetProvider, IStaticDataService staticDataService,
@@ -59,7 +56,7 @@ namespace _Scripts.Infrastructure.Factory
 
         public GameObject CreateObjectCard()
         {
-            GameObject card = _assetProvider.Instantiate("Prefabs/UI/Collection/CardExample");
+            GameObject card = _assetProvider.Instantiate("Prefabs/UI/Collection/SmallCard");
 
             return card;
         }
@@ -74,10 +71,23 @@ namespace _Scripts.Infrastructure.Factory
             ProgressReaders.Add(progressReader);
         }
 
-        public void CleanUp()
+        public void CleanDublicates()
         {
-            ProgressReaders.Clear();
-            ProgressWriters.Clear();
+            // Убираем null элементы и дубликаты в ProgressReaders
+            ProgressReaders = ProgressReaders
+                .Where(reader => reader != null) // Убираем null элементы
+                .GroupBy(reader => reader.GetType()) // Группируем по типу, чтобы избавиться от дубликатов
+                .Select(group => group.First()) // Берем первый элемент из каждой группы
+                .ToList();
+
+            // Убираем null элементы и дубликаты в ProgressWriters
+            ProgressWriters = ProgressWriters
+                .Where(writer => writer != null) // Убираем null элементы
+                .GroupBy(writer => writer.GetType()) // Группируем по типу
+                .Select(group => group.First()) // Берем первый элемент из каждой группы
+                .ToList();
+
+            Debug.Log("Removed nulls and duplicates from ProgressReaders and ProgressWriters");
         }
     }
 }

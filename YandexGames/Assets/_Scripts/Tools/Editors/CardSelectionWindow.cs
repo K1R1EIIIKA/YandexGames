@@ -8,16 +8,16 @@ using _Scripts.Data.Cards;
 public class CardSelectionWindow : EditorWindow
 {
     private static Rarity _selectedRarity;
-    private static Action<List<CardData>> onCardsSelected;
-    private List<CardData> availableCards = new();
-    private List<CardData> selectedCards = new();
+    private static Action<List<CardObject>> onCardsSelected;
+    private List<CardObject> availableCards = new();
+    private List<CardObject> selectedCards = new();
     private Vector2 scrollPos;
 
     private const float ElementHeight = 22f; // Высота одного элемента
     private const float MinHeight = 150f;
     private const float MaxHeight = 500f;
 
-    public static void ShowWindow(Rarity rarity, Action<List<CardData>> callback)
+    public static void ShowWindow(Rarity rarity, Action<List<CardObject>> callback)
     {
         _selectedRarity = rarity;
         onCardsSelected = callback;
@@ -35,7 +35,7 @@ public class CardSelectionWindow : EditorWindow
 
     private void LoadCards()
     {
-        availableCards = Resources.LoadAll<CardData>("Cards").Where(c => c.Rarity == _selectedRarity).ToList();
+        availableCards = Resources.LoadAll<CardObject>("Cards").Where(c => c.Rarity == _selectedRarity).ToList();
     }
 
     private void AdjustWindowSize()
@@ -78,7 +78,7 @@ public class CardSelectionWindow : EditorWindow
 
         if (GUILayout.Button("Добавить выбранные"))
         {
-            onCardsSelected?.Invoke(new List<CardData>(selectedCards));
+            onCardsSelected?.Invoke(new List<CardObject>(selectedCards));
             Close();
         }
     }
