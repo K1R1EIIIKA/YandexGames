@@ -1,8 +1,6 @@
-﻿using System;
-using _Scripts.Enums;
+﻿using _Scripts.Enums;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace _Scripts.Infrastructure.Inventory
 {
@@ -16,6 +14,11 @@ namespace _Scripts.Infrastructure.Inventory
         public void OpenTab()
         {
             gameObject.SetActive(true);
+        }
+
+        public void CloseTab()
+        {
+            gameObject.SetActive(false);
         }
 
         public void SetText(string text)

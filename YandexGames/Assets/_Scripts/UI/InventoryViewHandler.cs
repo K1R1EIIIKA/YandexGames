@@ -12,9 +12,9 @@ namespace _Scripts.UI
     {
         [SerializeField] private Button _mainMenuButton;
 
-        [SerializeField] private Button _charactersTabButton;
-        [SerializeField] private Button _bedsTabButton;
-        [SerializeField] private Button _backgroundsTabButton;
+        [SerializeField] private SelectableButtonBehaviour _charactersTabButton;
+        [SerializeField] private SelectableButtonBehaviour _bedsTabButton;
+        [SerializeField] private SelectableButtonBehaviour _backgroundsTabButton;
 
         private InventoryController _inventoryController;
         private GameStateMachine _gameStateMachine;
@@ -34,17 +34,17 @@ namespace _Scripts.UI
         private void OnEnable()
         {
             _mainMenuButton.onClick.AddListener(OnMainMenuButtonClicked);
-            _charactersTabButton.onClick.AddListener(OnCharactersTabButtonClicked);
-            _bedsTabButton.onClick.AddListener(OnBedsTabButtonClicked);
-            _backgroundsTabButton.onClick.AddListener(OnBackgroundsTabButtonClicked);
+            _charactersTabButton.Button.onClick.AddListener(OnCharactersTabButtonClicked);
+            _bedsTabButton.Button.onClick.AddListener(OnBedsTabButtonClicked);
+            _backgroundsTabButton.Button.onClick.AddListener(OnBackgroundsTabButtonClicked);
         }
 
         private void OnDisable()
         {
             _mainMenuButton.onClick.RemoveListener(OnMainMenuButtonClicked);
-            _charactersTabButton.onClick.RemoveListener(OnCharactersTabButtonClicked);
-            _bedsTabButton.onClick.RemoveListener(OnBedsTabButtonClicked);
-            _backgroundsTabButton.onClick.RemoveListener(OnBackgroundsTabButtonClicked);
+            _charactersTabButton.Button.onClick.RemoveListener(OnCharactersTabButtonClicked);
+            _bedsTabButton.Button.onClick.RemoveListener(OnBedsTabButtonClicked);
+            _backgroundsTabButton.Button.onClick.RemoveListener(OnBackgroundsTabButtonClicked);
         }
 
         private void OnMainMenuButtonClicked()
@@ -65,6 +65,27 @@ namespace _Scripts.UI
         private void OnBackgroundsTabButtonClicked()
         {
             _inventoryController.OpenTab(InventoryTabType.Backgrounds);
+        }
+
+        public void SelectCharactersButton()
+        {
+            _charactersTabButton.Select();
+            _bedsTabButton.Deselect();
+            _backgroundsTabButton.Deselect();
+        }
+
+        public void SelectBedsButton()
+        {
+            _charactersTabButton.Deselect();
+            _bedsTabButton.Select();
+            _backgroundsTabButton.Deselect();
+        }
+
+        public void SelectBackgroundsButton()
+        {
+            _charactersTabButton.Deselect();
+            _bedsTabButton.Deselect();
+            _backgroundsTabButton.Select();
         }
     }
 }

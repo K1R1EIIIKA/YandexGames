@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Inventory;
+using _Scripts.UI;
 using UnityEngine;
 using Zenject;
 
@@ -9,6 +10,7 @@ namespace _Scripts.Controllers
     public class InventoryTabsController : MonoBehaviour
     {
         [SerializeField] private InventoryTab[] _inventoryTabs;
+        [SerializeField] private InventoryViewHandler _inventoryViewHandler;
 
         private TransactionController _transactionController;
 
@@ -39,9 +41,7 @@ namespace _Scripts.Controllers
         public void OpenTab(InventoryTabType tabType)
         {
             foreach (var inventoryTab in _inventoryTabs)
-            {
-                inventoryTab.gameObject.SetActive(false);
-            }
+                inventoryTab.CloseTab();
 
             var tab = _inventoryTabs.First(tab => tab.TabType == tabType);
 
@@ -51,11 +51,14 @@ namespace _Scripts.Controllers
             {
                 case InventoryTabType.Characters:
                     tab.SetText($"{_transactionController.PlayerCards.Count}/{_transactionController.AllCards.Count}");
+                    _inventoryViewHandler.SelectCharactersButton();
                     break;
                 case InventoryTabType.Beds:
                     tab.SetText($"0");
+                    _inventoryViewHandler.SelectBedsButton();
                     break;
                 case InventoryTabType.Backgrounds:
+                    _inventoryViewHandler.SelectBackgroundsButton();
                     tab.SetText($"0");
                     break;
             }

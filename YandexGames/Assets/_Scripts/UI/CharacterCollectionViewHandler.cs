@@ -10,8 +10,8 @@ namespace _Scripts.UI
     {
         [Inject] ICardController _cardController;
 
-        [SerializeField] Button _openCollectionButton;
-        [SerializeField] Button _openInventoryButton;
+        [SerializeField] SelectableButtonBehaviour _openCollectionButton;
+        [SerializeField] SelectableButtonBehaviour _openInventoryButton;
         
         [SerializeField] GridLayoutGroup _gridLayoutGroup;
 
@@ -22,16 +22,32 @@ namespace _Scripts.UI
 
         private void OnEnable()
         {
-            _openInventoryButton.onClick.AddListener(_cardController.ShowPlayerCards);
-            _openCollectionButton.onClick.AddListener(_cardController.ShowAllCards);
+            _openInventoryButton.Button.onClick.AddListener(OnInventoryButtonClicked);
+            _openCollectionButton.Button.onClick.AddListener(OnCollectionButtonClicked);
 
-            _cardController.ShowPlayerCards();
+            OnInventoryButtonClicked();
         }
 
         private void OnDisable()
         {
-            _openInventoryButton.onClick.RemoveListener(_cardController.ShowPlayerCards);
-            _openCollectionButton.onClick.RemoveListener(_cardController.ShowAllCards);
+            _openInventoryButton.Button.onClick.RemoveListener(OnInventoryButtonClicked);
+            _openCollectionButton.Button.onClick.RemoveListener(OnCollectionButtonClicked);
+        }
+
+        private void OnInventoryButtonClicked()
+        {
+            _cardController.ShowPlayerCards();
+
+            _openInventoryButton.Select();
+            _openCollectionButton.Deselect();
+        }
+
+        private void OnCollectionButtonClicked()
+        {
+            _cardController.ShowAllCards();
+
+            _openCollectionButton.Select();
+            _openInventoryButton.Deselect();
         }
     }
 }

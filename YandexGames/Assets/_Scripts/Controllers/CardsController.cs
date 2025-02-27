@@ -94,6 +94,8 @@ namespace _Scripts.Controllers
         {
             if (cardsSet == null) return;
 
+            cardsSet.Sort();
+
             foreach (PlayerCardData cardData in cardsSet)
             {
                 GameObject card = CreateCardView(cardData);
@@ -104,18 +106,13 @@ namespace _Scripts.Controllers
 
         private GameObject CreateCardView(CardData cardData)
         {
-            Debug.Log(cardData + "cardData");
             GameObject card = _gameFactory.CreateObjectCard();
-            CardView cardView = card.GetComponent<CardView>();
+            SmallCardView smallCardView = card.GetComponent<SmallCardView>();
 
-            cardView.Initialize(cardData.Rarity.ToHexColor().ToColor(), cardData.Image);
+            smallCardView.Initialize(cardData);
 
             if (!cardData.IsOpen)
-            {
-                cardView.SetViewToClosed();
-            }
-
-            Debug.Log(card);
+                smallCardView.SetViewToClosed();
 
             return card;
         }
@@ -130,24 +127,6 @@ namespace _Scripts.Controllers
             }
 
             _cards.Clear();
-        }
-
-        private List<CardData> GetAllCardsSet()
-        {
-            Object[] cards = Resources.LoadAll(CardsFolder, typeof(CardObject));
-
-            List<CardData> cardsSet = new List<CardData>();
-
-            foreach (Object card in cards)
-            {
-                cardsSet.Add(new CardData((CardObject) card));
-            }
-
-            //sort cards by rarity
-
-            cardsSet.Sort();
-
-            return cardsSet;
         }
     }
 }

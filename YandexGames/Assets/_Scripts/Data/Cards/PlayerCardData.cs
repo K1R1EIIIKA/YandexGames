@@ -22,6 +22,7 @@ namespace _Scripts.Data.Cards
             Rarity = cardData.Rarity;
             IsOpen = cardData.IsOpen;
             MoneyPerClick = cardData.MoneyPerClick;
+            CardObjectLocation = cardData.CardObjectLocation;
             Count = 1;
         }
 

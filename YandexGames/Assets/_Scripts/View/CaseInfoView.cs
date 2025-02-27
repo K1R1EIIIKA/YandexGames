@@ -3,6 +3,7 @@ using _Scripts.ScriptableObjects;
 using _Scripts.Tools;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _Scripts.View

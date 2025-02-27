@@ -1,5 +1,6 @@
 ﻿using _Scripts.Enums;
 using _Scripts.Infrastructure.Factory;
+using _Scripts.UI;
 using UnityEngine;
 using Zenject;
 
@@ -8,12 +9,10 @@ namespace _Scripts.Controllers
     public class InventoryController
     {
         private ICardController _cardsController;
-        private IGameFactory _gameFactory;
 
         [Inject]
-        public void Construct(ICardController cardsController, IGameFactory gameFactory)
+        public void Construct(ICardController cardsController)
         {
-            _gameFactory = gameFactory;
             _cardsController = cardsController;
 
             Debug.Log("Inventory Controller initialized");
@@ -23,7 +22,6 @@ namespace _Scripts.Controllers
         {
             _cardsController.Initialize();
 
-            // _gameFactory.Register(_cardsController.GetSavedProgress());
             InventoryTabsController.Instance.Initialize();
         }
 

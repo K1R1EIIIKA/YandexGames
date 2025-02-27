@@ -220,9 +220,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8083169826064363457}
-  - component: {fileID: 813344816235261624}
+  - component: {fileID: 1201039624969468683}
   m_Layer: 5
-  m_Name: CardExample
+  m_Name: Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,7 +250,7 @@ RectTransform:
   m_AnchoredPosition: {x: 245.35284, y: -106.78931}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &813344816235261624
+--- !u!114 &1201039624969468683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1700170348567300477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 957e39ece6c24ebababbcb20181f2276, type: 3}
+  m_Script: {fileID: 11500000, guid: d5ee3946cd7748588125412c8f31aa0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundImage: {fileID: 7300080141884323879}

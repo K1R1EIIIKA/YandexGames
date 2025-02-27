@@ -14,6 +14,8 @@ namespace _Scripts.Data.Cards
         public bool IsOpen;
         public int MoneyPerClick;
 
+        public string CardObjectLocation;
+
         public CardData(CardObject cardObject)
         {
             Id = cardObject.Id;
@@ -23,6 +25,15 @@ namespace _Scripts.Data.Cards
             Rarity = cardObject.Rarity;
             MoneyPerClick = cardObject.MoneyPerClick;
             IsOpen = false;
+
+            // location of the card object
+            CardObjectLocation = Resources.Load<CardObject>("Cards/"+cardObject.name).name;
+        }
+
+        public CardObject ToCardObject()
+        {
+            Debug.Log("Cards/"+CardObjectLocation);
+            return Resources.Load<CardObject>("Cards/"+CardObjectLocation);
         }
 
         public CardData()
@@ -32,7 +43,8 @@ namespace _Scripts.Data.Cards
 
         public override string ToString()
         {
-            return $"Id: {Id}, Name: {Name}, ImageName: {Image}, Cost: {Cost}, Rare: {Rarity}, IsOpen: {IsOpen}, MoneyPerClick: {MoneyPerClick}";
+            return $"Id: {Id}, Name: {Name}, ImageName: {Image}, Cost: {Cost}, Rare: {Rarity}, IsOpen: {IsOpen}, MoneyPerClick: {MoneyPerClick}, " +
+                   $"CardObjectLocation: {CardObjectLocation}";
         }
 
         public int CompareTo(object obj)
@@ -43,7 +55,7 @@ namespace _Scripts.Data.Cards
             {
                 if (Rarity == otherCard.Rarity)
                 {
-                    return Cost.CompareTo(otherCard.Cost);
+                    return Cost.CompareTo(otherCard.ToCardObject().Cost);
                 }
 
                 return Rarity.CompareTo(otherCard.Rarity);

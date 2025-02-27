@@ -6,24 +6,32 @@ using UnityEngine.UI;
 
 namespace _Scripts.View
 {
-    public class CardView : MonoBehaviour
+    public class SmallCardView : MonoBehaviour
     {
         [SerializeField] private Image backgroundImage;
         [SerializeField] private Image objectImage;
-        [SerializeField] private TMP_Text objectName;
+        [SerializeField] private TextMeshProUGUI objectCount;
 
         public void Initialize(CardData cardObject)
         {
             backgroundImage.color = cardObject.Rarity.ToHexColor().ToColor();
             objectImage.sprite = cardObject.ToCardObject().Image;
             objectImage.color = Color.white;
-            objectName.text = cardObject.Name;
+
+            if (cardObject is PlayerCardData playerCardData)
+            {
+                objectCount.gameObject.SetActive(true);
+                objectCount.text = playerCardData.Count.ToString();
+            }
+            else
+            {
+                objectCount.gameObject.SetActive(false);
+            }
         }
 
         public void SetViewToClosed()
         {
             objectImage.color = Color.black;
-            objectName.text = "Не найдено";
         }
     }
 }
