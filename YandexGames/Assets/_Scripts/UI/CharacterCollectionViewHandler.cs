@@ -24,6 +24,8 @@ namespace _Scripts.UI
         {
             _openInventoryButton.onClick.AddListener(_cardController.ShowPlayerCards);
             _openCollectionButton.onClick.AddListener(_cardController.ShowAllCards);
+
+            _cardController.ShowPlayerCards();
         }
 
         private void OnDisable()

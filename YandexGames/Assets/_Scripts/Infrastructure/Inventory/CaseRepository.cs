@@ -1,4 +1,5 @@
 ﻿using _Scripts.Data.Cases;
+using _Scripts.ScriptableObjects;
 using UnityEngine;
 
 namespace _Scripts.Infrastructure.Inventory

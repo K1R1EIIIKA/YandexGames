@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
-using _Scripts.Data;
 using _Scripts.Data.Cards;
 using _Scripts.Data.Cases;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
-using _Scripts.Infrastructure.Factory;
-using _Scripts.Infrastructure.Services.PersistantProgress;
+using _Scripts.ScriptableObjects;
 using _Scripts.Tools;
 using _Scripts.UI;
 using TMPro;

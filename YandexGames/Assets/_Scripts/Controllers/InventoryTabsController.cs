@@ -2,6 +2,7 @@
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Inventory;
 using UnityEngine;
+using Zenject;
 
 namespace _Scripts.Controllers
 {
@@ -9,7 +10,15 @@ namespace _Scripts.Controllers
     {
         [SerializeField] private InventoryTab[] _inventoryTabs;
 
+        private TransactionController _transactionController;
+
         public static InventoryTabsController Instance { get; private set; }
+
+        [Inject]
+        public void Construct(TransactionController transactionController)
+        {
+            _transactionController = transactionController;
+        }
 
         private void Awake()
         {
@@ -19,7 +28,7 @@ namespace _Scripts.Controllers
             }
             else if (Instance != this)
             {
-                Destroy(gameObject); // Удаляем дубликаты, если они вдруг появились
+                Destroy(gameObject);
             }
         }
 
@@ -34,7 +43,22 @@ namespace _Scripts.Controllers
                 inventoryTab.gameObject.SetActive(false);
             }
 
-            _inventoryTabs.First(tab => tab.TabType == tabType).gameObject.SetActive(true);
+            var tab = _inventoryTabs.First(tab => tab.TabType == tabType);
+
+            tab.OpenTab();
+
+            switch (tabType)
+            {
+                case InventoryTabType.Characters:
+                    tab.SetText($"{_transactionController.PlayerCards.Count}/{_transactionController.AllCards.Count}");
+                    break;
+                case InventoryTabType.Beds:
+                    tab.SetText($"0");
+                    break;
+                case InventoryTabType.Backgrounds:
+                    tab.SetText($"0");
+                    break;
+            }
         }
     }
 }

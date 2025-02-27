@@ -10,7 +10,7 @@ namespace _Scripts.View
     {
         [SerializeField] private Image backgroundImage;
         [SerializeField] private Image objectImage;
-        [SerializeField] private TMP_Text objectName;
+        // [SerializeField] private TMP_Text objectName;
 
         public void Initialize(Color color, Sprite sprite)
         {
@@ -20,18 +20,18 @@ namespace _Scripts.View
             // objectName.text = name;
         }
 
-        public void Initialize(CardData cardData)
+        public void Initialize(CardData cardObject)
         {
-            backgroundImage.color = cardData.Rarity.ToHexColor().ToColor();
-            objectImage.sprite = cardData.Image;
+            backgroundImage.color = cardObject.Rarity.ToHexColor().ToColor();
+            objectImage.sprite = cardObject.Image;
             objectImage.color = Color.white;
-            objectName.text = cardData.Name;
+            // objectName.text = cardObject.Name;
         }
 
         public void SetViewToClosed()
         {
             objectImage.color = Color.black;
-            objectName.text = "Не найдено";
+            // objectName.text = "Не найдено";
         }
     }
 }

@@ -15,10 +15,10 @@ namespace _Scripts.Controllers
 {
     public class CardsController : ISavedProgress, ICardController, IInitializable
     {
-        private const string CARDS_CONFIGURATION_FILE_NAME = "CardsConfig";
+        private const string CardsFolder = "Cards";
 
         private List<CardData> _allCardsSet = new List<CardData>();
-        private List<CardData> _playerCardsData = new List<CardData>();
+        private List<PlayerCardData> _playerCardsData = new List<PlayerCardData>();
 
         private List<GameObject> _cards = new List<GameObject>();
 
@@ -55,7 +55,7 @@ namespace _Scripts.Controllers
         {
             ClearCards();
 
-            CreateCardsView(_playerCardsData);
+            CreatePlayerCardsView(_playerCardsData);
         }
 
         public void ShowAllCards()
@@ -73,55 +73,28 @@ namespace _Scripts.Controllers
         public void LoadProgress(PlayerProgress progress)
         {
             _playerCardsData = progress.LevelsProgress.PlayerCards;
-            // ShowPlayerCards();
-            // _allCardsSet = CardCSVHandler.ReadCSV(CARDS_CONFIGURATION_FILE_NAME);
-            //
-            // TestInventoryFilling();
-            // CheckConfigOnMistakes();
-            //
-        }
-
-        private void TestInventoryFilling()
-        {
-            // if (_playerCardsData.Count == 0)
-            // {
-            //     for (int i = 0; i < 3; i++)
-            //     {
-            //         GameObject cardObject = _gameFactory.CreateObjectCard();
-            //         CardView cardView = cardObject.GetComponent<CardView>();
-            //
-            //         CardData cardData = new CardData(_playerCardsData.Count.ToString(), _allCardsSet[i].Name,
-            //             _allCardsSet[i].ImageName, _allCardsSet[i].Cost, _allCardsSet[i].Rare, true);
-            //
-            //         cardView.Initialize(Color.cyan, CardSpritesLibrary.LoadSprite(cardData.ImageName), cardData.Name);
-            //
-            //         _cards.Add(cardObject);
-            //         _playerCardsData.Add(cardData);
-            //         cardObject.transform.SetParent(_gridLayout.transform);
-            //     }
-            //
-            //     _saveLoadService.SaveProgress();
-            // }
-        }
-
-        private void CheckConfigOnMistakes()
-        {
-            // List<string> playersUniqueCardNames = _playerCardsData.Select(x => x.ImageName).Distinct().ToList();
-            //
-            // foreach (string playersUniqueCardName in playersUniqueCardNames)
-            // {
-            //     CardData cardData = _allCardsSet.FirstOrDefault(x => x.ImageName == playersUniqueCardName);
-            //
-            //     if (cardData != null)
-            //     {
-            //         cardData.IsOpen = true;
-            //     }
-            // }
+            _allCardsSet = progress.LevelsProgress.AllCardsSet;
         }
 
         private void CreateCardsView(List<CardData> cardsSet)
         {
+            if (cardsSet == null) return;
+
+            cardsSet.Sort();
+
             foreach (CardData cardData in cardsSet)
+            {
+                GameObject card = CreateCardView(cardData);
+                _cards.Add(card);
+                card.transform.SetParent(_gridLayout.transform);
+            }
+        }
+
+        private void CreatePlayerCardsView(List<PlayerCardData> cardsSet)
+        {
+            if (cardsSet == null) return;
+
+            foreach (PlayerCardData cardData in cardsSet)
             {
                 GameObject card = CreateCardView(cardData);
                 _cards.Add(card);
@@ -132,8 +105,8 @@ namespace _Scripts.Controllers
         private GameObject CreateCardView(CardData cardData)
         {
             Debug.Log(cardData + "cardData");
-            GameObject cardObject = _gameFactory.CreateObjectCard();
-            CardView cardView = cardObject.GetComponent<CardView>();
+            GameObject card = _gameFactory.CreateObjectCard();
+            CardView cardView = card.GetComponent<CardView>();
 
             cardView.Initialize(cardData.Rarity.ToHexColor().ToColor(), cardData.Image);
 
@@ -142,9 +115,9 @@ namespace _Scripts.Controllers
                 cardView.SetViewToClosed();
             }
 
-            Debug.Log(cardObject);
+            Debug.Log(card);
 
-            return cardObject;
+            return card;
         }
 
         private void ClearCards()
@@ -157,6 +130,24 @@ namespace _Scripts.Controllers
             }
 
             _cards.Clear();
+        }
+
+        private List<CardData> GetAllCardsSet()
+        {
+            Object[] cards = Resources.LoadAll(CardsFolder, typeof(CardObject));
+
+            List<CardData> cardsSet = new List<CardData>();
+
+            foreach (Object card in cards)
+            {
+                cardsSet.Add(new CardData((CardObject) card));
+            }
+
+            //sort cards by rarity
+
+            cardsSet.Sort();
+
+            return cardsSet;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using _Scripts.Data.Cases;
+using _Scripts.ScriptableObjects;
 using _Scripts.Tools;
 using TMPro;
 using UnityEngine;
@@ -43,7 +44,7 @@ namespace _Scripts.View
             foreach (var cardData in _caseData.CardPool)
             {
                 var cardView = Instantiate(_cardViewPrefab, _caseContent);
-                cardView.Initialize(cardData);
+                cardView.Initialize(cardData.ToCardData());
             }
 
             gameObject.SetActive(true);

@@ -1,4 +1,5 @@
 ﻿using _Scripts.Data.Cases;
+using _Scripts.ScriptableObjects;
 using _Scripts.View;
 using TMPro;
 using UnityEngine;

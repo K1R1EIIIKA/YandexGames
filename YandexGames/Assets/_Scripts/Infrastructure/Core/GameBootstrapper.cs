@@ -1,5 +1,6 @@
-﻿using System;
+﻿using System.Linq;
 using _Scripts.Controllers;
+using _Scripts.Data.Cards;
 using _Scripts.Infrastructure.Core.States;
 using _Scripts.Infrastructure.Services.SaveLoad;
 using UnityEngine;
@@ -12,15 +13,18 @@ namespace _Scripts.Infrastructure.Core
         private Game _game;
         private InventoryController _inventoryController;
         private ISaveLoadService _saveLoadService;
+        private TransactionController _transactionController;
 
         private float _elapsedTime;
         private float _saveInterval = 3f;
 
         [Inject]
-        public void Construct(InventoryController inventoryController, ISaveLoadService saveLoadService)
+        public void Construct(InventoryController inventoryController, ISaveLoadService saveLoadService,
+            TransactionController transactionController)
         {
             _inventoryController = inventoryController;
             _saveLoadService = saveLoadService;
+            _transactionController = transactionController;
 
             Debug.Log("Bootstrapper initialized");
         }

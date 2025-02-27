@@ -3,6 +3,7 @@ using _Scripts.Controllers;
 using _Scripts.Data.Cases;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
+using _Scripts.ScriptableObjects;
 using _Scripts.Tools;
 using UnityEngine;
 using Zenject;
