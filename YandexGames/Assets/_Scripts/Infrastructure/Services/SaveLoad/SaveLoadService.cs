@@ -30,10 +30,10 @@ namespace _Scripts.Infrastructure.Services.SaveLoad
         {
             foreach (var progressWriter in _gameFactory.ProgressWriters.Where(writer => writer != null))
                 progressWriter.UpdateProgress(_progressService.Progress);
-            Debug.Log(string.Join(",", _gameFactory.ProgressWriters) + " progress writers updated progress");
+            // Debug.Log(string.Join(",", _gameFactory.ProgressWriters) + " progress writers updated progress");
 
-            Debug.Log($"Before actual saving: {_progressService.Progress != null}, data: " +
-                      (_progressService.Progress != null ? JsonUtility.ToJson(_progressService.Progress) : "NULL"));
+            // Debug.Log($"Before actual saving: {_progressService.Progress != null}, data: " +
+            //           (_progressService.Progress != null ? JsonUtility.ToJson(_progressService.Progress) : "NULL"));
 
             if (_progressService.Progress == null)
             {

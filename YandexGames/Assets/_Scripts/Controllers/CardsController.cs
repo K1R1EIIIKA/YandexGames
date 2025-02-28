@@ -23,15 +23,19 @@ namespace _Scripts.Controllers
         private List<GameObject> _cards = new List<GameObject>();
 
         private IGameFactory _gameFactory;
+        private TransactionController _transactionController;
         private ISaveLoadService _saveLoadService;
 
         private GridLayoutGroup _gridLayout;
 
+        private PlayerCardData _selectedCard;
+
         [Inject]
-        public CardsController(ISaveLoadService saveLoadService, IGameFactory gameFactory)
+        public CardsController(ISaveLoadService saveLoadService, IGameFactory gameFactory, TransactionController transactionController)
         {
             _gameFactory = gameFactory;
             _saveLoadService = saveLoadService;
+            _transactionController = transactionController;
 
             _gameFactory.Register(this);
             Debug.Log("Card Controller Initialized");
@@ -101,7 +105,14 @@ namespace _Scripts.Controllers
                 GameObject card = CreateCardView(cardData);
                 _cards.Add(card);
                 card.transform.SetParent(_gridLayout.transform);
+
+                card.GetComponent<Button>().onClick.AddListener((() => OnCardClick(cardData)));
             }
+        }
+
+        private void OnCardClick(PlayerCardData cardData)
+        {
+            _transactionController.ChooseSelectedCard(cardData);
         }
 
         private GameObject CreateCardView(CardData cardData)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using _Scripts.Data.Cards;
+using UnityEngine;
 
 namespace _Scripts.Data
 {
@@ -25,6 +26,7 @@ namespace _Scripts.Data
     {
         public String SceneName;
         public List<PlayerCardData> PlayerCards;
+        public PlayerCardData SelectedCard;
         public List<CardData> AllCardsSet;
         public int Money;
 
@@ -32,6 +34,20 @@ namespace _Scripts.Data
         {
             SceneName = sceneName;
             PlayerCards = new List<PlayerCardData>();
+
+            var card = Resources.Load<CardObject>("Cards/Амням");
+            var cardData = new CardData(card)
+            {
+                IsOpen = true
+            };
+            var playerCardData = new PlayerCardData(cardData)
+            {
+                IsOpen = true
+            };
+            PlayerCards.Add(playerCardData);
+
+            SelectedCard = PlayerCards[0];
+
             AllCardsSet = new List<CardData>();
             Money = 0;
         }

@@ -6,7 +6,7 @@ namespace _Scripts.Data.Cards
     public class PlayerCardData : CardData
     {
         public int Count;
-        public int TotalMoneyPerClick => Count * MoneyPerClick;
+        public int TotalMoneyPerClick => Count * ToCardObject().MoneyPerClick;
 
         public PlayerCardData(CardObject cardObject) : base(cardObject)
         {

@@ -19,6 +19,9 @@ namespace _Scripts.Controllers
         public List<PlayerCardData> PlayerCards => _playerCards;
         public List<CardData> AllCards => _allCards;
 
+        private PlayerCardData _selectedCard;
+        public PlayerCardData SelectedCard => _selectedCard;
+
         private GameFactory _gameFactory;
 
         [Inject]
@@ -90,6 +93,11 @@ namespace _Scripts.Controllers
             card.IsOpen = true;
         }
 
+        public void ChooseSelectedCard(PlayerCardData card)
+        {
+            _selectedCard = card;
+        }
+
         public void CheckForNewCards(List<CardObject> cardPool)
         {
             if (_allCards == null)
@@ -125,6 +133,7 @@ namespace _Scripts.Controllers
             _money = progress.LevelsProgress.Money;
             _playerCards = progress.LevelsProgress.PlayerCards;
             _allCards = progress.LevelsProgress.AllCardsSet;
+            _selectedCard = progress.LevelsProgress.SelectedCard;
 
             CheckForNewCards(Resources.LoadAll<CardObject>("Cards").ToList());
         }
@@ -135,6 +144,7 @@ namespace _Scripts.Controllers
             progress.LevelsProgress.Money = _money;
             progress.LevelsProgress.PlayerCards = _playerCards;
             progress.LevelsProgress.AllCardsSet = _allCards;
+            progress.LevelsProgress.SelectedCard = _selectedCard;
         }
     }
 }
