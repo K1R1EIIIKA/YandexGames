@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using _Scripts.Data.Cards;
-using _Scripts.Data.Cases;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
 using _Scripts.ScriptableObjects;

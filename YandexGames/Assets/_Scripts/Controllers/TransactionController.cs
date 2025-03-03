@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using _Scripts.BuffLogic;
 using _Scripts.Data;
 using _Scripts.Data.Cards;
 using _Scripts.Infrastructure.Factory;
@@ -23,13 +24,17 @@ namespace _Scripts.Controllers
         public PlayerCardData SelectedCard => _selectedCard;
 
         private GameFactory _gameFactory;
+        private BuffController _buffController;
 
         [Inject]
-        public void Construct(GameFactory gameFactory)
+        public void Construct(GameFactory gameFactory, BuffController buffController)
         {
             _gameFactory = gameFactory;
+            _buffController = buffController;
 
             _gameFactory.Register(this);
+
+            _buffController.Initialize(new BuffStats());
         }
 
         public void AddMoney(int amount)
@@ -140,7 +145,6 @@ namespace _Scripts.Controllers
 
         public void UpdateProgress(PlayerProgress progress)
         {
-            Debug.Log(_money + " " + progress.LevelsProgress.Money);
             progress.LevelsProgress.Money = _money;
             progress.LevelsProgress.PlayerCards = _playerCards;
             progress.LevelsProgress.AllCardsSet = _allCards;

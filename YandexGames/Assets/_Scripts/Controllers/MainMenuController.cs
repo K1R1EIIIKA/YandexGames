@@ -1,4 +1,7 @@
-﻿using _Scripts.Enums;
+﻿using System;
+using _Scripts.BuffLogic;
+using _Scripts.BuffLogic.Buffs;
+using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
 using _Scripts.Infrastructure.Inventory;
 using UnityEngine;
@@ -18,14 +21,16 @@ namespace _Scripts.Controllers
         private CaseManager _caseManager;
         private GameStateMachine _gameStateMachine;
         private InventoryController _inventoryController;
+        private BuffController _buffController;
 
         [Inject]
-        public void Construct(GameStateMachine gameStateMachine, InventoryController inventoryController, CaseManager caseManager)
+        public void Construct(GameStateMachine gameStateMachine, InventoryController inventoryController, CaseManager caseManager,
+            BuffController buffController)
         {
             _gameStateMachine = gameStateMachine;
             _inventoryController = inventoryController;
             _caseManager = caseManager;
-            Debug.Log(caseManager == null ? "CaseManager is null" : "CaseManager is not null");
+            _buffController = buffController;
 
             Initialize();
         }
@@ -37,6 +42,28 @@ namespace _Scripts.Controllers
             _bedsButton.onClick.AddListener(OnBedsButtonClicked);
             _backgroundsButton.onClick.AddListener(OnBackgroundsButtonClicked);
 
+            InitializeCases();
+        }
+
+        private void OnEnable()
+        {
+            _buffController.OnBuffsChanged += InitializeCases;
+        }
+
+        private void OnDisable()
+        {
+            _buffController.OnBuffsChanged -= InitializeCases;
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+                _buffController.AddBuff(new TemporaryBuff(_buffController, new DiscountBuff(10), 2f));
+        }
+
+        private void InitializeCases()
+        {
+            Debug.Log(_casesContainer);
             _caseManager.InitializeCases(_casesContainer, CaseLocationType.MainScreen);
         }
 

@@ -81,6 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _loadingCurtain: {fileID: 772471311428029802, guid: dd8f8835383ce7a4c81edc86ff6591ad, type: 3}
+  _caseManager: {fileID: 6535181824873888855, guid: 442cb7b04bbae5b479226000225892d6, type: 3}
 --- !u!114 &2658396917496427051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,5 +120,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865c5a4c4eb40a88e62eb6bbdd1f10b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _caseManager: {fileID: 6535181824873888855, guid: 442cb7b04bbae5b479226000225892d6, type: 3}
   _caseInfoView: {fileID: 3013111764781730063, guid: f575f46148f8fe940a3212b5a64415f0, type: 3}

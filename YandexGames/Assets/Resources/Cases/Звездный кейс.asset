@@ -16,7 +16,7 @@ MonoBehaviour:
   Name: "\u0417\u0432\u0435\u0437\u0434\u043D\u044B\u0439 \u043A\u0435\u0439\u0441"
   CaseImage: {fileID: 1115633057, guid: 5da958314232bad458f389beca6c4e59, type: 3}
   LootCountRange: {x: 2, y: 4}
-  CoinsRange: {x: 100, y: 200}
+  CoinsRange: {x: 0, y: 0}
   CardPool:
   - {fileID: 11400000, guid: 3e734c4e32b57e04a9d70c8ef286db68, type: 2}
   - {fileID: 11400000, guid: 56411bd599f1efa4c83d961a9a3a55b5, type: 2}

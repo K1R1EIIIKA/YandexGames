@@ -5,6 +5,7 @@ using UnityEngine;
 using _Scripts.Data.Cards;
 using _Scripts.Data.Cases;
 using _Scripts.Enums;
+using _Scripts.ScriptableObjects;
 using _Scripts.Tools;
 using Unity.VisualScripting;
 

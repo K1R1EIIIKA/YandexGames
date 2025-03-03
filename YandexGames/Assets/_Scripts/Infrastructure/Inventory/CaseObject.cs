@@ -31,7 +31,7 @@ namespace _Scripts.Infrastructure.Inventory
             _caseManager = caseManager;
         }
 
-        public void Initialize(CaseData caseData)
+        public void Initialize(CaseData caseData, int discount = 0)
         {
             _caseData = caseData;
             _caseImage.sprite = _caseData.CaseImage;
@@ -39,7 +39,8 @@ namespace _Scripts.Infrastructure.Inventory
             switch (caseData)
             {
                 case MoneyCaseData moneyCaseData when moneyCaseData != null:
-                    _casePrice.text = moneyCaseData.Price.ToString();
+                    var price = Mathf.RoundToInt(moneyCaseData.Price * (1 - discount / 100f));
+                    _casePrice.text = price.ToString();
                     _priceImage.gameObject.SetActive(true);
                     break;
 

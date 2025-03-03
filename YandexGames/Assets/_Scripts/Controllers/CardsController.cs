@@ -15,16 +15,13 @@ namespace _Scripts.Controllers
 {
     public class CardsController : ISavedProgress, ICardController, IInitializable
     {
-        private const string CardsFolder = "Cards";
+        private List<CardData> _allCardsSet = new();
+        private List<PlayerCardData> _playerCardsData = new();
 
-        private List<CardData> _allCardsSet = new List<CardData>();
-        private List<PlayerCardData> _playerCardsData = new List<PlayerCardData>();
-
-        private List<GameObject> _cards = new List<GameObject>();
+        private List<GameObject> _cards = new();
 
         private IGameFactory _gameFactory;
         private TransactionController _transactionController;
-        private ISaveLoadService _saveLoadService;
 
         private GridLayoutGroup _gridLayout;
 
@@ -34,7 +31,6 @@ namespace _Scripts.Controllers
         public CardsController(ISaveLoadService saveLoadService, IGameFactory gameFactory, TransactionController transactionController)
         {
             _gameFactory = gameFactory;
-            _saveLoadService = saveLoadService;
             _transactionController = transactionController;
 
             _gameFactory.Register(this);
