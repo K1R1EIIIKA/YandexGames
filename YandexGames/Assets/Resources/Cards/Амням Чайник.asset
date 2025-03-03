@@ -17,4 +17,4 @@ MonoBehaviour:
   Image: {fileID: -877276239, guid: fb6af7a5f1624da4fabbae88b147ba2b, type: 3}
   Cost: 10
   Rarity: 3
-  MoneyPerClick: 0
+  MoneyPerClick: 1
