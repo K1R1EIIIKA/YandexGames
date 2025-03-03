@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using _Scripts.Tools;
 using UnityEngine;
 
 namespace _Scripts.BuffLogic
@@ -40,15 +39,10 @@ namespace _Scripts.BuffLogic
         {
             CurrentStats = BaseStats.Copy();
 
-            Debug.Log("base stats: " + CurrentStats.DiscountBonus);
-
             foreach (var buff in _buffs)
             {
                 CurrentStats = buff.ApplyBuff(CurrentStats);
             }
-
-            Debug.Log(_buffs.Count);
-            Debug.Log("current stats: " + CurrentStats.DiscountBonus);
 
             OnBuffsChanged?.Invoke();
         }

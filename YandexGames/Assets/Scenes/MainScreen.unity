@@ -2750,6 +2750,7 @@ GameObject:
   - component: {fileID: 1149972010}
   - component: {fileID: 1149972009}
   - component: {fileID: 1149972008}
+  - component: {fileID: 1149972011}
   m_Layer: 5
   m_Name: CaseButtonsContainer
   m_TagString: Untagged
@@ -2859,6 +2860,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149972006}
   m_CullTransparentMesh: 1
+--- !u!114 &1149972011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149972006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f13bab966d498d889160635ebace2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _adButton: {fileID: 1149972008}
 --- !u!1 &1160579956
 GameObject:
   m_ObjectHideFlags: 0
@@ -3984,7 +3998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.69803923}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.62352943}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

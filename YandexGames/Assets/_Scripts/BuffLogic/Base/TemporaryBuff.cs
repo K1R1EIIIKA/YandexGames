@@ -32,7 +32,7 @@ namespace _Scripts.BuffLogic.Buffs
         private void RemoveSelf()
         {
             _owner.RemoveBuff(this);
-            _timer.OnCompleted -= RemoveSelf; // Очищаем обработчик после вызова
+            _timer.OnCompleted -= RemoveSelf;
         }
     }
 }

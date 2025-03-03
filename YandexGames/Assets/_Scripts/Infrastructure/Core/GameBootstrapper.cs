@@ -3,6 +3,7 @@ using _Scripts.Controllers;
 using _Scripts.Data.Cards;
 using _Scripts.Infrastructure.Core.States;
 using _Scripts.Infrastructure.Services.SaveLoad;
+using _Scripts.YG;
 using UnityEngine;
 using Zenject;
 
@@ -14,17 +15,19 @@ namespace _Scripts.Infrastructure.Core
         private InventoryController _inventoryController;
         private ISaveLoadService _saveLoadService;
         private TransactionController _transactionController;
+        private AdRewardController _adRewardController;
 
         private float _elapsedTime;
         private float _saveInterval = 3f;
 
         [Inject]
         public void Construct(InventoryController inventoryController, ISaveLoadService saveLoadService,
-            TransactionController transactionController)
+            TransactionController transactionController, AdRewardController adRewardController)
         {
             _inventoryController = inventoryController;
             _saveLoadService = saveLoadService;
             _transactionController = transactionController;
+            _adRewardController = adRewardController;
 
             Debug.Log("Bootstrapper initialized");
         }
@@ -34,6 +37,7 @@ namespace _Scripts.Infrastructure.Core
             _game = ProjectContext.Instance.Container.Instantiate<Game>();
 
             _game.StateMachine.Enter<BootstrapState>();
+            _adRewardController.Initialize();
             // _inventoryController.Initialize();
 
             DontDestroyOnLoad(this);

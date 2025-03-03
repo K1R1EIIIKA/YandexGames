@@ -4,6 +4,7 @@ using _Scripts.BuffLogic.Buffs;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
 using _Scripts.Infrastructure.Inventory;
+using _Scripts.YG;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -22,15 +23,17 @@ namespace _Scripts.Controllers
         private GameStateMachine _gameStateMachine;
         private InventoryController _inventoryController;
         private BuffController _buffController;
+        private AdRewardController _adRewardController;
 
         [Inject]
         public void Construct(GameStateMachine gameStateMachine, InventoryController inventoryController, CaseManager caseManager,
-            BuffController buffController)
+            BuffController buffController, AdRewardController adRewardController)
         {
             _gameStateMachine = gameStateMachine;
             _inventoryController = inventoryController;
             _caseManager = caseManager;
             _buffController = buffController;
+            _adRewardController = adRewardController;
 
             Initialize();
         }
@@ -63,7 +66,6 @@ namespace _Scripts.Controllers
 
         private void InitializeCases()
         {
-            Debug.Log(_casesContainer);
             _caseManager.InitializeCases(_casesContainer, CaseLocationType.MainScreen);
         }
 

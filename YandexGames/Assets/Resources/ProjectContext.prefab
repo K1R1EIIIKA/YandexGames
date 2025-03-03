@@ -82,6 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadingCurtain: {fileID: 772471311428029802, guid: dd8f8835383ce7a4c81edc86ff6591ad, type: 3}
   _caseManager: {fileID: 6535181824873888855, guid: 442cb7b04bbae5b479226000225892d6, type: 3}
+  _yandexGamePrefab: {fileID: 2211564899198745196, guid: caf9732433f4dc044845763962493607, type: 3}
 --- !u!114 &2658396917496427051
 MonoBehaviour:
   m_ObjectHideFlags: 0

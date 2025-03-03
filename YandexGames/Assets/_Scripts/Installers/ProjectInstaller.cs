@@ -10,7 +10,9 @@ using _Scripts.Infrastructure.Inventory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using _Scripts.Infrastructure.Services.SaveLoad;
 using _Scripts.Infrastructure.Services.StaticData;
+using _Scripts.YG;
 using UnityEngine;
+using YG;
 using Zenject;
 
 namespace _Scripts.Installers
@@ -19,6 +21,7 @@ namespace _Scripts.Installers
     {
         [SerializeField] private LoadingCurtain _loadingCurtain;
         [SerializeField] CaseManager _caseManager;
+        [SerializeField] private YandexGame _yandexGamePrefab;
 
         public override void InstallBindings()
         {
@@ -63,6 +66,9 @@ namespace _Scripts.Installers
             Container.Bind<CaseManager>().FromInstance(_caseManager).AsSingle().NonLazy();
             Container.QueueForInject(_caseManager);
 
+            Container.Bind<AdRewardController>().AsSingle().NonLazy();
+            Container.Bind<AdBuffController>().AsSingle().NonLazy();
+            Container.Bind<YandexGame>().FromComponentInNewPrefab(_yandexGamePrefab).AsSingle().NonLazy();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using _Scripts.Data;
+﻿using _Scripts.BuffLogic;
+using _Scripts.Data;
 using _Scripts.Data.Cards;
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
@@ -17,16 +18,19 @@ namespace _Scripts.Controllers
 
         private TransactionController _transactionController;
         private GameFactory _gameFactory;
+        private BuffController _buffController;
 
         private PlayerCardData _selectedCard;
 
         private int _moneyGain = 1;
 
         [Inject]
-        public void Construct(TransactionController transactionController, GameFactory gameFactory)
+        public void Construct(TransactionController transactionController, GameFactory gameFactory,
+            BuffController buffController)
         {
             _transactionController = transactionController;
             _gameFactory = gameFactory;
+            _buffController = buffController;
 
             _gameFactory.Register(this);
         }
@@ -46,7 +50,9 @@ namespace _Scripts.Controllers
 
         private void OnCharacterClick()
         {
-            _transactionController.AddMoney(_selectedCard.TotalMoneyPerClick);
+            var money = Mathf.RoundToInt(_selectedCard.TotalMoneyPerClick * _buffController.CurrentStats.ClickBonus);
+
+            _transactionController.AddMoney(money);
             _moneyText.text = _transactionController.Money.ToString();
         }
 
