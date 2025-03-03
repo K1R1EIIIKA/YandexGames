@@ -54,7 +54,7 @@ namespace _Scripts.Controllers
                     _inventoryViewHandler.SelectCharactersButton();
                     break;
                 case InventoryTabType.Beds:
-                    tab.SetText($"0");
+                    tab.SetText($"{_transactionController.PlayerBeds.Count}/{_transactionController.AllBeds.Count}");
                     _inventoryViewHandler.SelectBedsButton();
                     break;
                 case InventoryTabType.Backgrounds:

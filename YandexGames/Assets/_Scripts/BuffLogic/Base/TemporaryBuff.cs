@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using _Scripts.BuffLogic.Base;
+using DG.Tweening;
 
 namespace _Scripts.BuffLogic.Buffs
 {

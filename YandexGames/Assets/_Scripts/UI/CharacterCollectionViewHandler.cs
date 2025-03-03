@@ -1,5 +1,4 @@
-﻿using System;
-using _Scripts.Controllers;
+﻿using _Scripts.Controllers;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -36,7 +35,7 @@ namespace _Scripts.UI
 
         private void OnInventoryButtonClicked()
         {
-            _cardController.ShowPlayerCards();
+            _cardController.ShowPlayerBeds();
 
             _openInventoryButton.Select();
             _openCollectionButton.Deselect();
@@ -44,7 +43,7 @@ namespace _Scripts.UI
 
         private void OnCollectionButtonClicked()
         {
-            _cardController.ShowAllCards();
+            _cardController.ShowAllBeds();
 
             _openCollectionButton.Select();
             _openInventoryButton.Deselect();

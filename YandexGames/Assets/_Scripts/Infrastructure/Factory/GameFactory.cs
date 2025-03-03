@@ -61,6 +61,13 @@ namespace _Scripts.Infrastructure.Factory
             return card;
         }
 
+        public GameObject CreateObjectBed()
+        {
+            GameObject bed = _assetProvider.Instantiate("Prefabs/UI/Collection/BedInventory");
+
+            return bed;
+        }
+
         public void Register(ISavedProgressReader progressReader)
         {
             if (progressReader is ISavedProgress progressWriter)

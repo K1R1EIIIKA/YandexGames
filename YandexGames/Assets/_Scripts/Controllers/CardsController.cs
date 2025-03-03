@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using _Scripts.Data;
 using _Scripts.Data.Cards;
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using _Scripts.Infrastructure.Services.SaveLoad;
-using _Scripts.Tools;
 using _Scripts.View;
 using UnityEngine;
 using UnityEngine.UI;
@@ -51,17 +49,15 @@ namespace _Scripts.Controllers
         {
         }
 
-        public void ShowPlayerCards()
+        public void ShowPlayerBeds()
         {
             ClearCards();
-
             CreatePlayerCardsView(_playerCardsData);
         }
 
-        public void ShowAllCards()
+        public void ShowAllBeds()
         {
             ClearCards();
-
             CreateCardsView(_allCardsSet);
         }
 
@@ -102,7 +98,7 @@ namespace _Scripts.Controllers
                 _cards.Add(card);
                 card.transform.SetParent(_gridLayout.transform);
 
-                card.GetComponent<Button>().onClick.AddListener((() => OnCardClick(cardData)));
+                card.GetComponent<Button>().onClick.AddListener(() => OnCardClick(cardData));
             }
         }
 

@@ -15,5 +15,6 @@ namespace _Scripts.Infrastructure.Factory
         void CleanDublicates();
         List<GameObject> CreateObjectCards();
         GameObject CreateObjectCard();
+        GameObject CreateObjectBed();
     }
 }

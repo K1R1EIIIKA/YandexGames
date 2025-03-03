@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace _Scripts.BuffLogic
@@ -33,6 +34,15 @@ namespace _Scripts.BuffLogic
             ApplyBuffs();
 
             Debug.Log($"Buff removed: {buff.GetType().Name}");
+        }
+
+        public void RemoveBuffByType<T>() where T : IBuff
+        {
+            var buffsToRemove = _buffs.Where(buff => buff is T).ToList();
+            foreach (var buff in buffsToRemove)
+            {
+                RemoveBuff(buff);
+            }
         }
 
         private void ApplyBuffs()

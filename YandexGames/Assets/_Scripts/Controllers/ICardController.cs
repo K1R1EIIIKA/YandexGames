@@ -9,8 +9,8 @@ namespace _Scripts.Controllers
         void Initialize();
         void UpdateProgress(PlayerProgress progress);
         void LoadProgress(PlayerProgress progress);
-        void ShowPlayerCards();
-        void ShowAllCards();
+        void ShowPlayerBeds();
+        void ShowAllBeds();
         ISavedProgress GetSavedProgress();
 
         void Construct(GridLayoutGroup gridLayoutGroup);

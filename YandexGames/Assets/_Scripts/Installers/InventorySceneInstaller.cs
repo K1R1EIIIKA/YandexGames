@@ -14,6 +14,8 @@ namespace _Scripts.Installers
             Container.Bind(typeof(IInitializable), typeof(ICardController), typeof(ISavedProgress))
                 .To<CardsController>().AsSingle().NonLazy();
 
+            Container.Bind<BedsController>().AsSingle().NonLazy();
+
             // Убираем дублирующуюся строку
             // Container.Bind<CardsController>().AsSingle().NonLazy();
 

@@ -2,6 +2,7 @@
 using System.Linq;
 using _Scripts.BuffLogic;
 using _Scripts.Data;
+using _Scripts.Data.Beds;
 using _Scripts.Data.Cards;
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
@@ -20,8 +21,16 @@ namespace _Scripts.Controllers
         public List<PlayerCardData> PlayerCards => _playerCards;
         public List<CardData> AllCards => _allCards;
 
+        private List<BedData> _playerBeds = new List<BedData>();
+        private List<BedData> _allBeds = new List<BedData>();
+        public List<BedData> PlayerBeds => _playerBeds;
+        public List<BedData> AllBeds => _allBeds;
+
         private PlayerCardData _selectedCard;
         public PlayerCardData SelectedCard => _selectedCard;
+
+        private BedData _selectedBed;
+        public BedData SelectedBed => _selectedBed;
 
         private GameFactory _gameFactory;
         private BuffController _buffController;
@@ -103,6 +112,11 @@ namespace _Scripts.Controllers
             _selectedCard = card;
         }
 
+        public void ChooseSelectedBed(BedData bed)
+        {
+            _selectedBed = bed;
+        }
+
         public void CheckForNewCards(List<CardObject> cardPool)
         {
             if (_allCards == null)
@@ -132,6 +146,35 @@ namespace _Scripts.Controllers
             }
         }
 
+        private void CheckForNewBeds(List<BedObject> bedPool)
+        {
+            if (_allBeds == null)
+            {
+                _allBeds = new List<BedData>();
+            }
+
+            foreach (var bed in bedPool)
+            {
+                bool isNewBed = !_allBeds.Exists(b => b.Id == bed.Id);
+
+                if (isNewBed)
+                {
+                    _allBeds.Add(new BedData(bed));
+                    Debug.Log($"New bed added: {bed.Name}");
+                }
+                else
+                {
+                    foreach (var playerBed in _playerBeds)
+                    {
+                        if (playerBed.Id == bed.Id)
+                        {
+                            _allBeds.Find(b => b.Id == bed.Id).IsOpen = true;
+                        }
+                    }
+                }
+            }
+        }
+
 
         public void LoadProgress(PlayerProgress progress)
         {
@@ -140,7 +183,12 @@ namespace _Scripts.Controllers
             _allCards = progress.LevelsProgress.AllCardsSet;
             _selectedCard = progress.LevelsProgress.SelectedCard;
 
+            _playerBeds = progress.LevelsProgress.PlayerBeds;
+            _allBeds = progress.LevelsProgress.AllBedsSet;
+            _selectedBed = progress.LevelsProgress.SelectedBed;
+
             CheckForNewCards(Resources.LoadAll<CardObject>("Cards").ToList());
+            CheckForNewBeds(Resources.LoadAll<BedObject>("Beds").ToList());
         }
 
         public void UpdateProgress(PlayerProgress progress)
@@ -149,6 +197,10 @@ namespace _Scripts.Controllers
             progress.LevelsProgress.PlayerCards = _playerCards;
             progress.LevelsProgress.AllCardsSet = _allCards;
             progress.LevelsProgress.SelectedCard = _selectedCard;
+
+            progress.LevelsProgress.PlayerBeds = _playerBeds;
+            progress.LevelsProgress.AllBedsSet = _allBeds;
+            progress.LevelsProgress.SelectedBed = _selectedBed;
         }
     }
 }

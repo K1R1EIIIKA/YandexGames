@@ -1,8 +1,7 @@
-﻿
-using System;
+﻿using System;
 using UnityEngine;
 
-namespace _Scripts.BuffLogic
+namespace _Scripts.BuffLogic.Base
 {
     public class MonoTimer : MonoBehaviour
     {
@@ -11,6 +10,7 @@ namespace _Scripts.BuffLogic
             get
             {
                 GameObject obj = new GameObject("[TIMER]");
+                DontDestroyOnLoad(obj);
                 return obj.AddComponent<MonoTimer>();
             }
         }

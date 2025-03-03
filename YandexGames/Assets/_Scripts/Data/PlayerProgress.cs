@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using _Scripts.Data.Beds;
 using _Scripts.Data.Cards;
 using UnityEngine;
 
@@ -25,9 +26,15 @@ namespace _Scripts.Data
     public class OmNomData
     {
         public String SceneName;
+
         public List<PlayerCardData> PlayerCards;
         public PlayerCardData SelectedCard;
         public List<CardData> AllCardsSet;
+
+        public List<BedData> PlayerBeds;
+        public BedData SelectedBed;
+        public List<BedData> AllBedsSet;
+
         public int Money;
 
         public OmNomData(string sceneName)
@@ -49,6 +56,21 @@ namespace _Scripts.Data
             SelectedCard = PlayerCards[0];
 
             AllCardsSet = new List<CardData>();
+
+            PlayerBeds = new List<BedData>();
+
+            var bed = Resources.Load<BedObject>("Beds/Обычная лежанка");
+            var bedData = new BedData(bed)
+            {
+                IsOpen = true
+            };
+            var playerBedData = bedData.Copy();
+            PlayerBeds.Add(playerBedData);
+
+            SelectedBed = PlayerBeds[0];
+
+            AllBedsSet = new List<BedData>();
+
             Money = 0;
         }
     }
