@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace _Scripts.BuffLogic.Base
 {
@@ -29,7 +30,7 @@ namespace _Scripts.BuffLogic.Base
 
         private void Update()
         {
-            if (!_isEnabled)
+            if (!_isEnabled || SceneManager.GetActiveScene().name != "MainScreen")
             {
                 return;
             }

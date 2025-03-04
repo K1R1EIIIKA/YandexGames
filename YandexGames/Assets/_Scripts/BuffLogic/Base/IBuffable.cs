@@ -1,4 +1,4 @@
-﻿namespace _Scripts.BuffLogic
+﻿namespace _Scripts.BuffLogic.Base
 {
     public interface IBuffable
     {

@@ -1,5 +1,6 @@
 ﻿using System;
 using _Scripts.BuffLogic;
+using _Scripts.BuffLogic.Base;
 using _Scripts.BuffLogic.Buffs;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;

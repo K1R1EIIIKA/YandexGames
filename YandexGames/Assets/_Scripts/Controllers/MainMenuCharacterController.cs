@@ -1,4 +1,5 @@
-﻿using _Scripts.BuffLogic;
+﻿using System;
+using _Scripts.BuffLogic;
 using _Scripts.Data;
 using _Scripts.Data.Cards;
 using _Scripts.Infrastructure.Factory;
@@ -23,6 +24,8 @@ namespace _Scripts.Controllers
         private PlayerCardData _selectedCard;
 
         private int _moneyGain = 1;
+        private float _autoclicksInterval = 0.1f;
+        private float _autoclicksTime = 0;
 
         [Inject]
         public void Construct(TransactionController transactionController, GameFactory gameFactory,
@@ -69,6 +72,24 @@ namespace _Scripts.Controllers
         public void UpdateProgress(PlayerProgress progress)
         {
             // nope
+        }
+
+        private void Update()
+        {
+            if (_buffController.CurrentStats.IsAutoClick)
+            {
+                _autoclicksTime += Time.deltaTime;
+
+                if (_autoclicksTime >= _autoclicksInterval)
+                {
+                    _autoclicksTime = 0;
+
+                    var money = Mathf.RoundToInt(_selectedCard.TotalMoneyPerClick * _buffController.CurrentStats.ClickBonus);
+
+                    _transactionController.AddMoney(money);
+                    _moneyText.text = _transactionController.Money.ToString();
+                }
+            }
         }
     }
 }

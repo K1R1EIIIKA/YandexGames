@@ -1,7 +1,11 @@
-﻿using DG.Tweening;
+﻿using System;
+using _Scripts.BuffLogic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Zenject;
+using Random = UnityEngine.Random;
 
 namespace _Scripts.UI.Buttons
 {
@@ -19,6 +23,16 @@ namespace _Scripts.UI.Buttons
         [SerializeField] private Vector2 _randomPowerRange = new(200f, 500f);
 
         private Tween _tween;
+        private BuffController _buffController;
+
+        private float _autoclicksInterval = 0.1f;
+        private float _autoclicksTime = 0;
+
+        [Inject]
+        public void Construct(BuffController buffController)
+        {
+            _buffController = buffController;
+        }
         
         public void OnPointerEnter(PointerEventData eventData)
         {
@@ -75,6 +89,18 @@ namespace _Scripts.UI.Buttons
             floatingImage.transform.DORotate(new Vector3(0, 0, randomRotation), 1.75f, RotateMode.FastBeyond360);
             floatingImage.GetComponent<Image>().DOFade(0, 0.75f).SetDelay(0.75f)
                 .OnComplete(() => Destroy(floatingImage, 1f));
+        }
+
+        private void Update()
+        {
+            if (_buffController.CurrentStats.IsAutoClick){
+                _autoclicksTime += Time.deltaTime;
+                if (_autoclicksTime >= _autoclicksInterval)
+                {
+                    SpawnFloatingImage(transform.position);
+                    _autoclicksTime = 0;
+                }
+            }
         }
     }
 }

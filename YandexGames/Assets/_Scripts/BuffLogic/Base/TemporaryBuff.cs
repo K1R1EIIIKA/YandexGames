@@ -1,7 +1,4 @@
-﻿using _Scripts.BuffLogic.Base;
-using DG.Tweening;
-
-namespace _Scripts.BuffLogic.Buffs
+﻿namespace _Scripts.BuffLogic.Base
 {
     public class TemporaryBuff : IBuff
     {
@@ -25,7 +22,6 @@ namespace _Scripts.BuffLogic.Buffs
             var newStats = _coreBuff.ApplyBuff(baseStats);
 
             _timer.StartTimer(_duration);
-
 
             return newStats;
         }
