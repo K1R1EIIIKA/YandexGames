@@ -27,14 +27,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2ed91eb40fa293f4387da4dd3577e8fc, type: 2}
   - {fileID: 11400000, guid: 81722a134b3c9f34c9bdde4ce20ddaa0, type: 2}
   - {fileID: 11400000, guid: 1eab16111c1c6ca4eaaff5bbbab71aa1, type: 2}
+  - {fileID: 11400000, guid: d1d87efbb38d04b4d89cc589ec2aa097, type: 2}
   DropChancesSerializedDictionary:
     _serializedList:
     - Key: 0
-      Value: 25
+      Value: 20
     - Key: 1
-      Value: 35
+      Value: 20
     - Key: 2
-      Value: 25
+      Value: 20
     - Key: 3
-      Value: 15
+      Value: 20
+    - Key: 4
+      Value: 20
   Price: 0

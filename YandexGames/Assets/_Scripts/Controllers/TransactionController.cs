@@ -16,13 +16,13 @@ namespace _Scripts.Controllers
         private int _money;
         public int Money => _money;
 
-        private List<PlayerCardData> _playerCards = new List<PlayerCardData>();
-        private List<CardData> _allCards = new List<CardData>();
+        private List<PlayerCardData> _playerCards = new();
+        private List<CardData> _allCards = new();
         public List<PlayerCardData> PlayerCards => _playerCards;
         public List<CardData> AllCards => _allCards;
 
-        private List<BedData> _playerBeds = new List<BedData>();
-        private List<BedData> _allBeds = new List<BedData>();
+        private List<BedData> _playerBeds = new();
+        private List<BedData> _allBeds = new();
         public List<BedData> PlayerBeds => _playerBeds;
         public List<BedData> AllBeds => _allBeds;
 
@@ -105,6 +105,18 @@ namespace _Scripts.Controllers
         private void OpenCard(CardData card)
         {
             card.IsOpen = true;
+        }
+
+        public int GetPlayerCardsCount()
+        {
+            var count = 0;
+
+            foreach (var playerCard in _playerCards)
+            {
+                count += playerCard.Count;
+            }
+
+            return count;
         }
 
         public void ChooseSelectedCard(PlayerCardData card)

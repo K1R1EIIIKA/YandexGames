@@ -265,6 +265,7 @@ MonoBehaviour:
   backgroundImage: {fileID: 7300080141884323879}
   objectImage: {fileID: 2707672481476415519}
   objectName: {fileID: 3762615820176766177}
+  _specialMaterial: {fileID: 2100000, guid: cb3bc11d0116d15448a58270b96c88d4, type: 2}
 --- !u!1 &2776145500321695907
 GameObject:
   m_ObjectHideFlags: 0

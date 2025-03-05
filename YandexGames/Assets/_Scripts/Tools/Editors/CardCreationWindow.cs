@@ -4,6 +4,7 @@ using UnityEngine;
 using _Scripts.Data.Cards;
 using UnityEngine.UI;
 
+# if UNITY_EDITOR
 public class CardCreationWindow : EditorWindow
 {
     private static Rarity _selectedRarity;
@@ -69,3 +70,4 @@ public class CardCreationWindow : EditorWindow
         Close();
     }
 }
+# endif

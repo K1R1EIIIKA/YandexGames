@@ -9,6 +9,7 @@ using _Scripts.ScriptableObjects;
 using _Scripts.Tools;
 using Unity.VisualScripting;
 
+# if UNITY_EDITOR
 public class CaseCreationWindow : EditorWindow
 {
     private string caseName = "Новый кейс";
@@ -178,3 +179,4 @@ public class CaseCreationWindow : EditorWindow
         Close();
     }
 }
+# endif

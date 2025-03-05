@@ -16,18 +16,21 @@ namespace _Scripts.Infrastructure.Core
         private ISaveLoadService _saveLoadService;
         private TransactionController _transactionController;
         private AdRewardController _adRewardController;
+        private LeaderBoardController _leaderBoardController;
 
         private float _elapsedTime;
-        private float _saveInterval = 3f;
+        private float _saveInterval = 10f;
 
         [Inject]
         public void Construct(InventoryController inventoryController, ISaveLoadService saveLoadService,
-            TransactionController transactionController, AdRewardController adRewardController)
+            TransactionController transactionController, AdRewardController adRewardController,
+            LeaderBoardController leaderBoardController)
         {
             _inventoryController = inventoryController;
             _saveLoadService = saveLoadService;
             _transactionController = transactionController;
             _adRewardController = adRewardController;
+            _leaderBoardController = leaderBoardController;
 
             Debug.Log("Bootstrapper initialized");
         }
@@ -38,7 +41,7 @@ namespace _Scripts.Infrastructure.Core
 
             _game.StateMachine.Enter<BootstrapState>();
             _adRewardController.Initialize();
-            // _inventoryController.Initialize();
+            _leaderBoardController.Initialize();
 
             DontDestroyOnLoad(this);
             Debug.Log("Bootstrapper made his deal");

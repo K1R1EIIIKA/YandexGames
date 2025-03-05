@@ -18,7 +18,9 @@ namespace _Scripts.Controllers
         [SerializeField] private Button _charactersButton;
         [SerializeField] private Button _bedsButton;
         [SerializeField] private Button _backgroundsButton;
+        [SerializeField] private Button _accountButton;
         [SerializeField] private RectTransform _casesContainer;
+        [SerializeField] private AccountController _accountController;
 
         private CaseManager _caseManager;
         private GameStateMachine _gameStateMachine;
@@ -45,6 +47,7 @@ namespace _Scripts.Controllers
             _charactersButton.onClick.AddListener(OnCharactersButtonClicked);
             _bedsButton.onClick.AddListener(OnBedsButtonClicked);
             _backgroundsButton.onClick.AddListener(OnBackgroundsButtonClicked);
+            _accountButton.onClick.AddListener(OnAccountButtonClicked);
 
             InitializeCases();
         }
@@ -91,6 +94,11 @@ namespace _Scripts.Controllers
         {
             _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.Inventory,
                 () => _inventoryController.OpenTab(InventoryTabType.Backgrounds));
+        }
+
+        private void OnAccountButtonClicked()
+        {
+            _accountController.OpenAccount();
         }
     }
 }
