@@ -26,7 +26,8 @@ namespace _Scripts.Controllers
         private PlayerCardData _selectedCard;
 
         [Inject]
-        public CardsController(ISaveLoadService saveLoadService, IGameFactory gameFactory, TransactionController transactionController)
+        public CardsController(ISaveLoadService saveLoadService, IGameFactory gameFactory,
+            TransactionController transactionController)
         {
             _gameFactory = gameFactory;
             _transactionController = transactionController;
@@ -76,8 +77,6 @@ namespace _Scripts.Controllers
         {
             if (cardsSet == null) return;
 
-            cardsSet.Sort();
-
             foreach (CardData cardData in cardsSet)
             {
                 GameObject card = CreateCardView(cardData);
@@ -89,8 +88,6 @@ namespace _Scripts.Controllers
         private void CreatePlayerCardsView(List<PlayerCardData> cardsSet)
         {
             if (cardsSet == null) return;
-
-            cardsSet.Sort();
 
             foreach (PlayerCardData cardData in cardsSet)
             {
@@ -120,6 +117,7 @@ namespace _Scripts.Controllers
             return card;
         }
 
+
         private void ClearCards()
         {
             if (_cards == null) return;
@@ -131,5 +129,124 @@ namespace _Scripts.Controllers
 
             _cards.Clear();
         }
+
+        public void SortInventoryCards(InventoryCardsSortType sortType)
+        {
+            switch (sortType)
+            {
+                case InventoryCardsSortType.ByCountDesc:
+                    _playerCardsData.Sort((a, b) =>
+                    {
+                        if (a.Count == b.Count)
+                        {
+                            return a.Rarity.CompareTo(b.Rarity);
+                        }
+
+                        return b.Count.CompareTo(a.Count);
+                    });
+                    break;
+                case InventoryCardsSortType.ByCountAsc:
+                    _playerCardsData.Sort((a, b) =>
+                    {
+                        if (a.Count == b.Count)
+                        {
+                            return a.Rarity.CompareTo(b.Rarity);
+                        }
+
+                        return a.Count.CompareTo(b.Count);
+                    });
+                    break;
+                case InventoryCardsSortType.NyRareDesc:
+                    _playerCardsData.Sort((a, b) =>
+                    {
+                        if (a.Rarity == b.Rarity)
+                        {
+                            return b.Count.CompareTo(a.Count);
+                        }
+
+                        return b.Rarity.CompareTo(a.Rarity);
+                    });
+                    break;
+                case InventoryCardsSortType.ByRareAsc:
+                    _playerCardsData.Sort((a, b) =>
+                    {
+                        if (a.Rarity == b.Rarity)
+                        {
+                            return a.Count.CompareTo(b.Count);
+                        }
+
+                        return a.Rarity.CompareTo(b.Rarity);
+                    });
+                    break;
+            }
+        }
+
+        public void SortCollectionCards(CollectionCardsSortType sortType)
+        {
+            switch (sortType)
+            {
+                case CollectionCardsSortType.ByHasDesc:
+                    _allCardsSet.Sort((a, b) =>
+                    {
+                        if (a.IsOpen == b.IsOpen)
+                        {
+                            return a.Rarity.CompareTo(b.Rarity);
+                        }
+
+                        return a.IsOpen.CompareTo(b.IsOpen);
+                    });
+                    break;
+                case CollectionCardsSortType.ByHasAsc:
+                    _allCardsSet.Sort((a, b) =>
+                    {
+                        if (a.IsOpen == b.IsOpen)
+                        {
+                            return a.Rarity.CompareTo(b.Rarity);
+                        }
+
+                        return b.IsOpen.CompareTo(a.IsOpen);
+                    });
+                    break;
+                case CollectionCardsSortType.ByRareAsc:
+                    _allCardsSet.Sort((a, b) =>
+                    {
+                        if (a.Rarity == b.Rarity)
+                        {
+                            return b.IsOpen.CompareTo(a.IsOpen);
+                        }
+
+                        return a.Rarity.CompareTo(b.Rarity);
+                    });
+                    break;
+                case CollectionCardsSortType.ByRareDesc:
+                    _allCardsSet.Sort((a, b) =>
+                    {
+                        if (a.Rarity == b.Rarity)
+                        {
+                            return b.IsOpen.CompareTo(a.IsOpen);
+                        }
+
+                        return b.Rarity.CompareTo(a.Rarity);
+                    });
+                    break;
+            }
+        }
+    }
+
+
+    public enum InventoryCardsSortType
+    {
+        ByRareAsc,
+        NyRareDesc,
+        ByCountDesc,
+        ByCountAsc,
+    }
+
+    public enum CollectionCardsSortType
+    {
+        ByHasDesc,
+        ByHasAsc,
+        ByRareAsc,
+        ByRareDesc,
     }
 }

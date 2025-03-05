@@ -32,7 +32,7 @@ namespace _Scripts.Data.Cards
 
         public CardObject ToCardObject()
         {
-            Debug.Log("Cards/"+CardObjectLocation);
+            // Debug.Log("Cards/"+CardObjectLocation);
             return Resources.Load<CardObject>("Cards/"+CardObjectLocation);
         }
 

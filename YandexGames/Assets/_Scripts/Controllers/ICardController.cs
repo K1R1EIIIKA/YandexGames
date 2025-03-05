@@ -11,6 +11,8 @@ namespace _Scripts.Controllers
         void LoadProgress(PlayerProgress progress);
         void ShowPlayerBeds();
         void ShowAllBeds();
+        void SortInventoryCards(InventoryCardsSortType sortType);
+        void SortCollectionCards(CollectionCardsSortType sortType);
         ISavedProgress GetSavedProgress();
 
         void Construct(GridLayoutGroup gridLayoutGroup);
