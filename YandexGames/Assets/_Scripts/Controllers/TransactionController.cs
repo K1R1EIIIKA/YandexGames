@@ -98,6 +98,10 @@ namespace _Scripts.Controllers
             Debug.Log("Player cards: ");
             foreach (var playerCard in _playerCards)
             {
+                if (_selectedCard != null && playerCard.Id == _selectedCard.Id)
+                {
+                    _selectedCard = playerCard;
+                }
                 Debug.Log(playerCard.Name + " " + playerCard.Count);
             }
         }

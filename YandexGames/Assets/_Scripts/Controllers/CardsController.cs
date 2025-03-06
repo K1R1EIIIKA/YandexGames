@@ -18,8 +18,8 @@ namespace _Scripts.Controllers
 
         private List<GameObject> _cards = new();
 
-        private IGameFactory _gameFactory;
-        private TransactionController _transactionController;
+        private readonly IGameFactory _gameFactory;
+        private readonly CardBigView _cardBigView;
 
         private GridLayoutGroup _gridLayout;
 
@@ -27,10 +27,10 @@ namespace _Scripts.Controllers
 
         [Inject]
         public CardsController(ISaveLoadService saveLoadService, IGameFactory gameFactory,
-            TransactionController transactionController)
+            CardBigView cardBigView)
         {
             _gameFactory = gameFactory;
-            _transactionController = transactionController;
+            _cardBigView = cardBigView;
 
             _gameFactory.Register(this);
             Debug.Log("Card Controller Initialized");
@@ -82,6 +82,12 @@ namespace _Scripts.Controllers
                 GameObject card = CreateCardView(cardData);
                 _cards.Add(card);
                 card.transform.SetParent(_gridLayout.transform);
+
+                bool isOpen = _playerCardsData.Exists(x => x.Id == cardData.Id);
+                if (!isOpen)
+                    card.GetComponent<Button>().onClick.AddListener(() => _cardBigView.OpenCard(cardData));
+                else
+                    card.GetComponent<Button>().onClick.AddListener(() => _cardBigView.OpenCard(_playerCardsData.Find(x => x.Id == cardData.Id)));
             }
         }
 
@@ -95,13 +101,8 @@ namespace _Scripts.Controllers
                 _cards.Add(card);
                 card.transform.SetParent(_gridLayout.transform);
 
-                card.GetComponent<Button>().onClick.AddListener(() => OnCardClick(cardData));
+                card.GetComponent<Button>().onClick.AddListener(() => _cardBigView.OpenCard(cardData));
             }
-        }
-
-        private void OnCardClick(PlayerCardData cardData)
-        {
-            _transactionController.ChooseSelectedCard(cardData);
         }
 
         private GameObject CreateCardView(CardData cardData)

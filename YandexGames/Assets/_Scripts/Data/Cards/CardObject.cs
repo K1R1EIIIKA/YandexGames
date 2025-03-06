@@ -8,6 +8,7 @@ namespace _Scripts.Data.Cards
     {
         public string Id;
         public string Name;
+        public string Description;
         public Sprite Image;
         public int Cost;
         [FormerlySerializedAs("Rare")] public Rarity Rarity;

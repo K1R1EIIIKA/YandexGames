@@ -8,6 +8,7 @@ namespace _Scripts.Data.Cards
     {
         public string Id;
         public string Name;
+        public string Description;
         public Sprite Image;
         public int Cost;
         public Rarity Rarity;
@@ -20,6 +21,7 @@ namespace _Scripts.Data.Cards
         {
             Id = cardObject.Id;
             Name = cardObject.Name;
+            Description = cardObject.Description;
             Image = cardObject.Image;
             Cost = cardObject.Cost;
             Rarity = cardObject.Rarity;
