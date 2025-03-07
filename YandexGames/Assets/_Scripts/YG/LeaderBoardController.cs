@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using YG;
 using YG.Utils.LB;
 using Zenject;
@@ -13,6 +14,7 @@ namespace _Scripts.Controllers
         private const int QuantityAroundPlayer = 5;
 
         private TransactionController _transactionController;
+        private Action<LBData> _onGetLeaderBoard;
 
         [Inject]
         public void Construct(TransactionController transactionController)
@@ -25,18 +27,16 @@ namespace _Scripts.Controllers
             YandexGame.onGetLeaderboard += OnGetLeaderboard;
         }
 
-        public void GetLeaderBoard()
+        public void GetLeaderBoard(Action<LBData> onGetLeaderBoard)
         {
             YandexGame.GetLeaderboard(YandexLeaderBoardName, MaxQuantityPlayers, QuantityTopPlayers, QuantityAroundPlayer, "score");
+
+            _onGetLeaderBoard = onGetLeaderBoard;
         }
 
         private void OnGetLeaderboard(LBData obj)
         {
-            Debug.Log("OnGetLeaderboard");
-            foreach (var item in obj.players)
-            {
-                Debug.Log($"Player: {item.name}, score: {item.score}, rank: {item.rank}");
-            }
+            _onGetLeaderBoard?.Invoke(obj);
         }
 
         public void SaveLeaderBoardScore()

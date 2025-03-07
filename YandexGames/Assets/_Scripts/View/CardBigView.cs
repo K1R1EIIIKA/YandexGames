@@ -42,7 +42,7 @@ namespace _Scripts.View
             _nameText.text = nameWithLine;
             _descriptionText.text = cardObject.Description;
             _countText.gameObject.SetActive(true);
-            _countText.text = cardObject.Count.ToString();
+            _countText.text = "x" + cardObject.Count;
             _moneyGainText.text = "Сила клика Амняма: " + cardObject.MoneyPerClick;
             _totalMoneyGainText.text = "Общая Сила клика: " + cardObject.TotalMoneyPerClick;
 

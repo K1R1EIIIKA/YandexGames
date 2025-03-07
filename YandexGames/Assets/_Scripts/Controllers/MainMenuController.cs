@@ -1,7 +1,4 @@
-﻿using System;
-using _Scripts.BuffLogic;
-using _Scripts.BuffLogic.Base;
-using _Scripts.BuffLogic.Buffs;
+﻿using _Scripts.BuffLogic;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
 using _Scripts.Infrastructure.Inventory;
@@ -26,17 +23,15 @@ namespace _Scripts.Controllers
         private GameStateMachine _gameStateMachine;
         private InventoryController _inventoryController;
         private BuffController _buffController;
-        private AdRewardController _adRewardController;
 
         [Inject]
         public void Construct(GameStateMachine gameStateMachine, InventoryController inventoryController, CaseManager caseManager,
-            BuffController buffController, AdRewardController adRewardController)
+            BuffController buffController)
         {
             _gameStateMachine = gameStateMachine;
             _inventoryController = inventoryController;
             _caseManager = caseManager;
             _buffController = buffController;
-            _adRewardController = adRewardController;
 
             Initialize();
         }
@@ -60,12 +55,6 @@ namespace _Scripts.Controllers
         private void OnDisable()
         {
             _buffController.OnBuffsChanged -= InitializeCases;
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-                _buffController.AddBuff(new TemporaryBuff(_buffController, new DiscountBuff(10), 2f));
         }
 
         private void InitializeCases()

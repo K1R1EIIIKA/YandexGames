@@ -19,7 +19,9 @@ namespace _Scripts.Infrastructure.Core
         private LeaderBoardController _leaderBoardController;
 
         private float _elapsedTime;
+        private float _leaderboardElapsedTime;
         private float _saveInterval = 10f;
+        private float _leaderBoardSaveInterval = 20f;
 
         [Inject]
         public void Construct(InventoryController inventoryController, ISaveLoadService saveLoadService,
@@ -54,6 +56,13 @@ namespace _Scripts.Infrastructure.Core
             {
                 _saveLoadService.SaveProgress();
                 _elapsedTime = 0;
+            }
+
+            _leaderboardElapsedTime += Time.deltaTime;
+            if (_leaderboardElapsedTime >= _leaderBoardSaveInterval)
+            {
+                _leaderBoardController.SaveLeaderBoardScore();
+                _leaderboardElapsedTime = 0;
             }
         }
     }
