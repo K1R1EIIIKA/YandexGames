@@ -79,10 +79,10 @@ namespace _Scripts.View
         public void OpenUnbougthBed(BedData bedData)
         {
             _bedData = bedData;
-            
+
             _nameText.text = "???";
             _descriptionText.text = bedData.GetDescription();
-            _bonusText.text = "БОНУС: " + bedData.BuffType;
+            _bonusText.text = BedsBonuses.ConvertBuffToString(bedData.BuffType).GetLocalizedString();
             _playerMoneyText.text = _transactionController.Money.ToString();
 
             _buyButton.gameObject.SetActive(true);

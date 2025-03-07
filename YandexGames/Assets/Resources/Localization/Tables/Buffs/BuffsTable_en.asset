@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: BuffsTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 6a7366d0b8bbc774cb86f494d10d05f0, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 97491345408
+    m_Localized: 'BONUS: 5% discount on all boxes!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104718131200
+    m_Localized: 'BONUS: 10% discount on all boxes!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 117061967872
+    m_Localized: 'BONUS: 15% discount on all boxes!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 120807481344
+    m_Localized: 'BONUS: 20% discount on all boxes!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124347473920
+    m_Localized: 'BONUS: 25% discount on all boxes!'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

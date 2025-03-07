@@ -15,8 +15,8 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Turkish (tr)
   m_GUID: b3ff29b4a6b8e1441bcc5e3d7ce3d377
   m_SerializeEntries:
-  - m_GUID: 001f335b04e59ac47aff35dbcf905835
-    m_Address: StringTable_tr
+  - m_GUID: 21a6e5be7fad55643891f6655ce139b4
+    m_Address: BuffsTable_tr
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-tr
