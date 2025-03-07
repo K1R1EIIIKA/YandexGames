@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using _Scripts.Plugins;
+using _Scripts.Tools;
 using _Scripts.View;
 using TMPro;
 using UnityEngine;
@@ -43,6 +44,9 @@ namespace _Scripts.Controllers
         }
         private void OnGetLeaderBoard(LBData obj)
         {
+            var rectContainer = _container as RectTransform;
+            rectContainer.DestroyAllChildren();
+
             for (int i = 0; i < obj.players.Length; i++)
             {
                 LeaderboardPlayerView view = Instantiate(_leaderboardPlayerView, _container);
@@ -107,9 +111,10 @@ namespace _Scripts.Controllers
             gameObject.SetActive(true);
             _leaderBoardController.GetLeaderBoard(OnGetLeaderBoard);
 
+#if !UNITY_EDITOR
             JsLib.GetPlayerData();
+#endif
         }
-
 
         private void CloseAccount()
         {

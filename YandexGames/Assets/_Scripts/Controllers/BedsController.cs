@@ -24,6 +24,7 @@ namespace _Scripts.Controllers
 
         private IGameFactory _gameFactory;
         private TransactionController _transactionController;
+        private readonly BedBigView _bedBigView;
         private BuffController _buffController;
 
         private GridLayoutGroup _gridLayout;
@@ -32,11 +33,13 @@ namespace _Scripts.Controllers
 
         [Inject]
         public BedsController(ISaveLoadService saveLoadService, IGameFactory gameFactory,
-            TransactionController transactionController, BuffController buffController)
+            TransactionController transactionController, BuffController buffController,
+            BedBigView bedBigView)
         {
             _gameFactory = gameFactory;
             _transactionController = transactionController;
             _buffController = buffController;
+            _bedBigView = bedBigView;
 
             _gameFactory.Register(this);
             Debug.Log("Card Controller Initialized");
@@ -95,29 +98,32 @@ namespace _Scripts.Controllers
                 card.transform.SetParent(_gridLayout.transform);
                 if (isOpen)
                 {
-                    card.GetComponent<Button>().onClick.AddListener(() => OnBedClick(bedData));
+                    card.GetComponent<Button>().onClick.AddListener(() => _bedBigView.OpenBoughtBed(bedData));
                 }
                 else
                 {
                     card.GetComponent<BedView>().SetViewToClosed();
-                    card.GetComponent<Button>().onClick.AddListener(() => TryBuyBed(bedData));
+                    card.GetComponent<Button>().onClick.AddListener(() => _bedBigView.OpenUnbougthBed(bedData));
                 }
             }
         }
 
-        private void TryBuyBed(BedData bedData)
+        public bool TryBuyBed(BedData bedData)
         {
             if (_transactionController.SpendMoney(bedData.ToBedObject().Price))
             {
                 bedData.IsOpen = true;
                 _playerBedsData.Add(bedData);
                 ShowPlayerBeds();
+
+                return true;
             }
+
+            return false;
         }
 
-        private void OnBedClick(BedData bedData)
+        public void OnBedClick(BedData bedData)
         {
-            var currentBed = _transactionController.SelectedBed;
             _transactionController.ChooseSelectedBed(bedData);
             ApplyBedBuff(bedData);
         }

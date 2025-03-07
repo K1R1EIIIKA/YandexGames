@@ -10,6 +10,7 @@ namespace _Scripts.Data.Beds
     {
         public string Id;
         public string Name;
+        public string Description;
         public Sprite BedImage;
         public int Price;
         public Rarity Rarity;
@@ -22,6 +23,7 @@ namespace _Scripts.Data.Beds
         {
             Id = bedObject.Id;
             Name = bedObject.Name;
+            Description = bedObject.Description;
             BedImage = bedObject.BedImage;
             Rarity = bedObject.Rarity;
             Price = bedObject.Price;
@@ -34,6 +36,11 @@ namespace _Scripts.Data.Beds
         private BedData()
         {
 
+        }
+
+        public string GetDescription()
+        {
+            return ToBedObject().Description;
         }
 
         public BedObject ToBedObject()

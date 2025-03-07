@@ -10,6 +10,7 @@ namespace _Scripts.Installers
     {
         [SerializeField] private InventoryTabsController _inventoryTabsController;
         [SerializeField] private CardBigView _cardBigView;
+        [SerializeField] private BedBigView _bedBigView;
 
         public override void InstallBindings()
         {
@@ -29,6 +30,7 @@ namespace _Scripts.Installers
             // Container.Bind<InventoryTabsController>().FromInstance(_inventoryTabsController).AsSingle().NonLazy();
 
             Container.Bind<CardBigView>().FromComponentInNewPrefab(_cardBigView).AsSingle().NonLazy();
+            Container.Bind<BedBigView>().FromComponentInNewPrefab(_bedBigView).AsSingle().NonLazy();
             Container.Bind<InventoryController>().AsSingle().NonLazy();
         }
     }

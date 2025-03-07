@@ -9,6 +9,7 @@ namespace _Scripts.Data.Beds
     {
         public string Id;
         public string Name;
+        public string Description;
         public Sprite BedImage;
         public Rarity Rarity;
         public int Price;
