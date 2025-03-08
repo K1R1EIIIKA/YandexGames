@@ -69,7 +69,6 @@ namespace _Scripts.Installers
             Container.Bind<AdRewardController>().AsSingle().NonLazy();
             Container.Bind<AdBuffController>().AsSingle().NonLazy();
             Container.Bind<LeaderBoardController>().AsSingle().NonLazy();
-            // Container.Bind<YandexGame>().FromComponentInNewPrefab(_yandexGamePrefab).AsSingle().NonLazy();
         }
     }
 }

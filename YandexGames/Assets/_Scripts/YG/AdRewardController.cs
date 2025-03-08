@@ -46,43 +46,43 @@ namespace _Scripts.YG
             switch (id)
             {
                 case 1:
-                    OneAndHalfMoneyAdId?.Invoke(isAdd ? 6f : 0f);
+                    OneAndHalfMoneyAdId?.Invoke(isAdd ? 6f : 1f);
                     break;
                 case 2:
-                    DoubleMoneyAdId?.Invoke(isAdd ? 6f : 0f);
+                    DoubleMoneyAdId?.Invoke(isAdd ? 6f : 1f);
                     break;
                 case 3:
-                    TripleMoneyAdId?.Invoke(isAdd ? 6f : 0f);
+                    TripleMoneyAdId?.Invoke(isAdd ? 6f : 1f);
                     break;
                 case 4:
-                    Discount10AdId?.Invoke(isAdd ? 6f : 0f);
+                    Discount10AdId?.Invoke(isAdd ? 6f : 1f);
                     break;
                 case 5:
-                    Discount20AdId?.Invoke(isAdd ? 6f : 0f);
+                    Discount20AdId?.Invoke(isAdd ? 6f : 1f);
                     break;
                 case 6:
-                    Discount50AdId?.Invoke(isAdd ? 6f : 0f);
+                    Discount50AdId?.Invoke(isAdd ? 6f : 1f);
                     break;
                 case 7:
-                    BigCharacterAdId?.Invoke(isAdd ? 6f : 0f);
+                    BigCharacterAdId?.Invoke(isAdd ? 6f : 1f);
                     break;
                 case 8:
-                    SmallCharacterAdId?.Invoke(isAdd ? 6f : 0f);
+                    SmallCharacterAdId?.Invoke(isAdd ? 6f : 1f);
                     break;
                 case 9:
-                    CrazyCharacterAdId?.Invoke(isAdd ? 6f : 0f);
+                    CrazyCharacterAdId?.Invoke(isAdd ? 6f : 1f);
                     break;
                 case 10:
-                    MoreLoot1AdId?.Invoke(isAdd ? 6f : 0f);
+                    MoreLoot1AdId?.Invoke(isAdd ? 6f : 1f);
                     break;
                 case 11:
-                    MoreLoot2AdId?.Invoke(isAdd ? 6f : 0f);
+                    MoreLoot2AdId?.Invoke(isAdd ? 6f : 1f);
                     break;
                 case 12:
-                    AutoClickAdId?.Invoke(isAdd ? 6f : 0f);
+                    AutoClickAdId?.Invoke(isAdd ? 6f : 1f);
                     break;
                 case 13:
-                    AutoMoneyPerClickAdId?.Invoke(isAdd ? 6 : 0);
+                    AutoMoneyPerClickAdId?.Invoke(isAdd ? 6 : 1);
                     break;
                 case 14:
                     AdCaseAdId?.Invoke();

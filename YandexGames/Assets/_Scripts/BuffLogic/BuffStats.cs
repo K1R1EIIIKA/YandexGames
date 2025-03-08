@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.NetworkInformation;
 
 namespace _Scripts.BuffLogic
 {
@@ -8,6 +9,9 @@ namespace _Scripts.BuffLogic
         public float ClickBonus = 1;
         public int DiscountBonus = 0;
         public bool IsAutoClick = false;
+        public bool IsCharacterSizeChanged;
+        public bool IsCharacterSizeCrazy;
+        public float CharacterScale = 1;
 
         public BuffStats Copy()
         {
@@ -15,7 +19,10 @@ namespace _Scripts.BuffLogic
             {
                 ClickBonus = ClickBonus,
                 DiscountBonus = DiscountBonus,
-                IsAutoClick = IsAutoClick
+                IsAutoClick = IsAutoClick,
+                IsCharacterSizeChanged = IsCharacterSizeChanged,
+                IsCharacterSizeCrazy = IsCharacterSizeCrazy,
+                CharacterScale = CharacterScale
             };
         }
     }

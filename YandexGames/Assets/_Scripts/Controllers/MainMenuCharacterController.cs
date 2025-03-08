@@ -1,9 +1,11 @@
-﻿using System;
-using _Scripts.BuffLogic;
+﻿using _Scripts.BuffLogic;
+using _Scripts.BuffLogic.Base;
+using _Scripts.BuffLogic.Buffs;
 using _Scripts.Data;
 using _Scripts.Data.Cards;
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
+using _Scripts.YG;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +19,8 @@ namespace _Scripts.Controllers
         [SerializeField] private Button _characterButton;
         [SerializeField] private Image _characterImage;
 
+        [SerializeField] private Transform _characterTransform;
+
         private TransactionController _transactionController;
         private GameFactory _gameFactory;
         private BuffController _buffController;
@@ -26,6 +30,9 @@ namespace _Scripts.Controllers
         private int _moneyGain = 1;
         private float _autoclicksInterval = 0.1f;
         private float _autoclicksTime = 0;
+
+        [Inject] private AdBuffController _adBuffController;
+        [Inject] private AdRewardController _adRewardController;
 
         [Inject]
         public void Construct(TransactionController transactionController, GameFactory gameFactory,
@@ -44,11 +51,34 @@ namespace _Scripts.Controllers
 
             _moneyText.text = _transactionController.Money.ToString();
             Debug.Log(_characterImage);
+
+            _adRewardController.BigCharacterAdId += AddBigCharacterBuff;
+            _adRewardController.SmallCharacterAdId += AddSmallCharacterBuff;
+            _adRewardController.CrazyCharacterAdId += AddCrazyCharacterBuff;
+        }
+
+        private void AddBigCharacterBuff(float value)
+        {
+            _buffController.AddBuff(new TemporaryBuff(_buffController, new CharacterSizeBuff(1.5f, false), 10 * value));
+        }
+
+        private void AddSmallCharacterBuff(float value)
+        {
+            _buffController.AddBuff(new TemporaryBuff(_buffController, new CharacterSizeBuff(0.5f, false), 10 * value));
+        }
+
+        private void AddCrazyCharacterBuff(float value)
+        {
+            _buffController.AddBuff(new TemporaryBuff(_buffController, new CharacterSizeBuff(2f, false), 10 * value));
         }
 
         private void OnDisable()
         {
             _characterButton.onClick.RemoveListener(OnCharacterClick);
+
+            _adRewardController.BigCharacterAdId -= AddBigCharacterBuff;
+            _adRewardController.SmallCharacterAdId -= AddSmallCharacterBuff;
+            _adRewardController.CrazyCharacterAdId -= AddCrazyCharacterBuff;
         }
 
         private void OnCharacterClick()
@@ -88,6 +118,16 @@ namespace _Scripts.Controllers
 
                     _transactionController.AddMoney(money);
                     _moneyText.text = _transactionController.Money.ToString();
+                }
+            }
+
+            if (_buffController.CurrentStats.IsCharacterSizeChanged)
+            {
+                if (!_buffController.CurrentStats.IsCharacterSizeCrazy)
+                    _characterTransform.localScale = Vector3.Lerp(_characterTransform.localScale, Vector3.one * _buffController.CurrentStats.CharacterScale, Time.deltaTime);
+                else
+                {
+                    _characterTransform.localScale = Vector3.Lerp(_characterTransform.localScale, Vector3.one * _buffController.CurrentStats.CharacterScale, Time.deltaTime);
                 }
             }
         }

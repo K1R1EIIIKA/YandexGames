@@ -1,15 +1,15 @@
-﻿using _Scripts.Controllers;
+﻿using System.Linq;
+using _Scripts.Controllers;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Zenject;
 using Random = UnityEngine.Random;
 
 namespace _Scripts.YG
 {
-    public class AdButton : MonoBehaviour, IPointerClickHandler
+    public class AdButton : MonoBehaviour
     {
         [SerializeField] private Button _adButton;
         [SerializeField] private CanvasGroup _canvasGroup;
@@ -30,6 +30,16 @@ namespace _Scripts.YG
         {
             _adRewardController = adRewardController;
             _transactionController = transactionController;
+        }
+
+        private void OnEnable()
+        {
+            _adButton.onClick.AddListener(OnPointerClick);
+        }
+
+        private void OnDisable()
+        {
+            _adButton.onClick.RemoveListener(OnPointerClick);
         }
 
         public void Show()
@@ -68,17 +78,27 @@ namespace _Scripts.YG
             gameObject.SetActive(false);
         }
 
-        public void OnPointerClick(PointerEventData eventData)
+        public void OnPointerClick()
         {
-            var id = Random.Range(1, AdRewardIds.Count + 1);
+            Debug.Log("BUFFFFFFFFFF");
 
             if (_isAd)
             {
+                var validIds = Enumerable.Range(1, AdRewardIds.Count)
+                    .Where(x => x != 3 && x != 6 && x != 11)
+                    .ToList();
+
+                var id = validIds[Random.Range(0, validIds.Count)];
                 _adWindow.Show(id, () => OnAdWatched(id));
                 InstantHide();
             }
             else
             {
+                var validIds = Enumerable.Range(1, AdRewardIds.Count)
+                    .Where(x => x != 7 && x != 8 && x != 9)
+                    .ToList();
+
+                var id = validIds[Random.Range(0, validIds.Count)];
                 _adRewardController.OnRewardVideo(id, false);
                 _buffText.gameObject.SetActive(true);
 

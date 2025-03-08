@@ -39,6 +39,7 @@ namespace _Scripts.BuffLogic
             _adRewardController.AutoClickAdId += value => _buffController.AddBuff(new TemporaryBuff(_buffController, new AutoClickBuff(), BuffDuration * value));
 
             _adRewardController.AutoMoneyPerClickAdId += value => _buffController.AddBuff(new InstantBuff(_buffController, new InstantMoneyBuff(_transactionController, InstantMoneyBuffMultiplier * value)));
-        }
+
+       }
     }
 }
