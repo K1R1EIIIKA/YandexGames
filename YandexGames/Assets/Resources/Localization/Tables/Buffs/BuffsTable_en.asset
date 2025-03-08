@@ -70,6 +70,10 @@ MonoBehaviour:
     m_Localized: Common
     m_Metadata:
       m_Items: []
+  - m_Id: 186650675109888
+    m_Localized: 'BONUS: Nope'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

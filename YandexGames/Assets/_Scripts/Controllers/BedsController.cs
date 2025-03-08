@@ -80,8 +80,6 @@ namespace _Scripts.Controllers
 
         private void CreatePlayerBedsView()
         {
-            _allBedsSet.Sort();
-
             foreach (BedData bedData in _allBedsSet)
             {
                 bool isOpen = false;
@@ -95,7 +93,6 @@ namespace _Scripts.Controllers
 
                 GameObject card = CreateBedView(bedData);
                 _beds.Add(card);
-                card.transform.SetParent(_gridLayout.transform);
                 if (isOpen)
                 {
                     card.GetComponent<Button>().onClick.AddListener(() => _bedBigView.OpenBoughtBed(bedData));
@@ -159,7 +156,7 @@ namespace _Scripts.Controllers
 
         private GameObject CreateBedView(BedData cardData)
         {
-            GameObject card = _gameFactory.CreateObjectBed();
+            GameObject card = _gameFactory.CreateObjectBed(_gridLayout);
             BedView bedView = card.GetComponent<BedView>();
 
             bedView.Initialize(cardData);
@@ -180,6 +177,27 @@ namespace _Scripts.Controllers
             }
 
             _beds.Clear();
+        }
+
+        public void SortBeds(CollectionSortType sortType)
+        {
+            switch (sortType)
+            {
+                case CollectionSortType.ByRareAsc:
+                    _allBedsSet.Sort((a, b) => a.Rarity.CompareTo(b.Rarity));
+                    break;
+                case CollectionSortType.ByRareDesc:
+                    _allBedsSet.Sort((a, b) => b.Rarity.CompareTo(a.Rarity));
+                    break;
+                case CollectionSortType.ByHasAsc:
+                    _allBedsSet.Sort((a, b) => a.IsOpen.CompareTo(b.IsOpen));
+                    break;
+                case CollectionSortType.ByHasDesc:
+                    _allBedsSet.Sort((a, b) => b.IsOpen.CompareTo(a.IsOpen));
+                    break;
+            }
+
+            ShowPlayerBeds();
         }
     }
 }

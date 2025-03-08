@@ -13,7 +13,15 @@ MonoBehaviour:
   m_Name: "\u0422\u0435\u0441\u0442\u043E\u0432\u044B\u0439"
   m_EditorClassIdentifier: 
   Id: 
-  Name: "\u0422\u0435\u0441\u0442\u043E\u0432\u044B\u0439"
+  Name:
+    m_TableReference:
+      m_TableCollectionName: GUID:a99fd83691ef85e41820f02edee74168
+    m_TableEntryReference:
+      m_KeyId: 19234021376
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   CaseImage: {fileID: -1119683735, guid: 5da958314232bad458f389beca6c4e59, type: 3}
   LootCountRange: {x: 2, y: 6}
   CoinsRange: {x: 1, y: 200}
@@ -41,3 +49,6 @@ MonoBehaviour:
     - Key: 4
       Value: 20
   Price: 0
+  references:
+    version: 2
+    RefIds: []

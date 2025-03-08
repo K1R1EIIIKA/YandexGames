@@ -12,7 +12,7 @@ namespace _Scripts.Controllers
         void ShowPlayerBeds();
         void ShowAllBeds();
         void SortInventoryCards(InventoryCardsSortType sortType);
-        void SortCollectionCards(CollectionCardsSortType sortType);
+        void SortCollectionCards(CollectionSortType sortType);
         ISavedProgress GetSavedProgress();
 
         void Construct(GridLayoutGroup gridLayoutGroup);

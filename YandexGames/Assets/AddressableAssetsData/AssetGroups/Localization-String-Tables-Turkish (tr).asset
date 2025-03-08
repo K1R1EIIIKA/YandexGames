@@ -33,6 +33,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-tr
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30cdc6d20a9a292448dddbbc26a49937
+    m_Address: Beds_tr
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-tr
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e028b08b1a0e8fb42b30f475965f4a4f
+    m_Address: Cases_tr
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-tr
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: fea45065a3b85cb44a7298600f8100db, type: 2}
   m_SchemaSet:

@@ -13,8 +13,16 @@ MonoBehaviour:
   m_Name: Beds Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: Beds
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
-  m_Entries: []
+  m_TableCollectionNameGuidString: 614cadf04c952164d9dc678e1bc18060
+  m_Entries:
+  - m_Id: 41799376896
+    m_Key: magic_ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43812642816
+    m_Key: common_bed
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -70,6 +70,10 @@ MonoBehaviour:
     m_Localized: "\xD6zel"
     m_Metadata:
       m_Items: []
+  - m_Id: 186650675109888
+    m_Localized: "BONUS: Hay\u0131r"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

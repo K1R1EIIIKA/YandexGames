@@ -20,9 +20,19 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 614cadf04c952164d9dc678e1bc18060
+    m_Address: Assets/Resources/Localization/Tables/Beds/Beds Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8c8ca9e02e69aec41bb09320851c53d1
     m_Address: Assets/Resources/Localization/Tables/Characters/Characters Shared
       Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a99fd83691ef85e41820f02edee74168
+    m_Address: Assets/Resources/Localization/Tables/Cases/Cases Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

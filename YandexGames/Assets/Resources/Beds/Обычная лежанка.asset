@@ -13,8 +13,28 @@ MonoBehaviour:
   m_Name: "\u041E\u0431\u044B\u0447\u043D\u0430\u044F \u043B\u0435\u0436\u0430\u043D\u043A\u0430"
   m_EditorClassIdentifier: 
   Id: 1
-  Name: "\u041E\u0431\u044B\u0447\u043D\u0430\u044F \u043B\u0435\u0436\u0430\u043D\u043A\u0430"
+  Name:
+    m_TableReference:
+      m_TableCollectionName: GUID:614cadf04c952164d9dc678e1bc18060
+    m_TableEntryReference:
+      m_KeyId: 43812642816
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Description:
+    m_TableReference:
+      m_TableCollectionName: GUID:614cadf04c952164d9dc678e1bc18060
+    m_TableEntryReference:
+      m_KeyId: 43812642816
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   BedImage: {fileID: 425852584, guid: 0194c7c711a213b49be65771b2848d25, type: 3}
   Rarity: 0
   Price: 0
   BuffType: 0
+  references:
+    version: 2
+    RefIds: []

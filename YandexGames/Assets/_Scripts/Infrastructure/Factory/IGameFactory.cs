@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using _Scripts.Infrastructure.Services;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace _Scripts.Infrastructure.Factory
 {
@@ -14,7 +15,7 @@ namespace _Scripts.Infrastructure.Factory
         void Register(ISavedProgressReader progressReader);
         void CleanDublicates();
         List<GameObject> CreateObjectCards();
-        GameObject CreateObjectCard();
-        GameObject CreateObjectBed();
+        GameObject CreateObjectCard(GridLayoutGroup gridLayout);
+        GameObject CreateObjectBed(GridLayoutGroup gridLayout);
     }
 }

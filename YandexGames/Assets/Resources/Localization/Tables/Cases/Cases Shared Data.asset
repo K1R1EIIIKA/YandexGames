@@ -13,8 +13,20 @@ MonoBehaviour:
   m_Name: Cases Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: Cases
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
-  m_Entries: []
+  m_TableCollectionNameGuidString: a99fd83691ef85e41820f02edee74168
+  m_Entries:
+  - m_Id: 11612971008
+    m_Key: star_case
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14490263552
+    m_Key: omnoms_box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19234021376
+    m_Key: test
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

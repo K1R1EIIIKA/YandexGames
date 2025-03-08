@@ -100,7 +100,6 @@ namespace _Scripts.Controllers
             {
                 GameObject card = CreateCardView(cardData);
                 _cards.Add(card);
-                card.transform.SetParent(_gridLayout.transform);
 
                 card.GetComponent<Button>().onClick.AddListener(() => _cardBigView.OpenCard(cardData));
             }
@@ -108,7 +107,7 @@ namespace _Scripts.Controllers
 
         private GameObject CreateCardView(CardData cardData)
         {
-            GameObject card = _gameFactory.CreateObjectCard();
+            GameObject card = _gameFactory.CreateObjectCard(_gridLayout);
             SmallCardView smallCardView = card.GetComponent<SmallCardView>();
 
             smallCardView.Initialize(cardData);
@@ -116,7 +115,7 @@ namespace _Scripts.Controllers
             if (!cardData.IsOpen)
                 smallCardView.SetViewToClosed();
 
-            return card;
+            return smallCardView.gameObject;
         }
 
 
@@ -183,11 +182,11 @@ namespace _Scripts.Controllers
             }
         }
 
-        public void SortCollectionCards(CollectionCardsSortType sortType)
+        public void SortCollectionCards(CollectionSortType sortType)
         {
             switch (sortType)
             {
-                case CollectionCardsSortType.ByHasDesc:
+                case CollectionSortType.ByHasDesc:
                     _allCardsSet.Sort((a, b) =>
                     {
                         if (a.IsOpen == b.IsOpen)
@@ -198,7 +197,7 @@ namespace _Scripts.Controllers
                         return a.IsOpen.CompareTo(b.IsOpen);
                     });
                     break;
-                case CollectionCardsSortType.ByHasAsc:
+                case CollectionSortType.ByHasAsc:
                     _allCardsSet.Sort((a, b) =>
                     {
                         if (a.IsOpen == b.IsOpen)
@@ -209,7 +208,7 @@ namespace _Scripts.Controllers
                         return b.IsOpen.CompareTo(a.IsOpen);
                     });
                     break;
-                case CollectionCardsSortType.ByRareAsc:
+                case CollectionSortType.ByRareAsc:
                     _allCardsSet.Sort((a, b) =>
                     {
                         if (a.Rarity == b.Rarity)
@@ -220,7 +219,7 @@ namespace _Scripts.Controllers
                         return a.Rarity.CompareTo(b.Rarity);
                     });
                     break;
-                case CollectionCardsSortType.ByRareDesc:
+                case CollectionSortType.ByRareDesc:
                     _allCardsSet.Sort((a, b) =>
                     {
                         if (a.Rarity == b.Rarity)
@@ -235,7 +234,6 @@ namespace _Scripts.Controllers
         }
     }
 
-
     public enum InventoryCardsSortType
     {
         ByRareAsc,
@@ -244,7 +242,7 @@ namespace _Scripts.Controllers
         ByCountAsc,
     }
 
-    public enum CollectionCardsSortType
+    public enum CollectionSortType
     {
         ByHasDesc,
         ByHasAsc,

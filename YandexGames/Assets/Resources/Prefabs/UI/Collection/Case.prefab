@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5116482495423887134}
   - component: {fileID: 7555300984529690229}
   - component: {fileID: 7322709007669723698}
+  - component: {fileID: 3751328700096131348}
   m_Layer: 5
   m_Name: Case
   m_TagString: Untagged
@@ -112,6 +113,18 @@ MonoBehaviour:
   _caseInfoButton: {fileID: 6889839452885632119}
   _priceImage: {fileID: 6889741004975331780}
   _adCountImage: {fileID: 2195338003140109334}
+--- !u!114 &3751328700096131348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87360669488319955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52fc419d8164c96a84e463ac2c58219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3268259940178295921
 GameObject:
   m_ObjectHideFlags: 0
