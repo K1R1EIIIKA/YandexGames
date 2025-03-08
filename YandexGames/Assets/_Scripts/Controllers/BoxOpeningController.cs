@@ -115,6 +115,8 @@ namespace _Scripts.Controllers
                 card.IsOpen = true;
                 _cardsLoot.Add(card);
             }
+
+            _transactionController.AddCaseCounter();
             _transactionController.AddPlayerCards(_cardsLoot);
 
             SortCards();

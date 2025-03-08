@@ -15,7 +15,7 @@
         public const int MoreLoot2AdId = 11;
         public const int AutoClickAdId = 12;
         public const int AutoMoneyPerClickAdId = 13;
-
+        public const int AdCaseId = 14;
         public static int Count => 13;
 
         public static string GetAdRewardName(int id)

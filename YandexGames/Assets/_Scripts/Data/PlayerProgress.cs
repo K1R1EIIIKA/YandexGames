@@ -35,6 +35,9 @@ namespace _Scripts.Data
         public BedData SelectedBed;
         public List<BedData> AllBedsSet;
 
+        public int TotalAdsWatched;
+        public int TotalCasesOpened;
+
         public int Money;
 
         public OmNomData(string sceneName)
@@ -72,6 +75,9 @@ namespace _Scripts.Data
             AllBedsSet = new List<BedData>();
 
             Money = 0;
+
+            TotalAdsWatched = 0;
+            TotalCasesOpened = 0;
         }
     }
 }

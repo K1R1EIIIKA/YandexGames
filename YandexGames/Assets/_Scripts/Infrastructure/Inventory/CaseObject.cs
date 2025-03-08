@@ -1,4 +1,5 @@
-﻿using _Scripts.Data.Cases;
+﻿using _Scripts.Controllers;
+using _Scripts.Data.Cases;
 using _Scripts.ScriptableObjects;
 using _Scripts.View;
 using TMPro;
@@ -10,11 +11,11 @@ namespace _Scripts.Infrastructure.Inventory
 {
     public class CaseObject : MonoBehaviour
     {
-        [Header("Case Data")]
-        [SerializeField] private CaseData _caseData;
+        [Header("Case Data")] [SerializeField] private CaseData _caseData;
 
-        [Header("UI Elements")]
-        [SerializeField] private Image _caseImage;
+        [Header("UI Elements")] [SerializeField]
+        private Image _caseImage;
+
         [SerializeField] private TextMeshProUGUI _casePrice;
         [SerializeField] private Button _openCaseButton;
         [SerializeField] private Button _caseInfoButton;
@@ -23,12 +24,15 @@ namespace _Scripts.Infrastructure.Inventory
 
         private CaseInfoView _caseInfoView;
         private CaseManager _caseManager;
+        private TransactionController _transactionController;
 
         [Inject]
-        public void Construct(CaseInfoView caseInfoView, CaseManager caseManager)
+        public void Construct(CaseInfoView caseInfoView, CaseManager caseManager,
+            TransactionController transactionController)
         {
             _caseInfoView = caseInfoView;
             _caseManager = caseManager;
+            _transactionController = transactionController;
         }
 
         public void Initialize(CaseData caseData, int discount = 0)
@@ -45,8 +49,9 @@ namespace _Scripts.Infrastructure.Inventory
                     break;
 
                 case AdCaseData adCaseData when adCaseData != null:
-                    _casePrice.text = adCaseData.AdsCount.ToString();
+                    _casePrice.text = "x" + adCaseData.AdsCount;
                     _adCountImage.gameObject.SetActive(true);
+                    _priceImage.gameObject.SetActive(false);
                     break;
             }
         }

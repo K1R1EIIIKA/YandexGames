@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _caseRepository: {fileID: 11400000, guid: 4f6a31b7a9b72ea40aa94f74864f5502, type: 2}
   _caseObjectPrefab: {fileID: 7322709007669723698, guid: 3ab73d44c64ddee4f9c7d1feff37f430, type: 3}
+  _smallCaseObjectPrefab: {fileID: 7322709007669723698, guid: 1413d03931537574cb6500eba4cc7a63, type: 3}

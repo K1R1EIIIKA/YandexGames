@@ -8,8 +8,10 @@ namespace _Scripts.Infrastructure.Inventory
     {
         [SerializeField] private CaseData[] _mainScreenCases;
         [SerializeField] private CaseData[] _shopCases;
+        [SerializeField] private CaseData[] _adCases;
 
         public CaseData[] MainScreenCases => _mainScreenCases;
         public CaseData[] ShopCases => _shopCases;
+        public CaseData[] AdCases => _adCases;
     }
 }
