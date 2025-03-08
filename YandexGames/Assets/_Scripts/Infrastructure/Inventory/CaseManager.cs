@@ -83,24 +83,43 @@ namespace _Scripts.Infrastructure.Inventory
 
             if (caseData is MoneyCaseData moneyCaseData)
             {
-                var discount = GetDiscount();
-                var price = Mathf.RoundToInt(moneyCaseData.Price * (1 - discount / 100f));
-                if (_transactionController.SpendMoney(price))
+                if (!moneyCaseData.IsTotalCases)
                 {
-                    _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.BoxOpening,
-                        () => { BoxOpeningController.Instance.Initialize(caseData); });
+                    var discount = GetDiscount();
+                    var price = Mathf.RoundToInt(moneyCaseData.Price * (1 - discount / 100f));
+                    if (_transactionController.SpendMoney(price))
+                    {
+                        _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.BoxOpening,
+                            () => { BoxOpeningController.Instance.Initialize(caseData); });
+                    }
                 }
-
                 else
                 {
-                    Debug.Log("Not enough money");
+                    if (_transactionController.CaseCounter >= moneyCaseData.Price)
+                    {
+                        _transactionController.AddCaseCounter(-moneyCaseData.Price);
+                        _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.BoxOpening,
+                            () => { BoxOpeningController.Instance.Initialize(caseData); });
+                    }
                 }
             }
 
             else if (caseData is AdCaseData adCaseData)
             {
-                _adRewardController.AdCaseAdId += OpenAdCaseAction;
-                _adRewardController.ShowAd(AdRewardIds.AdCaseId);
+                if (!adCaseData.IsTotalAdsCount)
+                {
+                    _adRewardController.AdCaseAdId += OpenAdCaseAction;
+                    _transactionController.AddAdCounter();
+                    _adRewardController.ShowAd(AdRewardIds.AdCaseId);
+                }
+                else
+                {
+                    if (_transactionController.AdCounter >= adCaseData.AdsCount)
+                    {
+                        _transactionController.AddAdCounter(-adCaseData.AdsCount);
+                        OpenAdCase(adCaseData);
+                    }
+                }
             }
         }
 

@@ -6,5 +6,6 @@ namespace _Scripts.ScriptableObjects
     public class MoneyCaseData : CaseData
     {
         public int Price;
+        public bool IsTotalCases;
     }
 }

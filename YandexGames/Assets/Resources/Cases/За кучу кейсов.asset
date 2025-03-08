@@ -9,29 +9,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c52843d5071a4db58b1507c2d7c6644f, type: 3}
-  m_Name: "\u0414\u043E\u043D\u0430\u0442\u043D\u044B\u0439"
+  m_Script: {fileID: 11500000, guid: dd4123b41d224737b52719ab219d689a, type: 3}
+  m_Name: "\u0417\u0430 \u043A\u0443\u0447\u0443 \u043A\u0435\u0439\u0441\u043E\u0432"
   m_EditorClassIdentifier: 
   Id: 
   Name:
     m_TableReference:
-      m_TableCollectionName: GUID:8c8ca9e02e69aec41bb09320851c53d1
+      m_TableCollectionName: GUID:a99fd83691ef85e41820f02edee74168
     m_TableEntryReference:
-      m_KeyId: 75945205760
+      m_KeyId: 14490263552
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  CaseImage: {fileID: -1090895710, guid: 5da958314232bad458f389beca6c4e59, type: 3}
+  CaseImage: {fileID: -2043829189, guid: 5da958314232bad458f389beca6c4e59, type: 3}
   LootCountRange: {x: 2, y: 3}
-  CoinsRange: {x: 1000, y: 2000}
+  CoinsRange: {x: 5, y: 20}
   CardPool:
   - {fileID: 11400000, guid: 3e734c4e32b57e04a9d70c8ef286db68, type: 2}
+  - {fileID: 11400000, guid: 56411bd599f1efa4c83d961a9a3a55b5, type: 2}
   DropChancesSerializedDictionary:
     _serializedList:
     - Key: 0
       Value: 100
-  AdsCount: 1
+  Price: 10
+  IsTotalCases: 1
   references:
     version: 2
     RefIds: []

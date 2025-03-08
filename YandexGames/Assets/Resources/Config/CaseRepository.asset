@@ -17,3 +17,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c8f4e8126a2e1e43a06ee56c21e3b10, type: 2}
   - {fileID: 11400000, guid: 253861249600fba4b9b1ca3d4d83642a, type: 2}
   _shopCases: []
+  _adCases:
+  - {fileID: 11400000, guid: b516ad8729e122244919fefdb0ac48eb, type: 2}
+  - {fileID: 11400000, guid: a06f2c85e6e6e9e4ea92e71518da7458, type: 2}
+  - {fileID: 11400000, guid: 8c25308e3d4059d448f49db8c9b99b7c, type: 2}

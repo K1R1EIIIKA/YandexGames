@@ -18,7 +18,7 @@ namespace _Scripts.Data
 
         public override string ToString()
         {
-            return $"PlayerProgress: {LevelsProgress.SceneName}, Money: {LevelsProgress.Money}, PlayerCards: {LevelsProgress.PlayerCards}, AllCardsSet: {LevelsProgress.AllCardsSet}";
+            return $"PlayerProgress: {LevelsProgress.SceneName}, Money: {LevelsProgress.Money}, TotalAdsWatched: {LevelsProgress.TotalAdsWatched}, TotalCasesOpened: {LevelsProgress.TotalCasesOpened}";
         }
     }
 

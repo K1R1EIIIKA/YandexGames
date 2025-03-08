@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c52843d5071a4db58b1507c2d7c6644f, type: 3}
-  m_Name: "\u0414\u043E\u043D\u0430\u0442\u043D\u044B\u0439"
+  m_Name: "\u0421\u0443\u043F\u0435\u0440 \u0414\u043E\u043D\u0430\u0442\u043D\u044B\u0439"
   m_EditorClassIdentifier: 
   Id: 
   Name:
@@ -22,7 +22,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  CaseImage: {fileID: -1090895710, guid: 5da958314232bad458f389beca6c4e59, type: 3}
+  CaseImage: {fileID: 1855119281, guid: 5da958314232bad458f389beca6c4e59, type: 3}
   LootCountRange: {x: 2, y: 3}
   CoinsRange: {x: 1000, y: 2000}
   CardPool:
@@ -31,7 +31,8 @@ MonoBehaviour:
     _serializedList:
     - Key: 0
       Value: 100
-  AdsCount: 1
+  AdsCount: 3
+  IsTotalAdsCount: 1
   references:
     version: 2
     RefIds: []

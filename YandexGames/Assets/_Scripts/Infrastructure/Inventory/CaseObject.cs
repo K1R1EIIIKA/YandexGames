@@ -21,6 +21,7 @@ namespace _Scripts.Infrastructure.Inventory
         [SerializeField] private Button _caseInfoButton;
         [SerializeField] private Image _priceImage;
         [SerializeField] private Image _adCountImage;
+        [SerializeField] private Image _totalCasesImage;
 
         private CaseInfoView _caseInfoView;
         private CaseManager _caseManager;
@@ -43,13 +44,31 @@ namespace _Scripts.Infrastructure.Inventory
             switch (caseData)
             {
                 case MoneyCaseData moneyCaseData when moneyCaseData != null:
-                    var price = Mathf.RoundToInt(moneyCaseData.Price * (1 - discount / 100f));
-                    _casePrice.text = price.ToString();
-                    _priceImage.gameObject.SetActive(true);
+                    if (!moneyCaseData.IsTotalCases)
+                    {
+                        var price = Mathf.RoundToInt(moneyCaseData.Price * (1 - discount / 100f));
+                        _casePrice.text = price.ToString();
+                        _priceImage.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        _casePrice.text = _transactionController.CaseCounter + "/" + moneyCaseData.Price;
+                        _totalCasesImage.gameObject.SetActive(true);
+                        _priceImage.gameObject.SetActive(false);
+                    }
+
                     break;
 
                 case AdCaseData adCaseData when adCaseData != null:
-                    _casePrice.text = "x" + adCaseData.AdsCount;
+                    if (!adCaseData.IsTotalAdsCount)
+                    {
+                        _casePrice.text = "x" + adCaseData.AdsCount;
+                    }
+                    else
+                    {
+                        _casePrice.text = _transactionController.AdCounter + "/" + adCaseData.AdsCount;
+                    }
+
                     _adCountImage.gameObject.SetActive(true);
                     _priceImage.gameObject.SetActive(false);
                     break;

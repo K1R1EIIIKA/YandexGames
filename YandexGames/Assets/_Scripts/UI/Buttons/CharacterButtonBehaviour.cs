@@ -25,8 +25,8 @@ namespace _Scripts.UI.Buttons
         private Tween _tween;
         private BuffController _buffController;
 
-        private float _autoclicksInterval = 0.1f;
-        private float _autoclicksTime = 0;
+        private float _autoClicksInterval = 0.1f;
+        private float _autoClicksTime = 0;
 
         [Inject]
         public void Construct(BuffController buffController)
@@ -94,11 +94,11 @@ namespace _Scripts.UI.Buttons
         private void Update()
         {
             if (_buffController.CurrentStats.IsAutoClick){
-                _autoclicksTime += Time.deltaTime;
-                if (_autoclicksTime >= _autoclicksInterval)
+                _autoClicksTime += Time.deltaTime;
+                if (_autoClicksTime >= _autoClicksInterval)
                 {
                     SpawnFloatingImage(transform.position);
-                    _autoclicksTime = 0;
+                    _autoClicksTime = 0;
                 }
             }
         }

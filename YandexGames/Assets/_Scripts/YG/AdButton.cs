@@ -94,7 +94,7 @@ namespace _Scripts.YG
             _buffText.gameObject.SetActive(true);
             _buffText.text = _adRewardController.GetBuffText(id) + " for 10 seconds";
             _buffText.transform.position = _buffStartPosition.position;
-            _buffText.transform.DOLocalMoveY(_buffStartPosition.position.y + 100, 4f);
+            _buffText.transform.DOLocalMoveY(_buffStartPosition.position.y + 50, 4f);
             _buffText.DOFade(0, 3f).SetDelay(1f).OnComplete(() => _buffText.gameObject.SetActive(false));
         }
     }
