@@ -35,6 +35,38 @@ MonoBehaviour:
     m_Key: Discount25
     m_Metadata:
       m_Items: []
+  - m_Id: 174785228169216
+    m_Key: sort_rarity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 174863489687552
+    m_Key: sort_count
+    m_Metadata:
+      m_Items: []
+  - m_Id: 174943865135104
+    m_Key: sort_has
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180940587393024
+    m_Key: rare_common
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180954365681664
+    m_Key: rare_rare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180965983903744
+    m_Key: rare_super_rare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180978667479040
+    m_Key: rare_super_mega_rare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180989488783360
+    m_Key: rare_special
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

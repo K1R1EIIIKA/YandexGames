@@ -38,6 +38,38 @@ MonoBehaviour:
     m_Localized: 'BONUS: 25% discount on all boxes!'
     m_Metadata:
       m_Items: []
+  - m_Id: 174943865135104
+    m_Localized: 'SORT BY: AVAILABILITY'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 174863489687552
+    m_Localized: 'SORT BY: QUANTITY'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 174785228169216
+    m_Localized: 'SORT BY: RARITIES'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180989488783360
+    m_Localized: Special
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180978667479040
+    m_Localized: Super Mega Rare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180965983903744
+    m_Localized: Super Rare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180954365681664
+    m_Localized: Rare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180940587393024
+    m_Localized: Common
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

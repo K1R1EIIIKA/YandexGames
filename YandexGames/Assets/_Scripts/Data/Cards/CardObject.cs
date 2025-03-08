@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.Serialization;
 
 namespace _Scripts.Data.Cards
@@ -7,8 +8,8 @@ namespace _Scripts.Data.Cards
     public class CardObject : ScriptableObject
     {
         public string Id;
-        public string Name;
-        public string Description;
+        public LocalizedString Name;
+        public LocalizedString Description;
         public Sprite Image;
         public int Cost;
         [FormerlySerializedAs("Rare")] public Rarity Rarity;

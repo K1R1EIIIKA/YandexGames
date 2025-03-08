@@ -38,6 +38,38 @@ MonoBehaviour:
     m_Localized: "BONUS: T\xFCm kutularda% 25 indirim!"
     m_Metadata:
       m_Items: []
+  - m_Id: 174785228169216
+    m_Localized: "\u015EUNA G\xD6RE SIRALA: NAD\u0130RL\u0130KLER"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 174863489687552
+    m_Localized: "G\xD6RE SIRALA: M\u0130KTAR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 174943865135104
+    m_Localized: "\u015EUNA G\xD6RE SIRALA: MEVCUD\u0130YET"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180940587393024
+    m_Localized: Ortak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180954365681664
+    m_Localized: Nadir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180965983903744
+    m_Localized: "S\xFCper Nadir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180978667479040
+    m_Localized: "S\xFCper Mega Nadir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 180989488783360
+    m_Localized: "\xD6zel"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

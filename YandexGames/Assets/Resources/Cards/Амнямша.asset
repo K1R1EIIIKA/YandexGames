@@ -13,8 +13,28 @@ MonoBehaviour:
   m_Name: "\u0410\u043C\u043D\u044F\u043C\u0448\u0430"
   m_EditorClassIdentifier: 
   Id: be602a34-39a6-4e03-95e2-73b110632e24
-  Name: "\u0410\u043C\u043D\u044F\u043C\u0448\u0430"
+  Name:
+    m_TableReference:
+      m_TableCollectionName: GUID:8c8ca9e02e69aec41bb09320851c53d1
+    m_TableEntryReference:
+      m_KeyId: 45679108096
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Description:
+    m_TableReference:
+      m_TableCollectionName: GUID:8c8ca9e02e69aec41bb09320851c53d1
+    m_TableEntryReference:
+      m_KeyId: 9536790528
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   Image: {fileID: 21300000, guid: 98855de03cb171f40be27b7902eec2fe, type: 3}
   Cost: 20
   Rarity: 0
   MoneyPerClick: 1
+  references:
+    version: 2
+    RefIds: []

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
-  m_Name: StringTable
+  m_Name: Cases
   m_EditorClassIdentifier: 
-  m_SharedTableData: {fileID: 11400000, guid: c379c82f1e8d9054abfaef412a3a7214, type: 2}
+  m_SharedTableData: {fileID: 11400000, guid: a99fd83691ef85e41820f02edee74168, type: 2}
   m_Tables:
-  - {fileID: 11400000, guid: 342cce5a8807eb24f9481d283a3e291d, type: 2}
-  - {fileID: 11400000, guid: fc2a4189ea816494991ba9a498206b7a, type: 2}
-  - {fileID: 11400000, guid: 001f335b04e59ac47aff35dbcf905835, type: 2}
+  - {fileID: 11400000, guid: 373fcc61adf6e324599b7a0dd1566544, type: 2}
+  - {fileID: 11400000, guid: 0b1f7ad5de4e2374d8d36de2e01b769a, type: 2}
+  - {fileID: 11400000, guid: e028b08b1a0e8fb42b30f475965f4a4f, type: 2}
   m_Extensions: []
   m_Group: String Table
   references:

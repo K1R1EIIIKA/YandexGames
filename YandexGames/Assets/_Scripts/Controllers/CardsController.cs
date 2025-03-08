@@ -87,7 +87,8 @@ namespace _Scripts.Controllers
                 if (!isOpen)
                     card.GetComponent<Button>().onClick.AddListener(() => _cardBigView.OpenCard(cardData));
                 else
-                    card.GetComponent<Button>().onClick.AddListener(() => _cardBigView.OpenCard(_playerCardsData.Find(x => x.Id == cardData.Id)));
+                    card.GetComponent<Button>().onClick.AddListener(() =>
+                        _cardBigView.OpenCard(_playerCardsData.Find(x => x.Id == cardData.Id)));
             }
         }
 
@@ -249,5 +250,12 @@ namespace _Scripts.Controllers
         ByHasAsc,
         ByRareAsc,
         ByRareDesc,
+    }
+
+    public enum SortType
+    {
+        Rarity,
+        Count,
+        Availability
     }
 }

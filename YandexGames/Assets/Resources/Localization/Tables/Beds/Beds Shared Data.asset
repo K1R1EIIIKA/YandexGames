@@ -10,35 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: StringTable Shared Data
+  m_Name: Beds Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: StringTable
-  m_TableCollectionNameGuidString: c379c82f1e8d9054abfaef412a3a7214
-  m_Entries:
-  - m_Id: 35461783552
-    m_Key: mainmenu_shop
-    m_Metadata:
-      m_Items: []
-  - m_Id: 77006364672
-    m_Key: mainmenu_characters
-    m_Metadata:
-      m_Items: []
-  - m_Id: 96878977024
-    m_Key: mainmenu_mat
-    m_Metadata:
-      m_Items: []
-  - m_Id: 115807870976
-    m_Key: mainmenu_backgrounds
-    m_Metadata:
-      m_Items: []
+  m_TableCollectionName: Beds
+  m_TableCollectionNameGuidString: 00000000000000000000000000000000
+  m_Entries: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 360652266065363169
+    rid: 7318534293112750183
   references:
     version: 2
     RefIds:
-    - rid: 360652266065363169
+    - rid: 7318534293112750183
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1739645736961
+        m_CustomEpoch: 1741434209759

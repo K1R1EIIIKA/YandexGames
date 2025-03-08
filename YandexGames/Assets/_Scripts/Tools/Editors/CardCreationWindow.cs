@@ -2,6 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 using _Scripts.Data.Cards;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 
 # if UNITY_EDITOR
@@ -10,7 +11,7 @@ public class CardCreationWindow : EditorWindow
     private static Rarity _selectedRarity;
     private static Action<CardObject> onCardCreated;
 
-    private string cardName = "Новая карточка";
+    private LocalizedString cardName = new LocalizedString();
     private Sprite image;
     private int cost = 10;
 
@@ -39,7 +40,6 @@ public class CardCreationWindow : EditorWindow
     {
         EditorGUILayout.LabelField("Создание новой карточки", EditorStyles.boldLabel);
 
-        cardName = EditorGUILayout.TextField("Название", cardName);
         image = (Sprite)EditorGUILayout.ObjectField("Изображение", image, typeof(Sprite), false);
         cost = EditorGUILayout.IntField("Стоимость", cost);
 

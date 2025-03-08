@@ -15,8 +15,20 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Russian (ru)
   m_GUID: ca0318d76d298f24387a1a55bfc841ce
   m_SerializeEntries:
+  - m_GUID: 974e21c87c343a64bbfa9561bd82a6f6
+    m_Address: Main_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bc9254af09a8c0f4bb19bb5c73d30b5c
     m_Address: BuffsTable_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6b616a3d74f13f458c219b407cc6ab4
+    m_Address: Characters_ru
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru

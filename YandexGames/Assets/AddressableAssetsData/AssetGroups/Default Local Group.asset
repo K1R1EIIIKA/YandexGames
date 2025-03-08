@@ -14,30 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
   m_GUID: 8659592d0bd4f6947b455b4c91116977
-  m_SerializeEntries:
-  - m_GUID: 001f335b04e59ac47aff35dbcf905835
-    m_Address: Assets/Resources_moved/Localization/Tables/StringTable_tr.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-tr
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 342cce5a8807eb24f9481d283a3e291d
-    m_Address: Assets/Resources_moved/Localization/Tables/StringTable_en.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-en
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c379c82f1e8d9054abfaef412a3a7214
-    m_Address: Assets/Resources_moved/Localization/Tables/StringTable Shared Data.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fc2a4189ea816494991ba9a498206b7a
-    m_Address: Assets/Resources_moved/Localization/Tables/StringTable_ru.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fea45065a3b85cb44a7298600f8100db, type: 2}
   m_SchemaSet:

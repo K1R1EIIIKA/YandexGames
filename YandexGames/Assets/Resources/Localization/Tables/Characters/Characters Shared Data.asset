@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Characters Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Characters
+  m_TableCollectionNameGuidString: 8c8ca9e02e69aec41bb09320851c53d1
+  m_Entries:
+  - m_Id: 9536790528
+    m_Key: omnom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45679108096
+    m_Key: omnomy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49684668416
+    m_Key: baby_omnom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52985585664
+    m_Key: ghoul_omnom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57364439040
+    m_Key: fire_omnom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64767385600
+    m_Key: ice_omnom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71545380864
+    m_Key: super_mega_omnom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 75945205760
+    m_Key: avatar_omnom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82203107328
+    m_Key: plant_omnom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86695206912
+    m_Key: teapot_omnom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 93443842048
+    m_Key: 11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 97893998592
+    m_Key: 12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101442379776
+    m_Key: 13
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7318534293112750174
+  references:
+    version: 2
+    RefIds:
+    - rid: 7318534293112750174
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1741432196041

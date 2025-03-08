@@ -136,8 +136,8 @@ namespace _Scripts.Controllers
             var card = _cardsLoot[0];
 
             _cardImage.sprite = card.Image;
-            _cardNameText.text = card.Name;
-            _cardRareText.text = card.Rarity.ToColorName();
+            _cardNameText.text = card.GetName();
+            _cardRareText.text = LocalizedStrings.ConvertRarityToString(card.Rarity);
             _remainItemsCountValue--;
             _itemsCount.text = _remainItemsCountValue.ToString();
 

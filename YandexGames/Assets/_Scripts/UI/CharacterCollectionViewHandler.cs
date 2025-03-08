@@ -1,5 +1,6 @@
 ﻿using System;
 using _Scripts.Controllers;
+using _Scripts.Enums;
 using _Scripts.UI.Buttons;
 using UnityEngine;
 using UnityEngine.UI;
@@ -51,19 +52,19 @@ namespace _Scripts.UI
             switch (_currentInventorySortIndex)
             {
                 case 0:
-                    _inventorySortButton.ChangeSortType("СОРТИРОВАТЬ ПО: РЕДКОСТИ", true);
+                    _inventorySortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Rarity), true);
                     _cardController.SortInventoryCards(InventoryCardsSortType.ByRareAsc);
                     break;
                 case 1:
-                    _inventorySortButton.ChangeSortType("СОРТИРОВАТЬ ПО: РЕДКОСТИ", false);
+                    _inventorySortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Rarity), false);
                     _cardController.SortInventoryCards(InventoryCardsSortType.NyRareDesc);
                     break;
                 case 2:
-                    _inventorySortButton.ChangeSortType("СОРТИРОВАТЬ ПО: КОЛИЧЕСТВУ", true);
+                    _inventorySortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Count), true);
                     _cardController.SortInventoryCards(InventoryCardsSortType.ByCountAsc);
                     break;
                 case 3:
-                    _inventorySortButton.ChangeSortType("СОРТИРОВАТЬ ПО: КОЛИЧЕСТВУ", false);
+                    _inventorySortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Count), false);
                     _cardController.SortInventoryCards(InventoryCardsSortType.ByCountDesc);
                     break;
             }
@@ -78,19 +79,19 @@ namespace _Scripts.UI
             switch (_currentCollectionSortIndex)
             {
                 case 0:
-                    _collectionSortButton.ChangeSortType("СОРТИРОВАТЬ ПО: НАЛИЧИЮ", true);
+                    _collectionSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Availability), true);
                     _cardController.SortCollectionCards(CollectionCardsSortType.ByHasAsc);
                     break;
                 case 1:
-                    _collectionSortButton.ChangeSortType("СОРТИРОВАТЬ ПО: НАЛИЧИЮ", false);
+                    _collectionSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Availability), false);
                     _cardController.SortCollectionCards(CollectionCardsSortType.ByHasDesc);
                     break;
                 case 2:
-                    _collectionSortButton.ChangeSortType("СОРТИРОВАТЬ ПО: РЕДКОСТИ", true);
+                    _collectionSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Rarity), true);
                     _cardController.SortCollectionCards(CollectionCardsSortType.ByRareAsc);
                     break;
                 case 3:
-                    _collectionSortButton.ChangeSortType("СОРТИРОВАТЬ ПО: РЕДКОСТИ", false);
+                    _collectionSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Rarity), false);
                     _cardController.SortCollectionCards(CollectionCardsSortType.ByRareDesc);
                     break;
             }
@@ -115,7 +116,7 @@ namespace _Scripts.UI
 
             _collectionSortButton.gameObject.SetActive(false);
             _inventorySortButton.gameObject.SetActive(true);
-            _inventorySortButton.ChangeSortType("СОРТИРОВАТЬ ПО: РЕДКОСТИ", true);
+            _inventorySortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Rarity), true);
 
             _cardController.SortInventoryCards(InventoryCardsSortType.ByRareAsc);
             _cardController.ShowPlayerBeds();
@@ -128,7 +129,7 @@ namespace _Scripts.UI
 
             _inventorySortButton.gameObject.SetActive(false);
             _collectionSortButton.gameObject.SetActive(true);
-            _collectionSortButton.ChangeSortType("СОРТИРОВАТЬ ПО: НАЛИЧИЮ", true);
+            _collectionSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Availability), true);
 
             _cardController.SortCollectionCards(CollectionCardsSortType.ByHasAsc);
             _cardController.ShowAllBeds();

@@ -27,7 +27,7 @@ namespace _Scripts.View
             }
             objectImage.sprite = cardObject.ToCardObject().Image;
             objectImage.color = Color.white;
-            objectName.text = cardObject.Name;
+            objectName.text = cardObject.GetName();
         }
 
         public void SetViewToClosed()

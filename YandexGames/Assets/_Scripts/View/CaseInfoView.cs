@@ -1,9 +1,7 @@
-﻿using _Scripts.Data.Cases;
-using _Scripts.ScriptableObjects;
+﻿using _Scripts.ScriptableObjects;
 using _Scripts.Tools;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _Scripts.View
@@ -40,7 +38,7 @@ namespace _Scripts.View
 
             _caseData = caseData;
             _caseImage.sprite = _caseData.CaseImage;
-            _caseName.text = _caseData.Name;
+            _caseName.text = _caseData.GetName();
 
             foreach (var cardData in _caseData.CardPool)
             {

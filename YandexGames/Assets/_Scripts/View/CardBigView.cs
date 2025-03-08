@@ -38,13 +38,13 @@ namespace _Scripts.View
         {
             _cardData = cardObject;
 
-            var nameWithLine = cardObject.Name.Split(' ').Aggregate("", (current, next) => current + next + "\n");
+            var nameWithLine = cardObject.GetName().Split(' ').Aggregate("", (current, next) => current + next + "\n");
             _nameText.text = nameWithLine;
-            _descriptionText.text = cardObject.Description;
+            _descriptionText.text = cardObject.GetDescription();
             _countText.gameObject.SetActive(true);
             _countText.text = "x" + cardObject.Count;
-            _moneyGainText.text = "Сила клика Амняма: " + cardObject.MoneyPerClick;
-            _totalMoneyGainText.text = "Общая Сила клика: " + cardObject.TotalMoneyPerClick;
+            _moneyGainText.text = LocalizedStrings.ClickPower.GetLocalizedString() + cardObject.MoneyPerClick;
+            _totalMoneyGainText.text = LocalizedStrings.GeneralClickPower.GetLocalizedString() + cardObject.TotalMoneyPerClick;
 
             if (cardObject.Rarity == Rarity.Special)
             {
@@ -70,7 +70,7 @@ namespace _Scripts.View
         public void OpenCard(CardData cardData)
         {
             _nameText.text = "???";
-            _descriptionText.text = cardData.Description;
+            _descriptionText.text = cardData.GetDescription();
             _countText.gameObject.SetActive(false);
             _moneyGainText.text = "???";
             _totalMoneyGainText.text = "???";

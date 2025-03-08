@@ -2,6 +2,7 @@
 using _Scripts.Data.Cards;
 using _Scripts.Enums;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace _Scripts.Data.Beds
 {
@@ -9,8 +10,8 @@ namespace _Scripts.Data.Beds
     public class BedData : IComparable
     {
         public string Id;
-        public string Name;
-        public string Description;
+        public LocalizedString Name;
+        public LocalizedString Description;
         public Sprite BedImage;
         public int Price;
         public Rarity Rarity;
@@ -38,9 +39,14 @@ namespace _Scripts.Data.Beds
 
         }
 
+        public string GetName()
+        {
+            return ToBedObject().Name.GetLocalizedString();
+        }
+
         public string GetDescription()
         {
-            return ToBedObject().Description;
+            return ToBedObject().Description.GetLocalizedString();
         }
 
         public BedObject ToBedObject()

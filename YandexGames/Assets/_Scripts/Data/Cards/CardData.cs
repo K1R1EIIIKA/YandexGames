@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace _Scripts.Data.Cards
 {
@@ -7,8 +8,8 @@ namespace _Scripts.Data.Cards
     public class CardData : IComparable
     {
         public string Id;
-        public string Name;
-        public string Description;
+        public LocalizedString Name;
+        public LocalizedString Description;
         public Sprite Image;
         public int Cost;
         public Rarity Rarity;
@@ -36,6 +37,16 @@ namespace _Scripts.Data.Cards
         {
             // Debug.Log("Cards/"+CardObjectLocation);
             return Resources.Load<CardObject>("Cards/"+CardObjectLocation);
+        }
+
+        public string GetName()
+        {
+            return ToCardObject().Name.GetLocalizedString();
+        }
+
+        public string GetDescription()
+        {
+            return ToCardObject().Description.GetLocalizedString();
         }
 
         public CardData()

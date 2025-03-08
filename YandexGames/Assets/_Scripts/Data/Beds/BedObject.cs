@@ -1,6 +1,7 @@
 ﻿using _Scripts.Data.Cards;
 using _Scripts.Enums;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace _Scripts.Data.Beds
 {
@@ -8,8 +9,8 @@ namespace _Scripts.Data.Beds
     public class BedObject : ScriptableObject
     {
         public string Id;
-        public string Name;
-        public string Description;
+        public LocalizedString Name;
+        public LocalizedString Description;
         public Sprite BedImage;
         public Rarity Rarity;
         public int Price;

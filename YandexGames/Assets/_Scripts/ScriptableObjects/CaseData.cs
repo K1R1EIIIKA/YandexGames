@@ -5,6 +5,7 @@ using _Scripts.Data.Cards;
 using _Scripts.Tools;
 using AYellowpaper.SerializedCollections;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace _Scripts.ScriptableObjects
 {
@@ -12,7 +13,7 @@ namespace _Scripts.ScriptableObjects
     public abstract class CaseData : ScriptableObject
     {
         public string Id;
-        public string Name;
+        public LocalizedString Name;
         public Sprite CaseImage;
         public Vector2Int LootCountRange;
         public Vector2Int CoinsRange;
@@ -25,6 +26,11 @@ namespace _Scripts.ScriptableObjects
         public int GetRandomLootCount()
         {
             return UnityEngine.Random.Range(LootCountRange.x, LootCountRange.y + 1);
+        }
+
+        public string GetName()
+        {
+            return Name.GetLocalizedString();
         }
 
         public int GetRandomCoins()
