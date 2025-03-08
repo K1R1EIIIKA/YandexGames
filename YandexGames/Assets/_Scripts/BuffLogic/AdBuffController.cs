@@ -13,7 +13,7 @@ namespace _Scripts.BuffLogic
         private TransactionController _transactionController;
 
         private const float BuffDuration = 10f;
-        private const int InstantMoneyBuffMultiplier = 1000;
+        private const int InstantMoneyBuffMultiplier = 100;
 
         [Inject]
         public void Construct(AdRewardController adRewardController, BuffController buffController,
@@ -28,17 +28,17 @@ namespace _Scripts.BuffLogic
 
         private void Initialize()
         {
-            _adRewardController.Discount10AdId += () => _buffController.AddBuff(new TemporaryBuff(_buffController, new DiscountBuff(10), BuffDuration));
-            _adRewardController.Discount20AdId += () => _buffController.AddBuff(new TemporaryBuff(_buffController, new DiscountBuff(20), BuffDuration));
-            _adRewardController.Discount50AdId += () => _buffController.AddBuff(new TemporaryBuff(_buffController, new DiscountBuff(50), BuffDuration));
+            _adRewardController.Discount10AdId += value => _buffController.AddBuff(new TemporaryBuff(_buffController, new DiscountBuff(10), BuffDuration * value));
+            _adRewardController.Discount20AdId += value => _buffController.AddBuff(new TemporaryBuff(_buffController, new DiscountBuff(20), BuffDuration * value));
+            _adRewardController.Discount50AdId += value => _buffController.AddBuff(new TemporaryBuff(_buffController, new DiscountBuff(50), BuffDuration * value));
 
-            _adRewardController.OneAndHalfMoneyAdId += () => _buffController.AddBuff(new TemporaryBuff(_buffController, new MoneyClickBuff(1.5f),BuffDuration));
-            _adRewardController.DoubleMoneyAdId += () => _buffController.AddBuff(new TemporaryBuff(_buffController, new MoneyClickBuff(2f), BuffDuration));
-            _adRewardController.TripleMoneyAdId += () => _buffController.AddBuff(new TemporaryBuff(_buffController, new MoneyClickBuff(3f), BuffDuration));
+            _adRewardController.OneAndHalfMoneyAdId += value => _buffController.AddBuff(new TemporaryBuff(_buffController, new MoneyClickBuff(1.5f), BuffDuration * value));
+            _adRewardController.DoubleMoneyAdId += value => _buffController.AddBuff(new TemporaryBuff(_buffController, new MoneyClickBuff(2f), BuffDuration * value));
+            _adRewardController.TripleMoneyAdId += value => _buffController.AddBuff(new TemporaryBuff(_buffController, new MoneyClickBuff(3f), BuffDuration * value));
 
-            _adRewardController.AutoClickAdId += () => _buffController.AddBuff(new TemporaryBuff(_buffController, new AutoClickBuff(), BuffDuration));
+            _adRewardController.AutoClickAdId += value => _buffController.AddBuff(new TemporaryBuff(_buffController, new AutoClickBuff(), BuffDuration * value));
 
-            _adRewardController.AutoMoneyPerClickAdId += () => _buffController.AddBuff(new InstantBuff(_buffController, new InstantMoneyBuff(_transactionController, InstantMoneyBuffMultiplier)));
+            _adRewardController.AutoMoneyPerClickAdId += value => _buffController.AddBuff(new InstantBuff(_buffController, new InstantMoneyBuff(_transactionController, InstantMoneyBuffMultiplier * value)));
         }
     }
 }

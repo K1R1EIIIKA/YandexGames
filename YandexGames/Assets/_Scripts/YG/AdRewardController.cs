@@ -1,6 +1,4 @@
 ﻿using System;
-using _Scripts.Data.Cases;
-using TMPro;
 using UnityEngine;
 using YG;
 
@@ -8,20 +6,22 @@ namespace _Scripts.YG
 {
     public class AdRewardController
     {
-        public event Action OneAndHalfMoneyAdId;
-        public event Action DoubleMoneyAdId;
-        public event Action TripleMoneyAdId;
-        public event Action Discount10AdId;
-        public event Action Discount20AdId;
-        public event Action Discount50AdId;
-        public event Action BigCharacterAdId;
-        public event Action SmallCharacterAdId;
-        public event Action CrazyCharacterAdId;
-        public event Action MoreLoot1AdId;
-        public event Action MoreLoot2AdId;
-        public event Action AutoClickAdId;
-        public event Action AutoMoneyPerClickAdId;
+        public event Action<float> OneAndHalfMoneyAdId;
+        public event Action<float> DoubleMoneyAdId;
+        public event Action<float> TripleMoneyAdId;
+        public event Action<float> Discount10AdId;
+        public event Action<float> Discount20AdId;
+        public event Action<float> Discount50AdId;
+        public event Action<float> BigCharacterAdId;
+        public event Action<float> SmallCharacterAdId;
+        public event Action<float> CrazyCharacterAdId;
+        public event Action<float> MoreLoot1AdId;
+        public event Action<float> MoreLoot2AdId;
+        public event Action<float> AutoClickAdId;
+        public event Action<int> AutoMoneyPerClickAdId;
         public event Action AdCaseAdId;
+
+        private Action _onAdWatched;
 
         public void Initialize()
         {
@@ -30,52 +30,59 @@ namespace _Scripts.YG
 
         public void ShowAd(int id, Action callback = null)
         {
-            Debug.Log($"Show ad with id: {AdRewardIds.GetAdRewardName(id)}");
+            _onAdWatched = callback;
             YandexGame.RewVideoShow(id);
         }
 
         private void OnRewardVideo(int id)
         {
+            OnRewardVideo(id, true);
+            _onAdWatched?.Invoke();
+            _onAdWatched = null;
+        }
+
+        public void OnRewardVideo(int id, bool isAdd)
+        {
             switch (id)
             {
                 case 1:
-                    OneAndHalfMoneyAdId?.Invoke();
+                    OneAndHalfMoneyAdId?.Invoke(isAdd ? 6f : 0f);
                     break;
                 case 2:
-                    DoubleMoneyAdId?.Invoke();
+                    DoubleMoneyAdId?.Invoke(isAdd ? 6f : 0f);
                     break;
                 case 3:
-                    TripleMoneyAdId?.Invoke();
+                    TripleMoneyAdId?.Invoke(isAdd ? 6f : 0f);
                     break;
                 case 4:
-                    Discount10AdId?.Invoke();
+                    Discount10AdId?.Invoke(isAdd ? 6f : 0f);
                     break;
                 case 5:
-                    Discount20AdId?.Invoke();
+                    Discount20AdId?.Invoke(isAdd ? 6f : 0f);
                     break;
                 case 6:
-                    Discount50AdId?.Invoke();
+                    Discount50AdId?.Invoke(isAdd ? 6f : 0f);
                     break;
                 case 7:
-                    BigCharacterAdId?.Invoke();
+                    BigCharacterAdId?.Invoke(isAdd ? 6f : 0f);
                     break;
                 case 8:
-                    SmallCharacterAdId?.Invoke();
+                    SmallCharacterAdId?.Invoke(isAdd ? 6f : 0f);
                     break;
                 case 9:
-                    CrazyCharacterAdId?.Invoke();
+                    CrazyCharacterAdId?.Invoke(isAdd ? 6f : 0f);
                     break;
                 case 10:
-                    MoreLoot1AdId?.Invoke();
+                    MoreLoot1AdId?.Invoke(isAdd ? 6f : 0f);
                     break;
                 case 11:
-                    MoreLoot2AdId?.Invoke();
+                    MoreLoot2AdId?.Invoke(isAdd ? 6f : 0f);
                     break;
                 case 12:
-                    AutoClickAdId?.Invoke();
+                    AutoClickAdId?.Invoke(isAdd ? 6f : 0f);
                     break;
                 case 13:
-                    AutoMoneyPerClickAdId?.Invoke();
+                    AutoMoneyPerClickAdId?.Invoke(isAdd ? 6 : 0);
                     break;
                 case 14:
                     AdCaseAdId?.Invoke();

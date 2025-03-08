@@ -14,13 +14,16 @@ namespace _Scripts.YG
         [SerializeField] private Button _adButton;
         [SerializeField] private CanvasGroup _canvasGroup;
         [SerializeField] private RectTransform _parentTransform;
+        [SerializeField] private float _adChance = 0.2f;
 
-        [Header("Text")]
-        [SerializeField] private TextMeshProUGUI _buffText;
+        [Header("Text")] [SerializeField] private TextMeshProUGUI _buffText;
         [SerializeField] private Transform _buffStartPosition;
+        [SerializeField] private Image _adImage;
+        [SerializeField] private AdWindow _adWindow;
 
         private AdRewardController _adRewardController;
-        private  TransactionController _transactionController;
+        private TransactionController _transactionController;
+        private bool _isAd;
 
         [Inject]
         public void Construct(AdRewardController adRewardController, TransactionController transactionController)
@@ -28,23 +31,12 @@ namespace _Scripts.YG
             _adRewardController = adRewardController;
             _transactionController = transactionController;
         }
-        private void OnEnable()
-        {
-            _adButton.onClick.AddListener(OnAdButtonClicked);
-        }
-
-        private void OnDisable()
-        {
-            _adButton.onClick.RemoveListener(OnAdButtonClicked);
-        }
-
-        private void OnAdButtonClicked()
-        {
-
-        }
 
         public void Show()
         {
+            _isAd = Random.value < _adChance;
+            _adImage.gameObject.SetActive(_isAd);
+
             SetRandomPosition();
             gameObject.SetActive(true);
             _canvasGroup.alpha = 0;
@@ -79,20 +71,36 @@ namespace _Scripts.YG
         public void OnPointerClick(PointerEventData eventData)
         {
             var id = Random.Range(1, AdRewardIds.Count + 1);
-            _adRewardController.ShowAd(id);
+
+            if (_isAd)
+            {
+                _adWindow.Show(id, () => OnAdWatched(id));
+                InstantHide();
+            }
+            else
+            {
+                _adRewardController.OnRewardVideo(id, false);
+                _buffText.gameObject.SetActive(true);
+
+                InstantHide();
+                AnimateText(id, 10);
+            }
+        }
+
+        private void OnAdWatched(int id)
+        {
             _transactionController.AddAdCounter();
 
             _buffText.gameObject.SetActive(true);
 
-            InstantHide();
-            AnimateText(id);
+            AnimateText(id, 60);
         }
 
-        private void AnimateText(int id)
+        private void AnimateText(int id, int duration)
         {
             _buffText.alpha = 1;
             _buffText.gameObject.SetActive(true);
-            _buffText.text = _adRewardController.GetBuffText(id) + " for 10 seconds";
+            _buffText.text = _adRewardController.GetBuffText(id) + $" for {duration} seconds";
             _buffText.transform.position = _buffStartPosition.position;
             _buffText.transform.DOLocalMoveY(_buffStartPosition.position.y + 50, 4f);
             _buffText.DOFade(0, 3f).SetDelay(1f).OnComplete(() => _buffText.gameObject.SetActive(false));
