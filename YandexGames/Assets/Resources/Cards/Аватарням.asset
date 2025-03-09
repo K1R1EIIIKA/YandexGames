@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6429d5e23344ea0929a2c135d5c592b, type: 3}
   m_Name: "\u0410\u0432\u0430\u0442\u0430\u0440\u043D\u044F\u043C"
   m_EditorClassIdentifier: 
-  Id: b0e2e4a4-169a-482f-955a-2a1b1f66dde1
+  Id: 1
   Name:
     m_TableReference:
       m_TableCollectionName: GUID:8c8ca9e02e69aec41bb09320851c53d1

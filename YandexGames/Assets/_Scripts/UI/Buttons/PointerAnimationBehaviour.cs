@@ -14,7 +14,7 @@ namespace _Scripts.UI.Buttons
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            transform.DOScale(1.1f, 0.2f);
+            transform.DOScale(1.075f, 0.2f);
         }
 
         public void OnPointerExit(PointerEventData eventData)

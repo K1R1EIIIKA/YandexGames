@@ -23,7 +23,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   CaseImage: {fileID: -1119683735, guid: 5da958314232bad458f389beca6c4e59, type: 3}
-  LootCountRange: {x: 2, y: 6}
+  LootCountRange: {x: 20, y: 20}
   CoinsRange: {x: 1, y: 200}
   CardPool:
   - {fileID: 11400000, guid: 3e734c4e32b57e04a9d70c8ef286db68, type: 2}
@@ -35,7 +35,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2ed91eb40fa293f4387da4dd3577e8fc, type: 2}
   - {fileID: 11400000, guid: 81722a134b3c9f34c9bdde4ce20ddaa0, type: 2}
   - {fileID: 11400000, guid: 1eab16111c1c6ca4eaaff5bbbab71aa1, type: 2}
+  - {fileID: 11400000, guid: a30f6c3bfb27a754190964925cfb68d9, type: 2}
+  - {fileID: 11400000, guid: 8ec4c8361305376428354a4c595539eb, type: 2}
+  - {fileID: 11400000, guid: c01d33f1468772a41b68d360d16ee1c0, type: 2}
+  - {fileID: 11400000, guid: c9baa1d8e1d6f694ebe171b50cf9eebf, type: 2}
+  - {fileID: 11400000, guid: 9751d7295960e3e4880661f5adcbda53, type: 2}
+  - {fileID: 11400000, guid: 0fcf2be409bf1fb439c398f03f164b00, type: 2}
+  - {fileID: 11400000, guid: c82f9459cee04724f9df46af27ce106e, type: 2}
+  - {fileID: 11400000, guid: 3b16cd683aaeff940a13aead7104d85a, type: 2}
   - {fileID: 11400000, guid: d1d87efbb38d04b4d89cc589ec2aa097, type: 2}
+  - {fileID: 11400000, guid: 0dfd6b26522a19547819791af52f671f, type: 2}
   DropChancesSerializedDictionary:
     _serializedList:
     - Key: 0
@@ -49,6 +58,7 @@ MonoBehaviour:
     - Key: 4
       Value: 20
   Price: 0
+  IsTotalCases: 0
   references:
     version: 2
     RefIds: []

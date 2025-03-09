@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6429d5e23344ea0929a2c135d5c592b, type: 3}
   m_Name: "\u0410\u043C\u043D\u044F\u043C \u0427\u0430\u0439\u043D\u0438\u043A"
   m_EditorClassIdentifier: 
-  Id: 752fe77b-689b-471a-bc52-c74fb309a39a
+  Id: 5
   Name:
     m_TableReference:
       m_TableCollectionName: GUID:8c8ca9e02e69aec41bb09320851c53d1
@@ -31,7 +31,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  Image: {fileID: -877276239, guid: fb6af7a5f1624da4fabbae88b147ba2b, type: 3}
+  Image: {fileID: 21300000, guid: fb6af7a5f1624da4fabbae88b147ba2b, type: 3}
   Cost: 10
   Rarity: 3
   MoneyPerClick: 1
