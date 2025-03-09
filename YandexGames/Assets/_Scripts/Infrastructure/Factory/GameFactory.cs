@@ -70,6 +70,13 @@ namespace _Scripts.Infrastructure.Factory
             return bed;
         }
 
+        public GameObject CreateObjectBackground(GridLayoutGroup layoutGroup)
+        {
+            GameObject background = _assetProvider.Instantiate("Prefabs/UI/Collection/BackgroundInventory", layoutGroup.transform);
+
+            return background;
+        }
+
         public void Register(ISavedProgressReader progressReader)
         {
             if (progressReader is ISavedProgress progressWriter)

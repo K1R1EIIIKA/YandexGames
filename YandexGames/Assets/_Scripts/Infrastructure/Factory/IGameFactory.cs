@@ -17,5 +17,6 @@ namespace _Scripts.Infrastructure.Factory
         List<GameObject> CreateObjectCards();
         GameObject CreateObjectCard(GridLayoutGroup gridLayout);
         GameObject CreateObjectBed(GridLayoutGroup gridLayout);
+        GameObject CreateObjectBackground(GridLayoutGroup gridLayout);
     }
 }

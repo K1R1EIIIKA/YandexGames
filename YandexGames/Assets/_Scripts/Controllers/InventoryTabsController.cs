@@ -59,7 +59,7 @@ namespace _Scripts.Controllers
                     break;
                 case InventoryTabType.Backgrounds:
                     _inventoryViewHandler.SelectBackgroundsButton();
-                    tab.SetText($"0");
+                    tab.SetText($"{_transactionController.PlayerBackgrounds.Count}/{_transactionController.AllBackgrounds.Count}");
                     break;
             }
         }

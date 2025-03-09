@@ -11,6 +11,7 @@ namespace _Scripts.Installers
         [SerializeField] private InventoryTabsController _inventoryTabsController;
         [SerializeField] private CardBigView _cardBigView;
         [SerializeField] private BedBigView _bedBigView;
+        [SerializeField] private BackgroundBigView _backgroundBigView;
 
         public override void InstallBindings()
         {
@@ -18,6 +19,7 @@ namespace _Scripts.Installers
                 .To<CardsController>().AsSingle().NonLazy();
 
             Container.Bind<BedsController>().AsSingle().NonLazy();
+            Container.Bind<BackgroundsController>().AsSingle().NonLazy();
 
             // Убираем дублирующуюся строку
             // Container.Bind<CardsController>().AsSingle().NonLazy();
@@ -31,6 +33,7 @@ namespace _Scripts.Installers
 
             Container.Bind<CardBigView>().FromComponentInNewPrefab(_cardBigView).AsSingle().NonLazy();
             Container.Bind<BedBigView>().FromComponentInNewPrefab(_bedBigView).AsSingle().NonLazy();
+            Container.Bind<BackgroundBigView>().FromComponentInNewPrefab(_backgroundBigView).AsSingle().NonLazy();
             Container.Bind<InventoryController>().AsSingle().NonLazy();
         }
     }

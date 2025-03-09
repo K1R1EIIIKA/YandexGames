@@ -18,9 +18,11 @@ namespace _Scripts.Controllers
         [SerializeField] private Button _bedsButton;
         [SerializeField] private Button _backgroundsButton;
         [SerializeField] private Button _accountButton;
+        [SerializeField] private Button _settingsButton;
         [SerializeField] private RectTransform _casesContainer;
         [SerializeField] private RectTransform _adCasesContainer;
         [SerializeField] private AccountController _accountController;
+        [SerializeField] private SettingsController _settingsController;
 
         private CaseManager _caseManager;
         private GameStateMachine _gameStateMachine;
@@ -55,8 +57,14 @@ namespace _Scripts.Controllers
             _bedsButton.onClick.AddListener(OnBedsButtonClicked);
             _backgroundsButton.onClick.AddListener(OnBackgroundsButtonClicked);
             _accountButton.onClick.AddListener(OnAccountButtonClicked);
+            _settingsButton.onClick.AddListener(OnSettingsButtonClicked);
 
             InitializeCases();
+        }
+
+        private void OnSettingsButtonClicked()
+        {
+            _settingsController.OpenSettings();
         }
 
         private void OnEnable()

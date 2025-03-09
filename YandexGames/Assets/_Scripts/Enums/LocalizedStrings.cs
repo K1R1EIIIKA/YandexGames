@@ -1,4 +1,5 @@
-﻿using _Scripts.Controllers;
+﻿using _Scripts.BuffLogic;
+using _Scripts.Controllers;
 using _Scripts.Data.Cards;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -18,6 +19,12 @@ namespace _Scripts.Enums
         private static readonly LocalizedString Discount20 = new() { TableReference = BuffsTableReference, TableEntryReference = "Discount20" };
         private static readonly LocalizedString Discount25 = new() { TableReference = BuffsTableReference, TableEntryReference = "Discount25" };
 
+        private static readonly LocalizedString Click10 = new() { TableReference = BuffsTableReference, TableEntryReference = "Click10" };
+        private static readonly LocalizedString Click20 = new() { TableReference = BuffsTableReference, TableEntryReference = "Click20" };
+        private static readonly LocalizedString Click30 = new() { TableReference = BuffsTableReference, TableEntryReference = "Click30" };
+        private static readonly LocalizedString Click40 = new() { TableReference = BuffsTableReference, TableEntryReference = "Click40" };
+        private static readonly LocalizedString Click50 = new() { TableReference = BuffsTableReference, TableEntryReference = "Click50" };
+
         private static readonly LocalizedString SortByRarity = new() { TableReference = BuffsTableReference, TableEntryReference = "sort_rarity" };
         private static readonly LocalizedString SortByCount = new() { TableReference = BuffsTableReference, TableEntryReference = "sort_count" };
         private static readonly LocalizedString SortByHas = new() { TableReference = BuffsTableReference, TableEntryReference = "sort_has" };
@@ -31,7 +38,7 @@ namespace _Scripts.Enums
         public static readonly LocalizedString ClickPower = new() { TableReference = MainTableReference, TableEntryReference = "click_power" };
         public static readonly LocalizedString GeneralClickPower = new() { TableReference = MainTableReference, TableEntryReference = "general_click_power" };
 
-        public static string ConvertBuffToString(BedBuffType buffType)
+        public static string ConvertBedBuffToString(BedBuffType buffType)
         {
             return buffType switch
             {
@@ -41,6 +48,20 @@ namespace _Scripts.Enums
                 BedBuffType.Discount15 => Discount15.GetLocalizedString(),
                 BedBuffType.Discount20 => Discount20.GetLocalizedString(),
                 BedBuffType.Discount25 => Discount25.GetLocalizedString(),
+                _ => "???"
+            };
+        }
+
+        public static string ConvertBackgroundBuffToString(BackgroundBuffType buffType)
+        {
+            return buffType switch
+            {
+                BackgroundBuffType.None => BonusNone.GetLocalizedString(),
+                BackgroundBuffType.Click10 => Click10.GetLocalizedString(),
+                BackgroundBuffType.Click20 => Click20.GetLocalizedString(),
+                BackgroundBuffType.Click30 => Click30.GetLocalizedString(),
+                BackgroundBuffType.Click40 => Click40.GetLocalizedString(),
+                BackgroundBuffType.Click50 => Click50.GetLocalizedString(),
                 _ => "???"
             };
         }

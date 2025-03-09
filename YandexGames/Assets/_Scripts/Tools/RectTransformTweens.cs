@@ -9,6 +9,9 @@ namespace _Scripts.Tools
     {
         public static void DestroyAllChildren(this RectTransform rectTransform)
         {
+            if (rectTransform == null || rectTransform.childCount == 0)
+                return;
+
             for (int i = rectTransform.childCount - 1; i >= 0; i--)
             {
                 Object.Destroy(rectTransform.GetChild(i).gameObject);

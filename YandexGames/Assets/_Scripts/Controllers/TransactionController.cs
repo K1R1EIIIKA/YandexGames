@@ -2,10 +2,12 @@
 using System.Linq;
 using _Scripts.BuffLogic;
 using _Scripts.Data;
+using _Scripts.Data.Backgrounds;
 using _Scripts.Data.Beds;
 using _Scripts.Data.Cards;
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
+using _Scripts.ScriptableObjects;
 using UnityEngine;
 using Zenject;
 
@@ -31,10 +33,19 @@ namespace _Scripts.Controllers
 
         public BedData SelectedBed { get; private set; }
 
+        public BackgroundData SelectedBackground { get; private set; }
+
+        public List<BackgroundData> PlayerBackgrounds { get; private set; } = new();
+
+        public List<BackgroundData> AllBackgrounds { get; private set; } = new();
+
         public int AdCounter { get; private set; }
 
         public int CaseCounter { get; private set; }
 
+        public bool IsMusicOn { get; private set; }
+
+        public bool IsSoundOn { get; private set; }
 
         public void LoadProgress(PlayerProgress progress)
         {
@@ -47,11 +58,19 @@ namespace _Scripts.Controllers
             AllBeds = progress.LevelsProgress.AllBedsSet;
             SelectedBed = progress.LevelsProgress.SelectedBed;
 
+            PlayerBackgrounds = progress.LevelsProgress.PlayerBackgrounds;
+            AllBackgrounds = progress.LevelsProgress.AllBackgroundsSet;
+            SelectedBackground = progress.LevelsProgress.SelectedBackground;
+
             CheckForNewCards(Resources.LoadAll<CardObject>("Cards").ToList());
             CheckForNewBeds(Resources.LoadAll<BedObject>("Beds").ToList());
+            CheckForNewBackgrounds(Resources.LoadAll<BackgroundObject>("Backgrounds").ToList());
 
             AdCounter = progress.LevelsProgress.TotalAdsWatched;
             CaseCounter = progress.LevelsProgress.TotalCasesOpened;
+
+            IsMusicOn = progress.LevelsProgress.IsMusicOn;
+            IsSoundOn = progress.LevelsProgress.IsSoundOn;
         }
 
         public void UpdateProgress(PlayerProgress progress)
@@ -65,8 +84,15 @@ namespace _Scripts.Controllers
             progress.LevelsProgress.AllBedsSet = AllBeds;
             progress.LevelsProgress.SelectedBed = SelectedBed;
 
+            progress.LevelsProgress.PlayerBackgrounds = PlayerBackgrounds;
+            progress.LevelsProgress.AllBackgroundsSet = AllBackgrounds;
+            progress.LevelsProgress.SelectedBackground = SelectedBackground;
+
             progress.LevelsProgress.TotalAdsWatched = AdCounter;
             progress.LevelsProgress.TotalCasesOpened = CaseCounter;
+
+            progress.LevelsProgress.IsMusicOn = IsMusicOn;
+            progress.LevelsProgress.IsSoundOn = IsSoundOn;
         }
 
         [Inject]
@@ -152,6 +178,11 @@ namespace _Scripts.Controllers
             SelectedBed = bed;
         }
 
+        public void ChooseSelectedBackground(BackgroundData background)
+        {
+            SelectedBackground = background;
+        }
+
         public void CheckForNewCards(List<CardObject> cardPool)
         {
             if (AllCards == null) AllCards = new List<CardData>();
@@ -196,6 +227,28 @@ namespace _Scripts.Controllers
             }
         }
 
+        private void CheckForNewBackgrounds(List<BackgroundObject> backgroundPool)
+        {
+            if (AllBackgrounds == null) AllBackgrounds = new List<BackgroundData>();
+
+            foreach (var background in backgroundPool)
+            {
+                var isNewBackground = !AllBackgrounds.Exists(b => b.Id == background.Id);
+
+                if (isNewBackground)
+                {
+                    AllBackgrounds.Add(new BackgroundData(background));
+                    Debug.Log($"New background added: {background.Name}");
+                }
+                else
+                {
+                    foreach (var playerBackground in PlayerBackgrounds)
+                        if (playerBackground.Id == background.Id)
+                            AllBackgrounds.Find(b => b.Id == background.Id).IsOpen = true;
+                }
+            }
+        }
+
         public void AddAdCounter(int count = 1)
         {
             AdCounter += count;
@@ -204,6 +257,16 @@ namespace _Scripts.Controllers
         public void AddCaseCounter(int count = 1)
         {
             CaseCounter += count;
+        }
+
+        public void SetMusic(bool isOn)
+        {
+            IsMusicOn = isOn;
+        }
+
+        public void SetSound(bool isOn)
+        {
+            IsSoundOn = isOn;
         }
     }
 }

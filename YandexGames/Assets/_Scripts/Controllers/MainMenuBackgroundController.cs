@@ -1,20 +1,21 @@
 ﻿using _Scripts.Data;
-using _Scripts.Data.Beds;
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
+using _Scripts.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
 namespace _Scripts.Controllers
 {
-    public class MainMenuBedController : MonoBehaviour, ISavedProgress
+    public class MainMenuBackgroundController : MonoBehaviour, ISavedProgress
     {
-        [SerializeField] private Image _bedImage;
+        [SerializeField] private Image _backgroundImage;
 
         private GameFactory _gameFactory;
 
-        private BedData _selectedBed;
+        private BackgroundData _selectedBackground;
+
 
         [Inject]
         public void Construct(GameFactory gameFactory)
@@ -26,11 +27,11 @@ namespace _Scripts.Controllers
 
         public void LoadProgress(PlayerProgress progress)
         {
-            _selectedBed = progress.LevelsProgress.SelectedBed;
+            _selectedBackground = progress.LevelsProgress.SelectedBackground;
 
-            if (_selectedBed != null && _bedImage != null)
+            if (_selectedBackground != null && _backgroundImage != null)
             {
-                _bedImage.sprite = _selectedBed.ToBedObject().BedImage;
+                _backgroundImage.sprite = _selectedBackground.ToBackgroundObject().BackgroundImage;
             }
         }
 

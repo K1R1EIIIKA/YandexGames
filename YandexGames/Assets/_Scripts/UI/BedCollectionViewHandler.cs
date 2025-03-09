@@ -43,7 +43,6 @@ namespace _Scripts.UI
         private void OnBedSortButtonClicked()
         {
             _currentBedSortIndex = (_currentBedSortIndex + 1) % _sortTypes.Length;
-            Debug.Log(_currentBedSortIndex);
 
             switch (_currentBedSortIndex)
             {

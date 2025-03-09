@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using _Scripts.Data.Backgrounds;
 using _Scripts.Data.Beds;
 using _Scripts.Data.Cards;
+using _Scripts.ScriptableObjects;
 using UnityEngine;
 
 namespace _Scripts.Data
@@ -35,8 +37,15 @@ namespace _Scripts.Data
         public BedData SelectedBed;
         public List<BedData> AllBedsSet;
 
+        public List<BackgroundData> PlayerBackgrounds;
+        public BackgroundData SelectedBackground;
+        public List<BackgroundData> AllBackgroundsSet;
+
         public int TotalAdsWatched;
         public int TotalCasesOpened;
+
+        public bool IsSoundOn;
+        public bool IsMusicOn;
 
         public int Money;
 
@@ -74,10 +83,25 @@ namespace _Scripts.Data
 
             AllBedsSet = new List<BedData>();
 
+            PlayerBackgrounds = new List<BackgroundData>();
+
+            var background = Resources.Load<BackgroundObject>("Backgrounds/Обычный фон");
+            var backgroundData = new BackgroundData(background)
+            {
+                IsOpen = true
+            };
+            var playerBackgroundData = backgroundData.Copy();
+            PlayerBackgrounds.Add(playerBackgroundData);
+
+            SelectedBackground = PlayerBackgrounds[0];
+
             Money = 0;
 
             TotalAdsWatched = 0;
             TotalCasesOpened = 0;
+
+            IsSoundOn = true;
+            IsMusicOn = true;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace _Scripts.Enums
+﻿namespace _Scripts.BuffLogic
 {
     public enum BackgroundBuffType
     {

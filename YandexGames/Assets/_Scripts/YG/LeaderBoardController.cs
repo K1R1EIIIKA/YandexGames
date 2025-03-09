@@ -1,10 +1,11 @@
 ﻿using System;
+using _Scripts.Controllers;
 using UnityEngine;
 using YG;
 using YG.Utils.LB;
 using Zenject;
 
-namespace _Scripts.Controllers
+namespace _Scripts.YG
 {
     public class LeaderBoardController
     {
@@ -29,9 +30,9 @@ namespace _Scripts.Controllers
 
         public void GetLeaderBoard(Action<LBData> onGetLeaderBoard)
         {
+            _onGetLeaderBoard = onGetLeaderBoard;
             YandexGame.GetLeaderboard(YandexLeaderBoardName, MaxQuantityPlayers, QuantityTopPlayers, QuantityAroundPlayer, "score");
 
-            _onGetLeaderBoard = onGetLeaderBoard;
         }
 
         private void OnGetLeaderboard(LBData obj)

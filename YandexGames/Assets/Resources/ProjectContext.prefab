@@ -98,6 +98,7 @@ MonoBehaviour:
   _inventoryTabsController: {fileID: 5210512515536189385, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
   _cardBigView: {fileID: 7088422122600411591, guid: 6575c9e2d80b301469979f530d5dd2e9, type: 3}
   _bedBigView: {fileID: 3605858028142009741, guid: f575d8f85d8ceef4f91d73752285c940, type: 3}
+  _backgroundBigView: {fileID: 6822766530717597487, guid: bdbeec6cb45f5c346b54344c684bf5ab, type: 3}
 --- !u!114 &-5105250106318259337
 MonoBehaviour:
   m_ObjectHideFlags: 0

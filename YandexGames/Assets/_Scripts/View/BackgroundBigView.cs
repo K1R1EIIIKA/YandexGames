@@ -4,6 +4,7 @@ using _Scripts.Data.Beds;
 using _Scripts.Data.Cards;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
+using _Scripts.ScriptableObjects;
 using _Scripts.Tools;
 using TMPro;
 using UnityEngine;
@@ -12,11 +13,11 @@ using Zenject;
 
 namespace _Scripts.View
 {
-    public class BedBigView : MonoBehaviour
+    public class BackgroundBigView : MonoBehaviour
     {
         [Header("Objects")]
         [SerializeField] private GameObject _playerMoneyObject;
-        [SerializeField] private GameObject _bedPriceObject;
+        [SerializeField] private GameObject _backgroundPriceObject;
 
         [Header("Text")]
         [SerializeField] private TextMeshProUGUI _nameText;
@@ -31,31 +32,31 @@ namespace _Scripts.View
         [SerializeField] private Button _buyButton;
 
         [Header("Images")]
-        [SerializeField] private Image _bedImage;
+        [SerializeField] private Image _backgroundImage;
         [SerializeField] private Image _rarityBackgroundImage;
         [SerializeField] private Material _specialMaterial;
 
         [Inject] private TransactionController _transactionController;
         [Inject] private GameStateMachine _gameStateMachine;
-        [Inject] private LazyInject<BedsController> _bedsController;
+        [Inject] private LazyInject<BackgroundsController> _backgroundsController;
 
-        private BedData _bedData;
+        private BackgroundData _backgroundData;
 
-        public void OpenBoughtBed(BedData bedData)
+        public void OpenBoughtBed(BackgroundData backgroundData)
         {
-            _bedData = bedData;
+            _backgroundData = backgroundData;
 
-            var nameWithLine = bedData.GetName().Split(' ').Aggregate("", (current, next) => current + next + "\n");
+            var nameWithLine = backgroundData.GetName().Split(' ').Aggregate("", (current, next) => current + next + "\n");
             _nameText.text = nameWithLine;
-            _descriptionText.text = bedData.GetDescription();
-            _bonusText.text = LocalizedStrings.ConvertBedBuffToString(bedData.BuffType);
+            _descriptionText.text = backgroundData.GetDescription();
+            _bonusText.text = LocalizedStrings.ConvertBackgroundBuffToString(backgroundData.BuffType);
 
             _buyButton.gameObject.SetActive(false);
             _placeButton.gameObject.SetActive(true);
             _playerMoneyObject.SetActive(false);
-            _bedPriceObject.SetActive(false);
+            _backgroundPriceObject.SetActive(false);
 
-            if (bedData.Rarity == Rarity.Special)
+            if (backgroundData.Rarity == Rarity.Special)
             {
                 _rarityBackgroundImage.color = Color.white;
                 _rarityBackgroundImage.material = _specialMaterial;
@@ -63,11 +64,11 @@ namespace _Scripts.View
             else
             {
                 _rarityBackgroundImage.material = null;
-                _rarityBackgroundImage.color = bedData.Rarity.ToHexColor().ToColor();
+                _rarityBackgroundImage.color = backgroundData.Rarity.ToHexColor().ToColor();
             }
 
-            _bedImage.sprite = bedData.ToBedObject().BedImage;
-            _bedImage.color = Color.white;
+            _backgroundImage.sprite = backgroundData.ToBackgroundObject().BackgroundImage;
+            _backgroundImage.color = Color.white;
 
             _placeButton.gameObject.SetActive(true);
             _placeButton.onClick.AddListener(OnPlaceButtonClick);
@@ -76,21 +77,21 @@ namespace _Scripts.View
             GetComponent<LayoutUpdater>().UpdateAllLayouts();
         }
 
-        public void OpenUnbougthBed(BedData bedData)
+        public void OpenUnbougthBed(BackgroundData backgroundData)
         {
-            _bedData = bedData;
+            _backgroundData = backgroundData;
 
             _nameText.text = "???";
-            _descriptionText.text = bedData.GetDescription();
-            _bonusText.text = LocalizedStrings.ConvertBedBuffToString(bedData.BuffType);
+            _descriptionText.text = backgroundData.GetDescription();
+            _bonusText.text = LocalizedStrings.ConvertBackgroundBuffToString(backgroundData.BuffType);
             _playerMoneyText.text = _transactionController.Money.ToString();
 
             _buyButton.gameObject.SetActive(true);
             _placeButton.gameObject.SetActive(false);
             _playerMoneyObject.SetActive(true);
-            _bedPriceObject.SetActive(true);
+            _backgroundPriceObject.SetActive(true);
 
-            if (bedData.Rarity == Rarity.Special)
+            if (backgroundData.Rarity == Rarity.Special)
             {
                 _rarityBackgroundImage.color = Color.white;
                 _rarityBackgroundImage.material = _specialMaterial;
@@ -98,13 +99,13 @@ namespace _Scripts.View
             else
             {
                 _rarityBackgroundImage.material = null;
-                _rarityBackgroundImage.color = bedData.Rarity.ToHexColor().ToColor();
+                _rarityBackgroundImage.color = backgroundData.Rarity.ToHexColor().ToColor();
             }
 
-            _bedImage.sprite = bedData.ToBedObject().BedImage;
-            _bedImage.color = Color.black;
+            _backgroundImage.sprite = backgroundData.ToBackgroundObject().BackgroundImage;
+            _backgroundImage.color = Color.black;
 
-            _priceText.text = bedData.ToBedObject().Price.ToString();
+            _priceText.text = backgroundData.ToBackgroundObject().Price.ToString();
             _buyButton.onClick.AddListener(OnBuyButtonClick);
 
             gameObject.SetActive(true);
@@ -113,10 +114,10 @@ namespace _Scripts.View
 
         private void OnBuyButtonClick()
         {
-            if (_bedsController.Value.TryBuyBed(_bedData))
+            if (_backgroundsController.Value.TryBuyBackground(_backgroundData))
             {
                 gameObject.SetActive(false);
-                OpenBoughtBed(_bedData);
+                OpenBoughtBed(_backgroundData);
             }
         }
 
@@ -134,7 +135,7 @@ namespace _Scripts.View
 
         private void OnPlaceButtonClick()
         {
-            _bedsController.Value.OnBedClick(_bedData);
+            _backgroundsController.Value.OnBackgroundClick(_backgroundData);
             gameObject.SetActive(false);
             _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.MainScreen);
         }

@@ -78,14 +78,12 @@ namespace _Scripts.YG
             gameObject.SetActive(false);
         }
 
-        public void OnPointerClick()
+        private void OnPointerClick()
         {
-            Debug.Log("BUFFFFFFFFFF");
-
             if (_isAd)
             {
                 var validIds = Enumerable.Range(1, AdRewardIds.Count)
-                    .Where(x => x != 3 && x != 6 && x != 11)
+                    .Where(x => x != 3 && x != 6 && x != 11 && x != 10)
                     .ToList();
 
                 var id = validIds[Random.Range(0, validIds.Count)];
@@ -95,7 +93,7 @@ namespace _Scripts.YG
             else
             {
                 var validIds = Enumerable.Range(1, AdRewardIds.Count)
-                    .Where(x => x != 7 && x != 8 && x != 9)
+                    .Where(x => x != 7 && x != 8 && x != 9 && x != 10 && x != 11)
                     .ToList();
 
                 var id = validIds[Random.Range(0, validIds.Count)];

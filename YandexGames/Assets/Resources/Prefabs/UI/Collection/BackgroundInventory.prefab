@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7425781319567640548}
   - component: {fileID: 6077945210335695945}
   - component: {fileID: 3021889478923176580}
+  - component: {fileID: 2569001468727379758}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -29,13 +30,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1993944792282238798}
   m_Father: {fileID: 5545584415289170378}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.26950073, y: 0}
-  m_SizeDelta: {x: -3.8796, y: 0}
+  m_AnchoredPosition: {x: -0.33999634, y: -0.08899689}
+  m_SizeDelta: {x: -2.6252, y: -2.1104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6077945210335695945
 CanvasRenderer:
@@ -66,7 +68,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: d6936336260771843a3d90241bef6af9, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -74,7 +76,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.76
+--- !u!114 &2569001468727379758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489733758873879595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &2163543776648180365
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,11 +174,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5545584415289170378}
-  - component: {fileID: 7563742569650916401}
+  - component: {fileID: 1362749155935497586}
   - component: {fileID: 412788872128444021}
   - component: {fileID: -3672737637139037201}
   m_Layer: 5
-  m_Name: BedInventory
+  m_Name: BackgroundInventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,15 +198,14 @@ RectTransform:
   m_Children:
   - {fileID: 7425781319567640548}
   - {fileID: 618875552586792748}
-  - {fileID: 1993944792282238798}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 230, y: 153}
+  m_SizeDelta: {x: 400, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7563742569650916401
+--- !u!114 &1362749155935497586
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,7 +214,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3955292898950828347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328dd7da79244c1d88ead2d88ac1c80c, type: 3}
+  m_Script: {fileID: 11500000, guid: 48cba7f7107247c6bf8e27ffe5853839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _backgroundImage: {fileID: 3021889478923176580}
@@ -286,17 +300,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6021477856973535092}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5545584415289170378}
+  m_Father: {fileID: 7425781319567640548}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 158.2172, y: 154.3722}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8870273500030095426
 CanvasRenderer:
@@ -326,8 +340,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 425852584, guid: 0194c7c711a213b49be65771b2848d25, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: edf551424c6223c4ca5571690dc45772, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
