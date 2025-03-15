@@ -1,9 +1,7 @@
 ﻿using _Scripts.BuffLogic;
 using _Scripts.Controllers;
 using _Scripts.Data.Cards;
-using UnityEngine;
 using UnityEngine.Localization;
-using UnityEngine.Localization.Settings;
 
 namespace _Scripts.Enums
 {
@@ -37,6 +35,16 @@ namespace _Scripts.Enums
 
         public static readonly LocalizedString ClickPower = new() { TableReference = MainTableReference, TableEntryReference = "click_power" };
         public static readonly LocalizedString GeneralClickPower = new() { TableReference = MainTableReference, TableEntryReference = "general_click_power" };
+
+        public static readonly LocalizedString Seconds = new() { TableReference = BuffsTableReference, TableEntryReference = "seconds" };
+        public static readonly LocalizedString For = new() { TableReference = BuffsTableReference, TableEntryReference = "for" };
+        public static readonly LocalizedString Coins = new() { TableReference = BuffsTableReference, TableEntryReference = "coins" };
+        public static readonly LocalizedString ClickPowerBuff = new() { TableReference = BuffsTableReference, TableEntryReference = "click_power" };
+        public static readonly LocalizedString Discount = new() { TableReference = BuffsTableReference, TableEntryReference = "discount" };
+        public static readonly LocalizedString BigChar = new() { TableReference = BuffsTableReference, TableEntryReference = "big_char" };
+        public static readonly LocalizedString SmallChar = new() { TableReference = BuffsTableReference, TableEntryReference = "small_char" };
+        public static readonly LocalizedString CrazyChar = new() { TableReference = BuffsTableReference, TableEntryReference = "crazy_char" };
+        public static readonly LocalizedString AutoClick = new() { TableReference = BuffsTableReference, TableEntryReference = "auto_click" };
 
         public static string ConvertBedBuffToString(BedBuffType buffType)
         {

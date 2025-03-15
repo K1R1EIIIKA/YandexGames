@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using _Scripts.BuffLogic.Base;
+using _Scripts.Enums;
+using UnityEngine.Localization;
+using YG;
 
 namespace _Scripts.YG
 {
@@ -42,44 +45,23 @@ namespace _Scripts.YG
             };
         }
 
-        public static string GetAdRewardName(int id)
-        {
-            return id switch
-            {
-                OneAndHalfMoneyAdId => "1.5x Money",
-                DoubleMoneyAdId => "2x Money",
-                TripleMoneyAdId => "3x Money",
-                Discount10AdId => "10% Discount",
-                Discount20AdId => "20% Discount",
-                Discount50AdId => "50% Discount",
-                BigCharacterAdId => "Big Character",
-                SmallCharacterAdId => "Small Character",
-                CrazyCharacterAdId => "Crazy Character",
-                MoreLoot1AdId => "More Loot 1",
-                MoreLoot2AdId => "More Loot 2",
-                AutoClickAdId => "Auto Click",
-                AutoMoneyPerClickAdId => "Auto Money Per Click",
-                _ => "Unknown"
-            };
-        }
-
         public static (BuffCategory, string, float) GetRewardBuff(int id)
         {
             return id switch
             {
-                OneAndHalfMoneyAdId => (BuffCategory.Temporary, "1.5x Money",  10f),
-                DoubleMoneyAdId => (BuffCategory.Temporary, "2x Money", 10f),
-                TripleMoneyAdId => (BuffCategory.Temporary, "3x Money", 5f),
-                Discount10AdId => (BuffCategory.Temporary, "10% Discount",  10f),
-                Discount20AdId => (BuffCategory.Temporary, "20% Discount",  10f),
-                Discount50AdId => (BuffCategory.Temporary, "50% Discount",  5f),
-                BigCharacterAdId => (BuffCategory.Temporary, "Big Character",  10f),
-                SmallCharacterAdId => (BuffCategory.Temporary, "Small Character",  10f),
-                CrazyCharacterAdId => (BuffCategory.Temporary, "Crazy Character", 10f),
-                MoreLoot1AdId => (BuffCategory.Temporary, "More Loot 1",  10f),
-                MoreLoot2AdId => (BuffCategory.Temporary, "More Loot 2", 10f),
-                AutoClickAdId => (BuffCategory.Temporary, "Auto Click", 10f),
-                AutoMoneyPerClickAdId => (BuffCategory.Instant, "Auto Money Per Click", 100f),
+                OneAndHalfMoneyAdId => (BuffCategory.Temporary, $"1.5x {LocalizedStrings.ClickPowerBuff.GetLocalizedString()}",  10f),
+                DoubleMoneyAdId => (BuffCategory.Temporary, $"2x {LocalizedStrings.ClickPowerBuff.GetLocalizedString()}", 10f),
+                TripleMoneyAdId => (BuffCategory.Temporary, $"3x {LocalizedStrings.ClickPowerBuff.GetLocalizedString()}", 5f),
+                Discount10AdId => (BuffCategory.Temporary, $"10% {LocalizedStrings.Discount.GetLocalizedString()}",  10f),
+                Discount20AdId => (BuffCategory.Temporary, $"20% {LocalizedStrings.Discount.GetLocalizedString()}",  10f),
+                Discount50AdId => (BuffCategory.Temporary, $"50% {LocalizedStrings.Discount.GetLocalizedString()}",  5f),
+                BigCharacterAdId => (BuffCategory.Temporary, $"{LocalizedStrings.BigChar.GetLocalizedString()}",  10f),
+                SmallCharacterAdId => (BuffCategory.Temporary, $"{LocalizedStrings.SmallChar.GetLocalizedString()}",  10f),
+                CrazyCharacterAdId => (BuffCategory.Temporary, $"{LocalizedStrings.CrazyChar.GetLocalizedString()}", 10f),
+                MoreLoot1AdId => (BuffCategory.Temporary, $"More Loot 1",  10f),
+                MoreLoot2AdId => (BuffCategory.Temporary, $"More Loot 2", 10f),
+                AutoClickAdId => (BuffCategory.Temporary, $"{LocalizedStrings.AutoClick.GetLocalizedString()}", 10f),
+                AutoMoneyPerClickAdId => (BuffCategory.Instant, $"Auto Money Per Click", 100f),
                 _ => (BuffCategory.Temporary, "Unknown", 1f)
             };
         }
@@ -88,20 +70,20 @@ namespace _Scripts.YG
         {
             return id switch
             {
-                OneAndHalfMoneyAdId => (BuffCategory.Temporary, "1.5x Money",  60f),
-                DoubleMoneyAdId => (BuffCategory.Temporary, "2x Money", 60f),
-                TripleMoneyAdId => (BuffCategory.Temporary, "3x Money", 30f),
-                Discount10AdId => (BuffCategory.Temporary, "10% Discount",  60f),
-                Discount20AdId => (BuffCategory.Temporary, "20% Discount",  60f),
-                Discount50AdId => (BuffCategory.Temporary, "50% Discount",  20f),
-                BigCharacterAdId => (BuffCategory.Temporary, "Big Character",  60f),
-                SmallCharacterAdId => (BuffCategory.Temporary, "Small Character",  60f),
-                CrazyCharacterAdId => (BuffCategory.Temporary, "Crazy Character", 60f),
-                MoreLoot1AdId => (BuffCategory.Temporary, "More Loot 1",  60f),
-                MoreLoot2AdId => (BuffCategory.Temporary, "More Loot 2", 60f),
-                AutoClickAdId => (BuffCategory.Temporary, "Auto Click", 60f),
-                AutoMoneyPerClickAdId => (BuffCategory.Instant, "Auto Money Per Click", 600f),
-                _ => (BuffCategory.Temporary, "Unknown", 1f)
+                OneAndHalfMoneyAdId => (BuffCategory.Temporary,$"1.5x {LocalizedStrings.ClickPowerBuff.GetLocalizedString()}",  60f),
+                DoubleMoneyAdId => (BuffCategory.Temporary,$"2x {LocalizedStrings.ClickPowerBuff.GetLocalizedString()}", 60f),
+                TripleMoneyAdId => (BuffCategory.Temporary,$"3x {LocalizedStrings.ClickPowerBuff.GetLocalizedString()}", 30f),
+                Discount10AdId => (BuffCategory.Temporary,$"10% {LocalizedStrings.Discount.GetLocalizedString()}",  60f),
+                Discount20AdId => (BuffCategory.Temporary,$"20% {LocalizedStrings.Discount.GetLocalizedString()}",  60f),
+                Discount50AdId => (BuffCategory.Temporary,$"50% {LocalizedStrings.Discount.GetLocalizedString()}",  20f),
+                BigCharacterAdId => (BuffCategory.Temporary,$"{LocalizedStrings.BigChar.GetLocalizedString()}",  60f),
+                SmallCharacterAdId => (BuffCategory.Temporary,$"{LocalizedStrings.SmallChar.GetLocalizedString()}",  60f),
+                CrazyCharacterAdId => (BuffCategory.Temporary,$"{LocalizedStrings.CrazyChar.GetLocalizedString()}", 60f),
+                MoreLoot1AdId => (BuffCategory.Temporary,$"More Loot 1",  60f),
+                MoreLoot2AdId => (BuffCategory.Temporary,$"More Loot 2", 60f),
+                AutoClickAdId => (BuffCategory.Temporary,$"{LocalizedStrings.Discount.GetLocalizedString()}", 60f),
+                AutoMoneyPerClickAdId => (BuffCategory.Instant,$"Auto Money Per Click", 600f),
+                _ => (BuffCategory.Temporary,$"Unknown", 1f)
             };
         }
     }

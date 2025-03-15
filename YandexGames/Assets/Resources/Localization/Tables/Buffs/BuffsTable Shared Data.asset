@@ -71,6 +71,42 @@ MonoBehaviour:
     m_Key: BonusNone
     m_Metadata:
       m_Items: []
+  - m_Id: 2825285752840192
+    m_Key: for
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2825989083095040
+    m_Key: seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2826007894548480
+    m_Key: coins
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2826223154618368
+    m_Key: click_power
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2826339127123968
+    m_Key: discount
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2826414947557376
+    m_Key: big_char
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2826491577491456
+    m_Key: small_char
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2826530169282560
+    m_Key: crazy_char
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2826565908946944
+    m_Key: auto_click
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

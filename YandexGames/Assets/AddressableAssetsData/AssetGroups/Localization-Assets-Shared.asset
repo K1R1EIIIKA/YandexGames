@@ -25,6 +25,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a7366d0b8bbc774cb86f494d10d05f0
+    m_Address: Assets/Resources/Localization/Tables/Buffs/BuffsTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8c8ca9e02e69aec41bb09320851c53d1
     m_Address: Assets/Resources/Localization/Tables/Characters/Characters Shared
       Data.asset

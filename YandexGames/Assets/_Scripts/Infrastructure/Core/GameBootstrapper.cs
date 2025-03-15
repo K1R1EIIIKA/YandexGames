@@ -1,10 +1,15 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using _Scripts.Controllers;
 using _Scripts.Data.Cards;
 using _Scripts.Infrastructure.Core.States;
 using _Scripts.Infrastructure.Services.SaveLoad;
+using _Scripts.Plugins;
 using _Scripts.YG;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using Zenject;
 
 namespace _Scripts.Infrastructure.Core
@@ -22,6 +27,8 @@ namespace _Scripts.Infrastructure.Core
         private float _leaderboardElapsedTime;
         private float _saveInterval = 10f;
         private float _leaderBoardSaveInterval = 20f;
+
+        private bool _isSettingLanguage = false;
 
         [Inject]
         public void Construct(InventoryController inventoryController, ISaveLoadService saveLoadService,
@@ -47,8 +54,63 @@ namespace _Scripts.Infrastructure.Core
 
             DontDestroyOnLoad(this);
             Debug.Log("Bootstrapper made his deal");
+
+            SetLanguage();
         }
 
+        private void SetLanguage()
+        {
+            var lang = JsLib.GetLanguage(); // Получаем язык из Yandex SDK
+
+            if (string.IsNullOrEmpty(lang))
+            {
+                Debug.LogWarning("Не удалось получить язык, используется язык по умолчанию.");
+                return;
+            }
+
+            // Преобразуем язык Yandex SDK в формат Unity
+            string unityLangCode = ConvertYandexLangToUnity(lang);
+
+            // Устанавливаем язык
+            StartCoroutine(SetLocale(unityLangCode));
+        }
+
+        private IEnumerator SetLocale(string localeCode)
+        {
+            if (_isSettingLanguage) yield break; // Защита от повторных вызовов
+
+            _isSettingLanguage = true;
+
+            // Дожидаемся загрузки настроек локализации
+            if (!LocalizationSettings.InitializationOperation.IsDone)
+                yield return LocalizationSettings.InitializationOperation;
+
+            // Ищем соответствующую локаль
+            Locale targetLocale = LocalizationSettings.AvailableLocales.Locales.Find(locale => locale.Identifier.Code == localeCode);
+
+            if (targetLocale != null)
+            {
+                LocalizationSettings.SelectedLocale = targetLocale;
+                Debug.Log($"Язык установлен: {targetLocale.LocaleName} ({localeCode})");
+            }
+            else
+            {
+                Debug.LogWarning($"Локаль {localeCode} не найдена, используется стандартная.");
+            }
+
+            _isSettingLanguage = false;
+        }
+
+        private string ConvertYandexLangToUnity(string yandexLang)
+        {
+            switch (yandexLang)
+            {
+                case "ru": return "ru"; // Русский
+                case "en": return "en"; // Английский
+                case "tr": return "tr"; // Турецкий
+                default: return "ru"; // Язык по умолчанию
+            }
+        }
         private void Update()
         {
             _elapsedTime += Time.deltaTime;

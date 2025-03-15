@@ -131,7 +131,6 @@ namespace _Scripts.Controllers
                 }
             }
 
-            Debug.Log(_buffController.CurrentStats.IsCharacterSizeChanged);
             if (_buffController.CurrentStats.IsCharacterSizeChanged)
             {
                 _characterTransform.localScale = new Vector3(_buffController.CurrentStats.CharacterScale,
@@ -144,7 +143,11 @@ namespace _Scripts.Controllers
 
             if (_buffController.CurrentStats.IsCharacterSizeCrazy)
             {
-                _characterTransform.Rotate(Vector3.forward, 1);
+                _characterTransform.Rotate(Vector3.forward, 2);
+            }
+            else
+            {
+                _characterTransform.rotation = Quaternion.identity;
             }
         }
     }

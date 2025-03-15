@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using _Scripts.BuffLogic.Base;
 using _Scripts.Controllers;
+using _Scripts.Enums;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -128,13 +129,12 @@ namespace _Scripts.YG
             }
 
             if (buff.category == BuffCategory.Temporary)
-                _buffText.text = buff.description + $" for {buff.duration} seconds";
+                _buffText.text = buff.description + $" {LocalizedStrings.For.GetLocalizedString()} {buff.duration} {LocalizedStrings.Seconds.GetLocalizedString()}";
             else
             {
                 _buffText.text = "+" + _transactionController.SelectedCard.TotalMoneyPerClick * buff.duration +
-                                 " coins";
+                                 $" {LocalizedStrings.Coins.GetLocalizedString()}";
             }
-
 
             _buffText.alpha = 1;
             _buffText.gameObject.SetActive(true);
