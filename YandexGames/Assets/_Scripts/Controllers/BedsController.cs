@@ -8,6 +8,7 @@ using _Scripts.Enums;
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using _Scripts.Infrastructure.Services.SaveLoad;
+using _Scripts.UI;
 using _Scripts.View;
 using UnityEngine;
 using UnityEngine.UI;
@@ -105,7 +106,7 @@ namespace _Scripts.Controllers
             }
         }
 
-        public bool TryBuyBed(BedData bedData)
+        public bool TryBuyBed(BedData bedData, Transform buttonTransform)
         {
             if (_transactionController.SpendMoney(bedData.ToBedObject().Price))
             {
@@ -115,6 +116,8 @@ namespace _Scripts.Controllers
 
                 return true;
             }
+
+            AnimationTweens.HandleWrongTransform(buttonTransform);
 
             return false;
         }

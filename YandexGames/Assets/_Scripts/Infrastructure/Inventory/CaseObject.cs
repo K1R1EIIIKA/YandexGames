@@ -89,7 +89,7 @@ namespace _Scripts.Infrastructure.Inventory
 
         private void OpenCase()
         {
-            _caseManager.TryOpenCase(_caseData);
+            _caseManager.TryOpenCase(_caseData, transform);
         }
 
         private void ShowCaseInfo()

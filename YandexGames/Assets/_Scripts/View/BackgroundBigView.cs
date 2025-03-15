@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using _Scripts.Controllers;
-using _Scripts.Data.Beds;
 using _Scripts.Data.Cards;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
@@ -114,7 +113,7 @@ namespace _Scripts.View
 
         private void OnBuyButtonClick()
         {
-            if (_backgroundsController.Value.TryBuyBackground(_backgroundData))
+            if (_backgroundsController.Value.TryBuyBackground(_backgroundData, _buyButton.transform))
             {
                 gameObject.SetActive(false);
                 OpenBoughtBed(_backgroundData);

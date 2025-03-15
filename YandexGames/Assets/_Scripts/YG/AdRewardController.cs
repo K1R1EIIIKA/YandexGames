@@ -61,7 +61,7 @@ namespace _Scripts.YG
                     Discount20AdId?.Invoke(isAdd ? 6f : 1f);
                     break;
                 case 6:
-                    Discount50AdId?.Invoke(isAdd ? 2f : 1f);
+                    Discount50AdId?.Invoke(isAdd ? 4f : 1f);
                     break;
                 case 7:
                     BigCharacterAdId?.Invoke(isAdd ? 6f : 1f);

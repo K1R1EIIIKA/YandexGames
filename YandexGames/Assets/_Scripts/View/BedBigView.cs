@@ -113,7 +113,7 @@ namespace _Scripts.View
 
         private void OnBuyButtonClick()
         {
-            if (_bedsController.Value.TryBuyBed(_bedData))
+            if (_bedsController.Value.TryBuyBed(_bedData, _buyButton.transform))
             {
                 gameObject.SetActive(false);
                 OpenBoughtBed(_bedData);

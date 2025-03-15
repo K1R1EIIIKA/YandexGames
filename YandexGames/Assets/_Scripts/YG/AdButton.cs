@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using _Scripts.BuffLogic.Base;
 using _Scripts.Controllers;
 using DG.Tweening;
 using TMPro;
@@ -101,7 +102,7 @@ namespace _Scripts.YG
                 _buffText.gameObject.SetActive(true);
 
                 InstantHide();
-                AnimateText(id, 10);
+                AnimateText(id, false);
             }
         }
 
@@ -111,16 +112,34 @@ namespace _Scripts.YG
 
             _buffText.gameObject.SetActive(true);
 
-            AnimateText(id, 60);
+            AnimateText(id, true);
         }
 
-        private void AnimateText(int id, int duration)
+        private void AnimateText(int id, bool isAd)
         {
+            (BuffCategory category, string description, float duration) buff;
+            if (isAd)
+            {
+                buff = AdRewardIds.GetAdRewardBuff(id);
+            }
+            else
+            {
+                buff = AdRewardIds.GetRewardBuff(id);
+            }
+
+            if (buff.category == BuffCategory.Temporary)
+                _buffText.text = buff.description + $" for {buff.duration} seconds";
+            else
+            {
+                _buffText.text = "+" + _transactionController.SelectedCard.TotalMoneyPerClick * buff.duration +
+                                 " coins";
+            }
+
+
             _buffText.alpha = 1;
             _buffText.gameObject.SetActive(true);
-            _buffText.text = _adRewardController.GetBuffText(id) + $" for {duration} seconds";
             _buffText.transform.position = _buffStartPosition.position;
-            _buffText.transform.DOLocalMoveY(_buffStartPosition.position.y + 50, 4f);
+            _buffText.transform.DOMoveY(_buffStartPosition.position.y + 80, 4f);
             _buffText.DOFade(0, 3f).SetDelay(1f).OnComplete(() => _buffText.gameObject.SetActive(false));
         }
     }

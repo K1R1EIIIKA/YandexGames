@@ -11,10 +11,10 @@ namespace _Scripts.Data.Cards
         public LocalizedString Name;
         public LocalizedString Description;
         public Sprite Image;
-        public int Cost;
-        public Rarity Rarity;
+        public int Cost => ToCardObject().Cost;
+        public Rarity Rarity => ToCardObject().Rarity;
         public bool IsOpen;
-        public int MoneyPerClick;
+        public int MoneyPerClick => ToCardObject().MoneyPerClick;
 
         public string CardObjectLocation;
 
@@ -24,9 +24,6 @@ namespace _Scripts.Data.Cards
             Name = cardObject.Name;
             Description = cardObject.Description;
             Image = cardObject.Image;
-            Cost = cardObject.Cost;
-            Rarity = cardObject.Rarity;
-            MoneyPerClick = cardObject.MoneyPerClick;
             IsOpen = false;
 
             // location of the card object

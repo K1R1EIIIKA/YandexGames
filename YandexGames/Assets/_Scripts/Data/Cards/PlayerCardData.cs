@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace _Scripts.Data.Cards
 {
@@ -6,7 +7,20 @@ namespace _Scripts.Data.Cards
     public class PlayerCardData : CardData
     {
         public int Count;
-        public int TotalMoneyPerClick => Count * ToCardObject().MoneyPerClick;
+
+        public int TotalMoneyPerClick
+        {
+            get
+            {
+                float[] multipliers = { 1, 2, 2.9f, 3.7f, 4.4f, 4.9f, 5.3f, 5.6f, 5.8f, 6.0f };
+                int baseMoneyPerClick = ToCardObject().MoneyPerClick;
+
+                Debug.Log(multipliers.Length);
+                float multiplier = multipliers[Math.Min(Count, multipliers.Length - 1)];
+
+                return (int)(baseMoneyPerClick * multiplier);
+            }
+        }
 
         public PlayerCardData(CardObject cardObject) : base(cardObject)
         {
@@ -18,10 +32,7 @@ namespace _Scripts.Data.Cards
             Id = cardData.Id;
             Name = cardData.Name;
             Image = cardData.Image;
-            Cost = cardData.Cost;
-            Rarity = cardData.Rarity;
             IsOpen = cardData.IsOpen;
-            MoneyPerClick = cardData.MoneyPerClick;
             CardObjectLocation = cardData.CardObjectLocation;
             Count = 1;
         }

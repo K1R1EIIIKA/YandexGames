@@ -1,11 +1,11 @@
 ﻿using System;
 using _Scripts.BuffLogic;
 using _Scripts.Controllers;
-using _Scripts.Data.Cases;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
 using _Scripts.ScriptableObjects;
 using _Scripts.Tools;
+using _Scripts.UI;
 using _Scripts.YG;
 using UnityEngine;
 using Zenject;
@@ -42,7 +42,7 @@ namespace _Scripts.Infrastructure.Inventory
 
         private int GetDiscount()
         {
-            return _buffController.CurrentStats.DiscountBonus;
+            return Mathf.Min(_buffController.CurrentStats.DiscountBonus, 95);
         }
 
         public void InitializeCases(RectTransform container, CaseLocationType caseType)
@@ -77,7 +77,7 @@ namespace _Scripts.Infrastructure.Inventory
             }
         }
 
-        public void TryOpenCase(CaseData caseData)
+        public void TryOpenCase(CaseData caseData, Transform caseTransform)
         {
             _currentCaseData = caseData;
 
@@ -92,6 +92,10 @@ namespace _Scripts.Infrastructure.Inventory
                         _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.BoxOpening,
                             () => { BoxOpeningController.Instance.Initialize(caseData); });
                     }
+                    else
+                    {
+                        AnimationTweens.HandleWrongTransform(caseTransform);
+                    }
                 }
                 else
                 {
@@ -100,6 +104,10 @@ namespace _Scripts.Infrastructure.Inventory
                         _transactionController.AddCaseCounter(-moneyCaseData.Price);
                         _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.BoxOpening,
                             () => { BoxOpeningController.Instance.Initialize(caseData); });
+                    }
+                    else
+                    {
+                        AnimationTweens.HandleWrongTransform(caseTransform);
                     }
                 }
             }
@@ -118,6 +126,10 @@ namespace _Scripts.Infrastructure.Inventory
                     {
                         _transactionController.AddAdCounter(-adCaseData.AdsCount);
                         OpenAdCase(adCaseData);
+                    }
+                    else
+                    {
+                        AnimationTweens.HandleWrongTransform(caseTransform);
                     }
                 }
             }

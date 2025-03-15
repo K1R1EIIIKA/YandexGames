@@ -6,6 +6,7 @@ using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using _Scripts.Infrastructure.Services.SaveLoad;
 using _Scripts.ScriptableObjects;
+using _Scripts.UI;
 using _Scripts.View;
 using UnityEngine;
 using UnityEngine.UI;
@@ -101,7 +102,7 @@ namespace _Scripts.Controllers
             }
         }
 
-        public bool TryBuyBackground(BackgroundData backgroundData)
+        public bool TryBuyBackground(BackgroundData backgroundData, Transform buttonTransform)
         {
             if (_transactionController.SpendMoney(backgroundData.ToBackgroundObject().Price))
             {
@@ -111,6 +112,8 @@ namespace _Scripts.Controllers
 
                 return true;
             }
+
+            AnimationTweens.HandleWrongTransform(buttonTransform);
 
             return false;
         }

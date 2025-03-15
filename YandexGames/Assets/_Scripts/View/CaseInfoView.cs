@@ -10,6 +10,7 @@ namespace _Scripts.View
     {
         [SerializeField] private Image _caseImage;
         [SerializeField] private TextMeshProUGUI _caseName;
+        [SerializeField] private TextMeshProUGUI _coinsText;
         [SerializeField] private RectTransform _caseContent;
         [SerializeField] private Button _closeButton;
 
@@ -39,6 +40,7 @@ namespace _Scripts.View
             _caseData = caseData;
             _caseImage.sprite = _caseData.CaseImage;
             _caseName.text = _caseData.GetName();
+            _coinsText.text = $"{_caseData.CoinsRange.x}-{_caseData.CoinsRange.y}";
 
             foreach (var cardData in _caseData.CardPool)
             {
