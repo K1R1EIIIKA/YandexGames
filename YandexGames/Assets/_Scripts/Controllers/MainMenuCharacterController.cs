@@ -3,11 +3,14 @@ using _Scripts.BuffLogic.Base;
 using _Scripts.BuffLogic.Buffs;
 using _Scripts.Data;
 using _Scripts.Data.Cards;
+using _Scripts.EventsLogic;
+using _Scripts.EventsLogic.Events;
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using _Scripts.YG;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 using Zenject;
 
@@ -55,6 +58,8 @@ namespace _Scripts.Controllers
             _adRewardController.BigCharacterAdId += AddBigCharacterBuff;
             _adRewardController.SmallCharacterAdId += AddSmallCharacterBuff;
             _adRewardController.CrazyCharacterAdId += AddCrazyCharacterBuff;
+
+            EventBus<OnMoneyChangedEvent>.OnEvent += UpdateMoneyText;
         }
 
         private void AddBigCharacterBuff(float value)
@@ -69,7 +74,7 @@ namespace _Scripts.Controllers
 
         private void AddCrazyCharacterBuff(float value)
         {
-            _buffController.AddBuff(new TemporaryBuff(_buffController, new CharacterSizeBuff(2f, false), 10 * value));
+            _buffController.AddBuff(new TemporaryBuff(_buffController, new CharacterSizeBuff(1f, true), 10 * value));
         }
 
         private void OnDisable()
@@ -86,6 +91,10 @@ namespace _Scripts.Controllers
             var money = Mathf.RoundToInt(_selectedCard.TotalMoneyPerClick * _buffController.CurrentStats.ClickBonus);
 
             _transactionController.AddMoney(money);
+        }
+
+        private void UpdateMoneyText(OnMoneyChangedEvent e)
+        {
             _moneyText.text = _transactionController.Money.ToString();
         }
 
@@ -114,21 +123,28 @@ namespace _Scripts.Controllers
                 {
                     _autoclicksTime = 0;
 
-                    var money = Mathf.RoundToInt(_selectedCard.TotalMoneyPerClick * _buffController.CurrentStats.ClickBonus);
+                    var money = Mathf.RoundToInt(_selectedCard.TotalMoneyPerClick *
+                                                 _buffController.CurrentStats.ClickBonus);
 
                     _transactionController.AddMoney(money);
                     _moneyText.text = _transactionController.Money.ToString();
                 }
             }
 
+            Debug.Log(_buffController.CurrentStats.IsCharacterSizeChanged);
             if (_buffController.CurrentStats.IsCharacterSizeChanged)
             {
-                if (!_buffController.CurrentStats.IsCharacterSizeCrazy)
-                    _characterTransform.localScale = Vector3.Lerp(_characterTransform.localScale, Vector3.one * _buffController.CurrentStats.CharacterScale, Time.deltaTime);
-                else
-                {
-                    _characterTransform.localScale = Vector3.Lerp(_characterTransform.localScale, Vector3.one * _buffController.CurrentStats.CharacterScale, Time.deltaTime);
-                }
+                _characterTransform.localScale = new Vector3(_buffController.CurrentStats.CharacterScale,
+                    _buffController.CurrentStats.CharacterScale, 1);
+            }
+            else
+            {
+                _characterTransform.localScale = Vector3.one;
+            }
+
+            if (_buffController.CurrentStats.IsCharacterSizeCrazy)
+            {
+                _characterTransform.Rotate(Vector3.forward, 1);
             }
         }
     }

@@ -16,11 +16,12 @@ namespace _Scripts.BuffLogic.Buffs
         public BuffStats ApplyBuff(BuffStats stats)
         {
             var statsCopy = stats.Copy();
+
             statsCopy.CharacterScale *= _sizeMultiplier;
             statsCopy.IsCharacterSizeChanged = true;
             statsCopy.IsCharacterSizeCrazy = _isCrazy;
 
-            return stats;
+            return statsCopy;
         }
     }
 }

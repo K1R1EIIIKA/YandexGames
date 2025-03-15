@@ -5,6 +5,8 @@ using _Scripts.Data;
 using _Scripts.Data.Backgrounds;
 using _Scripts.Data.Beds;
 using _Scripts.Data.Cards;
+using _Scripts.EventsLogic;
+using _Scripts.EventsLogic.Events;
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using _Scripts.ScriptableObjects;
@@ -109,6 +111,7 @@ namespace _Scripts.Controllers
         public void AddMoney(int amount)
         {
             Money += amount;
+            EventBus<OnMoneyChangedEvent>.Raise(new OnMoneyChangedEvent());
         }
 
         public bool SpendMoney(int amount)

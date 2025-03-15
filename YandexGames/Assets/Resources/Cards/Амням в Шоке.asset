@@ -17,7 +17,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:8c8ca9e02e69aec41bb09320851c53d1
     m_TableEntryReference:
-      m_KeyId: 49684668416
+      m_KeyId: 2632745476939776
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -33,7 +33,7 @@ MonoBehaviour:
     m_LocalVariables: []
   Image: {fileID: 21300000, guid: 85804bc4bfc21a64e98ed84a006bad39, type: 3}
   Cost: 300
-  Rarity: 1
+  Rarity: 0
   MoneyPerClick: 1
   references:
     version: 2
