@@ -54,7 +54,7 @@ namespace _Scripts.Data
             SceneName = sceneName;
             PlayerCards = new List<PlayerCardData>();
 
-            var card = Resources.Load<CardObject>("Cards/Амням");
+            var card = Resources.Load<CardObject>("Cards/classic");
             var cardData = new CardData(card)
             {
                 IsOpen = true

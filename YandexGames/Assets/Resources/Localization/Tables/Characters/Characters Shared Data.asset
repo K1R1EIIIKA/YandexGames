@@ -15,156 +15,612 @@ MonoBehaviour:
   m_TableCollectionName: Characters
   m_TableCollectionNameGuidString: 8c8ca9e02e69aec41bb09320851c53d1
   m_Entries:
-  - m_Id: 9536790528
-    m_Key: omnom
+  - m_Id: 14239081914425344
+    m_Key: 3d_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 45679108096
-    m_Key: omnomy
+  - m_Id: 14239082031865856
+    m_Key: 3d_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 49684668416
-    m_Key: baby_omnom
+  - m_Id: 14239082493239296
+    m_Key: acid_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 52985585664
-    m_Key: ghoul_omnom
+  - m_Id: 14239082493239297
+    m_Key: acid_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 57364439040
-    m_Key: fire_omnom
+  - m_Id: 14239082711343104
+    m_Key: baby_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 64767385600
-    m_Key: ice_omnom
+  - m_Id: 14239082711343105
+    m_Key: baby_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 71545380864
-    m_Key: super_mega_omnom
+  - m_Id: 14239082958807040
+    m_Key: baguette_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 75945205760
-    m_Key: avatar_omnom
+  - m_Id: 14239082958807041
+    m_Key: baguette_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 82203107328
-    m_Key: plant_omnom
+  - m_Id: 14239083252408320
+    m_Key: broccoli_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 86695206912
-    m_Key: teapot_omnom
+  - m_Id: 14239083252408321
+    m_Key: broccoli_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 93443842048
-    m_Key: granny_omnom
+  - m_Id: 14239083541815296
+    m_Key: china_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 97893998592
-    m_Key: big_baby_omnom
+  - m_Id: 14239083541815297
+    m_Key: china_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 101442379776
-    m_Key: santa_omnom
+  - m_Id: 14239083768307712
+    m_Key: christmas_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 2632739432947712
-    m_Key: 3d_omnom
+  - m_Id: 14239083768307713
+    m_Key: christmas_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 2632740976451584
-    m_Key: school_omnom
+  - m_Id: 14239084011577344
+    m_Key: classic_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 2632741781757952
-    m_Key: power_omnom
+  - m_Id: 14239084011577345
+    m_Key: classic_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 2632742478012416
-    m_Key: shocked_omnom
+  - m_Id: 14239084275818496
+    m_Key: cool_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 2632743111352320
-    m_Key: omnom_with_baby
+  - m_Id: 14239084275818497
+    m_Key: cool_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 2632744881348608
-    m_Key: treasure_omnom
+  - m_Id: 14239084565225472
+    m_Key: cowboy_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 2632745476939776
-    m_Key: hungry_omnom
+  - m_Id: 14239084565225473
+    m_Key: cowboy_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 2632746068336640
-    m_Key: thrilled_omnomy
+  - m_Id: 14239084821078016
+    m_Key: croissant_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 2632746705870848
-    m_Key: omnomy_with_conditions
+  - m_Id: 14239084821078017
+    m_Key: croissant_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 2632747360182272
-    m_Key: hungry_moose_omnom
+  - m_Id: 14239085055959040
+    m_Key: crystall_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 2632747922219008
-    m_Key: demon_omnom
+  - m_Id: 14239085055959041
+    m_Key: crystall_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 2632748534587392
-    m_Key: stuntman
+  - m_Id: 14239085282451456
+    m_Key: demon_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 2634631412178944
-    m_Key: maple
+  - m_Id: 14239085282451457
+    m_Key: demon_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 2634759317479424
-    m_Key: cowboy
+  - m_Id: 14239085546692608
+    m_Key: dragon_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 2634833640546304
-    m_Key: moose
+  - m_Id: 14239085546692609
+    m_Key: dragon_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 2634916150894592
-    m_Key: man_face
+  - m_Id: 14239085907402752
+    m_Key: dumpling_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 2635010371739648
-    m_Key: micro
+  - m_Id: 14239085907402753
+    m_Key: dumpling_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 2635100138233856
-    m_Key: disaffected
+  - m_Id: 14239086138089472
+    m_Key: erenyega_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 2635266001985536
-    m_Key: diet
+  - m_Id: 14239086138089473
+    m_Key: erenyega_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 2635424366321664
-    m_Key: rap
+  - m_Id: 14239086385553408
+    m_Key: fireking_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 2635501205970944
-    m_Key: sleepy
+  - m_Id: 14239086385553409
+    m_Key: fireking_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 2635639009828864
-    m_Key: super_groul
+  - m_Id: 14239086674960384
+    m_Key: flower_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 2635640414920704
-    m_Key: pharaoh
+  - m_Id: 14239086674960385
+    m_Key: flower_Description
     m_Metadata:
       m_Items: []
-  - m_Id: 2635846590128128
-    m_Key: tricky
+  - m_Id: 14239086960173056
+    m_Key: forest_Name
     m_Metadata:
       m_Items: []
-  - m_Id: 2636248115044352
-    m_Key: ' snowy'
+  - m_Id: 14239086960173057
+    m_Key: forest_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087207636992
+    m_Key: freedom_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087207636993
+    m_Key: freedom_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087392186368
+    m_Key: gamer_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087392186369
+    m_Key: gamer_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087631261696
+    m_Key: geisha_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087631261697
+    m_Key: geisha_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087887114240
+    m_Key: ghost_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087887114241
+    m_Key: ghost_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088159744000
+    m_Key: ghoul_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088159744001
+    m_Key: ghoul_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088419790848
+    m_Key: gopnik_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088419790849
+    m_Key: gopnik_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088637894656
+    m_Key: granny_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088637894657
+    m_Key: granny_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088960856064
+    m_Key: harry_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088960856065
+    m_Key: harry_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089208320000
+    m_Key: hat_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089208320001
+    m_Key: hat_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089439006720
+    m_Key: hog_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089439006721
+    m_Key: hog_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089715830784
+    m_Key: ice_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089715830785
+    m_Key: ice_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089963294720
+    m_Key: icecube_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089963294721
+    m_Key: icecube_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090210758656
+    m_Key: icemage_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090210758657
+    m_Key: icemage_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090470805504
+    m_Key: inmode_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090470805505
+    m_Key: inmode_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090701492224
+    m_Key: ironman_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090701492225
+    m_Key: ironman_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090982510592
+    m_Key: karate_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090982510593
+    m_Key: karate_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091284500480
+    m_Key: knight_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091284500481
+    m_Key: knight_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091494215680
+    m_Key: kpop_1_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091494215681
+    m_Key: kpop_1_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091745873920
+    m_Key: kpop_2_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091745873921
+    m_Key: kpop_2_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091955589120
+    m_Key: kpop_3_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091955589121
+    m_Key: kpop_3_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092215635968
+    m_Key: liberty_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092215635969
+    m_Key: liberty_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092538597376
+    m_Key: magma_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092538597377
+    m_Key: magma_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092794449920
+    m_Key: manface_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092794449921
+    m_Key: manface_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093046108160
+    m_Key: matrix_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093046108161
+    m_Key: matrix_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093331320832
+    m_Key: mayor_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093331320833
+    m_Key: mayor_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093624922112
+    m_Key: meloman_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093624922113
+    m_Key: meloman_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093868191744
+    m_Key: micro_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093868191745
+    m_Key: micro_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094065324032
+    m_Key: mime_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094065324033
+    m_Key: mime_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094279233536
+    m_Key: mini_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094279233537
+    m_Key: mini_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094551863296
+    m_Key: minighoul_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094551863297
+    m_Key: minighoul_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094837075968
+    m_Key: mummy_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094837075969
+    m_Key: mummy_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095122288640
+    m_Key: naruto_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095122288641
+    m_Key: naruto_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095386529792
+    m_Key: paimon_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095386529793
+    m_Key: paimon_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095642382336
+    m_Key: painter_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095642382337
+    m_Key: painter_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095898234880
+    m_Key: pharaoh_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095898234881
+    m_Key: pharaoh_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096158281728
+    m_Key: pirate_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096158281729
+    m_Key: pirate_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096384774144
+    m_Key: robot_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096384774145
+    m_Key: robot_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096682569728
+    m_Key: rock_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096682569729
+    m_Key: rock_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097030696960
+    m_Key: russianteacher_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097030696961
+    m_Key: russianteacher_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097257189376
+    m_Key: sakura_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097257189377
+    m_Key: sakura_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097534013440
+    m_Key: sandking_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097534013441
+    m_Key: sandking_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097739534336
+    m_Key: sasuke_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097739534337
+    m_Key: sasuke_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097986998272
+    m_Key: sharingan_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097986998273
+    m_Key: sharingan_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098293182464
+    m_Key: sherif_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098293182465
+    m_Key: sherif_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098586783744
+    m_Key: sleepy_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098586783745
+    m_Key: sleepy_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098851024896
+    m_Key: snowboard_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098851024897
+    m_Key: snowboard_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099048157184
+    m_Key: snowman_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099048157185
+    m_Key: snowman_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099283038208
+    m_Key: spiderman_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099283038209
+    m_Key: spiderman_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099547279360
+    m_Key: startmagician_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099547279361
+    m_Key: startmagician_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099782160384
+    m_Key: sumo_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099782160385
+    m_Key: sumo_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099983486976
+    m_Key: superman_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099983486977
+    m_Key: superman_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100214173696
+    m_Key: sushi_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100214173697
+    m_Key: sushi_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100478414848
+    m_Key: teapot_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100478414849
+    m_Key: teapot_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100717490176
+    m_Key: tv_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100717490177
+    m_Key: tv_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100927205376
+    m_Key: vit_hat_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100927205377
+    m_Key: vit_hat_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239101233389568
+    m_Key: water_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239101233389569
+    m_Key: water_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239101560545280
+    m_Key: withbaby_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239101560545281
+    m_Key: withbaby_Description
     m_Metadata:
       m_Items: []
   m_Metadata:

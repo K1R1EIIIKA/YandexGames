@@ -31,7 +31,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  BackgroundImage: {fileID: 21300000, guid: edf551424c6223c4ca5571690dc45772, type: 3}
+  BackgroundImage: {fileID: 21300000, guid: b69341b96ce072643a194713c030894e, type: 3}
   Price: 0
   Rarity: 0
   BuffType: 0

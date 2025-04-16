@@ -18,156 +18,612 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 9536790528
-    m_Localized: OmNom
-    m_Metadata:
-      m_Items: []
-  - m_Id: 45679108096
-    m_Localized: OmNomy
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49684668416
-    m_Localized: Baby OmNom
-    m_Metadata:
-      m_Items: []
-  - m_Id: 52985585664
-    m_Localized: Ghoul OmNom
-    m_Metadata:
-      m_Items: []
-  - m_Id: 57364439040
-    m_Localized: Fire OmNom
-    m_Metadata:
-      m_Items: []
-  - m_Id: 64767385600
-    m_Localized: Ice OmNom
-    m_Metadata:
-      m_Items: []
-  - m_Id: 71545380864
-    m_Localized: Super Mega OmNom
-    m_Metadata:
-      m_Items: []
-  - m_Id: 75945205760
-    m_Localized: Avatar OmNom
-    m_Metadata:
-      m_Items: []
-  - m_Id: 82203107328
-    m_Localized: Plant OmNom
-    m_Metadata:
-      m_Items: []
-  - m_Id: 86695206912
-    m_Localized: Teapot OmNom
-    m_Metadata:
-      m_Items: []
-  - m_Id: 97893998592
-    m_Localized: Big baby OmNom
-    m_Metadata:
-      m_Items: []
-  - m_Id: 93443842048
-    m_Localized: Granny OmNom
-    m_Metadata:
-      m_Items: []
-  - m_Id: 101442379776
-    m_Localized: Santa OmNom
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2632739432947712
+  - m_Id: 14239081914425344
     m_Localized: 3D OmNom
     m_Metadata:
       m_Items: []
-  - m_Id: 2632740976451584
-    m_Localized: School OmNom
+  - m_Id: 14239082493239296
+    m_Localized: Acid OmNom
     m_Metadata:
       m_Items: []
-  - m_Id: 2632741781757952
-    m_Localized: Powerful OmNom
+  - m_Id: 14239082031865856
+    m_Localized: Believes that 2D is for weaklings. Sees right through the cookies!
     m_Metadata:
       m_Items: []
-  - m_Id: 2632742478012416
-    m_Localized: Shocked OmNom
+  - m_Id: 14239082493239297
+    m_Localized: So acidic that electrolyte is his morning cocktail.
     m_Metadata:
       m_Items: []
-  - m_Id: 2632743111352320
-    m_Localized: OmNom With Baby
+  - m_Id: 14239082711343105
+    m_Localized: Tries to pay taxes, but spends everything on candy.
     m_Metadata:
       m_Items: []
-  - m_Id: 2632744881348608
-    m_Localized: Treasure OmNom
+  - m_Id: 14239082958807041
+    m_Localized: With a baguette in hand and a croissant in your heart!
     m_Metadata:
       m_Items: []
-  - m_Id: 2632745476939776
-    m_Localized: Hungry OmNom
+  - m_Id: 14239083252408321
+    m_Localized: He eats broccoli so he can earn dessert later.
     m_Metadata:
       m_Items: []
-  - m_Id: 2632746068336640
-    m_Localized: Thrilled OmNomy
+  - m_Id: 14239083541815297
+    m_Localized: Masters chopsticks, kung fu and a mysterious smile.
     m_Metadata:
       m_Items: []
-  - m_Id: 2632746705870848
-    m_Localized: Omnomy with Conditions
+  - m_Id: 14239083768307713
+    m_Localized: He rustles with tinsel and always carries a tangerine.
     m_Metadata:
       m_Items: []
-  - m_Id: 2632747360182272
-    m_Localized: Hungry Moose OmNom
+  - m_Id: 14239084011577345
+    m_Localized: Amnyam is a real character with a taste for adventure!
     m_Metadata:
       m_Items: []
-  - m_Id: 2632747922219008
-    m_Localized: Little Devil OmNom
+  - m_Id: 14239084275818497
+    m_Localized: Looks at others from the top of the chocolate mountain.
     m_Metadata:
       m_Items: []
-  - m_Id: 2632748534587392
-    m_Localized: Stuntmant OmNom
+  - m_Id: 14239084565225473
+    m_Localized: "He saddled the marmalade bull and won\u2019t get off!"
     m_Metadata:
       m_Items: []
-  - m_Id: 2634631412178944
-    m_Localized: Maple OmNom
+  - m_Id: 14239084821078017
+    m_Localized: It even decorates oatmeal with cornflowers.
     m_Metadata:
       m_Items: []
-  - m_Id: 2634759317479424
+  - m_Id: 14239085055959041
+    m_Localized: Mixes syrups and turns them into gold... or jam.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239085282451457
+    m_Localized: DemoNyam is a real character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239085546692609
+    m_Localized: Spits out flames if you take away his cookies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239085907402753
+    m_Localized: Spins around in the plate and philosophizes about sauces.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239086138089473
+    m_Localized: Brings freedom and marmalade.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239086385553409
+    m_Localized: "Terrible, but inside it\u2019s a marshmallow."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239086674960385
+    m_Localized: Smells like chamomile and vanilla.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239086960173057
+    m_Localized: Lives under a leaf where it hides caramel.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087207636993
+    m_Localized: Free Amnyam is a real character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087392186369
+    m_Localized: Presses the buttons so fast that the sugar melts.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087631261697
+    m_Localized: She gracefully drinks tea and catches falling candies with her fan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087887114241
+    m_Localized: Is on another level...sweetness.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088159744001
+    m_Localized: Selects brains with raspberry flavor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088419790849
+    m_Localized: Sits on his haunches and gnaws on dry food.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088637894657
+    m_Localized: She bakes pies with love and a secret ingredient - joy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088960856065
+    m_Localized: The world has been saved, now we can get some chocolate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089208320001
+    m_Localized: Warms your ears and ice cream at the same time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089439006721
+    m_Localized: Loves dirt... made of chocolate!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089715830785
+    m_Localized: Cold on the outside, strawberry on the inside.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089963294721
+    m_Localized: Cold on the outside, strawberry on the inside.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090210758657
+    m_Localized: Cold on the outside, strawberry on the inside.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090470805505
+    m_Localized: Works around the clock in 'always hungry' mode.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090701492225
+    m_Localized: Hard as caramel and does not break under difficulties.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090982510593
+    m_Localized: Chops cookies with one blow!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091284500481
+    m_Localized: Fighting for honor... and for the last piece of candy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091494215681
+    m_Localized: Sings serenades to the loaf.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091745873921
+    m_Localized: Knows all the songs, especially if they are about food.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091955589121
+    m_Localized: Bias Amnyam is a real character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092215635969
+    m_Localized: Free Amnyam 2 is a real character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092538597377
+    m_Localized: 'Spell: Confetus Maximus!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092794449921
+    m_Localized: Man Face Amnyam is a real character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093046108161
+    m_Localized: Mysterious Amnyam... is a real character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093331320833
+    m_Localized: Yells 'Rise!' even in a sweet dream.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093624922113
+    m_Localized: Music lover Amnyam is a real character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093868191745
+    m_Localized: Mikrobnyam is a real character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094065324033
+    m_Localized: Mim Amnyam is a real character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094279233537
+    m_Localized: Mininyam is a real character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094551863297
+    m_Localized: Selects brains with raspberry flavor.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094837075969
+    m_Localized: Wrapped in bandages and reaching for marshmallows.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095122288641
+    m_Localized: Amnyam from Konoha is a true character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095386529793
+    m_Localized: Canned food Amnyam is a real character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095642382337
+    m_Localized: Amnyam Ross is a real character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095898234881
+    m_Localized: Pharaoh Amnyam is a real character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096158281729
+    m_Localized: The treasure map leads to the gingerbread box!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096384774145
+    m_Localized: '001: Find candy. 010: Eat. 011: Repeat.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096682569729
+    m_Localized: Hard as old stock candy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097030696961
+    m_Localized: He cooks porridge, sings ditties, and then - jam!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097257189377
+    m_Localized: Catches petals and honey at the same time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097534013441
+    m_Localized: Sand King Amnyam is a true character with a taste for adventure!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097739534337
+    m_Localized: I stole cookies and said it was a bug.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097986998273
+    m_Localized: He sees the future - and there is a lot of sweet things in it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098293182465
+    m_Localized: Maintains order and quantity of candies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098586783745
+    m_Localized: He even sleeps on cotton candy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098851024897
+    m_Localized: Glides through caramel at the speed of light.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099048157185
+    m_Localized: It melts, but only from the love of marshmallows.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099283038209
+    m_Localized: Crawling along the walls in search of jam.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099547279361
+    m_Localized: Just learning, but already causing chocolate rain!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099782160385
+    m_Localized: Can squeeze in a dozen donuts per round.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099983486977
+    m_Localized: A superhero in the world of sweet tooths.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100214173697
+    m_Localized: Turns himself into rice and smiles at wasabi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100478414849
+    m_Localized: It sizzles, bubbles, and smells of lemon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100717490177
+    m_Localized: There are only cooking shows on the screen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100927205377
+    m_Localized: He has breakfast with charts and muffins.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239101233389569
+    m_Localized: Glug-glug! This is not water - it's sweet syrup.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239101560545281
+    m_Localized: Vibrates with sugar like candy in the microwave.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239082711343104
+    m_Localized: Almost Grown-Up OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239082958807040
+    m_Localized: Baguette OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239083252408320
+    m_Localized: BroccoliNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239083541815296
+    m_Localized: Chinese OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239083768307712
+    m_Localized: Holiday OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239084011577344
+    m_Localized: OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239084275818496
+    m_Localized: Cool OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239084565225472
     m_Localized: Cowboy OmNom
     m_Metadata:
       m_Items: []
-  - m_Id: 2634833640546304
-    m_Localized: Moose OmNom
+  - m_Id: 14239084821078016
+    m_Localized: Aesthetic OmNom
     m_Metadata:
       m_Items: []
-  - m_Id: 2634916150894592
-    m_Localized: Man Face OmNom
+  - m_Id: 14239085055959040
+    m_Localized: Alchemist OmNom
     m_Metadata:
       m_Items: []
-  - m_Id: 2635010371739648
-    m_Localized: Micro OmNom
+  - m_Id: 14239085282451456
+    m_Localized: DemoNom
     m_Metadata:
       m_Items: []
-  - m_Id: 2635100138233856
-    m_Localized: Disaffected OmNomy
+  - m_Id: 14239085546692608
+    m_Localized: Dragonling OmNom
     m_Metadata:
       m_Items: []
-  - m_Id: 2635266001985536
-    m_Localized: Diet OmNom
+  - m_Id: 14239085907402752
+    m_Localized: Dumplinom
     m_Metadata:
       m_Items: []
-  - m_Id: 2635424366321664
-    m_Localized: Rap OmNom
+  - m_Id: 14239086138089472
+    m_Localized: Erenom Yeagernom
     m_Metadata:
       m_Items: []
-  - m_Id: 2635501205970944
-    m_Localized: Sleepy OmNom
+  - m_Id: 14239086385553408
+    m_Localized: Ogrish King OmNom
     m_Metadata:
       m_Items: []
-  - m_Id: 2635639009828864
-    m_Localized: Super Ghoul OmNom
+  - m_Id: 14239086674960384
+    m_Localized: Floral OmNom
     m_Metadata:
       m_Items: []
-  - m_Id: 2635640414920704
+  - m_Id: 14239086960173056
+    m_Localized: Forest OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087207636992
+    m_Localized: Free Spirit OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087392186368
+    m_Localized: Gamer OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087631261696
+    m_Localized: Geisha OmNomi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087887114240
+    m_Localized: Ascended OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088159744000
+    m_Localized: GhoulNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088419790848
+    m_Localized: GopnikNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088637894656
+    m_Localized: Granny OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088960856064
+    m_Localized: The OmNom Who Lived
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089208320000
+    m_Localized: Beanie OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089439006720
+    m_Localized: PigletNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089715830784
+    m_Localized: Icy OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089963294720
+    m_Localized: Ice Cube OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090210758656
+    m_Localized: Ice Mage OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090470805504
+    m_Localized: OmNom On Fire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090701492224
+    m_Localized: Iron OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090982510592
+    m_Localized: Karate OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091284500480
+    m_Localized: Knight OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091494215680
+    m_Localized: Singer OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091745873920
+    m_Localized: Fanboy OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091955589120
+    m_Localized: BiasOmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092215635968
+    m_Localized: Free Spirit OmNom 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092538597376
+    m_Localized: Magma OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092794449920
+    m_Localized: Man-Face OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093046108160
+    m_Localized: Mysterious OmNom...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093331320832
+    m_Localized: Sergeant OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093624922112
+    m_Localized: Music Lover OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093868191744
+    m_Localized: MicroNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094065324032
+    m_Localized: Mime OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094279233536
+    m_Localized: MiniNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094551863296
+    m_Localized: Mini Ghoul OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094837075968
+    m_Localized: Mummy OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095122288640
+    m_Localized: OmNom from Konoha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095386529792
+    m_Localized: Canned OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095642382336
+    m_Localized: OmNom Ross
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095898234880
     m_Localized: Pharaoh OmNom
     m_Metadata:
       m_Items: []
-  - m_Id: 2635846590128128
-    m_Localized: Tricky OmNom
+  - m_Id: 14239096158281728
+    m_Localized: Pirate OmNom
     m_Metadata:
       m_Items: []
-  - m_Id: 2636248115044352
+  - m_Id: 14239096384774144
+    m_Localized: RoboNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096682569728
+    m_Localized: StoneNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097030696960
+    m_Localized: Rusichka OmNomi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097257189376
+    m_Localized: Sakura Breeze OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097534013440
+    m_Localized: Sand King OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097739534336
+    m_Localized: Sus OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097986998272
+    m_Localized: Sharingan OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098293182464
+    m_Localized: Sheriff OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098586783744
+    m_Localized: Sleepy OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098851024896
+    m_Localized: Skier OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099048157184
     m_Localized: Snowy OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099283038208
+    m_Localized: Nom-Spidey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099547279360
+    m_Localized: Apprentice Wizard OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099782160384
+    m_Localized: Sumo OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099983486976
+    m_Localized: SuperNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100214173696
+    m_Localized: Sushi OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100478414848
+    m_Localized: Teapot OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100717490176
+    m_Localized: TV OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100927205376
+    m_Localized: Business OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239101233389568
+    m_Localized: Water OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239101560545280
+    m_Localized: OmNamikler
     m_Metadata:
       m_Items: []
   references:
