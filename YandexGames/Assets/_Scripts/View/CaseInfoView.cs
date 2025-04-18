@@ -1,5 +1,9 @@
-﻿using _Scripts.ScriptableObjects;
+﻿using System.Collections.Generic;
+using System.Linq;
+using _Scripts.Data.Cards;
+using _Scripts.ScriptableObjects;
 using _Scripts.Tools;
+using NUnit.Framework;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -42,7 +46,12 @@ namespace _Scripts.View
             _caseName.text = _caseData.GetName();
             _coinsText.text = $"{_caseData.CoinsRange.x}-{_caseData.CoinsRange.y}";
 
-            foreach (var cardData in _caseData.CardPool)
+            var sortedCards = _caseData.CardPool
+                .OrderBy(card => card.Rarity)
+                .ThenBy(card => card.Cost)
+                .ToList();
+
+            foreach (var cardData in sortedCards)
             {
                 var cardView = Instantiate(_cardViewPrefab, _caseContent);
                 cardView.Initialize(cardData.ToCardData());

@@ -10,27 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd4123b41d224737b52719ab219d689a, type: 3}
-  m_Name: "\u0417\u0432\u0435\u0437\u0434\u043D\u044B\u0439 \u043A\u0435\u0439\u0441"
+  m_Name: "\u041B\u0435\u0434\u044F\u043D\u0430\u044F \u043A\u043E\u0440\u043E\u0431\u043A\u0430"
   m_EditorClassIdentifier: 
   Id: 
   Name:
     m_TableReference:
       m_TableCollectionName: GUID:a99fd83691ef85e41820f02edee74168
     m_TableEntryReference:
-      m_KeyId: 11612971008
+      m_KeyId: 14902538410123264
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  CaseImage: {fileID: 1115633057, guid: 5da958314232bad458f389beca6c4e59, type: 3}
+  CaseImage: {fileID: 21300000, guid: 24d81faa3bea5d34cbcc438de42cf3cc, type: 3}
   LootCountRange: {x: 2, y: 4}
   CoinsRange: {x: 0, y: 0}
   CardPool:
-  - {fileID: 11400000, guid: 3e734c4e32b57e04a9d70c8ef286db68, type: 2}
-  - {fileID: 11400000, guid: 56411bd599f1efa4c83d961a9a3a55b5, type: 2}
-  - {fileID: 11400000, guid: 4b8a03cc00ccaea4890a36b5da2022d5, type: 2}
-  - {fileID: 11400000, guid: 8768ccf38b824854687c58ca6b45e1e5, type: 2}
-  - {fileID: 11400000, guid: 81722a134b3c9f34c9bdde4ce20ddaa0, type: 2}
+  - {fileID: 11400000, guid: f8519d1829910ce4ead27b830c1c1689, type: 2}
+  - {fileID: 11400000, guid: 0bc2626978b01434cbf8a5d641a97f3c, type: 2}
+  - {fileID: 11400000, guid: fa6710dd9eeb4e54cacdd6d916a6d4c2, type: 2}
+  - {fileID: 11400000, guid: c65bd34bc15a4944ba8b2db3fc39f9d1, type: 2}
+  - {fileID: 11400000, guid: 7c78a224ac221d2449b4e67fdd168647, type: 2}
+  - {fileID: 11400000, guid: 6aff9c808c72ebe4b8e7f060be3c5fd8, type: 2}
+  - {fileID: 11400000, guid: 985e4561e7617d94e902232b9af14775, type: 2}
   DropChancesSerializedDictionary:
     _serializedList:
     - Key: 0
@@ -40,6 +42,7 @@ MonoBehaviour:
     - Key: 3
       Value: 1
   Price: 500
+  IsTotalCases: 0
   references:
     version: 2
     RefIds: []

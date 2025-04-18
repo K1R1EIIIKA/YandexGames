@@ -33,7 +33,7 @@ MonoBehaviour:
     m_LocalVariables: []
   Image: {fileID: 21300000, guid: e65b4169d0dfa554b98f33fedd6393b1, type: 3}
   Cost: 0
-  Rarity: 0
+  Rarity: 3
   MoneyPerClick: 0
   references:
     version: 2

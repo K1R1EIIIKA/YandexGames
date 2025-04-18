@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06998bceeae94d12867cad08e5850b0f, type: 3}
   m_Name: "\u0412\u043E\u043B\u0448\u0435\u0431\u043D\u044B\u0439 \u0448\u0430\u0440"
   m_EditorClassIdentifier: 
-  Id: 2
+  Id: magic
   Name:
     m_TableReference:
       m_TableCollectionName: GUID:614cadf04c952164d9dc678e1bc18060
@@ -31,9 +31,9 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  BedImage: {fileID: 538541507, guid: 0194c7c711a213b49be65771b2848d25, type: 3}
+  BedImage: {fileID: 21300000, guid: 475c1c1fa9dcd80469cbbb65af32b861, type: 3}
   Rarity: 1
-  Price: 1
+  Price: 0
   BuffType: 1
   references:
     version: 2
