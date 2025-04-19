@@ -120,7 +120,7 @@ namespace _Scripts.Controllers
             EventBus<OnMoneyChangedEvent>.Raise(new OnMoneyChangedEvent());
         }
 
-        public bool SpendMoney(int amount)
+        public bool SpendMoney(float amount)
         {
             if (Money < amount) return false;
 

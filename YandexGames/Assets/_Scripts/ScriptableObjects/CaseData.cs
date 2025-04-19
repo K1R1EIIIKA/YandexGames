@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using _Scripts.Data.Cards;
+using _Scripts.Enums;
 using _Scripts.Tools;
 using AYellowpaper.SerializedCollections;
 using UnityEngine;
@@ -18,6 +19,7 @@ namespace _Scripts.ScriptableObjects
         public Vector2Int LootCountRange;
         public Vector2 CoinsRange;
         public List<CardObject> CardPool;
+        public CaseTier Tier;
 
         [SerializedDictionary("Rarity", "Drop Chance")]
         public SerializedDictionary<Rarity, float> DropChancesSerializedDictionary = new();

@@ -2,6 +2,7 @@
 using _Scripts.BuffLogic.Base;
 using _Scripts.Controllers;
 using _Scripts.Enums;
+using _Scripts.Tools;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -132,8 +133,8 @@ namespace _Scripts.YG
                 _buffText.text = buff.description + $" {LocalizedStrings.For.GetLocalizedString()} {buff.duration} {LocalizedStrings.Seconds.GetLocalizedString()}";
             else
             {
-                _buffText.text = "+" + _transactionController.SelectedCard.TotalMoneyPerClick * buff.duration +
-                                 $" {LocalizedStrings.Coins.GetLocalizedString()}";
+                _buffText.text = "+" + BigNumberFormatter.FormatBigNumber(_transactionController.SelectedCard.TotalMoneyPerClick * buff.duration) +
+                                                                          $" {LocalizedStrings.Coins.GetLocalizedString()}";
             }
 
             _buffText.alpha = 1;

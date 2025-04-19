@@ -44,7 +44,7 @@ namespace _Scripts.View
             _caseData = caseData;
             _caseImage.sprite = _caseData.CaseImage;
             _caseName.text = _caseData.GetName();
-            _coinsText.text = $"{_caseData.CoinsRange.x}-{_caseData.CoinsRange.y}";
+            _coinsText.text = $"{BigNumberFormatter.FormatBigNumber(_caseData.CoinsRange.x)}-{BigNumberFormatter.FormatBigNumber(_caseData.CoinsRange.y)}";
 
             var sortedCards = _caseData.CardPool
                 .OrderBy(card => card.Rarity)

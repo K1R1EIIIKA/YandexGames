@@ -100,7 +100,7 @@ namespace _Scripts.Infrastructure.Inventory
                 {
                     var discount = GetDiscount();
                     var casePrice = _caseController.GetTotalMoneyPrice(moneyCaseData);
-                    var price = Mathf.RoundToInt(casePrice * (1 - discount / 100f));
+                    var price = Mathf.Round(casePrice * (1 - discount / 100f));
                     if (_transactionController.SpendMoney(price))
                     {
                         _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.BoxOpening,
