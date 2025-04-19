@@ -15,7 +15,7 @@ namespace _Scripts.UI
         [SerializeField] GridLayoutGroup _gridLayoutGroup;
         [SerializeField] private SortTypeButtonBehaviour _bedSortButton;
 
-        private CollectionSortType[] _sortTypes =
+        private readonly CollectionSortType[] _sortTypes =
             (CollectionSortType[])Enum.GetValues(typeof(CollectionSortType));
 
         private int _currentBedSortIndex = 0;
@@ -50,7 +50,7 @@ namespace _Scripts.UI
                     _bedSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Rarity), true);
                     _bedsController.SortBeds(CollectionSortType.ByRareAsc);
                     break;
-                case 1:
+                case 3:
                     _bedSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Rarity), false);
                     _bedsController.SortBeds(CollectionSortType.ByRareDesc);
                     break;
@@ -58,7 +58,7 @@ namespace _Scripts.UI
                     _bedSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Availability), true);
                     _bedsController.SortBeds(CollectionSortType.ByHasAsc);
                     break;
-                case 3:
+                case 1:
                     _bedSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Availability), false);
                     _bedsController.SortBeds(CollectionSortType.ByHasDesc);
                     break;

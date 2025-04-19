@@ -77,6 +77,17 @@ namespace _Scripts.Infrastructure.Inventory
             }
         }
 
+        public void InitializeLimitedCase(RectTransform container)
+        {
+            container.DestroyAllChildren();
+
+            var caseData = _caseRepository.LimitedCase;
+            var caseObject = _container.InstantiatePrefabForComponent<CaseObject>(_caseObjectPrefab, container);
+
+            var discount = GetDiscount();
+            caseObject.Initialize(caseData, discount);
+        }
+
         public void TryOpenCase(CaseData caseData, Transform caseTransform)
         {
             _currentCaseData = caseData;
@@ -109,6 +120,21 @@ namespace _Scripts.Infrastructure.Inventory
                     {
                         AnimationTweens.HandleWrongTransform(caseTransform);
                     }
+                }
+            }
+
+            else if (caseData is LimitedCaseData limitedCaseData)
+            {
+                var discount = GetDiscount();
+                var price = Mathf.RoundToInt(limitedCaseData.Price * (1 - discount / 100f));
+                if (_transactionController.SpendMoney(price))
+                {
+                    _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.BoxOpening,
+                        () => { BoxOpeningController.Instance.Initialize(caseData); });
+                }
+                else
+                {
+                    AnimationTweens.HandleWrongTransform(caseTransform);
                 }
             }
 

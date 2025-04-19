@@ -9,9 +9,11 @@ namespace _Scripts.Infrastructure.Inventory
         [SerializeField] private CaseData[] _mainScreenCases;
         [SerializeField] private CaseData[] _shopCases;
         [SerializeField] private CaseData[] _adCases;
+        [SerializeField] private CaseData _limitedCase;
 
         public CaseData[] MainScreenCases => _mainScreenCases;
         public CaseData[] ShopCases => _shopCases;
         public CaseData[] AdCases => _adCases;
+        public CaseData LimitedCase => _limitedCase;
     }
 }

@@ -46,8 +46,8 @@ namespace _Scripts.Infrastructure.Inventory
                 case MoneyCaseData moneyCaseData when moneyCaseData != null:
                     if (!moneyCaseData.IsTotalCases)
                     {
-                        var price = Mathf.RoundToInt(moneyCaseData.Price * (1 - discount / 100f));
-                        _casePrice.text = price.ToString();
+                        var moneyPrice = Mathf.RoundToInt(moneyCaseData.Price * (1 - discount / 100f));
+                        _casePrice.text = moneyPrice.ToString();
                         _priceImage.gameObject.SetActive(true);
                     }
                     else
@@ -56,6 +56,13 @@ namespace _Scripts.Infrastructure.Inventory
                         _totalCasesImage.gameObject.SetActive(true);
                         _priceImage.gameObject.SetActive(false);
                     }
+
+                    break;
+
+                case LimitedCaseData limitedCaseData when limitedCaseData != null:
+                    var limitedPrice = Mathf.RoundToInt(limitedCaseData.Price * (1 - discount / 100f));
+                    _casePrice.text = limitedPrice.ToString();
+                    _priceImage.gameObject.SetActive(true);
 
                     break;
 

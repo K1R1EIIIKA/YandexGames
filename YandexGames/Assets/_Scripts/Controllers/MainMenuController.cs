@@ -4,7 +4,6 @@ using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
 using _Scripts.Infrastructure.Inventory;
 using _Scripts.YG;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -13,14 +12,20 @@ namespace _Scripts.Controllers
 {
     public class MainMenuController : MonoBehaviour
     {
+        [Header("Buttons")]
         [SerializeField] private Button _shopButton;
         [SerializeField] private Button _charactersButton;
         [SerializeField] private Button _bedsButton;
         [SerializeField] private Button _backgroundsButton;
         [SerializeField] private Button _accountButton;
         [SerializeField] private Button _settingsButton;
+
+        [Header("Case Containers")]
         [SerializeField] private RectTransform _casesContainer;
         [SerializeField] private RectTransform _adCasesContainer;
+        [SerializeField] private RectTransform _limitedCaseContainer;
+
+        [Header("Controllers")]
         [SerializeField] private AccountController _accountController;
         [SerializeField] private SettingsController _settingsController;
 
@@ -104,6 +109,7 @@ namespace _Scripts.Controllers
         {
             _caseManager.InitializeCases(_casesContainer, CaseLocationType.MainScreen);
             _caseManager.InitializeAdCases(_adCasesContainer);
+            _caseManager.InitializeLimitedCase(_limitedCaseContainer);
         }
 
         private void OnShopButtonClicked()

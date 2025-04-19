@@ -32,7 +32,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   BedImage: {fileID: 21300000, guid: b860d1c00e778224ca12d23c1ad8aef2, type: 3}
-  Rarity: 1
+  Rarity: 0
   Price: 0
   BuffType: 1
   references:
