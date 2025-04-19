@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4123b41d224737b52719ab219d689a, type: 3}
   m_Name: "\u041C\u0443\u043B\u044C\u0442\u044F\u0448\u043D\u0430\u044F \u043A\u043E\u0440\u043E\u0431\u043A\u0430"
   m_EditorClassIdentifier: 
-  Id: 
+  Id: cartoon
   Name:
     m_TableReference:
       m_TableCollectionName: GUID:a99fd83691ef85e41820f02edee74168
@@ -23,8 +23,8 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   CaseImage: {fileID: 21300000, guid: bb986d98fba685c4bb6f558d316bfa7b, type: 3}
-  LootCountRange: {x: 2, y: 4}
-  CoinsRange: {x: 0, y: 0}
+  LootCountRange: {x: 3, y: 5}
+  CoinsRange: {x: 170000, y: 520000}
   CardPool:
   - {fileID: 11400000, guid: 8049a45960e75c14392ee130046c815f, type: 2}
   - {fileID: 11400000, guid: 6a977b7f1a9a8594196376758e874bc6, type: 2}
@@ -34,6 +34,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7be67cceb5e971e4bb22811cc5efa561, type: 2}
   - {fileID: 11400000, guid: e1e51c254b6dd574d9ad1d314d78511f, type: 2}
   - {fileID: 11400000, guid: a04e6eb5b2a5f724b9c29ad29d542c06, type: 2}
+  - {fileID: 11400000, guid: 04064bb67dea674458e7b9208df6b6e4, type: 2}
   DropChancesSerializedDictionary:
     _serializedList:
     - Key: 0
@@ -42,7 +43,7 @@ MonoBehaviour:
       Value: 24
     - Key: 3
       Value: 1
-  Price: 500
+  Price: 1700000
   IsTotalCases: 0
   references:
     version: 2

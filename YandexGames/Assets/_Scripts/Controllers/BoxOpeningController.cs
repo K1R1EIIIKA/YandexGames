@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
 using _Scripts.Data.Cards;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
@@ -35,7 +36,7 @@ namespace _Scripts.Controllers
         private int _itemsCountValue;
         private int _remainItemsCountValue;
 
-        private int _moneyLoot;
+        private float _moneyLoot;
         private List<CardData> _cardsLoot = new();
 
         private GameStateMachine _gameStateMachine;
@@ -102,6 +103,10 @@ namespace _Scripts.Controllers
 
         private void OpenBox()
         {
+            if (_caseData is MoneyCaseData moneyCaseData)
+            {
+                _transactionController.AddMoneyCase(moneyCaseData);
+            }
             _cardsLoot.Clear();
             _backgroundChanger.ChangeBackground(BackgroundColor.Main);
 
@@ -126,7 +131,7 @@ namespace _Scripts.Controllers
 
         private void ShowMoneyLoot()
         {
-            _moneyLootText.text = _moneyLoot.ToString();
+            _moneyLootText.text = BigNumberFormatter.FormatBigNumber(_moneyLoot);
             _remainItemsCountValue--;
             _itemsCount.text = _remainItemsCountValue.ToString();
         }

@@ -21,13 +21,15 @@ namespace _Scripts.Controllers
 
         private GameFactory _gameFactory;
 
-        public int Money { get; private set; }
+        public float Money { get; private set; }
 
         public List<PlayerCardData> PlayerCards { get; private set; } = new();
 
         public List<CardData> AllCards { get; private set; } = new();
 
         public List<BedData> PlayerBeds { get; private set; } = new();
+
+        public List<PlayerMoneyCaseOpenedData> PlayerMoneyCases { get; private set; } = new();
 
         public List<BedData> AllBeds { get; private set; } = new();
 
@@ -64,6 +66,8 @@ namespace _Scripts.Controllers
             AllBackgrounds = progress.LevelsProgress.AllBackgroundsSet;
             SelectedBackground = progress.LevelsProgress.SelectedBackground;
 
+            PlayerMoneyCases = progress.LevelsProgress.PlayerMoneyCases;
+
             CheckForNewCards(Resources.LoadAll<CardObject>("Cards").ToList());
             CheckForNewBeds(Resources.LoadAll<BedObject>("Beds").ToList());
             CheckForNewBackgrounds(Resources.LoadAll<BackgroundObject>("Backgrounds").ToList());
@@ -90,6 +94,8 @@ namespace _Scripts.Controllers
             progress.LevelsProgress.AllBackgroundsSet = AllBackgrounds;
             progress.LevelsProgress.SelectedBackground = SelectedBackground;
 
+            progress.LevelsProgress.PlayerMoneyCases = PlayerMoneyCases;
+
             progress.LevelsProgress.TotalAdsWatched = AdCounter;
             progress.LevelsProgress.TotalCasesOpened = CaseCounter;
 
@@ -108,7 +114,7 @@ namespace _Scripts.Controllers
             _buffController.Initialize(new BuffStats());
         }
 
-        public void AddMoney(int amount)
+        public void AddMoney(float amount)
         {
             Money += amount;
             EventBus<OnMoneyChangedEvent>.Raise(new OnMoneyChangedEvent());
@@ -154,6 +160,36 @@ namespace _Scripts.Controllers
                 if (SelectedCard != null && playerCard.Id == SelectedCard.Id) SelectedCard = playerCard;
 
                 Debug.Log(playerCard.Name + " " + playerCard.Count);
+            }
+        }
+
+        public void AddMoneyCase(MoneyCaseData moneyCase)
+        {
+            if (PlayerMoneyCases == null) PlayerMoneyCases = new List<PlayerMoneyCaseOpenedData>();
+
+            var isCaseExist = false;
+
+            foreach (var playerCase in PlayerMoneyCases)
+                if (playerCase.Id == moneyCase.Id)
+                {
+                    playerCase.OpenedCount++;
+                    isCaseExist = true;
+                    break;
+                }
+
+            if (!isCaseExist)
+            {
+                var pc = new PlayerMoneyCaseOpenedData(moneyCase)
+                {
+                    OpenedCount = 1
+                };
+                PlayerMoneyCases.Add(pc);
+            }
+
+            Debug.Log("Player cases: ");
+            foreach (var playerCase in PlayerMoneyCases)
+            {
+                Debug.Log(playerCase.Id + " " + playerCase.OpenedCount);
             }
         }
 

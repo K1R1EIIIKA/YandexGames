@@ -20,7 +20,7 @@ namespace _Scripts.Data
 
         public override string ToString()
         {
-            return $"PlayerProgress: {LevelsProgress.SceneName}, Money: {LevelsProgress.Money}, TotalAdsWatched: {LevelsProgress.TotalAdsWatched}, TotalCasesOpened: {LevelsProgress.TotalCasesOpened}";
+            return $"PlayerProgress: {LevelsProgress.SceneName}, Money: {LevelsProgress.Money}, TotalAdsWatched: {LevelsProgress.TotalAdsWatched}, TotalCasesOpened: {LevelsProgress.TotalCasesOpened}, PlayerMoneyCases: {string.Join(",", LevelsProgress.PlayerMoneyCases)}";
         }
     }
 
@@ -32,6 +32,8 @@ namespace _Scripts.Data
         public List<PlayerCardData> PlayerCards;
         public PlayerCardData SelectedCard;
         public List<CardData> AllCardsSet;
+
+        public List<PlayerMoneyCaseOpenedData> PlayerMoneyCases;
 
         public List<BedData> PlayerBeds;
         public BedData SelectedBed;
@@ -47,7 +49,7 @@ namespace _Scripts.Data
         public bool IsSoundOn;
         public bool IsMusicOn;
 
-        public int Money;
+        public float Money;
 
         public OmNomData(string sceneName)
         {
@@ -68,6 +70,16 @@ namespace _Scripts.Data
             SelectedCard = PlayerCards[0];
 
             AllCardsSet = new List<CardData>();
+
+            PlayerMoneyCases = new List<PlayerMoneyCaseOpenedData>();
+            var moneyCases = Resources.LoadAll<MoneyCaseData>("Cases/MoneyCases/");
+            foreach (var moneyCase in moneyCases)
+            {
+                var playerMoneyCase = new PlayerMoneyCaseOpenedData(moneyCase);
+                PlayerMoneyCases.Add(playerMoneyCase);
+            }
+
+                Debug.Log("PLAYER MONEY CASES COUNT: " + PlayerMoneyCases);
 
             PlayerBeds = new List<BedData>();
 

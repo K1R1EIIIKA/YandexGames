@@ -22,7 +22,7 @@ namespace _Scripts.Infrastructure.Services.SaveLoad
 
         public PlayerProgress LoadProgress()
         {
-            Debug.Log(PlayerPrefs.GetString(ProgressKey));
+            Debug.Log(PlayerPrefs.GetString(ProgressKey)?.ToDeserialized<PlayerProgress>());
             return PlayerPrefs.GetString(ProgressKey)?.ToDeserialized<PlayerProgress>();
         }
 

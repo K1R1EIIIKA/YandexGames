@@ -83,7 +83,7 @@ namespace _Scripts.View
             _nameText.text = "???";
             _descriptionText.text = bedData.GetDescription();
             _bonusText.text = LocalizedStrings.ConvertBedBuffToString(bedData.BuffType);
-            _playerMoneyText.text = _transactionController.Money.ToString();
+            _playerMoneyText.text = BigNumberFormatter.FormatBigNumber(_transactionController.Money);
 
             _buyButton.gameObject.SetActive(true);
             _placeButton.gameObject.SetActive(false);
@@ -104,7 +104,7 @@ namespace _Scripts.View
             _bedImage.sprite = bedData.ToBedObject().BedImage;
             _bedImage.color = Color.black;
 
-            _priceText.text = bedData.ToBedObject().Price.ToString();
+            _priceText.text = BigNumberFormatter.FormatBigNumber(bedData.ToBedObject().Price);
             _buyButton.onClick.AddListener(OnBuyButtonClick);
 
             gameObject.SetActive(true);

@@ -10,28 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd4123b41d224737b52719ab219d689a, type: 3}
-  m_Name: "\u042D\u0441\u0442\u0435\u0442\u0438\u0447\u043D\u0430\u044F \u043A\u043E\u0440\u043E\u0431\u043A\u0430"
+  m_Name: "\u041E\u0433\u043D\u0435\u043D\u043D\u0430\u044F \u043A\u043E\u0440\u043E\u0431\u043A\u0430"
   m_EditorClassIdentifier: 
-  Id: 
+  Id: fire
   Name:
     m_TableReference:
       m_TableCollectionName: GUID:a99fd83691ef85e41820f02edee74168
     m_TableEntryReference:
-      m_KeyId: 14902548543561728
+      m_KeyId: 14902543913050112
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  CaseImage: {fileID: 21300000, guid: 5e4ce9620fa271c4aa0d49e44e7c0f99, type: 3}
-  LootCountRange: {x: 2, y: 4}
-  CoinsRange: {x: 0, y: 0}
+  CaseImage: {fileID: 21300000, guid: 0bbdd63410911ad4eac0550e7bef40ce, type: 3}
+  LootCountRange: {x: 3, y: 5}
+  CoinsRange: {x: 10000, y: 30000}
   CardPool:
-  - {fileID: 11400000, guid: 735f6c0f41c670740a78f72949b9f935, type: 2}
-  - {fileID: 11400000, guid: ecbe1d91b461b614094e1c4053900797, type: 2}
-  - {fileID: 11400000, guid: 296cb1ac9fd57df4f9d7b1488e11fbd8, type: 2}
-  - {fileID: 11400000, guid: 6a977b7f1a9a8594196376758e874bc6, type: 2}
-  - {fileID: 11400000, guid: 8770ae0288d4b394d881a9ad05ab4a71, type: 2}
-  - {fileID: 11400000, guid: 447f051a4b51d024eba92cede9acead8, type: 2}
+  - {fileID: 11400000, guid: d47183d4bf1215e4e9d770c3b99941e2, type: 2}
+  - {fileID: 11400000, guid: 99bc3845a7993dd41b75868cebe0c57d, type: 2}
+  - {fileID: 11400000, guid: b3a8a01ad9e417b45b8f442df30f1005, type: 2}
+  - {fileID: 11400000, guid: 07fc2e12343331f4cb938b3195cce781, type: 2}
+  - {fileID: 11400000, guid: 502a00e51446d654486188067389b2d7, type: 2}
   DropChancesSerializedDictionary:
     _serializedList:
     - Key: 0
@@ -40,7 +39,7 @@ MonoBehaviour:
       Value: 24
     - Key: 3
       Value: 1
-  Price: 500
+  Price: 100000
   IsTotalCases: 0
   references:
     version: 2

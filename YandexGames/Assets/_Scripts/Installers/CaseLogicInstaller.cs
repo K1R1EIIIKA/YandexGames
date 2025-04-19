@@ -1,4 +1,5 @@
-﻿using _Scripts.Infrastructure.Inventory;
+﻿using _Scripts.Controllers;
+using _Scripts.Infrastructure.Inventory;
 using _Scripts.View;
 using UnityEngine;
 using Zenject;
@@ -12,6 +13,7 @@ namespace _Scripts.Installers
         public override void InstallBindings()
         {
             Container.Bind<CaseInfoView>().FromComponentInNewPrefab(_caseInfoView).AsSingle().NonLazy();
+            Container.Bind<CaseController>().AsSingle().NonLazy();
         }
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4123b41d224737b52719ab219d689a, type: 3}
   m_Name: "\u0421\u0430\u043A\u0443\u0440\u0430 \u043A\u043E\u0440\u043E\u0431\u043A\u0430"
   m_EditorClassIdentifier: 
-  Id: 
+  Id: sakyra
   Name:
     m_TableReference:
       m_TableCollectionName: GUID:a99fd83691ef85e41820f02edee74168
@@ -23,8 +23,8 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   CaseImage: {fileID: 21300000, guid: 43d12976fc37c454fbcfba9898d35f0c, type: 3}
-  LootCountRange: {x: 2, y: 4}
-  CoinsRange: {x: 0, y: 0}
+  LootCountRange: {x: 3, y: 5}
+  CoinsRange: {x: 88000000, y: 260000000}
   CardPool:
   - {fileID: 11400000, guid: d5a92a4c3958aa24a975704fd2fb22a4, type: 2}
   - {fileID: 11400000, guid: 07fc2e12343331f4cb938b3195cce781, type: 2}
@@ -45,7 +45,7 @@ MonoBehaviour:
       Value: 24
     - Key: 3
       Value: 1
-  Price: 500
+  Price: 880000000
   IsTotalCases: 0
   references:
     version: 2

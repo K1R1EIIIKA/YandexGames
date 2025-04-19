@@ -83,7 +83,7 @@ namespace _Scripts.View
             _nameText.text = "???";
             _descriptionText.text = backgroundData.GetDescription();
             _bonusText.text = LocalizedStrings.ConvertBackgroundBuffToString(backgroundData.BuffType);
-            _playerMoneyText.text = _transactionController.Money.ToString();
+            _playerMoneyText.text = BigNumberFormatter.FormatBigNumber(_transactionController.Money);
 
             _buyButton.gameObject.SetActive(true);
             _placeButton.gameObject.SetActive(false);
@@ -104,7 +104,7 @@ namespace _Scripts.View
             _backgroundImage.sprite = backgroundData.ToBackgroundObject().BackgroundImage;
             _backgroundImage.color = Color.black;
 
-            _priceText.text = backgroundData.ToBackgroundObject().Price.ToString();
+            _priceText.text = BigNumberFormatter.FormatBigNumber(backgroundData.ToBackgroundObject().Price);
             _buyButton.onClick.AddListener(OnBuyButtonClick);
 
             gameObject.SetActive(true);

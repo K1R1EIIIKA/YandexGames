@@ -45,7 +45,7 @@ namespace _Scripts.Plugins
 
         private void Update()
         {
-            Debug.Log(GetLanguage());
+            // Debug.Log(GetLanguage());
         }
     }
 }

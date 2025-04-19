@@ -23,19 +23,21 @@ namespace _Scripts.Infrastructure.Inventory
         private TransactionController _transactionController;
         private BuffController _buffController;
         private AdRewardController _adRewardController;
+        private CaseController _caseController;
 
         private  CaseData _currentCaseData;
 
         [Inject]
         public void Construct(DiContainer container, GameStateMachine gameStateMachine,
             TransactionController transactionController, BuffController buffController,
-            AdRewardController adRewardController)
+            AdRewardController adRewardController, CaseController caseController)
         {
             _container = container;
             _gameStateMachine = gameStateMachine;
             _transactionController = transactionController;
             _buffController = buffController;
             _adRewardController = adRewardController;
+            _caseController = caseController;
 
             Debug.Log("CaseManager initialized");
         }
@@ -97,7 +99,8 @@ namespace _Scripts.Infrastructure.Inventory
                 if (!moneyCaseData.IsTotalCases)
                 {
                     var discount = GetDiscount();
-                    var price = Mathf.RoundToInt(moneyCaseData.Price * (1 - discount / 100f));
+                    var casePrice = _caseController.GetTotalMoneyPrice(moneyCaseData);
+                    var price = Mathf.RoundToInt(casePrice * (1 - discount / 100f));
                     if (_transactionController.SpendMoney(price))
                     {
                         _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.BoxOpening,
@@ -112,7 +115,7 @@ namespace _Scripts.Infrastructure.Inventory
                 {
                     if (_transactionController.CaseCounter >= moneyCaseData.Price)
                     {
-                        _transactionController.AddCaseCounter(-moneyCaseData.Price);
+                        _transactionController.AddCaseCounter(-(int)moneyCaseData.Price);
                         _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.BoxOpening,
                             () => { BoxOpeningController.Instance.Initialize(caseData); });
                     }

@@ -1,6 +1,7 @@
-﻿using _Scripts.Controllers;
-using _Scripts.Data.Cases;
+﻿using System.Globalization;
+using _Scripts.Controllers;
 using _Scripts.ScriptableObjects;
+using _Scripts.Tools;
 using _Scripts.View;
 using TMPro;
 using UnityEngine;
@@ -26,14 +27,16 @@ namespace _Scripts.Infrastructure.Inventory
         private CaseInfoView _caseInfoView;
         private CaseManager _caseManager;
         private TransactionController _transactionController;
+        private CaseController _caseController;
 
         [Inject]
         public void Construct(CaseInfoView caseInfoView, CaseManager caseManager,
-            TransactionController transactionController)
+            TransactionController transactionController, CaseController caseController)
         {
             _caseInfoView = caseInfoView;
             _caseManager = caseManager;
             _transactionController = transactionController;
+            _caseController = caseController;
         }
 
         public void Initialize(CaseData caseData, int discount = 0)
@@ -46,8 +49,9 @@ namespace _Scripts.Infrastructure.Inventory
                 case MoneyCaseData moneyCaseData when moneyCaseData != null:
                     if (!moneyCaseData.IsTotalCases)
                     {
-                        var moneyPrice = Mathf.RoundToInt(moneyCaseData.Price * (1 - discount / 100f));
-                        _casePrice.text = moneyPrice.ToString();
+                        var casePrice = _caseController.GetTotalMoneyPrice(moneyCaseData);
+                        var moneyPrice = BigNumberFormatter.FormatBigNumber(casePrice * (1 - discount / 100f));
+                        _casePrice.text = moneyPrice.ToString(CultureInfo.InvariantCulture);
                         _priceImage.gameObject.SetActive(true);
                     }
                     else
@@ -60,7 +64,7 @@ namespace _Scripts.Infrastructure.Inventory
                     break;
 
                 case LimitedCaseData limitedCaseData when limitedCaseData != null:
-                    var limitedPrice = Mathf.RoundToInt(limitedCaseData.Price * (1 - discount / 100f));
+                    var limitedPrice = BigNumberFormatter.FormatBigNumber(limitedCaseData.Price * (1 - discount / 100f));
                     _casePrice.text = limitedPrice.ToString();
                     _priceImage.gameObject.SetActive(true);
 

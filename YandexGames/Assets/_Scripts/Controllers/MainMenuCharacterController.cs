@@ -1,4 +1,5 @@
-﻿using _Scripts.BuffLogic;
+﻿using System.Globalization;
+using _Scripts.BuffLogic;
 using _Scripts.BuffLogic.Base;
 using _Scripts.BuffLogic.Buffs;
 using _Scripts.Data;
@@ -7,6 +8,7 @@ using _Scripts.EventsLogic;
 using _Scripts.EventsLogic.Events;
 using _Scripts.Infrastructure.Factory;
 using _Scripts.Infrastructure.Services.PersistantProgress;
+using _Scripts.Tools;
 using _Scripts.YG;
 using TMPro;
 using UnityEngine;
@@ -52,7 +54,7 @@ namespace _Scripts.Controllers
         {
             _characterButton.onClick.AddListener(OnCharacterClick);
 
-            _moneyText.text = _transactionController.Money.ToString();
+            _moneyText.text = BigNumberFormatter.FormatBigNumber(_transactionController.Money);
             Debug.Log(_characterImage);
 
             _adRewardController.BigCharacterAdId += AddBigCharacterBuff;
@@ -95,7 +97,7 @@ namespace _Scripts.Controllers
 
         private void UpdateMoneyText(OnMoneyChangedEvent e)
         {
-            _moneyText.text = _transactionController.Money.ToString();
+            _moneyText.text = BigNumberFormatter.FormatBigNumber(_transactionController.Money);
         }
 
         public void LoadProgress(PlayerProgress progress)
@@ -127,7 +129,7 @@ namespace _Scripts.Controllers
                                                  _buffController.CurrentStats.ClickBonus);
 
                     _transactionController.AddMoney(money);
-                    _moneyText.text = _transactionController.Money.ToString();
+                    _moneyText.text = BigNumberFormatter.FormatBigNumber(_transactionController.Money);
                 }
             }
 

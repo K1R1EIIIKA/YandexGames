@@ -16,7 +16,7 @@ namespace _Scripts.ScriptableObjects
         public LocalizedString Name;
         public Sprite CaseImage;
         public Vector2Int LootCountRange;
-        public Vector2Int CoinsRange;
+        public Vector2 CoinsRange;
         public List<CardObject> CardPool;
 
         [SerializedDictionary("Rarity", "Drop Chance")]
@@ -33,7 +33,7 @@ namespace _Scripts.ScriptableObjects
             return Name.GetLocalizedString();
         }
 
-        public int GetRandomCoins()
+        public float GetRandomCoins()
         {
             return UnityEngine.Random.Range(CoinsRange.x, CoinsRange.y + 1);
         }
