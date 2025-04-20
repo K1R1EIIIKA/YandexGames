@@ -103,9 +103,14 @@ namespace _Scripts.Controllers
 
         private void OpenBox()
         {
-            if (_caseData is MoneyCaseData moneyCaseData)
+            switch (_caseData)
             {
-                _transactionController.AddMoneyCase(moneyCaseData);
+                case MoneyCaseData moneyCaseData:
+                    _transactionController.AddMoneyCase(moneyCaseData);
+                    break;
+                case LimitedCaseData limitedCaseData:
+                    _transactionController.AddLimitedCase(limitedCaseData);
+                    break;
             }
             _cardsLoot.Clear();
             _backgroundChanger.ChangeBackground(BackgroundColor.Main);

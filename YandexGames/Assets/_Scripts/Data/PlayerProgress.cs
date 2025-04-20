@@ -35,6 +35,7 @@ namespace _Scripts.Data
         public List<CardData> AllCardsSet;
 
         public List<PlayerMoneyCaseOpenedData> PlayerMoneyCases;
+        public List<PlayerLimitedCaseOpenedData> PlayerLimitedCases;
 
         public List<BedData> PlayerBeds;
         public BedData SelectedBed;
@@ -80,6 +81,14 @@ namespace _Scripts.Data
             {
                 var playerMoneyCase = new PlayerMoneyCaseOpenedData(moneyCase);
                 PlayerMoneyCases.Add(playerMoneyCase);
+            }
+
+            PlayerLimitedCases = new List<PlayerLimitedCaseOpenedData>();
+            var limitedCases = Resources.LoadAll<LimitedCaseData>("Cases/LimitedCases/");
+            foreach (var limitedCase in limitedCases)
+            {
+                var playerLimitedCase = new PlayerLimitedCaseOpenedData(limitedCase);
+                PlayerLimitedCases.Add(playerLimitedCase);
             }
 
             Debug.Log("PLAYER MONEY CASES COUNT: " + PlayerMoneyCases);

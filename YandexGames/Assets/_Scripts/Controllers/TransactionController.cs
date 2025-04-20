@@ -31,6 +31,7 @@ namespace _Scripts.Controllers
         public List<BedData> PlayerBeds { get; private set; } = new();
 
         public List<PlayerMoneyCaseOpenedData> PlayerMoneyCases { get; private set; } = new();
+        public List<PlayerLimitedCaseOpenedData> PlayerLimitedCases { get; private set; } = new();
 
         public List<BedData> AllBeds { get; private set; } = new();
 
@@ -70,6 +71,7 @@ namespace _Scripts.Controllers
             SelectedBackground = progress.LevelsProgress.SelectedBackground;
 
             PlayerMoneyCases = progress.LevelsProgress.PlayerMoneyCases;
+            PlayerLimitedCases = progress.LevelsProgress.PlayerLimitedCases;
 
             CurrentCaseTier = progress.LevelsProgress.CurrentCaseTier;
 
@@ -100,6 +102,7 @@ namespace _Scripts.Controllers
             progress.LevelsProgress.SelectedBackground = SelectedBackground;
 
             progress.LevelsProgress.PlayerMoneyCases = PlayerMoneyCases;
+            progress.LevelsProgress.PlayerLimitedCases = PlayerLimitedCases;
 
             progress.LevelsProgress.TotalAdsWatched = AdCounter;
             progress.LevelsProgress.TotalCasesOpened = CaseCounter;
@@ -161,13 +164,13 @@ namespace _Scripts.Controllers
                 }
             }
 
-            Debug.Log("Player cards: ");
-            foreach (var playerCard in PlayerCards)
-            {
-                if (SelectedCard != null && playerCard.Id == SelectedCard.Id) SelectedCard = playerCard;
-
-                Debug.Log(playerCard.Name + " " + playerCard.Count);
-            }
+            // Debug.Log("Player cards: ");
+            // foreach (var playerCard in PlayerCards)
+            // {
+            //     if (SelectedCard != null && playerCard.Id == SelectedCard.Id) SelectedCard = playerCard;
+            //
+            //     Debug.Log(playerCard.Name + " " + playerCard.Count);
+            // }
         }
 
         public void AddMoneyCase(MoneyCaseData moneyCase)
@@ -193,8 +196,38 @@ namespace _Scripts.Controllers
                 PlayerMoneyCases.Add(pc);
             }
 
+            // Debug.Log("Player cases: ");
+            // foreach (var playerCase in PlayerMoneyCases)
+            // {
+            //     Debug.Log(playerCase.Id + " " + playerCase.OpenedCount);
+            // }
+        }
+
+        public void AddLimitedCase(LimitedCaseData limitedCase)
+        {
+            if (PlayerLimitedCases == null) PlayerLimitedCases = new List<PlayerLimitedCaseOpenedData>();
+
+            var isCaseExist = false;
+
+            foreach (var playerCase in PlayerLimitedCases)
+                if (playerCase.Id == limitedCase.Id)
+                {
+                    playerCase.OpenedCount++;
+                    isCaseExist = true;
+                    break;
+                }
+
+            if (!isCaseExist)
+            {
+                var pc = new PlayerLimitedCaseOpenedData(limitedCase)
+                {
+                    OpenedCount = 1
+                };
+                PlayerLimitedCases.Add(pc);
+            }
+
             Debug.Log("Player cases: ");
-            foreach (var playerCase in PlayerMoneyCases)
+            foreach (var playerCase in PlayerLimitedCases)
             {
                 Debug.Log(playerCase.Id + " " + playerCase.OpenedCount);
             }

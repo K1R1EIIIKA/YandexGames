@@ -141,7 +141,8 @@ namespace _Scripts.Infrastructure.Inventory
             else if (caseData is LimitedCaseData limitedCaseData)
             {
                 var discount = GetDiscount();
-                var price = Mathf.RoundToInt(limitedCaseData.Price * (1 - discount / 100f));
+                var casePrice = _caseController.GetTotalLimitedPrice(limitedCaseData);
+                var price = Mathf.Round(casePrice * (1 - discount / 100f));
                 if (_transactionController.SpendMoney(price))
                 {
                     _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.BoxOpening,

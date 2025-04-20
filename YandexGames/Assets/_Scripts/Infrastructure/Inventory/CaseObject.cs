@@ -64,8 +64,9 @@ namespace _Scripts.Infrastructure.Inventory
                     break;
 
                 case LimitedCaseData limitedCaseData when limitedCaseData != null:
-                    var limitedPrice = BigNumberFormatter.FormatBigNumber(limitedCaseData.Price * (1 - discount / 100f));
-                    _casePrice.text = limitedPrice.ToString();
+                    var limitedCasePrice = _caseController.GetTotalLimitedPrice(limitedCaseData);
+                    var limitedPrice = BigNumberFormatter.FormatBigNumber(limitedCasePrice * (1 - discount / 100f));
+                    _casePrice.text = limitedPrice;
                     _priceImage.gameObject.SetActive(true);
 
                     break;

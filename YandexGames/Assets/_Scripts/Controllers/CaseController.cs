@@ -19,5 +19,18 @@ namespace _Scripts.Controllers
 
             return moneyCaseData.Price;
         }
+
+        public float GetTotalLimitedPrice(LimitedCaseData limitedCaseData)
+        {
+            foreach (var caseData in _transactionController.PlayerLimitedCases)
+            {
+                if (caseData.Id == limitedCaseData.Id)
+                {
+                    return caseData.TotalPrice;
+                }
+            }
+
+            return limitedCaseData.Price;
+        }
     }
 }
