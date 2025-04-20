@@ -124,6 +124,11 @@ namespace _Scripts.Controllers
             _transactionController.AddCaseCounter();
             _transactionController.AddPlayerCards(_cardsLoot);
 
+            if ((int)_caseData.Tier > (int)_transactionController.CurrentCaseTier)
+            {
+                _transactionController.SetCaseTier(_caseData.Tier);
+            }
+
             SortCards();
 
             ShowMoneyLoot();

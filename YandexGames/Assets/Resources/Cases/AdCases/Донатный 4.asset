@@ -23,15 +23,25 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   CaseImage: {fileID: 21300000, guid: 38dc19abdd4717647903f20b10c85ea3, type: 3}
-  LootCountRange: {x: 2, y: 3}
+  LootCountRange: {x: 3, y: 4}
   CoinsRange: {x: 1000, y: 2000}
   CardPool:
-  - {fileID: 11400000, guid: 3e734c4e32b57e04a9d70c8ef286db68, type: 2}
+  - {fileID: 11400000, guid: 762171c37da8d4548994ed3f2bd78046, type: 2}
+  - {fileID: 11400000, guid: 2d43d2b7cc5ef5541b4923bc62c9c350, type: 2}
+  - {fileID: 11400000, guid: be6536198238398478b9c36c49229c5c, type: 2}
+  - {fileID: 11400000, guid: db0f19464a16d414aae5db2289de8f26, type: 2}
+  - {fileID: 11400000, guid: d47183d4bf1215e4e9d770c3b99941e2, type: 2}
+  - {fileID: 11400000, guid: b3a8a01ad9e417b45b8f442df30f1005, type: 2}
+  - {fileID: 11400000, guid: 99bc3845a7993dd41b75868cebe0c57d, type: 2}
   Tier: 3
   DropChancesSerializedDictionary:
     _serializedList:
-    - Key: 0
-      Value: 100
+    - Key: 2
+      Value: 60
+    - Key: 3
+      Value: 25
+    - Key: 4
+      Value: 15
   AdsCount: 1
   IsTotalAdsCount: 0
   references:

@@ -38,16 +38,18 @@ namespace _Scripts.UI.Buttons
         {
             _tween?.Complete(true);
 
-            transform.parent.DOScale(Vector3.one * 1.1f, 0.3f);
-            _tween = transform.DOPunchScale(Vector3.one * 0.05f, .7f, 5, 2f).SetEase(Ease.InSine);
+            transform.parent.DOScale(Vector3.one * 1.1f, 0.3f).SetLink(gameObject, LinkBehaviour.KillOnDestroy);
+            _tween = transform.DOPunchScale(Vector3.one * 0.05f, .7f, 5, 2f).SetEase(Ease.InSine)
+                .SetLink(gameObject, LinkBehaviour.KillOnDestroy);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
             _tween?.Complete(true);
 
-            transform.parent.DOScale(Vector3.one, 0.3f);
-            _tween = transform.DOPunchScale(Vector3.one * -0.05f, .7f, 5, 2f).SetEase(Ease.InSine);
+            transform.parent.DOScale(Vector3.one, 0.3f).SetLink(gameObject, LinkBehaviour.KillOnDestroy);
+            _tween = transform.DOPunchScale(Vector3.one * -0.05f, .7f, 5, 2f).SetEase(Ease.InSine)
+                .SetLink(gameObject, LinkBehaviour.KillOnDestroy);
         }
 
 
@@ -55,16 +57,18 @@ namespace _Scripts.UI.Buttons
         {
             _tween?.Complete(true);
 
-            transform.parent.DOScale(Vector3.one, 0.15f);
-            _tween = transform.DOPunchScale(Vector3.one * 0.05f, .5f, 8, 2f).SetEase(Ease.InSine);
+            transform.parent.DOScale(Vector3.one, 0.15f).SetLink(gameObject, LinkBehaviour.KillOnDestroy);
+            _tween = transform.DOPunchScale(Vector3.one * 0.05f, .5f, 8, 2f).SetEase(Ease.InSine)
+                .SetLink(gameObject, LinkBehaviour.KillOnDestroy);
         }
 
         public void OnPointerUp(PointerEventData eventData)
         {
             _tween?.Complete(true);
 
-            transform.parent.DOScale(Vector3.one * 1.1f, 0.15f);
-            _tween = transform.DOPunchScale(Vector3.one * -0.05f, .5f, 8, 2f).SetEase(Ease.InSine);
+            transform.parent.DOScale(Vector3.one * 1.1f, 0.15f).SetLink(gameObject, LinkBehaviour.KillOnDestroy);
+            _tween = transform.DOPunchScale(Vector3.one * -0.05f, .5f, 8, 2f).SetEase(Ease.InSine)
+                .SetLink(gameObject, LinkBehaviour.KillOnDestroy);
         }
 
         public void OnPointerClick(PointerEventData eventData)
@@ -85,9 +89,9 @@ namespace _Scripts.UI.Buttons
 
             Vector3 targetPosition = clickPosition + new Vector3(randomX, randomY, 0);
 
-            floatingImage.transform.DOJump(targetPosition, randomPower, 1, 1.75f).SetEase(Ease.OutSine);
-            floatingImage.transform.DORotate(new Vector3(0, 0, randomRotation), 1.75f, RotateMode.FastBeyond360);
-            floatingImage.GetComponent<Image>().DOFade(0, 0.75f).SetDelay(0.75f)
+            floatingImage.transform.DOJump(targetPosition, randomPower, 1, 1.75f).SetEase(Ease.OutSine).SetLink(floatingImage, LinkBehaviour.KillOnDestroy);
+            floatingImage.transform.DORotate(new Vector3(0, 0, randomRotation), 1.75f, RotateMode.FastBeyond360).SetLink(floatingImage, LinkBehaviour.KillOnDestroy);
+            floatingImage.GetComponent<Image>().DOFade(0, 0.75f).SetDelay(0.75f).SetLink(floatingImage, LinkBehaviour.KillOnDestroy)
                 .OnComplete(() => Destroy(floatingImage, 1f));
         }
 

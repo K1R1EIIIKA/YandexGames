@@ -5,6 +5,7 @@ using _Scripts.Data;
 using _Scripts.Data.Backgrounds;
 using _Scripts.Data.Beds;
 using _Scripts.Data.Cards;
+using _Scripts.Enums;
 using _Scripts.EventsLogic;
 using _Scripts.EventsLogic.Events;
 using _Scripts.Infrastructure.Factory;
@@ -51,6 +52,8 @@ namespace _Scripts.Controllers
 
         public bool IsSoundOn { get; private set; }
 
+        public CaseTier CurrentCaseTier { get; private set; }
+
         public void LoadProgress(PlayerProgress progress)
         {
             Money = progress.LevelsProgress.Money;
@@ -67,6 +70,8 @@ namespace _Scripts.Controllers
             SelectedBackground = progress.LevelsProgress.SelectedBackground;
 
             PlayerMoneyCases = progress.LevelsProgress.PlayerMoneyCases;
+
+            CurrentCaseTier = progress.LevelsProgress.CurrentCaseTier;
 
             CheckForNewCards(Resources.LoadAll<CardObject>("Cards").ToList());
             CheckForNewBeds(Resources.LoadAll<BedObject>("Beds").ToList());
@@ -101,6 +106,8 @@ namespace _Scripts.Controllers
 
             progress.LevelsProgress.IsMusicOn = IsMusicOn;
             progress.LevelsProgress.IsSoundOn = IsSoundOn;
+
+            progress.LevelsProgress.CurrentCaseTier = CurrentCaseTier;
         }
 
         [Inject]
@@ -306,6 +313,11 @@ namespace _Scripts.Controllers
         public void SetSound(bool isOn)
         {
             IsSoundOn = isOn;
+        }
+
+        public void SetCaseTier(CaseTier caseTier)
+        {
+            CurrentCaseTier = caseTier;
         }
     }
 }

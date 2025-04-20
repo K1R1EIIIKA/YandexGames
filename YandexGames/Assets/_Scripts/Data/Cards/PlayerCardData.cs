@@ -8,16 +8,16 @@ namespace _Scripts.Data.Cards
     {
         public int Count;
 
-        public int TotalMoneyPerClick
+        public float TotalMoneyPerClick
         {
             get
             {
                 float[] multipliers = { 1, 1, 2, 2.9f, 3.7f, 4.4f, 4.9f, 5.3f, 5.6f, 5.8f, 6.0f };
-                int baseMoneyPerClick = ToCardObject().MoneyPerClick;
+                float baseMoneyPerClick = ToCardObject().MoneyPerClick;
 
                 float multiplier = multipliers[Math.Min(Count, multipliers.Length - 1)];
 
-                return (int)(baseMoneyPerClick * multiplier);
+                return baseMoneyPerClick * multiplier;
             }
         }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using _Scripts.Data.Backgrounds;
 using _Scripts.Data.Beds;
 using _Scripts.Data.Cards;
+using _Scripts.Enums;
 using _Scripts.ScriptableObjects;
 using UnityEngine;
 
@@ -51,6 +52,8 @@ namespace _Scripts.Data
 
         public float Money;
 
+        public CaseTier CurrentCaseTier;
+
         public OmNomData(string sceneName)
         {
             SceneName = sceneName;
@@ -79,7 +82,7 @@ namespace _Scripts.Data
                 PlayerMoneyCases.Add(playerMoneyCase);
             }
 
-                Debug.Log("PLAYER MONEY CASES COUNT: " + PlayerMoneyCases);
+            Debug.Log("PLAYER MONEY CASES COUNT: " + PlayerMoneyCases);
 
             PlayerBeds = new List<BedData>();
 
@@ -114,6 +117,8 @@ namespace _Scripts.Data
 
             IsSoundOn = true;
             IsMusicOn = true;
+
+            CurrentCaseTier = CaseTier.Tier1;
         }
     }
 }

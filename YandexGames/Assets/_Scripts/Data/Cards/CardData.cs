@@ -14,7 +14,7 @@ namespace _Scripts.Data.Cards
         public int Cost => ToCardObject().Cost;
         public Rarity Rarity => ToCardObject().Rarity;
         public bool IsOpen;
-        public int MoneyPerClick => ToCardObject().MoneyPerClick;
+        public float MoneyPerClick => ToCardObject().MoneyPerClick;
 
         public string CardObjectLocation;
 

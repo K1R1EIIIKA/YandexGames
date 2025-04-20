@@ -29,9 +29,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 735f6c0f41c670740a78f72949b9f935, type: 2}
   - {fileID: 11400000, guid: ecbe1d91b461b614094e1c4053900797, type: 2}
   - {fileID: 11400000, guid: 296cb1ac9fd57df4f9d7b1488e11fbd8, type: 2}
-  - {fileID: 11400000, guid: 6a977b7f1a9a8594196376758e874bc6, type: 2}
   - {fileID: 11400000, guid: 8770ae0288d4b394d881a9ad05ab4a71, type: 2}
   - {fileID: 11400000, guid: 447f051a4b51d024eba92cede9acead8, type: 2}
+  - {fileID: 11400000, guid: de72579024672e24c8d67ba3c2441ca4, type: 2}
+  - {fileID: 11400000, guid: 4fa8d97ac555edb4590c1194aa07a1a6, type: 2}
+  - {fileID: 11400000, guid: 018fb3dee793fe044a519a75b1b4f304, type: 2}
+  Tier: 8
   DropChancesSerializedDictionary:
     _serializedList:
     - Key: 0

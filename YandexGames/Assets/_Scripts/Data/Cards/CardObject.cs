@@ -13,7 +13,7 @@ namespace _Scripts.Data.Cards
         public Sprite Image;
         public int Cost;
         [FormerlySerializedAs("Rare")] public Rarity Rarity;
-        public int MoneyPerClick;
+        public float MoneyPerClick;
 
         public CardData ToCardData()
         {

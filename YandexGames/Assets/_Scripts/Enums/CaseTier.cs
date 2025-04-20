@@ -1,5 +1,8 @@
-﻿namespace _Scripts.Enums
+﻿using System;
+
+namespace _Scripts.Enums
 {
+    [Serializable]
     public enum CaseTier
     {
         Tier1,

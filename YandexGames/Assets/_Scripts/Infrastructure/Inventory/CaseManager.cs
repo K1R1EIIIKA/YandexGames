@@ -70,8 +70,20 @@ namespace _Scripts.Infrastructure.Inventory
         {
             container.DestroyAllChildren();
 
-            var cases = _caseRepository.AdCases;
-            foreach (var caseData in cases)
+            var adCases = _caseRepository.AdCases;
+
+            foreach (var adCase in adCases)
+            {
+                if (adCase.Tier == _transactionController.CurrentCaseTier)
+                {
+                    var caseObject =
+                        _container.InstantiatePrefabForComponent<CaseObject>(_smallCaseObjectPrefab, container);
+                    caseObject.Initialize(adCase);
+                }
+            }
+
+            var specialCases = _caseRepository.SpecialCases;
+            foreach (var caseData in specialCases)
             {
                 var caseObject =
                     _container.InstantiatePrefabForComponent<CaseObject>(_smallCaseObjectPrefab, container);

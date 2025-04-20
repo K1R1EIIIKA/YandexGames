@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using _Scripts.BuffLogic;
+﻿using _Scripts.BuffLogic;
 using _Scripts.BuffLogic.Base;
 using _Scripts.BuffLogic.Buffs;
 using _Scripts.Data;
@@ -12,7 +11,6 @@ using _Scripts.Tools;
 using _Scripts.YG;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 using Zenject;
 
@@ -90,8 +88,7 @@ namespace _Scripts.Controllers
 
         private void OnCharacterClick()
         {
-            var money = Mathf.RoundToInt(_selectedCard.TotalMoneyPerClick * _buffController.CurrentStats.ClickBonus);
-
+            var money = Mathf.Round(_selectedCard.TotalMoneyPerClick * _buffController.CurrentStats.ClickBonus);
             _transactionController.AddMoney(money);
         }
 
