@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c52843d5071a4db58b1507c2d7c6644f, type: 3}
   m_Name: "\u0414\u043E\u043D\u0430\u0442\u043D\u044B\u0439 11"
   m_EditorClassIdentifier: 
-  Id: 
+  Id: ad11
   Name:
     m_TableReference:
       m_TableCollectionName: GUID:8c8ca9e02e69aec41bb09320851c53d1
@@ -36,12 +36,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f465c7cfa2344a48ad6515e67fb0a84, type: 2}
   - {fileID: 11400000, guid: 8f46925a97fe7ac4fae4ac7aaf194054, type: 2}
   - {fileID: 11400000, guid: 08f97656c1af2434486a769e209207ae, type: 2}
-  - {fileID: 11400000, guid: f39d6248efdd180469d09fe17850acf0, type: 2}
   - {fileID: 11400000, guid: a24c036783e3e2c438573d8b60d5463d, type: 2}
   - {fileID: 11400000, guid: 7073be0abc84ef34bb6b66f65cb034c7, type: 2}
   - {fileID: 11400000, guid: 724a295a31d505f45895611ee424f2d5, type: 2}
   - {fileID: 11400000, guid: 2ef46f023cfa9324f995125a73a6295a, type: 2}
   - {fileID: 11400000, guid: a1e674500bbf9074db316095f6bf7f10, type: 2}
+  - {fileID: 11400000, guid: da152a779324e454e84bfa0fb5c100e2, type: 2}
   - {fileID: 11400000, guid: da152a779324e454e84bfa0fb5c100e2, type: 2}
   Tier: 10
   DropChancesSerializedDictionary:

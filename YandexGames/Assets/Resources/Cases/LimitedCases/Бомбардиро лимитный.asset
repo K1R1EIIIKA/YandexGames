@@ -36,11 +36,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f465c7cfa2344a48ad6515e67fb0a84, type: 2}
   - {fileID: 11400000, guid: 2d43d2b7cc5ef5541b4923bc62c9c350, type: 2}
   - {fileID: 11400000, guid: be6536198238398478b9c36c49229c5c, type: 2}
+  Tier: 0
   DropChancesSerializedDictionary:
     _serializedList:
     - Key: 4
       Value: 100
-  Price: 500000
+  Price: 50000
   references:
     version: 2
     RefIds: []

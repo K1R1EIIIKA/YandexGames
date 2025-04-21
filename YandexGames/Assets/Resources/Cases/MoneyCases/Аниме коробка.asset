@@ -37,11 +37,11 @@ MonoBehaviour:
   DropChancesSerializedDictionary:
     _serializedList:
     - Key: 1
-      Value: 60
+      Value: 70
     - Key: 2
-      Value: 35
+      Value: 25
     - Key: 3
-      Value: 2
+      Value: 5
   Price: 1e+15
   IsTotalCases: 0
   references:

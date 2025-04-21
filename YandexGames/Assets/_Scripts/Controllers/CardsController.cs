@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using _Scripts.Data;
 using _Scripts.Data.Cards;
 using _Scripts.Infrastructure.Factory;
@@ -184,55 +185,20 @@ namespace _Scripts.Controllers
 
         public void SortCollectionCards(CollectionSortType sortType)
         {
-            switch (sortType)
+            _allCardsSet = sortType switch
             {
-                case CollectionSortType.ByHasDesc:
-                    _allCardsSet.Sort((a, b) =>
-                    {
-                        if (a.IsOpen == b.IsOpen)
-                        {
-                            return a.Rarity.CompareTo(b.Rarity);
-                        }
-
-                        return a.IsOpen.CompareTo(b.IsOpen);
-                    });
-                    break;
-                case CollectionSortType.ByHasAsc:
-                    _allCardsSet.Sort((a, b) =>
-                    {
-                        if (a.IsOpen == b.IsOpen)
-                        {
-                            return a.Rarity.CompareTo(b.Rarity);
-                        }
-
-                        return b.IsOpen.CompareTo(a.IsOpen);
-                    });
-                    break;
-                case CollectionSortType.ByRareAsc:
-                    _allCardsSet.Sort((a, b) =>
-                    {
-                        if (a.Rarity == b.Rarity)
-                        {
-                            return b.IsOpen.CompareTo(a.IsOpen);
-                        }
-
-                        return a.Rarity.CompareTo(b.Rarity);
-                    });
-                    break;
-                case CollectionSortType.ByRareDesc:
-                    _allCardsSet.Sort((a, b) =>
-                    {
-                        if (a.Rarity == b.Rarity)
-                        {
-                            return b.IsOpen.CompareTo(a.IsOpen);
-                        }
-
-                        return b.Rarity.CompareTo(a.Rarity);
-                    });
-                    break;
-            }
+                CollectionSortType.ByHasDesc => _allCardsSet.OrderByDescending(c => c.IsOpen).ThenBy(c => c.Rarity)
+                    .ToList(),
+                CollectionSortType.ByHasAsc => _allCardsSet.OrderBy(c => c.IsOpen).ThenBy(c => c.Rarity).ToList(),
+                CollectionSortType.ByRareAsc => _allCardsSet.OrderBy(c => c.Rarity).ThenByDescending(c => c.IsOpen)
+                    .ToList(),
+                CollectionSortType.ByRareDesc => _allCardsSet.OrderByDescending(c => c.Rarity)
+                    .ThenByDescending(c => c.IsOpen).ToList(),
+                _ => _allCardsSet
+            };
         }
     }
+
 
     public enum InventoryCardsSortType
     {

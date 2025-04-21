@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4123b41d224737b52719ab219d689a, type: 3}
+  m_Name: "\u041E\u0431\u044B\u0447\u043D\u0430\u044F \u043A\u043E\u0440\u043E\u0431\u043A\u0430"
+  m_EditorClassIdentifier: 
+  Id: default
+  Name:
+    m_TableReference:
+      m_TableCollectionName: GUID:a99fd83691ef85e41820f02edee74168
+    m_TableEntryReference:
+      m_KeyId: 14902542826725376
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  CaseImage: {fileID: 21300000, guid: f3b2343e770c6da469b2a53d98513b7b, type: 3}
+  LootCountRange: {x: 3, y: 5}
+  CoinsRange: {x: 10, y: 30}
+  CardPool:
+  - {fileID: 11400000, guid: b90a45ef2accb1b4fb202117724f3626, type: 2}
+  - {fileID: 11400000, guid: 514e74efe4c5721429d9e57438c4c825, type: 2}
+  - {fileID: 11400000, guid: b492b26fb62e8294f966ca2f861c10af, type: 2}
+  - {fileID: 11400000, guid: d83c5419cd7f7244cb23a5b1d1e4ceeb, type: 2}
+  - {fileID: 11400000, guid: 37235cc260e921d4f814d67c909febf0, type: 2}
+  - {fileID: 11400000, guid: e72163fa2de02df4ca5acc7dd381cab6, type: 2}
+  - {fileID: 11400000, guid: e5eb2378a7f47344a970ac8e0e1a6457, type: 2}
+  - {fileID: 11400000, guid: 02d10f4e5cecdff4d8f30ad2db84affd, type: 2}
+  - {fileID: 11400000, guid: 0bb123288ef3dc34da7b97b7e933dc08, type: 2}
+  - {fileID: 11400000, guid: cc26ac4a88d9ff642a007613c9017991, type: 2}
+  - {fileID: 11400000, guid: 12b1d58f6ba6aa54baf484d6189b01c0, type: 2}
+  DropChancesSerializedDictionary:
+    _serializedList:
+    - Key: 0
+      Value: 75
+    - Key: 1
+      Value: 24
+    - Key: 3
+      Value: 1
+  Price: 100
+  IsTotalCases: 0
+  references:
+    version: 2
+    RefIds: []

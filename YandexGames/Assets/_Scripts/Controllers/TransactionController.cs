@@ -50,8 +50,8 @@ namespace _Scripts.Controllers
         public int CaseCounter { get; private set; }
 
         public bool IsMusicOn { get; private set; }
-
         public bool IsSoundOn { get; private set; }
+        public bool IsFirstGameStarted { get; private set; }
 
         public CaseTier CurrentCaseTier { get; private set; }
 
@@ -84,6 +84,9 @@ namespace _Scripts.Controllers
 
             IsMusicOn = progress.LevelsProgress.IsMusicOn;
             IsSoundOn = progress.LevelsProgress.IsSoundOn;
+            IsFirstGameStarted = progress.LevelsProgress.IsFirstGameStarted;
+
+            EventBus<OnTransactionsLoadedEvent>.Raise(new OnTransactionsLoadedEvent());
         }
 
         public void UpdateProgress(PlayerProgress progress)
@@ -109,6 +112,7 @@ namespace _Scripts.Controllers
 
             progress.LevelsProgress.IsMusicOn = IsMusicOn;
             progress.LevelsProgress.IsSoundOn = IsSoundOn;
+            progress.LevelsProgress.IsFirstGameStarted = IsFirstGameStarted;
 
             progress.LevelsProgress.CurrentCaseTier = CurrentCaseTier;
         }
@@ -351,6 +355,11 @@ namespace _Scripts.Controllers
         public void SetCaseTier(CaseTier caseTier)
         {
             CurrentCaseTier = caseTier;
+        }
+
+        public void SetFirstGameStarted(bool isFirstGameStarted)
+        {
+            IsFirstGameStarted = isFirstGameStarted;
         }
     }
 }

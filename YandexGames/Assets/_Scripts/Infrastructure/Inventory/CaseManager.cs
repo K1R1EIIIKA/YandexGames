@@ -82,13 +82,36 @@ namespace _Scripts.Infrastructure.Inventory
                 }
             }
 
-            var specialCases = _caseRepository.SpecialCases;
-            foreach (var caseData in specialCases)
+            var bigAdCases = _caseRepository.BigAdCases;
+
+            foreach (var adCase in bigAdCases)
             {
-                var caseObject =
-                    _container.InstantiatePrefabForComponent<CaseObject>(_smallCaseObjectPrefab, container);
-                caseObject.Initialize(caseData);
+                if (adCase.Tier == _transactionController.CurrentCaseTier)
+                {
+                    var caseObject =
+                        _container.InstantiatePrefabForComponent<CaseObject>(_smallCaseObjectPrefab, container);
+                    caseObject.Initialize(adCase);
+                }
             }
+
+            var caseOpenedCases = _caseRepository.CaseOpenedCases;
+            foreach (var adCase in caseOpenedCases)
+            {
+                if (adCase.Tier == _transactionController.CurrentCaseTier)
+                {
+                    var caseObject =
+                        _container.InstantiatePrefabForComponent<CaseObject>(_smallCaseObjectPrefab, container);
+                    caseObject.Initialize(adCase);
+                }
+            }
+
+            // var specialCases = _caseRepository.SpecialCases;
+            // foreach (var caseData in specialCases)
+            // {
+            //     var caseObject =
+            //         _container.InstantiatePrefabForComponent<CaseObject>(_smallCaseObjectPrefab, container);
+            //     caseObject.Initialize(caseData);
+            // }
         }
 
         public void InitializeLimitedCase(RectTransform container)

@@ -9,19 +9,19 @@ namespace _Scripts.YG
 {
     public static class AdRewardIds
     {
-        public const int OneAndHalfMoneyAdId = 1;
-        public const int DoubleMoneyAdId = 2;
-        public const int TripleMoneyAdId = 3;
-        public const int Discount10AdId = 4;
-        public const int Discount20AdId = 5;
-        public const int Discount50AdId = 6;
-        public const int BigCharacterAdId = 7;
-        public const int SmallCharacterAdId = 8;
-        public const int CrazyCharacterAdId = 9;
-        public const int MoreLoot1AdId = 10;
-        public const int MoreLoot2AdId = 11;
-        public const int AutoClickAdId = 12;
-        public const int AutoMoneyPerClickAdId = 13;
+        private const int OneAndHalfMoneyAdId = 1;
+        private const int DoubleMoneyAdId = 2;
+        private const int TripleMoneyAdId = 3;
+        private const int Discount10AdId = 4;
+        private const int Discount20AdId = 5;
+        private const int Discount50AdId = 6;
+        private const int BigCharacterAdId = 7;
+        private const int SmallCharacterAdId = 8;
+        private const int CrazyCharacterAdId = 9;
+        private const int MoreLoot1AdId = 10;
+        private const int MoreLoot2AdId = 11;
+        private const int AutoClickAdId = 12;
+        private const int AutoMoneyPerClickAdId = 13;
         public const int AdCaseId = 14;
         public static int Count => 13;
 

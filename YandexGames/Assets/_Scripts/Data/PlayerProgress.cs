@@ -51,6 +51,8 @@ namespace _Scripts.Data
         public bool IsSoundOn;
         public bool IsMusicOn;
 
+        public bool IsFirstGameStarted;
+
         public float Money;
 
         public CaseTier CurrentCaseTier;
@@ -126,6 +128,8 @@ namespace _Scripts.Data
 
             IsSoundOn = true;
             IsMusicOn = true;
+
+            IsFirstGameStarted = true;
 
             CurrentCaseTier = CaseTier.Tier1;
         }

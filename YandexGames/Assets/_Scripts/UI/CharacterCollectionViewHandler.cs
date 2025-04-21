@@ -78,19 +78,19 @@ namespace _Scripts.UI
 
             switch (_currentCollectionSortIndex)
             {
-                case 0:
+                case 1:
                     _collectionSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Availability), true);
                     _cardController.SortCollectionCards(CollectionSortType.ByHasAsc);
                     break;
-                case 1:
+                case 0:
                     _collectionSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Availability), false);
                     _cardController.SortCollectionCards(CollectionSortType.ByHasDesc);
                     break;
-                case 2:
+                case 3:
                     _collectionSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Rarity), true);
                     _cardController.SortCollectionCards(CollectionSortType.ByRareAsc);
                     break;
-                case 3:
+                case 2:
                     _collectionSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Rarity), false);
                     _cardController.SortCollectionCards(CollectionSortType.ByRareDesc);
                     break;
@@ -129,9 +129,9 @@ namespace _Scripts.UI
 
             _inventorySortButton.gameObject.SetActive(false);
             _collectionSortButton.gameObject.SetActive(true);
-            _collectionSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Availability), true);
+            _collectionSortButton.ChangeSortType(LocalizedStrings.ConvertSortToString(SortType.Availability), false);
 
-            _cardController.SortCollectionCards(CollectionSortType.ByHasAsc);
+            _cardController.SortCollectionCards(CollectionSortType.ByHasDesc);
             _cardController.ShowAllBeds();
         }
     }

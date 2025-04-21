@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using _Scripts.BuffLogic;
 using _Scripts.BuffLogic.Buffs;
 using _Scripts.Data;
@@ -184,23 +185,29 @@ namespace _Scripts.Controllers
 
         public void SortBeds(CollectionSortType sortType)
         {
-            switch (sortType)
+            _allBedsSet = sortType switch
             {
-                case CollectionSortType.ByRareAsc:
-                    _allBedsSet.Sort((a, b) => a.Rarity.CompareTo(b.Rarity));
-                    break;
-                case CollectionSortType.ByRareDesc:
-                    _allBedsSet.Sort((a, b) => b.Rarity.CompareTo(a.Rarity));
-                    break;
-                case CollectionSortType.ByHasAsc:
-                    _allBedsSet.Sort((a, b) => a.IsOpen.CompareTo(b.IsOpen));
-                    break;
-                case CollectionSortType.ByHasDesc:
-                    _allBedsSet.Sort((a, b) => b.IsOpen.CompareTo(a.IsOpen));
-                    break;
-            }
+                CollectionSortType.ByRareAsc  => _allBedsSet
+                    .OrderBy(b => b.Rarity)
+                    .ThenBy(b => b.IsOpen)
+                    .ToList(),
+                CollectionSortType.ByRareDesc => _allBedsSet
+                    .OrderByDescending(b => b.Rarity)
+                    .ThenBy(b => b.IsOpen)
+                    .ToList(),
+                CollectionSortType.ByHasAsc   => _allBedsSet
+                    .OrderBy(b => b.IsOpen)
+                    .ThenBy(b => b.Rarity)
+                    .ToList(),
+                CollectionSortType.ByHasDesc  => _allBedsSet
+                    .OrderByDescending(b => b.IsOpen)
+                    .ThenBy(b => b.Rarity)
+                    .ToList(),
+                _                              => _allBedsSet
+            };
 
             ShowPlayerBeds();
         }
+
     }
 }

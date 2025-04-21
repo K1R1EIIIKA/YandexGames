@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using _Scripts.BuffLogic;
 using _Scripts.Enums;
+using _Scripts.EventsLogic;
+using _Scripts.EventsLogic.Events;
 using _Scripts.Infrastructure.Core.States;
 using _Scripts.Infrastructure.Inventory;
 using _Scripts.YG;
@@ -28,6 +30,7 @@ namespace _Scripts.Controllers
         [Header("Controllers")]
         [SerializeField] private AccountController _accountController;
         [SerializeField] private SettingsController _settingsController;
+        [SerializeField] private NewGameController _newGameController;
 
         private CaseManager _caseManager;
         private GameStateMachine _gameStateMachine;
@@ -41,6 +44,8 @@ namespace _Scripts.Controllers
         [SerializeField] private AdButton _randomButton;
 
         private Coroutine _randomButtonCoroutine;
+
+        [Inject] private TransactionController _transactionController;
 
         [Inject]
         public void Construct(GameStateMachine gameStateMachine, InventoryController inventoryController,
@@ -66,6 +71,8 @@ namespace _Scripts.Controllers
 
             InitializeCases();
         }
+        
+        
 
         private void OnSettingsButtonClicked()
         {
@@ -78,6 +85,17 @@ namespace _Scripts.Controllers
 
             _randomButton.InstantHide();
             _randomButtonCoroutine = StartCoroutine(RandomButtonCoroutine());
+            
+            EventBus<OnTransactionsLoadedEvent>.OnEvent += OnTransactionsLoaded;
+        }
+
+        private void OnTransactionsLoaded(OnTransactionsLoadedEvent @event)
+        {
+            if (_transactionController.IsFirstGameStarted)
+            {
+                _newGameController.ShowNewGame();
+                _transactionController.SetFirstGameStarted(false);
+            }
         }
 
         private IEnumerator RandomButtonCoroutine()
@@ -103,6 +121,8 @@ namespace _Scripts.Controllers
             {
                 StopCoroutine(_randomButtonCoroutine);
             }
+            
+            EventBus<OnTransactionsLoadedEvent>.OnEvent -= OnTransactionsLoaded;
         }
 
         private void InitializeCases()

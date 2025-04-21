@@ -122,7 +122,7 @@ namespace _Scripts.Controllers
                 {
                     _autoclicksTime = 0;
 
-                    var money = Mathf.RoundToInt(_selectedCard.TotalMoneyPerClick *
+                    var money = Mathf.Round(_selectedCard.TotalMoneyPerClick *
                                                  _buffController.CurrentStats.ClickBonus);
 
                     _transactionController.AddMoney(money);

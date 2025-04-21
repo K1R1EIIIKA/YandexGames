@@ -42,9 +42,9 @@ namespace _Scripts.View
             _nameText.text = nameWithLine;
             _descriptionText.text = cardObject.GetDescription();
             _countText.gameObject.SetActive(true);
-            _countText.text = "x" + cardObject.Count;
-            _moneyGainText.text = LocalizedStrings.ClickPower.GetLocalizedString() + cardObject.MoneyPerClick;
-            _totalMoneyGainText.text = LocalizedStrings.GeneralClickPower.GetLocalizedString() + cardObject.TotalMoneyPerClick;
+            _countText.text = "x" + BigNumberFormatter.FormatBigNumber(cardObject.Count);
+            _moneyGainText.text = LocalizedStrings.ClickPower.GetLocalizedString() + BigNumberFormatter.FormatBigNumber(cardObject.MoneyPerClick);
+            _totalMoneyGainText.text = LocalizedStrings.GeneralClickPower.GetLocalizedString() + BigNumberFormatter.FormatBigNumber(cardObject.TotalMoneyPerClick);
 
             if (cardObject.Rarity == Rarity.Special)
             {

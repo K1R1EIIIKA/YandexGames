@@ -86,7 +86,7 @@ namespace _Scripts.YG
             if (_isAd)
             {
                 var validIds = Enumerable.Range(1, AdRewardIds.Count)
-                    .Where(x => x != 7 && x != 8 && x != 9 && x != 11 && x != 10)
+                    .Where(x => x != 7 && x != 1 && x != 4 && x != 8 && x != 9 && x != 11 && x != 10)
                     .ToList();
 
                 var id = validIds[Random.Range(0, validIds.Count)];
