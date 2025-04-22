@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using _Scripts.Plugins;
+using _Scripts.Enums;
 using _Scripts.Tools;
 using _Scripts.UI;
 using _Scripts.View;
@@ -57,7 +57,7 @@ namespace _Scripts.Controllers
             _bestScoreButton.Deselect();
 
             _playerCharacter.sprite = _transactionController.SelectedCard.ToCardObject().Image;
-            _totalCharacters.text = "Всего Амнямов: " + _transactionController.GetPlayerCardsCount();
+            _totalCharacters.text = LocalizedStrings.TotalOmnoms.GetLocalizedString() + " " + _transactionController.GetPlayerCardsCount();
             _bestScorePanel.SetActive(false);
         }
 
@@ -72,7 +72,7 @@ namespace _Scripts.Controllers
 
         public void SetPlayerName(string name)
         {
-            _playerName.text = name + " (Главный Амнямер)";
+            _playerName.text = name + " " + LocalizedStrings.BestOmnomer.GetLocalizedString();
         }
 
         public void SetPlayerAvatar(string url)
@@ -83,7 +83,6 @@ namespace _Scripts.Controllers
         private void OnGetLeaderBoard(LBData obj)
         {
             var rectContainer = _container as RectTransform;
-            Debug.Log(11);
             rectContainer.DestroyAllChildren();
 
             for (int i = 0; i < obj.players.Length; i++)

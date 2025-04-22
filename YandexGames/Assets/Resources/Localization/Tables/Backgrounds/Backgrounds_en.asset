@@ -26,6 +26,14 @@ MonoBehaviour:
     m_Localized: Candy heaven
     m_Metadata:
       m_Items: []
+  - m_Id: 164189527072768
+    m_Localized: A regular background of a regular box.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 164192983179264
+    m_Localized: Even more candies!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

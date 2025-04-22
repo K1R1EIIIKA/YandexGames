@@ -46,6 +46,9 @@ namespace _Scripts.Enums
         public static readonly LocalizedString CrazyChar = new() { TableReference = BuffsTableReference, TableEntryReference = "crazy_char" };
         public static readonly LocalizedString AutoClick = new() { TableReference = BuffsTableReference, TableEntryReference = "auto_click" };
 
+        public static readonly LocalizedString BestOmnomer = new() { TableReference = MainTableReference, TableEntryReference = "best_omnomer" };
+        public static readonly LocalizedString TotalOmnoms = new() { TableReference = MainTableReference, TableEntryReference = "total_omnoms" };
+
         public static string ConvertBedBuffToString(BedBuffType buffType)
         {
             return buffType switch

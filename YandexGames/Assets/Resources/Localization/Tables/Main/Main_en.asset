@@ -58,6 +58,34 @@ MonoBehaviour:
     m_Localized: PLACE
     m_Metadata:
       m_Items: []
+  - m_Id: 16306032576815104
+    m_Localized: YOUR ACCOUNT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16306078533804032
+    m_Localized: BEST OMNOMS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16306139946803200
+    m_Localized: (Chief OmNom)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16306210868289536
+    m_Localized: 'Total OmNoms: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16306347447410688
+    m_Localized: SETTINGS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16306384382451712
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16306398974435328
+    m_Localized: Sounds
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

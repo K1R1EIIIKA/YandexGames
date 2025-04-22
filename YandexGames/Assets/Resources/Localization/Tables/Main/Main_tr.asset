@@ -58,6 +58,34 @@ MonoBehaviour:
     m_Localized: ALMAK
     m_Metadata:
       m_Items: []
+  - m_Id: 16306032576815104
+    m_Localized: HESABINIZ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16306078533804032
+    m_Localized: "EN \u0130Y\u0130 OMNOMS"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16306139946803200
+    m_Localized: "(Ba\u015F OmNom)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16306210868289536
+    m_Localized: 'Toplam OmNoms: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16306347447410688
+    m_Localized: AYARLAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16306384382451712
+    m_Localized: "M\xFCzik"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16306398974435328
+    m_Localized: Sesler
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

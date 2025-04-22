@@ -647,44 +647,52 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14908030532444160
-    m_Localized: "Ananaslar\u0131n i\xE7inde saklanmay\u0131 seviyor."
+    m_Localized: "Bombardi\u2014? No, No, No, Crocodilo Ananasino, Croco Crocodini
+      Ananasini"
     m_Metadata:
       m_Items: []
   - m_Id: 14908030763130881
-    m_Localized: "Kahve ve gizli g\xF6revlerin ustas\u0131."
+    m_Localized: il marito della ballerina cappuccino e conduce una vita segreta
     m_Metadata:
       m_Items: []
   - m_Id: 14908030951874561
-    m_Localized: "Sahnede f\u0131r\u0131ldak gibi d\xF6ner."
+    m_Localized: Ballerina Cappuccina, mi mi mi miiii. Era la moglie di Cappuccino
+      Assasino. E ama la musica, la la la la! La sua passione e il Ballerino Lololo.
     m_Metadata:
       m_Items: []
   - m_Id: 14908031144812545
-    m_Localized: "Kar f\u0131rt\u0131nalar\u0131n\u0131 ve s\u0131cak \xE7ikolatay\u0131
-      sever."
+    m_Localized: un simpatico aereo coccodrillo che vola e combatte con altri animali
+      ia
     m_Metadata:
       m_Items: []
   - m_Id: 14908031526494209
-    m_Localized: "Nazik kalpli bir meyve canavar\u0131."
+    m_Localized: glorbo fruttodrillo nel profondo della Palude glorbo frutt drillo
+      regnava il suo corpo era un'enorme anguria a strisce
     m_Metadata:
       m_Items: []
   - m_Id: 14908031807512577
-    m_Localized: "O kadar mavi ki g\xF6ky\xFCz\xFCyle kar\u0131\u015Ft\u0131r\u0131l\u0131yor."
+    m_Localized: spijoniro golubilo spijoniro golubilo spijoniro golubilo spijoniro
+      golubilo spijoniro golubilo spijoniro golubilo
     m_Metadata:
       m_Items: []
   - m_Id: 14908032029810689
-    m_Localized: "\u015Eark\u0131lar\u0131 sadece \u015Fekerler duyar."
+    m_Localized: "Liril\xEC Laril\xE0, elefante nel deserto che cammina qua e l\xE0.
+      Con la sua conchiglia e un orologio che fa tic tac le spine del cactus mi fanno
+      un attacco flashback."
     m_Metadata:
       m_Items: []
   - m_Id: 14908032289857537
-    m_Localized: "Herkesi g\xFCr\xFClt\xFCl\xFC danslar\u0131yla uyand\u0131r\u0131r."
+    m_Localized: Tung tung tung tung tung tung tung tung tung sahur. Anomali mengerikan
+      yang hanya keluar pada sahur.
     m_Metadata:
       m_Items: []
   - m_Id: 14908032486989825
-    m_Localized: "M\xFCzik ve \u015Feker olmadan ya\u015Fayamaz."
+    m_Localized: "T-T-T-Trallallero-trallal\xE0"
     m_Metadata:
       m_Items: []
   - m_Id: 14908032730259457
-    m_Localized: "Hayal bulutlar\u0131nda kaybolur."
+    m_Localized: Trippi troppi, troppa trippa, tre topi trotterellano tra tromboni
+      tritati. Triplicando trottoline tropicali. E chi troppo vuole, nulla trippa!
     m_Metadata:
       m_Items: []
   - m_Id: 16122867048505344
@@ -882,6 +890,41 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 16138605775806464
     m_Localized: "Ate\u015F Buz OmNom"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286911449522176
+    m_Localized: "G\xFCc\xFC her sava\u015Fla artan bir kahraman. Ger\xE7ek bir evren
+      savunucusu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286911986393089
+    m_Localized: "B\xFCy\xFCk ba\u015Far\u0131lara ula\u015Fmay\u0131 hayal eden
+      al\xE7akg\xF6n\xFCll\xFC ama kararl\u0131 bir kahraman."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286912510681089
+    m_Localized: "Elmalar\u0131 seven g\xF6r\xFCnmez bir canavar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286913026580481
+    m_Localized: "Sevdikleri i\xE7in son nefesine kadar sava\u015Fmaya haz\u0131r
+      y\u0131lmaz bir k\u0131l\u0131\xE7 ustas\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286911374024704
+    m_Localized: "\u0130nci OmNom"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286911986393088
+    m_Localized: Tuhaf OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286912510681088
+    m_Localized: Elma Sever OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286913026580480
+    m_Localized: "\u0130blis Avc\u0131s\u0131 OmNom"
     m_Metadata:
       m_Items: []
   references:
