@@ -361,5 +361,16 @@ namespace _Scripts.Controllers
         {
             IsFirstGameStarted = isFirstGameStarted;
         }
+
+        public bool IsCardClosed(CardObject cardData)
+        {
+            if (PlayerCards == null) return true;
+
+            foreach (var playerCard in PlayerCards)
+                if (playerCard.Id == cardData.Id)
+                    return !playerCard.IsOpen;
+
+            return true;
+        }
     }
 }

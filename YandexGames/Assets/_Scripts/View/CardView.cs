@@ -10,6 +10,7 @@ namespace _Scripts.View
     {
         [SerializeField] private Image backgroundImage;
         [SerializeField] private Image objectImage;
+        [SerializeField] private Image objectCoverImage;
         [SerializeField] private TMP_Text objectName;
         [SerializeField] private Material _specialMaterial;
 
@@ -32,7 +33,7 @@ namespace _Scripts.View
 
         public void SetViewToClosed()
         {
-            objectImage.color = Color.black;
+            objectImage.color = new Color(0.25f, 0.25f, 0.25f, 1);
             objectName.text = "Не найдено";
         }
     }

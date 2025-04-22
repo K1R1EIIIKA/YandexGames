@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using _Scripts.Controllers;
 using _Scripts.Data.Cards;
 using _Scripts.ScriptableObjects;
 using _Scripts.Tools;
@@ -7,6 +8,7 @@ using NUnit.Framework;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace _Scripts.View
 {
@@ -19,6 +21,8 @@ namespace _Scripts.View
         [SerializeField] private Button _closeButton;
 
         [SerializeField] CardView _cardViewPrefab;
+
+        [Inject] private TransactionController _transactionController;
 
         private CaseData _caseData;
 
@@ -55,6 +59,11 @@ namespace _Scripts.View
             {
                 var cardView = Instantiate(_cardViewPrefab, _caseContent);
                 cardView.Initialize(cardData.ToCardData());
+
+                if (_transactionController.IsCardClosed(cardData))
+                {
+                    cardView.SetViewToClosed();
+                }
             }
 
             gameObject.SetActive(true);

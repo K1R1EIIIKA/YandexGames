@@ -859,6 +859,38 @@ MonoBehaviour:
     m_Key: baby_Description
     m_Metadata:
       m_Items: []
+  - m_Id: 16286911374024704
+    m_Key: goku_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286911449522176
+    m_Key: goku_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286911986393088
+    m_Key: midoria_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286911986393089
+    m_Key: midoria_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286912510681088
+    m_Key: ruk_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286912510681089
+    m_Key: ruk_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286913026580480
+    m_Key: tanjiro_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286913026580481
+    m_Key: tanjiro_Description
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

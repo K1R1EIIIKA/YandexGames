@@ -33,6 +33,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7073be0abc84ef34bb6b66f65cb034c7, type: 2}
   - {fileID: 11400000, guid: 724a295a31d505f45895611ee424f2d5, type: 2}
   - {fileID: 11400000, guid: 2ef46f023cfa9324f995125a73a6295a, type: 2}
+  - {fileID: 11400000, guid: c8e7c508858fa9241ac4044414a2f2b8, type: 2}
+  - {fileID: 11400000, guid: 0faec6b1d304e064eba061a679dc6c45, type: 2}
+  - {fileID: 11400000, guid: 389340c93ed67b14d8c3f9111d0e04e3, type: 2}
+  - {fileID: 11400000, guid: 6064f0a1b1f996740a24844a706d68a6, type: 2}
   Tier: 10
   DropChancesSerializedDictionary:
     _serializedList:
