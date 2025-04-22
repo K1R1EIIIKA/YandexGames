@@ -23,8 +23,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14239082031865856
-    m_Localized: "2B'nin zay\u0131flar i\xE7in oldu\u011Funa inan\u0131r. \xC7erezlerin
-      i\xE7ini g\xF6r\xFCyor!"
+    m_Localized: "2B'nin zay\u0131flar i\xE7in oldu\u011Funa inan\u0131r. Sadece
+      yer\xE7ekiminin g\xFCc\xFCne g\xF6re \xFC\xE7 boyutta kurabiyeleri g\xF6r\xFCr."
     m_Metadata:
       m_Items: []
   - m_Id: 14239082493239297
@@ -644,6 +644,244 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 14239101560545280
     m_Localized: OmNamikler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030532444160
+    m_Localized: "Ananaslar\u0131n i\xE7inde saklanmay\u0131 seviyor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030763130881
+    m_Localized: "Kahve ve gizli g\xF6revlerin ustas\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030951874561
+    m_Localized: "Sahnede f\u0131r\u0131ldak gibi d\xF6ner."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031144812545
+    m_Localized: "Kar f\u0131rt\u0131nalar\u0131n\u0131 ve s\u0131cak \xE7ikolatay\u0131
+      sever."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031526494209
+    m_Localized: "Nazik kalpli bir meyve canavar\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031807512577
+    m_Localized: "O kadar mavi ki g\xF6ky\xFCz\xFCyle kar\u0131\u015Ft\u0131r\u0131l\u0131yor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032029810689
+    m_Localized: "\u015Eark\u0131lar\u0131 sadece \u015Fekerler duyar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032289857537
+    m_Localized: "Herkesi g\xFCr\xFClt\xFCl\xFC danslar\u0131yla uyand\u0131r\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032486989825
+    m_Localized: "M\xFCzik ve \u015Feker olmadan ya\u015Fayamaz."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032730259457
+    m_Localized: "Hayal bulutlar\u0131nda kaybolur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867048505344
+    m_Localized: "Sonbaharda taze bir elma gibi \xE7\u0131t\u0131rdar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867346300929
+    m_Localized: "Bir kilometre \xF6teden hamburger kokar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867648290817
+    m_Localized: "Karanl\u0131k ve kasvetli yerleri ayd\u0131nlat\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122868101275649
+    m_Localized: "En iyi meyveleri bir sepete toplad\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122868457791489
+    m_Localized: "Son \u015Feker par\xE7as\u0131 i\xE7in sava\u015F\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869074354177
+    m_Localized: "Peynir ve pepperoniyle kapl\u0131 olmay\u0131 hayal eder."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869351178241
+    m_Localized: "Kendi eri\u015Ftelerine doland\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869749637121
+    m_Localized: "D\xFCnyan\u0131n en iyi tatl\u0131lar\u0131n\u0131 yapar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122870173261825
+    m_Localized: "O kadar parlak parlar ki g\xFCne\u015Flenebilirsin."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16125221537832961
+    m_Localized: "Donmu\u015F ama her zaman e\u011Flenceye haz\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131488482320385
+    m_Localized: "Havai fi\u015Fekleri ve b\xFCy\xFCk hamburgerleri sever."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131488864002049
+    m_Localized: "Balalaykay\u0131 herkesten daha iyi \xE7alar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489165991937
+    m_Localized: "Adalet i\xE7in sava\u015Fmaya her zaman haz\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489488953345
+    m_Localized: "\u015Eeker yemekten daha h\u0131zl\u0131 kitap okur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489803526145
+    m_Localized: "Bir ponpon sallayarak morali y\xFCkseltir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131490218762241
+    m_Localized: "Tatl\u0131 bir kahvalt\u0131 i\xE7in bal\u0131k yakalar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131490583666689
+    m_Localized: Kurabiyelerden daha eski hikayeleri bilir.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131491443499009
+    m_Localized: "Sadece su mu? Yoksa daha m\u0131 g\xFC\xE7l\xFC?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16138605775806465
+    m_Localized: "D\u0131\u015Far\u0131da s\u0131cak, i\xE7eride so\u011Fuk."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16138605775806466
+    m_Localized: "Hen\xFCz \xE7i\u011Fnemeyi \xF6\u011Frenen masum bebek. Her \u015Feyi
+      tatmay\u0131 seviyor."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030347894784
+    m_Localized: Ananasini OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030763130880
+    m_Localized: Cappuccino OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030951874560
+    m_Localized: Balerin OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031144812544
+    m_Localized: Bombardino OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031526494208
+    m_Localized: Glorbo OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031807512576
+    m_Localized: Golubini OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032029810688
+    m_Localized: Lirili OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032289857536
+    m_Localized: TunTunTun OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032486989824
+    m_Localized: Tralala OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032730259456
+    m_Localized: Trippy OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122866905899008
+    m_Localized: "Elmal\u0131 OmNom"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867346300928
+    m_Localized: Burger OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867648290816
+    m_Localized: Mum OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122868101275648
+    m_Localized: Meyveli OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122868457791488
+    m_Localized: "Gladyat\xF6r OmNom"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869074354176
+    m_Localized: Pizza OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869351178240
+    m_Localized: Ramen OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869749637120
+    m_Localized: "\u015Eef OmNom"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122870173261824
+    m_Localized: "G\xFCne\u015Fli OmNom"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16125221537832960
+    m_Localized: "Buz K\xFCp\xFC OmNom"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131488482320384
+    m_Localized: Taraftar OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131488864002048
+    m_Localized: Balalayka OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489165991936
+    m_Localized: Haylaz OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489488953344
+    m_Localized: "\u0130nek OmNom"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489803526144
+    m_Localized: Amigo Stacy OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131490218762240
+    m_Localized: "Bal\u0131k\xE7\u0131 OmNom"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131490583666688
+    m_Localized: Dede OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131491443499008
+    m_Localized: Su OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16138605775806464
+    m_Localized: "Ate\u015F Buz OmNom"
     m_Metadata:
       m_Items: []
   references:

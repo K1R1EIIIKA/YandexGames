@@ -29,12 +29,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 564ba065b63eaf94d9a2437bed9d0b2c, type: 2}
   - {fileID: 11400000, guid: 226876b7a0ea64e4db0c370bd386ae1d, type: 2}
   - {fileID: 11400000, guid: 5b8ef42a94dd9b44dbb4b4b4ab8d1233, type: 2}
-  - {fileID: 11400000, guid: fc29a9e65a0b90c4c9396bde872a105e, type: 2}
   - {fileID: 11400000, guid: 408495b62cc774144bf651ccc3b0e14f, type: 2}
   - {fileID: 11400000, guid: a24c036783e3e2c438573d8b60d5463d, type: 2}
   - {fileID: 11400000, guid: 56c25543c8c10eb4c839882a3db3a0d0, type: 2}
   - {fileID: 11400000, guid: 45af3705721decb44a0babbc3a699237, type: 2}
   - {fileID: 11400000, guid: 6aff9c808c72ebe4b8e7f060be3c5fd8, type: 2}
+  - {fileID: 11400000, guid: 64951c7ddfcf08a4aa12fae04e2947ce, type: 2}
+  - {fileID: 11400000, guid: 314882c3e7da5b54f9b1bfcf5791e4e1, type: 2}
+  - {fileID: 11400000, guid: 3cd549f6f4d6cb24bae037554eaed00b, type: 2}
+  - {fileID: 11400000, guid: e03a8f8a4779cf645b9ae303e5db35ce, type: 2}
   Tier: 9
   DropChancesSerializedDictionary:
     _serializedList:

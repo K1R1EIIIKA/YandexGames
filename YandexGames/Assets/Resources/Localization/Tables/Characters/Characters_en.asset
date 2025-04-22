@@ -27,7 +27,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14239082031865856
-    m_Localized: Believes that 2D is for weaklings. Sees right through the cookies!
+    m_Localized: Believes that 2D is for weaklings. Only sees cookies in three dimensions
+      under the force of gravity.
     m_Metadata:
       m_Items: []
   - m_Id: 14239082493239297
@@ -624,6 +625,242 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 14239101560545280
     m_Localized: OmNamikler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030532444160
+    m_Localized: Loves hiding in pineapples.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030763130881
+    m_Localized: Master of coffee and secret missions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030951874561
+    m_Localized: Spins like a top on stage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031144812545
+    m_Localized: Loves snowstorms and hot chocolate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031526494209
+    m_Localized: Fruit monster with a gentle heart.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031807512577
+    m_Localized: So blue that he's mistaken for the sky.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032029810689
+    m_Localized: Sings songs only candies can hear.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032289857537
+    m_Localized: Wakes everyone up with loud dances.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032486989825
+    m_Localized: Can't live without music and sweets.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032730259457
+    m_Localized: Always lost in clouds of dreams.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867048505344
+    m_Localized: Crunches like a fresh apple in autumn.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867346300929
+    m_Localized: Smells like a burger from a mile away.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867648290817
+    m_Localized: Lights up where it's dark and gloomy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122868101275649
+    m_Localized: Collected the best fruits in one basket.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122868457791489
+    m_Localized: Fights for the last piece of candy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869074354177
+    m_Localized: Dreams of being covered in cheese and pepperoni.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869351178241
+    m_Localized: Got tangled in his own noodles.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869749637121
+    m_Localized: Cooks the best desserts in the world.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122870173261825
+    m_Localized: Shines so bright you can sunbathe.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16125221537832961
+    m_Localized: Frozen, but always ready for fun.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131488482320385
+    m_Localized: Loves fireworks and big burgers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131488864002049
+    m_Localized: Plays the balalaika better than anyone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489165991937
+    m_Localized: Always ready to fight for justice.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489488953345
+    m_Localized: Reads books faster than eating candies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489803526145
+    m_Localized: Lifts spirits with a single pompom wave.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131490218762241
+    m_Localized: Catches fish for a sweet breakfast.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131490583666689
+    m_Localized: Knows stories older than cookies.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131491443499009
+    m_Localized: Only water? Or something stronger?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16138605775806465
+    m_Localized: Hot outside, cold inside.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16138605775806466
+    m_Localized: The innocent baby still learning to chew. Loves to taste everything.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030347894784
+    m_Localized: Ananasini OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030763130880
+    m_Localized: Cappuccino OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030951874560
+    m_Localized: Ballerina OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031144812544
+    m_Localized: Bombardino OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031526494208
+    m_Localized: Glorbo OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031807512576
+    m_Localized: Golubini OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032029810688
+    m_Localized: Lirili OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032289857536
+    m_Localized: TunTunTun OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032486989824
+    m_Localized: Tralala OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032730259456
+    m_Localized: Trippy OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122866905899008
+    m_Localized: Apple OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867346300928
+    m_Localized: Burger OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867648290816
+    m_Localized: Candle OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122868101275648
+    m_Localized: Fruit OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122868457791488
+    m_Localized: Gladiator OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869074354176
+    m_Localized: Pizza OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869351178240
+    m_Localized: Ramen OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869749637120
+    m_Localized: Chef OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122870173261824
+    m_Localized: Sunny OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16125221537832960
+    m_Localized: Ice Cube OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131488482320384
+    m_Localized: Fan OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131488864002048
+    m_Localized: Balalaika OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489165991936
+    m_Localized: Bully OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489488953344
+    m_Localized: Nerd OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489803526144
+    m_Localized: Cheerleader Stacy OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131490218762240
+    m_Localized: Fisher OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131490583666688
+    m_Localized: Grandpa OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131491443499008
+    m_Localized: Water OmNom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16138605775806464
+    m_Localized: Fire Ice OmNom
     m_Metadata:
       m_Items: []
   references:
