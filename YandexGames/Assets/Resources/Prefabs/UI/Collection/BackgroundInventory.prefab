@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 1362749155935497586}
   - component: {fileID: 412788872128444021}
   - component: {fileID: -3672737637139037201}
+  - component: {fileID: 8788704413140924872}
   m_Layer: 5
   m_Name: BackgroundInventory
   m_TagString: Untagged
@@ -273,6 +274,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a52fc419d8164c96a84e463ac2c58219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8788704413140924872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3955292898950828347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54086a6e81074415be5c7577b7b74513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6021477856973535092

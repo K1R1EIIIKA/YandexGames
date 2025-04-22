@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using _Scripts.Controllers;
+using _Scripts.Sound;
 using DG.Tweening;
 using UnityEngine;
 
@@ -32,6 +34,8 @@ namespace _Scripts.UI
             .OnKill(() => t.localPosition = _originalLocalPositions[t]);
 
             _currentShakeTweens[t] = shakeTween;
+
+            AudioController.Instance.PlaySound(SoundName.HandleWrong);
         }
     }
 }

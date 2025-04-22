@@ -4,6 +4,7 @@ using _Scripts.Data.Cards;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
 using _Scripts.ScriptableObjects;
+using _Scripts.Sound;
 using _Scripts.Tools;
 using _Scripts.UI;
 using TMPro;
@@ -144,6 +145,7 @@ namespace _Scripts.Controllers
             _moneyLootText.text = BigNumberFormatter.FormatBigNumber(_moneyLoot);
             _remainItemsCountValue--;
             _itemsCount.text = _remainItemsCountValue.ToString();
+            AudioController.Instance.PlaySound(SoundName.Yes);
         }
 
         private void ShowCardLoot()
@@ -162,18 +164,23 @@ namespace _Scripts.Controllers
             {
                 case Rarity.Common:
                     _backgroundChanger.ChangeBackground(BackgroundColor.Common);
+                    AudioController.Instance.PlaySound(SoundName.Yes);
                     break;
                 case Rarity.Rare:
                     _backgroundChanger.ChangeBackground(BackgroundColor.Rare);
+                    AudioController.Instance.PlaySound(SoundName.Yes);
                     break;
                 case Rarity.SuperRare:
                     _backgroundChanger.ChangeBackground(BackgroundColor.SuperRare);
+                    AudioController.Instance.PlaySound(SoundName.Yes);
                     break;
                 case Rarity.SuperMegaRare:
                     _backgroundChanger.ChangeBackground(BackgroundColor.SuperMegaRare);
+                    AudioController.Instance.PlaySound(SoundName.GetLegendary);
                     break;
                 case Rarity.Special:
                     _backgroundChanger.ChangeBackground(BackgroundColor.Special);
+                    AudioController.Instance.PlaySound(SoundName.GetLegendary);
                     break;
             }
 

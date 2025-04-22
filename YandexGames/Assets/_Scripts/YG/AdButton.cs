@@ -2,6 +2,7 @@
 using _Scripts.BuffLogic.Base;
 using _Scripts.Controllers;
 using _Scripts.Enums;
+using _Scripts.Sound;
 using _Scripts.Tools;
 using DG.Tweening;
 using TMPro;
@@ -105,6 +106,7 @@ namespace _Scripts.YG
 
                 InstantHide();
                 AnimateText(id, false);
+                AudioController.Instance.PlaySound(SoundName.Yes);
             }
         }
 
@@ -115,6 +117,7 @@ namespace _Scripts.YG
             _buffText.gameObject.SetActive(true);
 
             AnimateText(id, true);
+            AudioController.Instance.PlaySound(SoundName.Yes);
         }
 
         private void AnimateText(int id, bool isAd)

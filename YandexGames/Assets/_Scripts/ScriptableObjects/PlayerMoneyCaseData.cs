@@ -11,7 +11,7 @@ namespace _Scripts.ScriptableObjects
 
         public int OpenedCount;
 
-        private const float PriceMultiplier = 0.1f;
+        private const float PriceMultiplier = 0.15f;
 
         public string Id => ToCaseData().Id;
         public float TotalPrice
