@@ -107,6 +107,26 @@ MonoBehaviour:
     m_Key: auto_click
     m_Metadata:
       m_Items: []
+  - m_Id: 16332593715732480
+    m_Key: Click10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16332625667940352
+    m_Key: Click20
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16332636896092160
+    m_Key: Click30
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16332645150482432
+    m_Key: Click40
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16332653052551168
+    m_Key: Click50
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

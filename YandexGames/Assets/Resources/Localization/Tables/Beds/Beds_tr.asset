@@ -19,11 +19,35 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 41799376896
-    m_Localized: Sihirli Top
+    m_Localized: Sihirli masa
     m_Metadata:
       m_Items: []
   - m_Id: 43812642816
-    m_Localized: "S\u0131radan yatak"
+    m_Localized: Normal yatak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16143197980844032
+    m_Localized: "Ye\u015Fil \xFC\xE7gen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16143214980358144
+    m_Localized: Karpuz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16143239563173888
+    m_Localized: "Bir par\xE7a lambert"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16143250174763008
+    m_Localized: "Sakura'n\u0131n alt\u0131ndaki yatak"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16143273834831872
+    m_Localized: "Buz sal\u0131nca\u011F\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16143316646092800
+    m_Localized: "Cehennemin taht\u0131"
     m_Metadata:
       m_Items: []
   references:

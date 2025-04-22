@@ -17,7 +17,187 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: a99fd83691ef85e41820f02edee74168, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 14902406591537152
+    m_Localized: Anime box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902448270336000
+    m_Localized: Bombardiro boxed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902536115838976
+    m_Localized: Box of borscht
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902538410123264
+    m_Localized: Ice box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902540079456256
+    m_Localized: Magic box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902541597794304
+    m_Localized: cartoon box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902542826725376
+    m_Localized: Regular box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902543913050112
+    m_Localized: Fire box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902544890322944
+    m_Localized: Natural box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902545917927424
+    m_Localized: Sakura box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902547184607232
+    m_Localized: Free box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902548543561728
+    m_Localized: Aesthetic box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16134684562939904
+    m_Localized: Level 1 promotional case
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135030202949632
+    m_Localized: Advertising case 2 levels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135049467387904
+    m_Localized: Advertising case 3 levels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135050767622144
+    m_Localized: Advertising case 4 levels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135051510013952
+    m_Localized: Advertising case level 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135052218851328
+    m_Localized: Promotional case level 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135052906717184
+    m_Localized: Level 7 Promotional Case
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135053712023552
+    m_Localized: Promotional case level 8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135054634770432
+    m_Localized: Promotional case level 9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135054907400192
+    m_Localized: Promotional case level 10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135055234555904
+    m_Localized: Promotional case level 11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135055490408448
+    m_Localized: Super Advertising Case Level 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135055750455296
+    m_Localized: Super Advertising Case Level 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135056014696448
+    m_Localized: Super Advertising Case Level 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135056341852160
+    m_Localized: Super Advertising Case Level 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135056606093312
+    m_Localized: Super Advertising Case Level 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135056857751552
+    m_Localized: Super Advertising Case Level 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135057184907264
+    m_Localized: Super Advertising Case Level 7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135057444954112
+    m_Localized: Super Advertising Case Level 8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135057713389568
+    m_Localized: Super Advertising Case Level 9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135057965047808
+    m_Localized: Super Advertising Case Level 10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135058225094656
+    m_Localized: Super Advertising Case Level 11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136210798862336
+    m_Localized: Case for a bunch of tier 1 cases
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136269892411392
+    m_Localized: Case for a bunch of cases of level 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136278801113088
+    m_Localized: Case for a bunch of cases of level 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136291220447232
+    m_Localized: Case for a bunch of cases of level 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136297159581696
+    m_Localized: Case for a bunch of level 5 cases
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136303467814912
+    m_Localized: Case for a bunch of level 6 cases
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136310073843712
+    m_Localized: Case for a bunch of level 7 cases
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136316600180736
+    m_Localized: Case for a bunch of level 8 cases
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136323541753856
+    m_Localized: Case for a bunch of level 9 cases
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136330189725696
+    m_Localized: Case for a bunch of level 10 cases
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136339375251456
+    m_Localized: Case for a bunch of level 11 cases
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

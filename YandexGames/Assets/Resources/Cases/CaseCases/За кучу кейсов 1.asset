@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: "\u0417\u0430 \u043A\u0443\u0447\u0443 \u043A\u0435\u0439\u0441\u043E\u0432
     1"
   m_EditorClassIdentifier: 
-  Id: 
+  Id: 1
   Name:
     m_TableReference:
       m_TableCollectionName: GUID:a99fd83691ef85e41820f02edee74168
     m_TableEntryReference:
-      m_KeyId: 14490263552
+      m_KeyId: 16136210798862336
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

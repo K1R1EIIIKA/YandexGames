@@ -74,6 +74,26 @@ MonoBehaviour:
     m_Localized: "BONUS: Hay\u0131r"
     m_Metadata:
       m_Items: []
+  - m_Id: 16332653052551168
+    m_Localized: "BONUS: T\u0131klamalar %50 daha fazla \u015Feker verir!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16332645150482432
+    m_Localized: "BONUS: T\u0131klamalar %40 daha fazla \u015Feker verir!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16332636896092160
+    m_Localized: "BONUS: T\u0131klamalar %30 daha fazla \u015Feker verir!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16332625667940352
+    m_Localized: "BONUS: T\u0131klamalar %20 daha fazla \u015Feker verir!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16332593715732480
+    m_Localized: "BONUS: T\u0131klamalar %10 daha fazla \u015Feker verir!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

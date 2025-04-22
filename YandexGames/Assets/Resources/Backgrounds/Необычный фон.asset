@@ -15,9 +15,9 @@ MonoBehaviour:
   Id: 2
   Name:
     m_TableReference:
-      m_TableCollectionName: GUID:8c8ca9e02e69aec41bb09320851c53d1
+      m_TableCollectionName: GUID:04d2367b437ac654494f3beac33207b0
     m_TableEntryReference:
-      m_KeyId: 9536790528
+      m_KeyId: 23352827904
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

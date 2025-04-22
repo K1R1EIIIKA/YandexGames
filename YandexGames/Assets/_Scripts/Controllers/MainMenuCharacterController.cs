@@ -142,7 +142,7 @@ namespace _Scripts.Controllers
 
             if (_buffController.CurrentStats.IsCharacterSizeCrazy)
             {
-                _characterTransform.Rotate(Vector3.forward, 2);
+                _characterTransform.Rotate(Vector3.forward, 4);
             }
             else
             {
