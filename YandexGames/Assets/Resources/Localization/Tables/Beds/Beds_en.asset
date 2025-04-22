@@ -50,6 +50,38 @@ MonoBehaviour:
     m_Localized: Hell's throne
     m_Metadata:
       m_Items: []
+  - m_Id: 16271699216424960
+    m_Localized: A table filled with magic and secrets.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271740681314304
+    m_Localized: A nature triangle for true green lovers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271812223557632
+    m_Localized: A cozy bed for everyday relaxation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271863893188608
+    m_Localized: An appetizing piece of cheese for cozy evenings.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271909141340160
+    m_Localized: A juicy watermelon-shaped bed is a summer holiday dream.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271934684651520
+    m_Localized: A flaming bed for those who love warmth and comfort.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271978523516928
+    m_Localized: A refreshing bed that keeps you cool in winter.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16272008244355072
+    m_Localized: A delicate bed inspired by cherry blossoms.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

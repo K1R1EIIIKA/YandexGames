@@ -47,6 +47,38 @@ MonoBehaviour:
     m_Key: fire
     m_Metadata:
       m_Items: []
+  - m_Id: 16271699216424960
+    m_Key: magic_ball_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271740681314304
+    m_Key: nature_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271812223557632
+    m_Key: common_bed_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271863893188608
+    m_Key: cheese_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271909141340160
+    m_Key: watermelon_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271934684651520
+    m_Key: fire_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271978523516928
+    m_Key: ice_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16272008244355072
+    m_Key: sakura_desc
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

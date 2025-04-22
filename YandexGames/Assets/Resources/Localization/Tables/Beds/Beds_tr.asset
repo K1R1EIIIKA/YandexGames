@@ -50,6 +50,41 @@ MonoBehaviour:
     m_Localized: "Cehennemin taht\u0131"
     m_Metadata:
       m_Items: []
+  - m_Id: 16271699216424960
+    m_Localized: "Sihir ve s\u0131rlarla dolu bir masa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271740681314304
+    m_Localized: "Ger\xE7ek ye\u015Fil sevenler i\xE7in bir do\u011Fa \xFC\xE7geni."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271812223557632
+    m_Localized: "G\xFCnl\xFCk rahatlama i\xE7in rahat bir yatak."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271863893188608
+    m_Localized: "Rahat ak\u015Famlar i\xE7in i\u015Ftah a\xE7\u0131c\u0131 bir peynir
+      par\xE7as\u0131."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271909141340160
+    m_Localized: "Sulu karpuz \u015Feklindeki yatak bir yaz tatili hayalidir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271934684651520
+    m_Localized: "S\u0131cakl\u0131\u011F\u0131 ve konforu sevenler i\xE7in alevli
+      bir yatak."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271978523516928
+    m_Localized: "K\u0131\u015F\u0131n sizi serinleten ferahlat\u0131c\u0131 bir
+      yatak."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16272008244355072
+    m_Localized: "Kiraz \xE7i\xE7eklerinden ilham alan narin bir yatak."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

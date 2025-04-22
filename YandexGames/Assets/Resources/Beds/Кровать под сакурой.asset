@@ -34,7 +34,7 @@ MonoBehaviour:
   BedImage: {fileID: 21300000, guid: d782045d1e244e6488fbd9c779bfd186, type: 3}
   Rarity: 2
   Price: 0
-  BuffType: 0
+  BuffType: 4
   references:
     version: 2
     RefIds: []

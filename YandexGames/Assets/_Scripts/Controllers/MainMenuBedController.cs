@@ -30,7 +30,7 @@ namespace _Scripts.Controllers
 
             if (_selectedBed != null && _bedImage != null)
             {
-                _bedImage.sprite = _selectedBed.ToBedObject().BedImage;
+                _bedImage.sprite = _selectedBed.BedImage;
             }
         }
 

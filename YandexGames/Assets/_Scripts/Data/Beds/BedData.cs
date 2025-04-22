@@ -9,26 +9,19 @@ namespace _Scripts.Data.Beds
     [Serializable]
     public class BedData : IComparable
     {
-        public string Id;
-        public LocalizedString Name;
-        public LocalizedString Description;
-        public Sprite BedImage;
-        public int Price;
-        public Rarity Rarity;
-        public BedBuffType BuffType;
+        public string Id => ToBedObject().Id;
+        public LocalizedString Name => ToBedObject().Name;
+        public LocalizedString Description => ToBedObject().Description;
+        public Sprite BedImage => ToBedObject().BedImage;
+        public int Price => ToBedObject().Price;
+        public Rarity Rarity => ToBedObject().Rarity;
+        public BedBuffType BuffType => ToBedObject().BuffType;
         public bool IsOpen;
 
         public string BedObjectLocation;
 
         public BedData(BedObject bedObject)
         {
-            Id = bedObject.Id;
-            Name = bedObject.Name;
-            Description = bedObject.Description;
-            BedImage = bedObject.BedImage;
-            Rarity = bedObject.Rarity;
-            Price = bedObject.Price;
-            BuffType = bedObject.BuffType;
             IsOpen = false;
 
             BedObjectLocation = Resources.Load<BedObject>($"Beds/{bedObject.name}").name;
@@ -58,12 +51,6 @@ namespace _Scripts.Data.Beds
         {
             return new BedData
             {
-                Id = Id,
-                Name = Name,
-                BedImage = BedImage,
-                Price = Price,
-                Rarity = Rarity,
-                BuffType = BuffType,
                 IsOpen = IsOpen,
                 BedObjectLocation = BedObjectLocation
             };

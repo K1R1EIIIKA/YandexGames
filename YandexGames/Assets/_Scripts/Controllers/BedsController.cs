@@ -109,7 +109,7 @@ namespace _Scripts.Controllers
 
         public bool TryBuyBed(BedData bedData, Transform buttonTransform)
         {
-            if (_transactionController.SpendMoney(bedData.ToBedObject().Price))
+            if (_transactionController.SpendMoney(bedData.Price))
             {
                 bedData.IsOpen = true;
                 _playerBedsData.Add(bedData);

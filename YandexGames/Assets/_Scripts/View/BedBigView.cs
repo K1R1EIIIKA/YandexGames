@@ -66,7 +66,7 @@ namespace _Scripts.View
                 _rarityBackgroundImage.color = bedData.Rarity.ToHexColor().ToColor();
             }
 
-            _bedImage.sprite = bedData.ToBedObject().BedImage;
+            _bedImage.sprite = bedData.BedImage;
             _bedImage.color = Color.white;
 
             _placeButton.gameObject.SetActive(true);
@@ -101,10 +101,10 @@ namespace _Scripts.View
                 _rarityBackgroundImage.color = bedData.Rarity.ToHexColor().ToColor();
             }
 
-            _bedImage.sprite = bedData.ToBedObject().BedImage;
+            _bedImage.sprite = bedData.BedImage;
             _bedImage.color = Color.black;
 
-            _priceText.text = BigNumberFormatter.FormatBigNumber(bedData.ToBedObject().Price);
+            _priceText.text = BigNumberFormatter.FormatBigNumber(bedData.Price);
             _buyButton.onClick.AddListener(OnBuyButtonClick);
 
             gameObject.SetActive(true);

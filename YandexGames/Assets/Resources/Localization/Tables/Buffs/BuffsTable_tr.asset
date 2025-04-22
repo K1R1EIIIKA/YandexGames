@@ -94,6 +94,42 @@ MonoBehaviour:
     m_Localized: "BONUS: T\u0131klamalar %10 daha fazla \u015Feker verir!"
     m_Metadata:
       m_Items: []
+  - m_Id: 2825285752840192
+    m_Localized: "i\xE7in"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2825989083095040
+    m_Localized: saniye
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2826007894548480
+    m_Localized: paralar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2826223154618368
+    m_Localized: "G\xFC\xE7'e t\u0131klay\u0131n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2826339127123968
+    m_Localized: "\u0130ndirim"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2826414947557376
+    m_Localized: "B\xFCy\xFCk OmNom"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2826491577491456
+    m_Localized: "K\xFC\xE7\xFCk OmNom"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2826530169282560
+    m_Localized: "\xC7\u0131lg\u0131n OmNom"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2826565908946944
+    m_Localized: "Otomatik T\u0131klama"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

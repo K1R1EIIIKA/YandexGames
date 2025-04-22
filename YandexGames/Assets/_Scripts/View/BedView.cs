@@ -13,7 +13,7 @@ namespace _Scripts.View
         public void Initialize(BedData bedData)
         {
             _backgroundImage.color = bedData.Rarity.ToHexColor().ToColor();
-            _objectImage.sprite = bedData.ToBedObject().BedImage;
+            _objectImage.sprite = bedData.BedImage;
             _objectImage.color = Color.white;
         }
 
