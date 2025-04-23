@@ -55,10 +55,16 @@ namespace _Scripts.Controllers
 
         public CaseTier CurrentCaseTier { get; private set; }
 
+        [Inject] DiContainer _diContainer;
+
         public void LoadProgress(PlayerProgress progress)
         {
             Money = progress.LevelsProgress.Money;
             PlayerCards = progress.LevelsProgress.PlayerCards;
+            foreach (var playerCard in PlayerCards)
+            {
+                _diContainer.Inject(playerCard);
+            }
             AllCards = progress.LevelsProgress.AllCardsSet;
             SelectedCard = progress.LevelsProgress.SelectedCard;
 
@@ -71,6 +77,10 @@ namespace _Scripts.Controllers
             SelectedBackground = progress.LevelsProgress.SelectedBackground;
 
             PlayerMoneyCases = progress.LevelsProgress.PlayerMoneyCases;
+            foreach (var playerMoneyCaseOpenedData in PlayerMoneyCases)
+            {
+                _diContainer.Inject(playerMoneyCaseOpenedData);
+            }
             PlayerLimitedCases = progress.LevelsProgress.PlayerLimitedCases;
 
             CurrentCaseTier = progress.LevelsProgress.CurrentCaseTier;
@@ -166,6 +176,7 @@ namespace _Scripts.Controllers
                 if (!isCardExist)
                 {
                     PlayerCards.Add(new PlayerCardData(card));
+                    _diContainer.Inject(PlayerCards.Last());
                     OpenCard(card);
                 }
             }
@@ -373,6 +384,21 @@ namespace _Scripts.Controllers
                     return !playerCard.IsOpen;
 
             return true;
+        }
+
+        public float GetHighestPriceCard()
+        {
+            float highestMoneyPerClick = 0;
+
+            foreach (var playerCard in PlayerCards)
+            {
+                if (playerCard.Rarity != Rarity.Special && playerCard.TotalMoneyPerClick > highestMoneyPerClick)
+                {
+                    highestMoneyPerClick = playerCard.TotalMoneyPerClick;
+                }
+            }
+
+            return highestMoneyPerClick;
         }
     }
 }

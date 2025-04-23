@@ -10,14 +10,12 @@ namespace _Scripts.BuffLogic.Database
         [Tooltip("Все определения баффов")]
         public BuffDefinition[] Definitions;
 
-        // Переходник: по ID возвращает спрайт
         public Sprite GetIcon(string buffId)
         {
             var def = Definitions.FirstOrDefault(d => d.buffId == buffId);
             return def != null ? def.icon : null;
         }
 
-        // Синглтон из папки Resources
         private static BuffDatabase _instance;
         public static BuffDatabase Instance
         {

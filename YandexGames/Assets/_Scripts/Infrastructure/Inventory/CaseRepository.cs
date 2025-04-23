@@ -21,5 +21,18 @@ namespace _Scripts.Infrastructure.Inventory
         public AdCaseData[] BigAdCases => _bigAdCases;
         public MoneyCaseData[] CaseOpenedCases => _caseOpenedCases;
         public CaseData LimitedCase => _limitedCase;
+
+
+        private static CaseRepository _instance;
+
+        public static CaseRepository Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = Resources.Load<CaseRepository>("Config/CaseRepository");
+                return _instance;
+            }
+        }
     }
 }

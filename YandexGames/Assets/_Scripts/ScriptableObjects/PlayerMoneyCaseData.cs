@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Linq;
+using _Scripts.Controllers;
 using UnityEngine;
+using Zenject;
 
 namespace _Scripts.ScriptableObjects
 {
@@ -9,48 +12,52 @@ namespace _Scripts.ScriptableObjects
         [SerializeField] private string caseObjectLocation;
         public string CaseObjectLocation => caseObjectLocation;
 
+        public string Id => ToCaseData().Id;
         public int OpenedCount;
 
-        private const float PriceMultiplier = 0.15f;
+        private const float PriceMultiplierPerOpen   = 0.15f;
+        private const float TierStepFractionPerTier  = 0.1f;
 
-        public string Id => ToCaseData().Id;
+        [Inject] private TransactionController _transactionController;
+
         public float TotalPrice
         {
             get
             {
-                if (OpenedCount == 0)
-                {
-                    return ToCaseData().Price;
-                }
-
-                float basePrice = ToCaseData().Price;
-                float price = basePrice;
+                var baseData = ToCaseData();
+                float price = baseData.Price;
 
                 for (int i = 0; i < OpenedCount; i++)
+                    price *= 1f + PriceMultiplierPerOpen;
+
+                foreach (var other in _transactionController.PlayerMoneyCases
+                                .Where(d => (int)d.ToCaseData().Tier > (int)baseData.Tier))
                 {
-                    price += price * PriceMultiplier;
+                    int diffTiers = (int)other.ToCaseData().Tier - (int)baseData.Tier;
+
+                    Debug.Log("diffTiers: " + diffTiers);
+                    float stepFraction = diffTiers * TierStepFractionPerTier;
+
+                    for (int k = 0; k < other.OpenedCount; k++)
+                    {
+                        price *= 1f + stepFraction;
+                    }
                 }
 
                 return price;
             }
         }
 
-
         public PlayerMoneyCaseOpenedData(MoneyCaseData caseData)
         {
-            OpenedCount = 0;
+            OpenedCount        = 0;
             caseObjectLocation = caseData.name;
-            Debug.Log("LOCATION " + caseObjectLocation);
         }
 
         private MoneyCaseData ToCaseData()
-        {
-            return Resources.Load<MoneyCaseData>("Cases/MoneyCases/" + caseObjectLocation);
-        }
+            => Resources.Load<MoneyCaseData>($"Cases/MoneyCases/{caseObjectLocation}");
 
         public override string ToString()
-        {
-            return $"OpenedCount: {OpenedCount}, TotalPrice: {caseObjectLocation}";
-        }
+            => $"OpenedCount: {OpenedCount}, Location: {caseObjectLocation}";
     }
 }

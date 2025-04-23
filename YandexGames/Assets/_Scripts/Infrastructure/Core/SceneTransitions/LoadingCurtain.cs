@@ -1,5 +1,7 @@
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace _Scripts.Infrastructure.Core.SceneTransitions
 {
@@ -20,18 +22,10 @@ namespace _Scripts.Infrastructure.Core.SceneTransitions
 
         public void Hide()
         {
-            StartCoroutine(DoFadeIn());
-        }
-
-        private IEnumerator DoFadeIn()
-        {
-            while (Curtain.alpha > 0)
+            Curtain.DOFade(0, 0.1f).SetDelay(0.2f).SetLink(gameObject, LinkBehaviour.KillOnDestroy).OnComplete(() =>
             {
-                Curtain.alpha -= 0.03f;
-                yield return new WaitForSeconds(0.03f);
-            }
-
-            gameObject.SetActive(false);
+                gameObject.SetActive(false);
+            });
         }
     }
 }

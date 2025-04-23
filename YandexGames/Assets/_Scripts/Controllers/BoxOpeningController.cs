@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Globalization;
 using _Scripts.Data.Cards;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
@@ -16,6 +15,8 @@ namespace _Scripts.Controllers
 {
     public class BoxOpeningController : MonoBehaviour
     {
+        [SerializeField] private Button _openBoxButton;
+
         [Header("Containers")]
         [SerializeField] private GameObject _caseContainer;
         [SerializeField] private GameObject _moneyContainer;
@@ -66,12 +67,12 @@ namespace _Scripts.Controllers
 
         private void OnEnable()
         {
-            InputManager.OnMouseClick += HandleBoxClick;
+            _openBoxButton.onClick.AddListener(HandleBoxClick);
         }
 
         private void OnDisable()
         {
-            InputManager.OnMouseClick -= HandleBoxClick;
+            _openBoxButton.onClick.RemoveListener(HandleBoxClick);
         }
 
         public void Initialize(CaseData caseData)
@@ -113,6 +114,9 @@ namespace _Scripts.Controllers
                     _transactionController.AddLimitedCase(limitedCaseData);
                     break;
             }
+
+            if (_caseData == null) Debug.LogError("CaseData is null");
+
             _cardsLoot.Clear();
             _backgroundChanger.ChangeBackground(BackgroundColor.Main);
 
