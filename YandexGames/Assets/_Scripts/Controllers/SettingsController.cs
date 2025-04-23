@@ -1,4 +1,6 @@
 ﻿using System;
+using _Scripts.EventsLogic;
+using _Scripts.EventsLogic.Events;
 using _Scripts.UI.Buttons;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,11 +28,20 @@ namespace _Scripts.Controllers
             _soundButton.SetChecked(_transactionController.IsSoundOn);
         }
 
+        private void OnDisable()
+        {
+            _closeButton.onClick.RemoveListener(OnCloseButtonClicked);
+
+            _soundButton.Button.onClick.RemoveListener(OnSoundButtonClicked);
+            _musicButton.Button.onClick.RemoveListener(OnMusicButtonClicked);
+        }
+
         private void OnMusicButtonClicked()
         {
             _musicButton.SetChecked(!_musicButton.IsChecked);
 
             _transactionController.SetMusic(_musicButton.IsChecked);
+            EventBus<OnMusicSettingsChanged>.Raise(new OnMusicSettingsChanged(_musicButton.IsChecked));
         }
 
         private void OnSoundButtonClicked()
@@ -38,6 +49,7 @@ namespace _Scripts.Controllers
             _soundButton.SetChecked(!_soundButton.IsChecked);
 
             _transactionController.SetSound(_soundButton.IsChecked);
+            EventBus<OnSoundSettingsChanged>.Raise(new OnSoundSettingsChanged(_soundButton.IsChecked));
         }
 
         private void OnCloseButtonClicked()

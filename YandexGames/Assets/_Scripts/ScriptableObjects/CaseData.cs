@@ -28,7 +28,9 @@ namespace _Scripts.ScriptableObjects
 
         public int GetRandomLootCount()
         {
-            return UnityEngine.Random.Range(LootCountRange.x, LootCountRange.y + 1);
+            //log path to file
+            Debug.Log($"CaseData {name} has loot count range {LootCountRange.x} - {LootCountRange.y}");
+            return Random.Range(LootCountRange.x, LootCountRange.y + 1);
         }
 
         public string GetName()

@@ -86,6 +86,8 @@ namespace _Scripts.Controllers
             IsSoundOn = progress.LevelsProgress.IsSoundOn;
             IsFirstGameStarted = progress.LevelsProgress.IsFirstGameStarted;
 
+            EventBus<OnMusicSettingsChanged>.Raise(new OnMusicSettingsChanged(IsMusicOn));
+            EventBus<OnSoundSettingsChanged>.Raise(new OnSoundSettingsChanged(IsSoundOn));
             EventBus<OnTransactionsLoadedEvent>.Raise(new OnTransactionsLoadedEvent());
         }
 

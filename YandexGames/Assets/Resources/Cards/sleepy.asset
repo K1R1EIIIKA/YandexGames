@@ -34,7 +34,7 @@ MonoBehaviour:
   Image: {fileID: 21300000, guid: 4bf5495644159b74aa5f91ff402a0b52, type: 3}
   Cost: 0
   Rarity: 0
-  MoneyPerClick: 0
+  MoneyPerClick: 2
   references:
     version: 2
     RefIds: []

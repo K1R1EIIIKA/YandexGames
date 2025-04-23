@@ -55,7 +55,7 @@ namespace _Scripts.YG
             gameObject.SetActive(true);
             _canvasGroup.alpha = 0;
 
-            _canvasGroup.DOFade(1, 3f);
+            _canvasGroup.DOFade(1, 3f).SetLink(gameObject, LinkBehaviour.KillOnDestroy);
         }
 
         private void SetRandomPosition()
@@ -72,7 +72,7 @@ namespace _Scripts.YG
 
         public void Hide()
         {
-            _canvasGroup.DOFade(0, 3f).OnComplete(() => gameObject.SetActive(false));
+            _canvasGroup.DOFade(0, 3f).OnComplete(() => gameObject.SetActive(false)).SetLink(gameObject, LinkBehaviour.KillOnDestroy);
         }
 
         public void InstantHide()
@@ -143,8 +143,10 @@ namespace _Scripts.YG
             _buffText.alpha = 1;
             _buffText.gameObject.SetActive(true);
             _buffText.transform.position = _buffStartPosition.position;
-            _buffText.transform.DOMoveY(_buffStartPosition.position.y + 80, 4f);
-            _buffText.DOFade(0, 3f).SetDelay(1f).OnComplete(() => _buffText.gameObject.SetActive(false));
+            _buffText.transform.DOMoveY(_buffStartPosition.position.y + 80, 4f)
+                .SetLink(gameObject, LinkBehaviour.KillOnDestroy);
+            _buffText.DOFade(0, 3f).SetDelay(1f).OnComplete(() => _buffText.gameObject.SetActive(false))
+                .SetLink(gameObject, LinkBehaviour.KillOnDestroy);
         }
     }
 }

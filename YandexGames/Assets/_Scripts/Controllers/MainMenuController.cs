@@ -32,23 +32,20 @@ namespace _Scripts.Controllers
         [SerializeField] private SettingsController _settingsController;
         [SerializeField] private NewGameController _newGameController;
 
-        private CaseManager _caseManager;
         private GameStateMachine _gameStateMachine;
         private InventoryController _inventoryController;
+        private CaseManager _caseManager;
         private BuffController _buffController;
 
-        [Header("Random Button")] [SerializeField]
-        private float _minInterval = 5f;
-
-        [SerializeField] private float _maxInterval = 10f;
+        [Header("Random Button")]
         [SerializeField] private AdButton _randomButton;
-
-        private Coroutine _randomButtonCoroutine;
 
         [Inject] private TransactionController _transactionController;
 
         [Inject]
-        public void Construct(GameStateMachine gameStateMachine, InventoryController inventoryController,
+        public void Construct(
+            GameStateMachine gameStateMachine,
+            InventoryController inventoryController,
             CaseManager caseManager,
             BuffController buffController)
         {
@@ -71,22 +68,35 @@ namespace _Scripts.Controllers
 
             InitializeCases();
         }
-        
-        
-
-        private void OnSettingsButtonClicked()
-        {
-            _settingsController.OpenSettings();
-        }
 
         private void OnEnable()
         {
             _buffController.OnBuffsChanged += InitializeCases;
-
-            _randomButton.InstantHide();
-            _randomButtonCoroutine = StartCoroutine(RandomButtonCoroutine());
-            
             EventBus<OnTransactionsLoadedEvent>.OnEvent += OnTransactionsLoaded;
+
+            // Подписываемся на сервис и сразу скрываем кнопку
+            if (RandomButtonService.Instance != null)
+            {
+                RandomButtonService.Instance.OnShow += ShowRandomButton;
+                RandomButtonService.Instance.OnHide += HideRandomButton;
+            }
+
+            if (RandomButtonService.Instance.IsShow)
+                ShowRandomButton();
+            else
+                _randomButton.InstantHide();
+        }
+
+        private void OnDisable()
+        {
+            _buffController.OnBuffsChanged -= InitializeCases;
+            EventBus<OnTransactionsLoadedEvent>.OnEvent -= OnTransactionsLoaded;
+
+            if (RandomButtonService.Instance != null)
+            {
+                RandomButtonService.Instance.OnShow -= ShowRandomButton;
+                RandomButtonService.Instance.OnHide -= HideRandomButton;
+            }
         }
 
         private void OnTransactionsLoaded(OnTransactionsLoadedEvent @event)
@@ -98,31 +108,14 @@ namespace _Scripts.Controllers
             }
         }
 
-        private IEnumerator RandomButtonCoroutine()
+        private void ShowRandomButton()
         {
-            while (true)
-            {
-                float waitTime = Random.Range(_minInterval, _maxInterval);
-                yield return new WaitForSeconds(waitTime);
-
-                _randomButton.Show();
-
-                yield return new WaitForSeconds(5f);
-
-                _randomButton.Hide();
-            }
+            _randomButton.Show();
         }
 
-        private void OnDisable()
+        private void HideRandomButton()
         {
-            _buffController.OnBuffsChanged -= InitializeCases;
-
-            if (_randomButtonCoroutine != null)
-            {
-                StopCoroutine(_randomButtonCoroutine);
-            }
-            
-            EventBus<OnTransactionsLoadedEvent>.OnEvent -= OnTransactionsLoaded;
+            _randomButton.Hide();
         }
 
         private void InitializeCases()
@@ -132,32 +125,22 @@ namespace _Scripts.Controllers
             _caseManager.InitializeLimitedCase(_limitedCaseContainer);
         }
 
-        private void OnShopButtonClicked()
-        {
-            Debug.Log("Shop button clicked");
-        }
+        private void OnShopButtonClicked() => Debug.Log("Shop button clicked");
 
-        private void OnCharactersButtonClicked()
-        {
-            _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.Inventory,
-                () => _inventoryController.OpenTab(InventoryTabType.Characters));
-        }
+        private void OnCharactersButtonClicked() => _gameStateMachine
+            .Enter<LoadLevelState, string>(SceneNames.Inventory, () =>
+                _inventoryController.OpenTab(InventoryTabType.Characters));
 
-        private void OnBedsButtonClicked()
-        {
-            _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.Inventory,
-                () => _inventoryController.OpenTab(InventoryTabType.Beds));
-        }
+        private void OnBedsButtonClicked() => _gameStateMachine
+            .Enter<LoadLevelState, string>(SceneNames.Inventory, () =>
+                _inventoryController.OpenTab(InventoryTabType.Beds));
 
-        private void OnBackgroundsButtonClicked()
-        {
-            _gameStateMachine.Enter<LoadLevelState, string>(SceneNames.Inventory,
-                () => _inventoryController.OpenTab(InventoryTabType.Backgrounds));
-        }
+        private void OnBackgroundsButtonClicked() => _gameStateMachine
+            .Enter<LoadLevelState, string>(SceneNames.Inventory, () =>
+                _inventoryController.OpenTab(InventoryTabType.Backgrounds));
 
-        private void OnAccountButtonClicked()
-        {
-            _accountController.OpenAccount();
-        }
+        private void OnAccountButtonClicked() => _accountController.OpenAccount();
+
+        private void OnSettingsButtonClicked() => _settingsController.OpenSettings();
     }
 }

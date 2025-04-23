@@ -1,6 +1,9 @@
 ﻿using System.Collections;
+using _Scripts.EventsLogic;
+using _Scripts.EventsLogic.Events;
 using _Scripts.Sound;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace _Scripts.Controllers
 {
@@ -34,6 +37,64 @@ namespace _Scripts.Controllers
             DontDestroyOnLoad(gameObject);
 
             PlayMusicLoop();
+        }
+
+        private void OnEnable()
+        {
+            EventBus<OnMusicSettingsChanged>.OnEvent += OnMusicSettingsChanged;
+            EventBus<OnSoundSettingsChanged>.OnEvent += OnSoundSettingsChanged;
+        }
+
+        private void OnDisable()
+        {
+            EventBus<OnMusicSettingsChanged>.OnEvent -= OnMusicSettingsChanged;
+            EventBus<OnSoundSettingsChanged>.OnEvent -= OnSoundSettingsChanged;
+        }
+
+        private void OnMusicSettingsChanged(OnMusicSettingsChanged @event)
+        {
+            if (@event.IsMusicEnabled)
+            {
+                foreach (var sound in _sounds)
+                {
+                    if (sound.Type == SoundType.Music)
+                    {
+                        sound.Source.volume = sound.Volume;
+                        // sound.Source.Play();
+                    }
+                }
+            }
+            else
+            {
+                foreach (var sound in _sounds)
+                {
+                    if (sound.Type == SoundType.Music)
+                    {
+                        sound.Source.volume = 0f;
+                        // sound.Source.Stop();
+                    }
+                }
+            }
+        }
+
+        private void OnSoundSettingsChanged(OnSoundSettingsChanged @event)
+        {
+            if (@event.IsSoundEnabled)
+            {
+                foreach (var sound in _sounds)
+                {
+                    if (sound.Type == SoundType.SFX)
+                        sound.Source.volume = sound.Volume;
+                }
+            }
+            else
+            {
+                foreach (var sound in _sounds)
+                {
+                    if (sound.Type == SoundType.SFX)
+                        sound.Source.volume = 0f;
+                }
+            }
         }
 
         private Sound.Sound FindSound(SoundName soundName)
