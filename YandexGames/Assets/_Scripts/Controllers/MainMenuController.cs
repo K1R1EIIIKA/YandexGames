@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using _Scripts.BuffLogic;
 using _Scripts.Enums;
 using _Scripts.EventsLogic;
@@ -81,6 +82,10 @@ namespace _Scripts.Controllers
                 RandomButtonService.Instance.OnHide += HideRandomButton;
             }
 
+        }
+
+        private void Start()
+        {
             if (RandomButtonService.Instance.IsShow)
                 ShowRandomButton();
             else

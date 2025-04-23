@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using _Scripts.BuffLogic.Base;
+using UnityEngine;
 
 namespace _Scripts.BuffLogic.Buffs
 {
-    public class CharacterSizeBuff : IBuff
+    public class CharacterSizeBuff : IIdentifiedBuff
     {
         private readonly float _sizeMultiplier;
         private readonly bool _isCrazy;
@@ -22,6 +23,19 @@ namespace _Scripts.BuffLogic.Buffs
             statsCopy.IsCharacterSizeCrazy = _isCrazy;
 
             return statsCopy;
+        }
+
+        public string Id
+        {
+            get
+            {
+                if (_isCrazy)
+                {
+                    return "sizecrazy";
+                }
+
+                return _sizeMultiplier > 1 ? "sizeup" : "sizedown";
+            }
         }
     }
 }

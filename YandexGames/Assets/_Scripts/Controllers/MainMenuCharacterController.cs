@@ -53,7 +53,6 @@ namespace _Scripts.Controllers
             _characterButton.onClick.AddListener(OnCharacterClick);
 
             _moneyText.text = BigNumberFormatter.FormatBigNumber(_transactionController.Money);
-            Debug.Log(_characterImage);
 
             _adRewardController.BigCharacterAdId += AddBigCharacterBuff;
             _adRewardController.SmallCharacterAdId += AddSmallCharacterBuff;

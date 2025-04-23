@@ -1,6 +1,8 @@
-﻿namespace _Scripts.BuffLogic.Buffs
+﻿using _Scripts.BuffLogic.Base;
+
+namespace _Scripts.BuffLogic.Buffs
 {
-    public class AutoClickBuff : IBuff
+    public class AutoClickBuff : IIdentifiedBuff
     {
         public BuffStats ApplyBuff(BuffStats baseStats)
         {
@@ -9,5 +11,7 @@
 
             return newStats;
         }
+
+        public string Id => "autoclick";
     }
 }

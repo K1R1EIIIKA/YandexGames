@@ -21,6 +21,12 @@ namespace _Scripts.YG
             _watchButton.onClick.AddListener(OnWatchButtonClicked);
         }
 
+        private void OnDisable()
+        {
+            _closeButton.onClick.RemoveListener(OnCloseButtonClicked);
+            _watchButton.onClick.RemoveListener(OnWatchButtonClicked);
+        }
+
         private void OnWatchButtonClicked()
         {
             _adRewardController.ShowAd(_id, _onAdWatched);

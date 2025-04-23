@@ -28,8 +28,6 @@ namespace _Scripts.ScriptableObjects
 
         public int GetRandomLootCount()
         {
-            //log path to file
-            Debug.Log($"CaseData {name} has loot count range {LootCountRange.x} - {LootCountRange.y}");
             return Random.Range(LootCountRange.x, LootCountRange.y + 1);
         }
 

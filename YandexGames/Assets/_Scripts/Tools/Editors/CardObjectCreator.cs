@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+using UnityEngine;
 using UnityEditor;
 using UnityEditor.Localization;
 using UnityEngine.Localization;
@@ -135,3 +136,4 @@ public class CardObjectCreator : EditorWindow
         Debug.Log($"Создано {createdCount} новых объектов CardObject.");
     }
 }
+#endif

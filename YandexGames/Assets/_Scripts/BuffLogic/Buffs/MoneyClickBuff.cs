@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using _Scripts.BuffLogic.Base;
+using UnityEngine;
 
 namespace _Scripts.BuffLogic.Buffs
 {
-    public class MoneyClickBuff : IBuff
+    public class MoneyClickBuff : IIdentifiedBuff
     {
         private readonly float _multiplier;
 
@@ -18,5 +19,7 @@ namespace _Scripts.BuffLogic.Buffs
 
             return newStats;
         }
+
+        public string Id => "click";
     }
 }

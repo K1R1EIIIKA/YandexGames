@@ -2,7 +2,7 @@
     GetPlayerData: function() {
         if (typeof myGameInstance !== "undefined" && myGameInstance !== null) {
             myGameInstance.SendMessage("JsLib", "SetPlayerName", player.getName());
-            myGameInstance.SendMessage("JsLib", "SetPlayerImage", player.getPhoto('medium'));
+            myGameInstance.SendMessage("JsLib", "SetPlayerImage", player.getPhoto('large'));
         } else {
             console.error("myGameInstance is not defined or null!");
         }

@@ -2,6 +2,7 @@
 using _Scripts.BuffLogic.Buffs;
 using _Scripts.Controllers;
 using _Scripts.YG;
+using UnityEngine;
 using Zenject;
 
 namespace _Scripts.BuffLogic

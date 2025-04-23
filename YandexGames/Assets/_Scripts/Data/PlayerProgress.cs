@@ -93,8 +93,6 @@ namespace _Scripts.Data
                 PlayerLimitedCases.Add(playerLimitedCase);
             }
 
-            Debug.Log("PLAYER MONEY CASES COUNT: " + PlayerMoneyCases);
-
             PlayerBeds = new List<BedData>();
 
             var bed = Resources.Load<BedObject>("Beds/Обычная лежанка");

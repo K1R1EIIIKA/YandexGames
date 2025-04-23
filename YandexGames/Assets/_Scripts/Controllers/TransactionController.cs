@@ -232,11 +232,11 @@ namespace _Scripts.Controllers
                 PlayerLimitedCases.Add(pc);
             }
 
-            Debug.Log("Player cases: ");
-            foreach (var playerCase in PlayerLimitedCases)
-            {
-                Debug.Log(playerCase.Id + " " + playerCase.OpenedCount);
-            }
+            // Debug.Log("Player cases: ");
+            // foreach (var playerCase in PlayerLimitedCases)
+            // {
+            //     Debug.Log(playerCase.Id + " " + playerCase.OpenedCount);
+            // }
         }
 
         private void OpenCard(CardData card)
