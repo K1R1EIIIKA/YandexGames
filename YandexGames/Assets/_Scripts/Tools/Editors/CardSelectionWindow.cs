@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using _Scripts.Data.Cards;
 
+# if UNITY_EDITOR
 public class CardSelectionWindow : EditorWindow
 {
     private static Rarity _selectedRarity;
@@ -74,6 +75,7 @@ public class CardSelectionWindow : EditorWindow
                 if (isSelected) selectedCards.Remove(card);
             }
         }
+
         EditorGUILayout.EndScrollView();
 
         if (GUILayout.Button("Добавить выбранные"))
@@ -83,3 +85,4 @@ public class CardSelectionWindow : EditorWindow
         }
     }
 }
+# endif

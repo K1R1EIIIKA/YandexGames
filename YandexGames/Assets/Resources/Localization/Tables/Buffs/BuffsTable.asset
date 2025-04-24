@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: BuffsTable
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 6a7366d0b8bbc774cb86f494d10d05f0, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: bc9254af09a8c0f4bb19bb5c73d30b5c, type: 2}
+  - {fileID: 11400000, guid: e11b7a0ec474c6d4da34c9d811e1ada3, type: 2}
+  - {fileID: 11400000, guid: 21a6e5be7fad55643891f6655ce139b4, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

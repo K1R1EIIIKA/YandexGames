@@ -15,8 +15,38 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-English (en)
   m_GUID: 0b9437de7112d6749beccb396c327e23
   m_SerializeEntries:
-  - m_GUID: 342cce5a8807eb24f9481d283a3e291d
-    m_Address: StringTable_en
+  - m_GUID: 0b1f7ad5de4e2374d8d36de2e01b769a
+    m_Address: Cases_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0bdc1c994b2d832409333c5cb4a64b72
+    m_Address: Backgrounds_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2258adefd614fdc44b4bd2f9502ac600
+    m_Address: Beds_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e4a52ae0d2ba604aa7c80ad97e3933f
+    m_Address: Main_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a314ef6eba1bed4459b33743fa110c67
+    m_Address: Characters_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e11b7a0ec474c6d4da34c9d811e1ada3
+    m_Address: BuffsTable_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

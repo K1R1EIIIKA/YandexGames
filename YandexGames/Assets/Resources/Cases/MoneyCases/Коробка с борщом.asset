@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4123b41d224737b52719ab219d689a, type: 3}
+  m_Name: "\u041A\u043E\u0440\u043E\u0431\u043A\u0430 \u0441 \u0431\u043E\u0440\u0449\u043E\u043C"
+  m_EditorClassIdentifier: 
+  Id: russia
+  Name:
+    m_TableReference:
+      m_TableCollectionName: GUID:a99fd83691ef85e41820f02edee74168
+    m_TableEntryReference:
+      m_KeyId: 14902536115838976
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  CaseImage: {fileID: 21300000, guid: c2a0661dedbe29043b772ba6447b4e8a, type: 3}
+  LootCountRange: {x: 3, y: 5}
+  CoinsRange: {x: 2.6e+12, y: 7.8e+12}
+  CardPool:
+  - {fileID: 11400000, guid: 564ba065b63eaf94d9a2437bed9d0b2c, type: 2}
+  - {fileID: 11400000, guid: 226876b7a0ea64e4db0c370bd386ae1d, type: 2}
+  - {fileID: 11400000, guid: 5b8ef42a94dd9b44dbb4b4b4ab8d1233, type: 2}
+  - {fileID: 11400000, guid: 408495b62cc774144bf651ccc3b0e14f, type: 2}
+  - {fileID: 11400000, guid: a24c036783e3e2c438573d8b60d5463d, type: 2}
+  - {fileID: 11400000, guid: 56c25543c8c10eb4c839882a3db3a0d0, type: 2}
+  - {fileID: 11400000, guid: 45af3705721decb44a0babbc3a699237, type: 2}
+  - {fileID: 11400000, guid: 6aff9c808c72ebe4b8e7f060be3c5fd8, type: 2}
+  - {fileID: 11400000, guid: 64951c7ddfcf08a4aa12fae04e2947ce, type: 2}
+  - {fileID: 11400000, guid: 314882c3e7da5b54f9b1bfcf5791e4e1, type: 2}
+  - {fileID: 11400000, guid: 3cd549f6f4d6cb24bae037554eaed00b, type: 2}
+  - {fileID: 11400000, guid: e03a8f8a4779cf645b9ae303e5db35ce, type: 2}
+  Tier: 9
+  DropChancesSerializedDictionary:
+    _serializedList:
+    - Key: 0
+      Value: 53
+    - Key: 1
+      Value: 30
+    - Key: 2
+      Value: 15
+    - Key: 3
+      Value: 2
+  Price: 2.6e+13
+  IsTotalCases: 0
+  references:
+    version: 2
+    RefIds: []

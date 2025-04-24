@@ -44,7 +44,6 @@ namespace _Scripts.Infrastructure.Core.States
         {
             if (_activeState != null && _activeState != _states[typeof(BootstrapState)])
             {
-                Debug.Log(_activeState);
                 Debug.Log($"Before saving: {_progressService.Progress != null}, data: " +
                           (_progressService.Progress != null ? JsonUtility.ToJson(_progressService.Progress) : "NULL"));
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace _Scripts.Data.Cards
 {
@@ -7,12 +8,13 @@ namespace _Scripts.Data.Cards
     public class CardData : IComparable
     {
         public string Id;
-        public string Name;
+        public LocalizedString Name;
+        public LocalizedString Description;
         public Sprite Image;
-        public int Cost;
-        public Rarity Rarity;
+        public int Cost => ToCardObject().Cost;
+        public Rarity Rarity => ToCardObject().Rarity;
         public bool IsOpen;
-        public int MoneyPerClick;
+        public float MoneyPerClick => ToCardObject().MoneyPerClick;
 
         public string CardObjectLocation;
 
@@ -20,10 +22,8 @@ namespace _Scripts.Data.Cards
         {
             Id = cardObject.Id;
             Name = cardObject.Name;
+            Description = cardObject.Description;
             Image = cardObject.Image;
-            Cost = cardObject.Cost;
-            Rarity = cardObject.Rarity;
-            MoneyPerClick = cardObject.MoneyPerClick;
             IsOpen = false;
 
             // location of the card object
@@ -32,8 +32,18 @@ namespace _Scripts.Data.Cards
 
         public CardObject ToCardObject()
         {
-            Debug.Log("Cards/"+CardObjectLocation);
+            // Debug.Log("Cards/"+CardObjectLocation);
             return Resources.Load<CardObject>("Cards/"+CardObjectLocation);
+        }
+
+        public string GetName()
+        {
+            return ToCardObject().Name.GetLocalizedString();
+        }
+
+        public string GetDescription()
+        {
+            return ToCardObject().Description.GetLocalizedString();
         }
 
         public CardData()

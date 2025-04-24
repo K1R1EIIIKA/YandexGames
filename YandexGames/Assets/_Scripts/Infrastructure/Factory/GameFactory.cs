@@ -4,6 +4,7 @@ using _Scripts.Infrastructure.AssetManager;
 using _Scripts.Infrastructure.Services.PersistantProgress;
 using _Scripts.Infrastructure.Services.StaticData;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace _Scripts.Infrastructure.Factory
@@ -54,11 +55,26 @@ namespace _Scripts.Infrastructure.Factory
             return new List<GameObject>();
         }
 
-        public GameObject CreateObjectCard()
+        public GameObject CreateObjectCard(GridLayoutGroup layoutGroup)
         {
-            GameObject card = _assetProvider.Instantiate("Prefabs/UI/Collection/SmallCard");
+            GameObject card = _assetProvider.Instantiate("Prefabs/UI/Collection/SmallCard", layoutGroup.transform);
+            card.transform.SetParent(layoutGroup.transform);
 
             return card;
+        }
+
+        public GameObject CreateObjectBed(GridLayoutGroup layoutGroup)
+        {
+            GameObject bed = _assetProvider.Instantiate("Prefabs/UI/Collection/BedInventory", layoutGroup.transform);
+
+            return bed;
+        }
+
+        public GameObject CreateObjectBackground(GridLayoutGroup layoutGroup)
+        {
+            GameObject background = _assetProvider.Instantiate("Prefabs/UI/Collection/BackgroundInventory", layoutGroup.transform);
+
+            return background;
         }
 
         public void Register(ISavedProgressReader progressReader)

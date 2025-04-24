@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Beds
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 614cadf04c952164d9dc678e1bc18060, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 30c746aef0c2ff74fa1d025b8590fc35, type: 2}
+  - {fileID: 11400000, guid: 2258adefd614fdc44b4bd2f9502ac600, type: 2}
+  - {fileID: 11400000, guid: 30cdc6d20a9a292448dddbbc26a49937, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

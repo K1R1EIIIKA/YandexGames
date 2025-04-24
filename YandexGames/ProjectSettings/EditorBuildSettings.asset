@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Initial.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KirillScene.unity
     guid: 859f51ca97d5aef4abc9c7b4bf0f5d28
   - enabled: 1

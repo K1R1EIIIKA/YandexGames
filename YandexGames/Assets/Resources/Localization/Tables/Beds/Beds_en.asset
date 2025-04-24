@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Beds_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 614cadf04c952164d9dc678e1bc18060, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 43812642816
+    m_Localized: Regular bed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41799376896
+    m_Localized: Magic table
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16143197980844032
+    m_Localized: Green triangle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16143214980358144
+    m_Localized: Watermelon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16143239563173888
+    m_Localized: A cheese piece
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16143250174763008
+    m_Localized: Bed under sakura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16143273834831872
+    m_Localized: Ice swing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16143316646092800
+    m_Localized: Hell's throne
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271699216424960
+    m_Localized: A table filled with magic and secrets.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271740681314304
+    m_Localized: A nature triangle for true green lovers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271812223557632
+    m_Localized: A cozy bed for everyday relaxation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271863893188608
+    m_Localized: An appetizing piece of cheese for cozy evenings.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271909141340160
+    m_Localized: A juicy watermelon-shaped bed is a summer holiday dream.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271934684651520
+    m_Localized: A flaming bed for those who love warmth and comfort.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16271978523516928
+    m_Localized: A refreshing bed that keeps you cool in winter.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16272008244355072
+    m_Localized: A delicate bed inspired by cherry blossoms.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

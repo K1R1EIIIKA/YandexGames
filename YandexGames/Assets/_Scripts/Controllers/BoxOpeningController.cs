@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using _Scripts.Data.Cards;
-using _Scripts.Data.Cases;
 using _Scripts.Enums;
 using _Scripts.Infrastructure.Core.States;
 using _Scripts.ScriptableObjects;
+using _Scripts.Sound;
 using _Scripts.Tools;
 using _Scripts.UI;
 using TMPro;
@@ -15,6 +15,8 @@ namespace _Scripts.Controllers
 {
     public class BoxOpeningController : MonoBehaviour
     {
+        [SerializeField] private Button _openBoxButton;
+
         [Header("Containers")]
         [SerializeField] private GameObject _caseContainer;
         [SerializeField] private GameObject _moneyContainer;
@@ -36,7 +38,7 @@ namespace _Scripts.Controllers
         private int _itemsCountValue;
         private int _remainItemsCountValue;
 
-        private int _moneyLoot;
+        private float _moneyLoot;
         private List<CardData> _cardsLoot = new();
 
         private GameStateMachine _gameStateMachine;
@@ -65,12 +67,12 @@ namespace _Scripts.Controllers
 
         private void OnEnable()
         {
-            InputManager.OnMouseClick += HandleBoxClick;
+            _openBoxButton.onClick.AddListener(HandleBoxClick);
         }
 
         private void OnDisable()
         {
-            InputManager.OnMouseClick -= HandleBoxClick;
+            _openBoxButton.onClick.RemoveListener(HandleBoxClick);
         }
 
         public void Initialize(CaseData caseData)
@@ -103,6 +105,18 @@ namespace _Scripts.Controllers
 
         private void OpenBox()
         {
+            switch (_caseData)
+            {
+                case MoneyCaseData moneyCaseData:
+                    _transactionController.AddMoneyCase(moneyCaseData);
+                    break;
+                case LimitedCaseData limitedCaseData:
+                    _transactionController.AddLimitedCase(limitedCaseData);
+                    break;
+            }
+
+            if (_caseData == null) Debug.LogError("CaseData is null");
+
             _cardsLoot.Clear();
             _backgroundChanger.ChangeBackground(BackgroundColor.Main);
 
@@ -116,7 +130,14 @@ namespace _Scripts.Controllers
                 card.IsOpen = true;
                 _cardsLoot.Add(card);
             }
+
+            _transactionController.AddCaseCounter();
             _transactionController.AddPlayerCards(_cardsLoot);
+
+            if ((int)_caseData.Tier > (int)_transactionController.CurrentCaseTier)
+            {
+                _transactionController.SetCaseTier(_caseData.Tier);
+            }
 
             SortCards();
 
@@ -125,9 +146,10 @@ namespace _Scripts.Controllers
 
         private void ShowMoneyLoot()
         {
-            _moneyLootText.text = _moneyLoot.ToString();
+            _moneyLootText.text = BigNumberFormatter.FormatBigNumber(_moneyLoot);
             _remainItemsCountValue--;
             _itemsCount.text = _remainItemsCountValue.ToString();
+            AudioController.Instance.PlaySound(SoundName.Yes);
         }
 
         private void ShowCardLoot()
@@ -137,8 +159,8 @@ namespace _Scripts.Controllers
             var card = _cardsLoot[0];
 
             _cardImage.sprite = card.Image;
-            _cardNameText.text = card.Name;
-            _cardRareText.text = card.Rarity.ToColorName();
+            _cardNameText.text = card.GetName();
+            _cardRareText.text = LocalizedStrings.ConvertRarityToString(card.Rarity);
             _remainItemsCountValue--;
             _itemsCount.text = _remainItemsCountValue.ToString();
 
@@ -146,18 +168,23 @@ namespace _Scripts.Controllers
             {
                 case Rarity.Common:
                     _backgroundChanger.ChangeBackground(BackgroundColor.Common);
+                    AudioController.Instance.PlaySound(SoundName.Yes);
                     break;
                 case Rarity.Rare:
                     _backgroundChanger.ChangeBackground(BackgroundColor.Rare);
+                    AudioController.Instance.PlaySound(SoundName.Yes);
                     break;
                 case Rarity.SuperRare:
                     _backgroundChanger.ChangeBackground(BackgroundColor.SuperRare);
+                    AudioController.Instance.PlaySound(SoundName.Yes);
                     break;
                 case Rarity.SuperMegaRare:
                     _backgroundChanger.ChangeBackground(BackgroundColor.SuperMegaRare);
+                    AudioController.Instance.PlaySound(SoundName.GetLegendary);
                     break;
                 case Rarity.Special:
                     _backgroundChanger.ChangeBackground(BackgroundColor.Special);
+                    AudioController.Instance.PlaySound(SoundName.GetLegendary);
                     break;
             }
 

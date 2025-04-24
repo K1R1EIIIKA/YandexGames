@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Cases_tr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: a99fd83691ef85e41820f02edee74168, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 14902406591537152
+    m_Localized: Anime kutusu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902448270336000
+    m_Localized: Bombardiro kutulu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902536115838976
+    m_Localized: "Pancar \xE7orbas\u0131 kutusu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902538410123264
+    m_Localized: Buz kutusu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902540079456256
+    m_Localized: Sihirli kutu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902541597794304
+    m_Localized: "karikat\xFCr kutusu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902542826725376
+    m_Localized: Normal kutu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902543913050112
+    m_Localized: "Yang\u0131n kutusu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902544890322944
+    m_Localized: "Do\u011Fal kutu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902545917927424
+    m_Localized: Sakura kutusu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902547184607232
+    m_Localized: "\xDCcretsiz kutu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14902548543561728
+    m_Localized: Estetik kutu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16134684562939904
+    m_Localized: 1. Seviye promosyon kutusu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135030202949632
+    m_Localized: "Reklam vakas\u0131 2 seviyeleri"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135049467387904
+    m_Localized: "Reklam vakas\u0131 3 seviyeleri"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135050767622144
+    m_Localized: "Reklam vakas\u0131 4 seviye"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135051510013952
+    m_Localized: Reklam durumu seviye 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135052218851328
+    m_Localized: "Promosyon vakas\u0131 seviye 6"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135052906717184
+    m_Localized: "Seviye 7 Promosyon Kasas\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135053712023552
+    m_Localized: "Promosyon vakas\u0131 seviye 8"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135054634770432
+    m_Localized: "Promosyon vakas\u0131 seviye 9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135054907400192
+    m_Localized: "Promosyon vakas\u0131 seviye 10"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135055234555904
+    m_Localized: "Promosyon vakas\u0131 seviye 11"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135055490408448
+    m_Localized: "S\xFCper Reklam Vakas\u0131 Seviye 1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135055750455296
+    m_Localized: "S\xFCper Reklam Vakas\u0131 Seviye 2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135056014696448
+    m_Localized: "S\xFCper Reklam Vakas\u0131 Seviye 3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135056341852160
+    m_Localized: "S\xFCper Reklam Vakas\u0131 Seviye 4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135056606093312
+    m_Localized: "S\xFCper Reklam Vakas\u0131 Seviye 5"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135056857751552
+    m_Localized: "S\xFCper Reklam Vakas\u0131 Seviye 6"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135057184907264
+    m_Localized: "S\xFCper Reklam Vakas\u0131 Seviye 7"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135057444954112
+    m_Localized: "S\xFCper Reklam Vakas\u0131 Seviye 8"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135057713389568
+    m_Localized: "S\xFCper Reklam Vakas\u0131 Seviye 9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135057965047808
+    m_Localized: "S\xFCper Reklam Vakas\u0131 Seviye 10"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16135058225094656
+    m_Localized: "S\xFCper Reklam Vakas\u0131 Seviye 11"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136210798862336
+    m_Localized: "Bir grup 1. seviye vaka i\xE7in durum"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136269892411392
+    m_Localized: "Seviye 2'deki bir grup vaka i\xE7in durum"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136278801113088
+    m_Localized: "Seviye 3'teki bir grup vaka i\xE7in durum"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136291220447232
+    m_Localized: "Seviye 4'teki bir grup vaka i\xE7in durum"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136297159581696
+    m_Localized: "Bir grup 5. seviye vaka i\xE7in durum"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136303467814912
+    m_Localized: "Bir grup 6. seviye vaka i\xE7in durum"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136310073843712
+    m_Localized: "Bir grup 7. seviye vaka i\xE7in durum"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136316600180736
+    m_Localized: "Bir grup 8. seviye vaka i\xE7in durum"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136323541753856
+    m_Localized: "Bir grup 9. seviye vaka i\xE7in durum"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136330189725696
+    m_Localized: "Bir grup 10. seviye vaka i\xE7in durum"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16136339375251456
+    m_Localized: "Bir grup 11. seviye vaka i\xE7in durum"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

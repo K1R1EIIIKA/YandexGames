@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Backgrounds
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 04d2367b437ac654494f3beac33207b0, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 67777dc4ba4627241955213dc4d7b43d, type: 2}
+  - {fileID: 11400000, guid: 0bdc1c994b2d832409333c5cb4a64b72, type: 2}
+  - {fileID: 11400000, guid: dcf43492f8694094fb6aed5d471bf217, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,904 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Characters Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Characters
+  m_TableCollectionNameGuidString: 8c8ca9e02e69aec41bb09320851c53d1
+  m_Entries:
+  - m_Id: 14239081914425344
+    m_Key: 3d_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239082031865856
+    m_Key: 3d_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239082493239296
+    m_Key: acid_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239082493239297
+    m_Key: acid_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239082711343104
+    m_Key: baby_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239082711343105
+    m_Key: baby_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239082958807040
+    m_Key: baguette_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239082958807041
+    m_Key: baguette_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239083252408320
+    m_Key: broccoli_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239083252408321
+    m_Key: broccoli_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239083541815296
+    m_Key: china_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239083541815297
+    m_Key: china_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239083768307712
+    m_Key: christmas_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239083768307713
+    m_Key: christmas_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239084011577344
+    m_Key: classic_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239084011577345
+    m_Key: classic_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239084275818496
+    m_Key: cool_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239084275818497
+    m_Key: cool_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239084565225472
+    m_Key: cowboy_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239084565225473
+    m_Key: cowboy_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239084821078016
+    m_Key: croissant_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239084821078017
+    m_Key: croissant_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239085055959040
+    m_Key: crystall_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239085055959041
+    m_Key: crystall_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239085282451456
+    m_Key: demon_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239085282451457
+    m_Key: demon_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239085546692608
+    m_Key: dragon_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239085546692609
+    m_Key: dragon_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239085907402752
+    m_Key: dumpling_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239085907402753
+    m_Key: dumpling_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239086138089472
+    m_Key: erenyega_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239086138089473
+    m_Key: erenyega_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239086385553408
+    m_Key: fireking_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239086385553409
+    m_Key: fireking_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239086674960384
+    m_Key: flower_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239086674960385
+    m_Key: flower_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239086960173056
+    m_Key: forest_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239086960173057
+    m_Key: forest_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087207636992
+    m_Key: freedom_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087207636993
+    m_Key: freedom_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087392186368
+    m_Key: gamer_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087392186369
+    m_Key: gamer_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087631261696
+    m_Key: geisha_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087631261697
+    m_Key: geisha_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087887114240
+    m_Key: ghost_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239087887114241
+    m_Key: ghost_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088159744000
+    m_Key: ghoul_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088159744001
+    m_Key: ghoul_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088419790848
+    m_Key: gopnik_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088419790849
+    m_Key: gopnik_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088637894656
+    m_Key: granny_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088637894657
+    m_Key: granny_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088960856064
+    m_Key: harry_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239088960856065
+    m_Key: harry_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089208320000
+    m_Key: hat_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089208320001
+    m_Key: hat_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089439006720
+    m_Key: hog_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089439006721
+    m_Key: hog_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089715830784
+    m_Key: ice_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089715830785
+    m_Key: ice_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089963294720
+    m_Key: icecube_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239089963294721
+    m_Key: icecube_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090210758656
+    m_Key: icemage_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090210758657
+    m_Key: icemage_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090470805504
+    m_Key: inmode_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090470805505
+    m_Key: inmode_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090701492224
+    m_Key: ironman_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090701492225
+    m_Key: ironman_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090982510592
+    m_Key: karate_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239090982510593
+    m_Key: karate_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091284500480
+    m_Key: knight_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091284500481
+    m_Key: knight_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091494215680
+    m_Key: kpop_1_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091494215681
+    m_Key: kpop_1_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091745873920
+    m_Key: kpop_2_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091745873921
+    m_Key: kpop_2_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091955589120
+    m_Key: kpop_3_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239091955589121
+    m_Key: kpop_3_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092215635968
+    m_Key: liberty_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092215635969
+    m_Key: liberty_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092538597376
+    m_Key: magma_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092538597377
+    m_Key: magma_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092794449920
+    m_Key: manface_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239092794449921
+    m_Key: manface_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093046108160
+    m_Key: matrix_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093046108161
+    m_Key: matrix_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093331320832
+    m_Key: mayor_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093331320833
+    m_Key: mayor_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093624922112
+    m_Key: meloman_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093624922113
+    m_Key: meloman_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093868191744
+    m_Key: micro_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239093868191745
+    m_Key: micro_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094065324032
+    m_Key: mime_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094065324033
+    m_Key: mime_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094279233536
+    m_Key: mini_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094279233537
+    m_Key: mini_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094551863296
+    m_Key: minighoul_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094551863297
+    m_Key: minighoul_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094837075968
+    m_Key: mummy_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239094837075969
+    m_Key: mummy_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095122288640
+    m_Key: naruto_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095122288641
+    m_Key: naruto_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095386529792
+    m_Key: paimon_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095386529793
+    m_Key: paimon_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095642382336
+    m_Key: painter_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095642382337
+    m_Key: painter_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095898234880
+    m_Key: pharaoh_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239095898234881
+    m_Key: pharaoh_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096158281728
+    m_Key: pirate_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096158281729
+    m_Key: pirate_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096384774144
+    m_Key: robot_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096384774145
+    m_Key: robot_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096682569728
+    m_Key: rock_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239096682569729
+    m_Key: rock_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097030696960
+    m_Key: russianteacher_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097030696961
+    m_Key: russianteacher_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097257189376
+    m_Key: sakura_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097257189377
+    m_Key: sakura_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097534013440
+    m_Key: sandking_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097534013441
+    m_Key: sandking_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097739534336
+    m_Key: sasuke_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097739534337
+    m_Key: sasuke_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097986998272
+    m_Key: sharingan_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239097986998273
+    m_Key: sharingan_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098293182464
+    m_Key: sherif_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098293182465
+    m_Key: sherif_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098586783744
+    m_Key: sleepy_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098586783745
+    m_Key: sleepy_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098851024896
+    m_Key: snowboard_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239098851024897
+    m_Key: snowboard_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099048157184
+    m_Key: snowman_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099048157185
+    m_Key: snowman_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099283038208
+    m_Key: spiderman_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099283038209
+    m_Key: spiderman_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099547279360
+    m_Key: startmagician_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099547279361
+    m_Key: startmagician_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099782160384
+    m_Key: sumo_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099782160385
+    m_Key: sumo_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099983486976
+    m_Key: superman_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239099983486977
+    m_Key: superman_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100214173696
+    m_Key: sushi_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100214173697
+    m_Key: sushi_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100478414848
+    m_Key: teapot_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100478414849
+    m_Key: teapot_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100717490176
+    m_Key: tv_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100717490177
+    m_Key: tv_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100927205376
+    m_Key: vit_hat_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239100927205377
+    m_Key: vit_hat_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239101233389568
+    m_Key: water_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239101233389569
+    m_Key: water_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239101560545280
+    m_Key: withbaby_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14239101560545281
+    m_Key: withbaby_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030347894784
+    m_Key: ananasini_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030532444160
+    m_Key: ananasini_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030763130880
+    m_Key: assasino_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030763130881
+    m_Key: assasino_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030951874560
+    m_Key: balerina_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908030951874561
+    m_Key: balerina_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031144812544
+    m_Key: bombardino_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031144812545
+    m_Key: bombardino_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031526494208
+    m_Key: fruttodrillo_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031526494209
+    m_Key: fruttodrillo_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031807512576
+    m_Key: golubini_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908031807512577
+    m_Key: golubini_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032029810688
+    m_Key: lirililarila_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032029810689
+    m_Key: lirililarila_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032289857536
+    m_Key: sahur_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032289857537
+    m_Key: sahur_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032486989824
+    m_Key: tralalero_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032486989825
+    m_Key: tralalero_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032730259456
+    m_Key: trippitroppi_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14908032730259457
+    m_Key: trippitroppi_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122866905899008
+    m_Key: apple_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867048505344
+    m_Key: apple_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867346300928
+    m_Key: burger_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867346300929
+    m_Key: burger_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867648290816
+    m_Key: candle_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122867648290817
+    m_Key: candle_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122868101275648
+    m_Key: fruits_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122868101275649
+    m_Key: fruits_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122868457791488
+    m_Key: gladiator_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122868457791489
+    m_Key: gladiator_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869074354176
+    m_Key: pizza_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869074354177
+    m_Key: pizza_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869351178240
+    m_Key: ramen_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869351178241
+    m_Key: ramen_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869749637120
+    m_Key: shef_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122869749637121
+    m_Key: shef_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122870173261824
+    m_Key: sun_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16122870173261825
+    m_Key: sun_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16125221537832960
+    m_Key: icecube2_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16125221537832961
+    m_Key: icecube2_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131488482320384
+    m_Key: america_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131488482320385
+    m_Key: america_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131488864002048
+    m_Key: balalayka_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131488864002049
+    m_Key: balalayka_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489165991936
+    m_Key: bob_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489165991937
+    m_Key: bob_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489488953344
+    m_Key: botan_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489488953345
+    m_Key: botan_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489803526144
+    m_Key: cheerleader_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131489803526145
+    m_Key: cheerleader_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131490218762240
+    m_Key: fish_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131490218762241
+    m_Key: fish_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131490583666688
+    m_Key: grandpa_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131490583666689
+    m_Key: grandpa_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131491443499008
+    m_Key: vodka_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16131491443499009
+    m_Key: vodka_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16138605775806464
+    m_Key: fireice_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16138605775806465
+    m_Key: fireice_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16138605775806466
+    m_Key: baby_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286911374024704
+    m_Key: goku_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286911449522176
+    m_Key: goku_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286911986393088
+    m_Key: midoria_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286911986393089
+    m_Key: midoria_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286912510681088
+    m_Key: ruk_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286912510681089
+    m_Key: ruk_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286913026580480
+    m_Key: tanjiro_Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16286913026580481
+    m_Key: tanjiro_Description
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7318534293112750174
+  references:
+    version: 2
+    RefIds:
+    - rid: 7318534293112750174
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1741432196041

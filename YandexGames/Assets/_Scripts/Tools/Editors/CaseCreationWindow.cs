@@ -5,9 +5,11 @@ using UnityEngine;
 using _Scripts.Data.Cards;
 using _Scripts.Data.Cases;
 using _Scripts.Enums;
+using _Scripts.ScriptableObjects;
 using _Scripts.Tools;
 using Unity.VisualScripting;
 
+# if UNITY_EDITOR
 public class CaseCreationWindow : EditorWindow
 {
     private string caseName = "Новый кейс";
@@ -143,7 +145,7 @@ public class CaseCreationWindow : EditorWindow
     {
         var newCase = CreateInstance<MoneyCaseData>();
         newCase.Price = _moneyCasePrice;
-        newCase.Name = caseName;
+        // newCase.Name = caseName;
         newCase.CardPool = selectedCards.Values.SelectMany(c => c).ToList();
         // newCase.DropChancesSerializable = new List<SerializableDictionaryItem<Rarity, float>>();
         foreach (var kvp in dropChances)
@@ -164,7 +166,7 @@ public class CaseCreationWindow : EditorWindow
     {
         var newCase = CreateInstance<AdCaseData>();
         newCase.AdsCount = _adCaseAdCount;
-        newCase.Name = caseName;
+        // newCase.Name = caseName;
         newCase.CardPool = selectedCards.Values.SelectMany(c => c).ToList();
         // newCase.DropChancesSerializable =
 
@@ -177,3 +179,4 @@ public class CaseCreationWindow : EditorWindow
         Close();
     }
 }
+# endif

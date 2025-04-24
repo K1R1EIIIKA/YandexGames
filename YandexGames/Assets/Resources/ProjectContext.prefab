@@ -81,6 +81,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _loadingCurtain: {fileID: 772471311428029802, guid: dd8f8835383ce7a4c81edc86ff6591ad, type: 3}
+  _caseManager: {fileID: 6535181824873888855, guid: 442cb7b04bbae5b479226000225892d6, type: 3}
+  _yandexGamePrefab: {fileID: 2211564899198745196, guid: caf9732433f4dc044845763962493607, type: 3}
 --- !u!114 &2658396917496427051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,6 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inventoryTabsController: {fileID: 5210512515536189385, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
+  _cardBigView: {fileID: 7088422122600411591, guid: 6575c9e2d80b301469979f530d5dd2e9, type: 3}
+  _bedBigView: {fileID: 3605858028142009741, guid: f575d8f85d8ceef4f91d73752285c940, type: 3}
+  _backgroundBigView: {fileID: 6822766530717597487, guid: bdbeec6cb45f5c346b54344c684bf5ab, type: 3}
 --- !u!114 &-5105250106318259337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,5 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2865c5a4c4eb40a88e62eb6bbdd1f10b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _caseManager: {fileID: 6535181824873888855, guid: 442cb7b04bbae5b479226000225892d6, type: 3}
   _caseInfoView: {fileID: 3013111764781730063, guid: f575f46148f8fe940a3212b5a64415f0, type: 3}

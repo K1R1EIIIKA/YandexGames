@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using _Scripts.Data.Cards;
+using _Scripts.Enums;
 using _Scripts.Tools;
 using AYellowpaper.SerializedCollections;
 using UnityEngine;
+using UnityEngine.Localization;
+using Random = UnityEngine.Random;
 
 namespace _Scripts.ScriptableObjects
 {
@@ -12,11 +15,12 @@ namespace _Scripts.ScriptableObjects
     public abstract class CaseData : ScriptableObject
     {
         public string Id;
-        public string Name;
+        public LocalizedString Name;
         public Sprite CaseImage;
         public Vector2Int LootCountRange;
-        public Vector2Int CoinsRange;
+        public Vector2 CoinsRange;
         public List<CardObject> CardPool;
+        public CaseTier Tier;
 
         [SerializedDictionary("Rarity", "Drop Chance")]
         public SerializedDictionary<Rarity, float> DropChancesSerializedDictionary = new();
@@ -24,49 +28,47 @@ namespace _Scripts.ScriptableObjects
 
         public int GetRandomLootCount()
         {
-            return UnityEngine.Random.Range(LootCountRange.x, LootCountRange.y + 1);
+            return Random.Range(LootCountRange.x, LootCountRange.y + 1);
         }
 
-        public int GetRandomCoins()
+        public string GetName()
         {
-            return UnityEngine.Random.Range(CoinsRange.x, CoinsRange.y + 1);
+            return Name.GetLocalizedString();
+        }
+
+        public float GetRandomCoins()
+        {
+            return Random.Range(CoinsRange.x, CoinsRange.y + 1);
         }
 
         public CardData GetRandomCard()
         {
-            LogDropChances();
             if (CardPool == null || CardPool.Count == 0 || DropChances == null || DropChances.Count == 0)
                 return null;
 
-            // Создаём список карт с их шансами
-            List<(CardData card, float chance)> weightedCards = new();
+            float totalRarityWeight = DropChances.Values.Sum();
+            float rand = Random.Range(0f, totalRarityWeight);
+            float cum = 0f;
+            Rarity selectedRarity = Rarity.Common;
 
-            foreach (var card in CardPool)
+            foreach (var kv in DropChances)
             {
-                if (DropChances.TryGetValue(card.Rarity, out float chance))
+                cum += kv.Value;
+                if (rand <= cum)
                 {
-                    weightedCards.Add((card.ToCardData(), chance));
+                    selectedRarity = kv.Key;
+                    break;
                 }
             }
 
-            if (weightedCards.Count == 0)
+            var cardsOfRarity = CardPool.Where(c => c.Rarity == selectedRarity).ToList();
+            if (cardsOfRarity.Count == 0)
                 return null;
 
-            // Считаем общий вес
-            float totalWeight = weightedCards.Sum(c => c.chance);
-            float randomValue = UnityEngine.Random.Range(0, totalWeight);
-
-            // Выбираем карту по весу
-            float cumulativeWeight = 0;
-            foreach (var (card, chance) in weightedCards)
-            {
-                cumulativeWeight += chance;
-                if (randomValue <= cumulativeWeight)
-                    return card;
-            }
-
-            return weightedCards.Last().card; // Защита от ошибок (если вдруг не выберется)
+            int idx = Random.Range(0, cardsOfRarity.Count);
+            return cardsOfRarity[idx].ToCardData();
         }
+
 
         private void LogDropChances()
         {

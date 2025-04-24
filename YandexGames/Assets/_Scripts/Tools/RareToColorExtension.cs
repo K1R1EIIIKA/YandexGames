@@ -24,25 +24,5 @@ namespace _Scripts.Tools
                     return "#FFFFFF";
             }
         }
-
-        public static string ToColorName(this Rarity rarity)
-        {
-            switch (rarity)
-            {
-                case Rarity.Common:
-                    return "Обычный";
-                case Rarity.Rare:
-                    return "Редкий";
-                case Rarity.SuperRare:
-                    return "Супер редкий";
-                case Rarity.SuperMegaRare:
-                    return "Супер мега редкий";
-                case Rarity.Special:
-                    return "Особый";
-                default:
-                    Debug.LogWarning("RareToColorExtension::ToColor: Unknown Rare");
-                    return "Неизвестный";
-            }
-        }
     }
 }
