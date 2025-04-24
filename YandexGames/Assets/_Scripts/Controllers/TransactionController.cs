@@ -54,6 +54,7 @@ namespace _Scripts.Controllers
         public bool IsFirstGameStarted { get; private set; }
 
         public CaseTier CurrentCaseTier { get; private set; }
+        public float ScrollPosition { get; set; }
 
         [Inject] DiContainer _diContainer;
 

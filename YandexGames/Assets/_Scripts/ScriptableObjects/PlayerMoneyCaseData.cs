@@ -35,7 +35,6 @@ namespace _Scripts.ScriptableObjects
                 {
                     int diffTiers = (int)other.ToCaseData().Tier - (int)baseData.Tier;
 
-                    Debug.Log("diffTiers: " + diffTiers);
                     float stepFraction = diffTiers * TierStepFractionPerTier;
 
                     for (int k = 0; k < other.OpenedCount; k++)

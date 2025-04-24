@@ -86,6 +86,27 @@ MonoBehaviour:
     m_Localized: Sounds
     m_Metadata:
       m_Items: []
+  - m_Id: 16888736053714944
+    m_Localized: TRALALERO UPDATE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16888741200125952
+    m_Localized: 'This update has all the coolest animals: from the Tralalero Tralala
+      to TUN TUN TUN TUN TUN SAHUUUR!!!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16889381095727104
+    m_Localized: Watch an ad to get a 6x cooler bonus?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16889379090849792
+    m_Localized: SUPER CANDY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16889600503963648
+    m_Localized: WATCH
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

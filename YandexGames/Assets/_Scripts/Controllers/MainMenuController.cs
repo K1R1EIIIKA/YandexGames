@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using _Scripts.BuffLogic;
 using _Scripts.Enums;
 using _Scripts.EventsLogic;
@@ -27,6 +26,7 @@ namespace _Scripts.Controllers
         [SerializeField] private RectTransform _casesContainer;
         [SerializeField] private RectTransform _adCasesContainer;
         [SerializeField] private RectTransform _limitedCaseContainer;
+        [SerializeField] private ScrollRect _scrollRect;
 
         [Header("Controllers")]
         [SerializeField] private AccountController _accountController;
@@ -75,13 +75,23 @@ namespace _Scripts.Controllers
             _buffController.OnBuffsChanged += InitializeCases;
             EventBus<OnTransactionsLoadedEvent>.OnEvent += OnTransactionsLoaded;
 
-            // Подписываемся на сервис и сразу скрываем кнопку
             if (RandomButtonService.Instance != null)
             {
                 RandomButtonService.Instance.OnShow += ShowRandomButton;
                 RandomButtonService.Instance.OnHide += HideRandomButton;
             }
 
+            StartCoroutine(RestoreScrollPositionNextFrame());
+        }
+
+        private IEnumerator RestoreScrollPositionNextFrame()
+        {
+            yield return null;
+
+            Canvas.ForceUpdateCanvases();
+            LayoutRebuilder.ForceRebuildLayoutImmediate(_scrollRect.content);
+
+            _scrollRect.horizontalNormalizedPosition = _transactionController.ScrollPosition;
         }
 
         private void Start()
@@ -102,6 +112,8 @@ namespace _Scripts.Controllers
                 RandomButtonService.Instance.OnShow -= ShowRandomButton;
                 RandomButtonService.Instance.OnHide -= HideRandomButton;
             }
+
+            _transactionController.ScrollPosition = _scrollRect.horizontalNormalizedPosition;
         }
 
         private void OnTransactionsLoaded(OnTransactionsLoadedEvent @event)

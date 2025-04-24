@@ -2668,6 +2668,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 754753575021354523, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 82.364
+      objectReference: {fileID: 0}
+    - target: {fileID: 754753575021354523, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.6879883
+      objectReference: {fileID: 0}
     - target: {fileID: 889952194594459937, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 4
@@ -2803,6 +2811,14 @@ PrefabInstance:
     - target: {fileID: 2284505358157005204, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684407667957388138, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 98.232
+      objectReference: {fileID: 0}
+    - target: {fileID: 2684407667957388138, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 15.622986
       objectReference: {fileID: 0}
     - target: {fileID: 2690197074393758579, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3031,6 +3047,14 @@ PrefabInstance:
     - target: {fileID: 5347755383877502651, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609958654887920845, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 122.909
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609958654887920845, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 27.961
       objectReference: {fileID: 0}
     - target: {fileID: 5873899205128782747, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
       propertyPath: m_HorizontalAlignment

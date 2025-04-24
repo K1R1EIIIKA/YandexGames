@@ -86,6 +86,28 @@ MonoBehaviour:
     m_Localized: Sesler
     m_Metadata:
       m_Items: []
+  - m_Id: 16888741200125952
+    m_Localized: "Bu g\xFCncelleme, Tralalero Tralala'dan TUN TUN TUN TUN TUN TUN
+      SAHUUUUR kadar en haval\u0131 ve en haval\u0131 hayvanlara sahiptir!!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16888736053714944
+    m_Localized: "TRALALERO G\xDCNCELLEMES\u0130"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16889379090849792
+    m_Localized: "S\xDCPER TATLIM"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16889381095727104
+    m_Localized: "Bonusu 6 kat daha haval\u0131 almak i\xE7in reklamlar\u0131 izlemek
+      mi?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16889600503963648
+    m_Localized: "G\xD6R\xDCNT\xDCLE"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

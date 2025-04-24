@@ -81,7 +81,7 @@ namespace _Scripts.YG
                 CrazyCharacterAdId => (BuffCategory.Temporary,$"{LocalizedStrings.CrazyChar.GetLocalizedString()}", 60f),
                 MoreLoot1AdId => (BuffCategory.Temporary,$"More Loot 1",  60f),
                 MoreLoot2AdId => (BuffCategory.Temporary,$"More Loot 2", 60f),
-                AutoClickAdId => (BuffCategory.Temporary,$"{LocalizedStrings.Discount.GetLocalizedString()}", 60f),
+                AutoClickAdId => (BuffCategory.Temporary,$"{LocalizedStrings.AutoClick.GetLocalizedString()}", 60f),
                 AutoMoneyPerClickAdId => (BuffCategory.Instant,$"Auto Money Per Click", 600f),
                 _ => (BuffCategory.Temporary,$"Unknown", 1f)
             };
