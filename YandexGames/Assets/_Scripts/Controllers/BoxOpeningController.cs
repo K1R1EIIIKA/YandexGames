@@ -6,6 +6,7 @@ using _Scripts.ScriptableObjects;
 using _Scripts.Sound;
 using _Scripts.Tools;
 using _Scripts.UI;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,14 +17,17 @@ namespace _Scripts.Controllers
     public class BoxOpeningController : MonoBehaviour
     {
         [SerializeField] private Button _openBoxButton;
+        [SerializeField] private Button _otherBoxButton;
+        [SerializeField] private Button _charBoxButton;
+        [SerializeField] private Button _moneyBoxButton;
 
-        [Header("Containers")]
-        [SerializeField] private GameObject _caseContainer;
+        [Header("Containers")] [SerializeField]
+        private GameObject _caseContainer;
+
         [SerializeField] private GameObject _moneyContainer;
         [SerializeField] private GameObject _cardContainer;
 
-        [Header("UI")]
-        [SerializeField] private Image _caseImage;
+        [Header("UI")] [SerializeField] private Image _caseImage;
         [SerializeField] private Image _moneyImage;
         [SerializeField] private Image _cardImage;
 
@@ -68,11 +72,17 @@ namespace _Scripts.Controllers
         private void OnEnable()
         {
             _openBoxButton.onClick.AddListener(HandleBoxClick);
+            _otherBoxButton.onClick.AddListener(HandleBoxClick);
+            _charBoxButton.onClick.AddListener(HandleBoxClick);
+            _moneyBoxButton.onClick.AddListener(HandleBoxClick);
         }
 
         private void OnDisable()
         {
             _openBoxButton.onClick.RemoveListener(HandleBoxClick);
+            _otherBoxButton.onClick.RemoveListener(HandleBoxClick);
+            _charBoxButton.onClick.RemoveListener(HandleBoxClick);
+            _moneyBoxButton.onClick.RemoveListener(HandleBoxClick);
         }
 
         public void Initialize(CaseData caseData)
@@ -124,7 +134,7 @@ namespace _Scripts.Controllers
             _moneyLoot = _caseData.GetRandomCoins();
             _transactionController.AddMoney(_moneyLoot);
 
-            for (int i = 0; i < _itemsCountValue-1; i++)
+            for (int i = 0; i < _itemsCountValue - 1; i++)
             {
                 var card = _caseData.GetRandomCard();
                 card.IsOpen = true;
@@ -146,6 +156,32 @@ namespace _Scripts.Controllers
 
         private void ShowMoneyLoot()
         {
+            SetContainer(ContainerType.Money);
+            _openBoxButton.interactable = false;
+            _otherBoxButton.interactable = false;
+            _moneyBoxButton.interactable = false;
+            _charBoxButton.interactable = false;
+
+            // 2) Инициализация: уменьшаем масштаб до 0
+            _moneyImage.transform.localScale = Vector3.zero;
+            _moneyLootText.transform.localScale = Vector3.zero;
+
+            // 3) Прокидываем анимацию “вылета” (масштабирование с эффектом “отскока”)
+            _moneyImage.transform
+                .DOScale(Vector3.one, 0.2f)
+                .SetEase(Ease.OutBack);
+            _moneyLootText.transform
+                .DOScale(Vector3.one, 0.2f)
+                .SetEase(Ease.OutBack)
+                .SetDelay(0.1f).OnComplete(() =>
+                {
+                    _openBoxButton.interactable = true;
+                    _otherBoxButton.interactable = true;
+                    _moneyBoxButton.interactable = true;
+                    _charBoxButton.interactable = true;
+                });
+
+            // остальной код
             _moneyLootText.text = BigNumberFormatter.FormatBigNumber(_moneyLoot);
             _remainItemsCountValue--;
             _itemsCount.text = _remainItemsCountValue.ToString();
@@ -156,14 +192,26 @@ namespace _Scripts.Controllers
         {
             SetContainer(ContainerType.Card);
 
-            var card = _cardsLoot[0];
+            // Блокируем кнопку, чтобы не было повторных кликов
+            _openBoxButton.interactable = false;
+            _otherBoxButton.interactable = false;
+            _moneyBoxButton.interactable = false;
+            _charBoxButton.interactable = false;
 
+            // Останавливаем предыдущие твины на контейнере и его Transform
+            _cardContainer.transform.DOKill();
+
+            var card = _cardsLoot[0];
             _cardImage.sprite = card.Image;
             _cardNameText.text = card.GetName();
             _cardRareText.text = LocalizedStrings.ConvertRarityToString(card.Rarity);
-            _remainItemsCountValue--;
-            _itemsCount.text = _remainItemsCountValue.ToString();
 
+            // Сохраняем стартовую позицию, чтобы всегда корректно сбрасывать
+            Vector3 startPos = new Vector3(0, -31f, 0);
+            Vector3 raisedPos = new Vector3(0, 131f, 0);
+
+            _cardContainer.transform.localScale = Vector3.zero;
+            _cardContainer.transform.localPosition = startPos;
             switch (card.Rarity)
             {
                 case Rarity.Common:
@@ -188,8 +236,31 @@ namespace _Scripts.Controllers
                     break;
             }
 
+
+            // Собираем новую последовательность
+            Sequence seq = DOTween.Sequence()
+                .Append(_cardContainer.transform
+                    .DOScale(1f, 0.3f)
+                    .SetEase(Ease.OutBack))
+                .Join(_cardContainer.transform
+                    .DOLocalMove(raisedPos, 0.3f)
+                    .SetEase(Ease.OutBack))
+                .OnComplete(() =>
+                {
+                    // Фон и звук после «вылета»
+
+                    // Разблокируем кнопку — теперь можно следующий клик
+                    _openBoxButton.interactable = true;
+                    _otherBoxButton.interactable = true;
+                    _moneyBoxButton.interactable = true;
+                    _charBoxButton.interactable = true;
+                });
+
+            _remainItemsCountValue--;
+            _itemsCount.text = _remainItemsCountValue.ToString();
             _cardsLoot.RemoveAt(0);
         }
+
 
         private void CloseBox()
         {
