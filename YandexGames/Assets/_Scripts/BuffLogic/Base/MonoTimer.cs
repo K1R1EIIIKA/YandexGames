@@ -39,7 +39,7 @@ namespace _Scripts.BuffLogic.Base
             _elapsed += Time.deltaTime;
             float progress = Mathf.Clamp01(_elapsed / _targetTime);
             OnTick?.Invoke(progress);
-            Debug.Log(_elapsed);
+            // Debug.Log(_elapsed);
 
             if (_elapsed >= _targetTime)
             {

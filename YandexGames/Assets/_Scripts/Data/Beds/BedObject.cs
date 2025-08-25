@@ -13,7 +13,7 @@ namespace _Scripts.Data.Beds
         public LocalizedString Description;
         public Sprite BedImage;
         public Rarity Rarity;
-        public int Price;
+        public float Price;
         public BedBuffType BuffType;
     }
 }

@@ -44,7 +44,6 @@ namespace _Scripts.BuffLogic.Base
 
                 var identified = _coreBuff as IIdentifiedBuff;
                 string buffId = identified != null ? identified.Id : "default";
-                Debug.Log(buffId);
                 Sprite icon = BuffDatabase.Instance.GetIcon(buffId);
 
                 _uiInstance.Initialize(_timer, icon, _duration);

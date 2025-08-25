@@ -13,7 +13,7 @@ namespace _Scripts.Data.Beds
         public LocalizedString Name => ToBedObject().Name;
         public LocalizedString Description => ToBedObject().Description;
         public Sprite BedImage => ToBedObject().BedImage;
-        public int Price => ToBedObject().Price;
+        public float Price => ToBedObject().Price;
         public Rarity Rarity => ToBedObject().Rarity;
         public BedBuffType BuffType => ToBedObject().BuffType;
         public bool IsOpen;

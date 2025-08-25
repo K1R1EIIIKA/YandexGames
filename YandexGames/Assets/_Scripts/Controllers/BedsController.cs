@@ -187,27 +187,26 @@ namespace _Scripts.Controllers
         {
             _allBedsSet = sortType switch
             {
-                CollectionSortType.ByRareAsc  => _allBedsSet
+                CollectionSortType.ByRareAsc => _allBedsSet
                     .OrderBy(b => b.Rarity)
-                    .ThenBy(b => b.IsOpen)
+                    .ThenBy(b => b.IsOpen).ThenBy(b => b.Price)
                     .ToList(),
                 CollectionSortType.ByRareDesc => _allBedsSet
                     .OrderByDescending(b => b.Rarity)
-                    .ThenBy(b => b.IsOpen)
+                    .ThenBy(b => b.IsOpen).ThenBy(b => b.Price)
                     .ToList(),
-                CollectionSortType.ByHasAsc   => _allBedsSet
+                CollectionSortType.ByHasAsc => _allBedsSet
                     .OrderBy(b => b.IsOpen)
-                    .ThenBy(b => b.Rarity)
+                    .ThenBy(b => b.Rarity).ThenBy(b => b.Price)
                     .ToList(),
-                CollectionSortType.ByHasDesc  => _allBedsSet
+                CollectionSortType.ByHasDesc => _allBedsSet
                     .OrderByDescending(b => b.IsOpen)
-                    .ThenBy(b => b.Rarity)
+                    .ThenBy(b => b.Rarity).ThenBy(b => b.Price)
                     .ToList(),
-                _                              => _allBedsSet
+                _ => _allBedsSet
             };
 
             ShowPlayerBeds();
         }
-
     }
 }

@@ -33,7 +33,7 @@ MonoBehaviour:
     m_LocalVariables: []
   BedImage: {fileID: 21300000, guid: 01f2e5343bc470f41a961a8211f5b1f5, type: 3}
   Rarity: 3
-  Price: 0
+  Price: 1e+19
   BuffType: 4
   references:
     version: 2

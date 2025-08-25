@@ -291,7 +291,7 @@ namespace _Scripts.Controllers
                 if (isNewCard)
                 {
                     AllCards.Add(new CardData(card));
-                    Debug.Log($"New card added: {card.Name}");
+                    // Debug.Log($"New card added: {card.Name}");
                 }
                 else
                 {

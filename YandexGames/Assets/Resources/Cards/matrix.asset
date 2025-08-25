@@ -34,7 +34,7 @@ MonoBehaviour:
   Image: {fileID: 21300000, guid: dbe1ee228edca2148aba2211d2398911, type: 3}
   Cost: 0
   Rarity: 1
-  MoneyPerClick: 5000
+  MoneyPerClick: 4500
   references:
     version: 2
     RefIds: []

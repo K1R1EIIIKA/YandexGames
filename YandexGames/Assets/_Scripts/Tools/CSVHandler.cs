@@ -45,7 +45,7 @@ namespace _Scripts.Tools
 
                 while ((line = reader.ReadLine()) != null)
                 {
-                    Debug.Log(line);
+                    // Debug.Log(line);
                     line = line.Trim();
 
                     if (isFirstLine)
@@ -110,7 +110,7 @@ namespace _Scripts.Tools
                     }
                     else
                     {
-                        Debug.Log(values[i]);
+                        // Debug.Log(values[i]);
                         property.SetValue(result, values[i]);
                     }
                 }

@@ -6124,9 +6124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffbfa72de9a4715af838cb6e181ef96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minInterval: 5
-  _maxInterval: 10
-  _visibleDuration: 3
+  _minInterval: 30
+  _maxInterval: 60
+  _visibleDuration: 5
 --- !u!4 &1027611513
 Transform:
   m_ObjectHideFlags: 0
@@ -12197,7 +12197,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3289679399563020970, guid: deb0a1a48506a184d853b9dd0a73e552, type: 3}
       propertyPath: _adChance
-      value: 0.98
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3289679399563020970, guid: deb0a1a48506a184d853b9dd0a73e552, type: 3}
       propertyPath: _adWindow

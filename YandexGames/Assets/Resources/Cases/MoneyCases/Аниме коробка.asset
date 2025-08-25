@@ -40,12 +40,14 @@ MonoBehaviour:
   Tier: 10
   DropChancesSerializedDictionary:
     _serializedList:
+    - Key: 0
+      Value: 58
     - Key: 1
-      Value: 70
+      Value: 30
     - Key: 2
-      Value: 25
+      Value: 10
     - Key: 3
-      Value: 5
+      Value: 2
   Price: 1e+15
   IsTotalCases: 0
   references:
