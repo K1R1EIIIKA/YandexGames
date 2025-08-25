@@ -36,6 +36,7 @@ namespace _Scripts.Controllers
 
         [Inject] private AdBuffController _adBuffController;
         [Inject] private AdRewardController _adRewardController;
+        [Inject] private DiContainer _container;
 
         [Inject]
         public void Construct(TransactionController transactionController, GameFactory gameFactory,
@@ -99,6 +100,7 @@ namespace _Scripts.Controllers
         public void LoadProgress(PlayerProgress progress)
         {
             _selectedCard = progress.LevelsProgress.SelectedCard;
+            _container.Inject(_selectedCard);
 
             if (_selectedCard != null && _characterImage != null)
             {

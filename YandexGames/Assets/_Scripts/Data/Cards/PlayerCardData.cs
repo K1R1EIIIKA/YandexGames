@@ -17,7 +17,7 @@ namespace _Scripts.Data.Cards
             get
             {
                 if (Rarity == Rarity.Special)
-                {
+                { 
                     var highestprice = _transactionController.GetHighestPriceCard();
                     return highestprice;
                 }

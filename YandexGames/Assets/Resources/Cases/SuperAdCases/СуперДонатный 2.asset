@@ -31,7 +31,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2d43d2b7cc5ef5541b4923bc62c9c350, type: 2}
   - {fileID: 11400000, guid: 13ef9a572770a6e48b2795d36505749c, type: 2}
   - {fileID: 11400000, guid: 7c78a224ac221d2449b4e67fdd168647, type: 2}
-  - {fileID: 11400000, guid: ea218598cb1a006429b9f57000414c07, type: 2}
   - {fileID: 11400000, guid: 4fa8d97ac555edb4590c1194aa07a1a6, type: 2}
   Tier: 1
   DropChancesSerializedDictionary:
