@@ -89,7 +89,7 @@ namespace _Scripts.Controllers
             for (int i = 0; i < obj.players.Length; i++)
             {
                 LeaderboardPlayerView view = Instantiate(_leaderboardPlayerView, _container);
-                view.SetData(obj.players[i].name, obj.players[i].score);
+                view.SetData(obj.players[i].rank, obj.players[i].name.Length > 9 ? obj.players[i].name[..20] : obj.players[i].name, obj.players[i].score);
 
                 StartCoroutine(DownloadOtherPlayerImage(obj.players[i].photo, view));
             }
