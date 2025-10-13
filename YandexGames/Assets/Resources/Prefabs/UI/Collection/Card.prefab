@@ -74,8 +74,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -265,6 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundImage: {fileID: 5810308613155277579}
   objectImage: {fileID: 2707672481476415519}
+  objectCoverImage: {fileID: 0}
   objectName: {fileID: 3762615820176766177}
   _specialMaterial: {fileID: 2100000, guid: cb3bc11d0116d15448a58270b96c88d4, type: 2}
 --- !u!1 &1812810403361545854
@@ -391,8 +392,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 21.484}
-  m_SizeDelta: {x: -63.8565, y: -63.8568}
+  m_AnchoredPosition: {x: 0, y: 1.1604996}
+  m_SizeDelta: {x: -33.232, y: -33.2321}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2786954142615877664
 CanvasRenderer:
