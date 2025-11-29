@@ -148,9 +148,9 @@ namespace _Scripts.Controllers
             gameObject.SetActive(true);
             _leaderBoardController.GetLeaderBoard(OnGetLeaderBoard);
 
-#if !UNITY_EDITOR
-            JsLib.GetPlayerData();
-#endif
+// #if !UNITY_EDITOR
+//             JsLib.GetPlayerData();
+// #endif
         }
 
         private void CloseAccount()

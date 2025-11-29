@@ -60,14 +60,7 @@ namespace _Scripts.Infrastructure.Core
 
         private void SetLanguage()
         {
-            var lang = JsLib.GetLanguage(); // Получаем язык из Yandex SDK
-
-            if (string.IsNullOrEmpty(lang))
-            {
-                Debug.LogWarning("Не удалось получить язык, используется язык по умолчанию.");
-                return;
-            }
-
+            var lang = "ru"; // JsLib.GetLanguage();
             // Преобразуем язык Yandex SDK в формат Unity
             string unityLangCode = ConvertYandexLangToUnity(lang);
 

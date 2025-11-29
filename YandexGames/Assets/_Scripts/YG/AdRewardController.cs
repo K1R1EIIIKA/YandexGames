@@ -31,7 +31,10 @@ namespace _Scripts.YG
         public void ShowAd(int id, Action callback = null)
         {
             _onAdWatched = callback;
-            YandexGame.RewVideoShow(id);
+            // YandexGame.RewVideoShow(id);
+            OnRewardVideo(id, true);
+            _onAdWatched?.Invoke();
+            _onAdWatched = null;
         }
 
         private void OnRewardVideo(int id)
