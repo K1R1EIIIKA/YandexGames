@@ -9,7 +9,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
-using YG.Utils.LB;
 using Zenject;
 
 namespace _Scripts.Controllers
@@ -81,19 +80,19 @@ namespace _Scripts.Controllers
             StartCoroutine(DownloadPlayerImage(url));
         }
 
-        private void OnGetLeaderBoard(LBData obj)
-        {
-            var rectContainer = _container as RectTransform;
-            rectContainer.DestroyAllChildren();
-
-            for (int i = 0; i < obj.players.Length; i++)
-            {
-                LeaderboardPlayerView view = Instantiate(_leaderboardPlayerView, _container);
-                view.SetData(obj.players[i].rank, obj.players[i].name.Length > 9 ? obj.players[i].name[..20] : obj.players[i].name, obj.players[i].score);
-
-                StartCoroutine(DownloadOtherPlayerImage(obj.players[i].photo, view));
-            }
-        }
+        // private void OnGetLeaderBoard(LBData obj)
+        // {
+        //     var rectContainer = _container as RectTransform;
+        //     rectContainer.DestroyAllChildren();
+        //
+        //     for (int i = 0; i < obj.players.Length; i++)
+        //     {
+        //         LeaderboardPlayerView view = Instantiate(_leaderboardPlayerView, _container);
+        //         view.SetData(obj.players[i].rank, obj.players[i].name.Length > 9 ? obj.players[i].name[..20] : obj.players[i].name, obj.players[i].score);
+        //
+        //         StartCoroutine(DownloadOtherPlayerImage(obj.players[i].photo, view));
+        //     }
+        // }
 
         private IEnumerator DownloadPlayerImage(string url)
         {
@@ -146,7 +145,7 @@ namespace _Scripts.Controllers
         public void OpenAccount()
         {
             gameObject.SetActive(true);
-            _leaderBoardController.GetLeaderBoard(OnGetLeaderBoard);
+            // _leaderBoardController.GetLeaderBoard(OnGetLeaderBoard);
 
 // #if !UNITY_EDITOR
 //             JsLib.GetPlayerData();

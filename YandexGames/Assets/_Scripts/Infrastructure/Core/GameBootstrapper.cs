@@ -50,7 +50,7 @@ namespace _Scripts.Infrastructure.Core
 
             _game.StateMachine.Enter<BootstrapState>();
             _adRewardController.Initialize();
-            _leaderBoardController.Initialize();
+            // _leaderBoardController.Initialize();
 
             DontDestroyOnLoad(this);
             Debug.Log("Bootstrapper made his deal");
@@ -116,7 +116,7 @@ namespace _Scripts.Infrastructure.Core
             _leaderboardElapsedTime += Time.deltaTime;
             if (_leaderboardElapsedTime >= _leaderBoardSaveInterval)
             {
-                _leaderBoardController.SaveLeaderBoardScore();
+                // _leaderBoardController.SaveLeaderBoardScore();
                 _leaderboardElapsedTime = 0;
             }
         }

@@ -1,6 +1,6 @@
 ﻿using System;
 using UnityEngine;
-using YG;
+// using YG;
 
 namespace _Scripts.YG
 {
@@ -25,7 +25,7 @@ namespace _Scripts.YG
 
         public void Initialize()
         {
-            YandexGame.RewardVideoEvent += OnRewardVideo;
+            // YandexGame.RewardVideoEvent += OnRewardVideo;
         }
 
         public void ShowAd(int id, Action callback = null)

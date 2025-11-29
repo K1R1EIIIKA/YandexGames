@@ -12,7 +12,7 @@ using _Scripts.Infrastructure.Services.SaveLoad;
 using _Scripts.Infrastructure.Services.StaticData;
 using _Scripts.YG;
 using UnityEngine;
-using YG;
+// using YG;
 using Zenject;
 
 namespace _Scripts.Installers
@@ -21,7 +21,7 @@ namespace _Scripts.Installers
     {
         [SerializeField] private LoadingCurtain _loadingCurtain;
         [SerializeField] CaseManager _caseManager;
-        [SerializeField] private YandexGame _yandexGamePrefab;
+        // [SerializeField] private YandexGame _yandexGamePrefab;
 
         public override void InstallBindings()
         {

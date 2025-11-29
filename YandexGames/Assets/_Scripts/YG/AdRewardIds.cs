@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using _Scripts.BuffLogic.Base;
 using _Scripts.Enums;
 using UnityEngine.Localization;
-using YG;
+// using YG;
 
 namespace _Scripts.YG
 {
