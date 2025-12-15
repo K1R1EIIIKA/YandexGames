@@ -120,7 +120,7 @@ namespace _Scripts.Controllers
         {
             if (_transactionController.IsFirstGameStarted)
             {
-                _newGameController.ShowNewGame();
+                // _newGameController.ShowNewGame();
                 _transactionController.SetFirstGameStarted(false);
             }
         }
