@@ -265,6 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundImage: {fileID: 5810308613155277579}
   objectImage: {fileID: 2707672481476415519}
+  objectCoverImage: {fileID: 0}
   objectName: {fileID: 3762615820176766177}
   _specialMaterial: {fileID: 2100000, guid: cb3bc11d0116d15448a58270b96c88d4, type: 2}
 --- !u!1 &1812810403361545854
@@ -351,7 +352,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1812810403361545854}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 

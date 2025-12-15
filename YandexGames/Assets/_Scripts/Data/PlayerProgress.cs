@@ -62,7 +62,7 @@ namespace _Scripts.Data
             SceneName = sceneName;
             PlayerCards = new List<PlayerCardData>();
 
-            var card = Resources.Load<CardObject>("Cards/classic");
+            var card = Resources.Load<CardObject>("Cards/ham_common_default");
             var cardData = new CardData(card)
             {
                 IsOpen = true

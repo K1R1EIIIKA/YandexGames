@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 20106436608
-    m_Localized: OMNOMS
+    m_Localized: HAMSTERS
     m_Metadata:
       m_Items: []
   - m_Id: 16528695296
@@ -35,7 +35,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1346152423424
-    m_Localized: MY OMNOMS
+    m_Localized: MY HAMSTERS
     m_Metadata:
       m_Items: []
   - m_Id: 1532845088768
@@ -43,7 +43,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 26885516943360
-    m_Localized: 'OmNom''s Click power: '
+    m_Localized: 'Hamster''s Click power: '
     m_Metadata:
       m_Items: []
   - m_Id: 26889153404928
@@ -63,7 +63,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 16306078533804032
-    m_Localized: BEST OMNOMS
+    m_Localized: BEST HAMSTERS
     m_Metadata:
       m_Items: []
   - m_Id: 16306139946803200

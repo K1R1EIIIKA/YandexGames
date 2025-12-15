@@ -27,19 +27,7 @@ MonoBehaviour:
   LootCountRange: {x: 3, y: 4}
   CoinsRange: {x: 9e+13, y: 1.8e+14}
   CardPool:
-  - {fileID: 11400000, guid: 762171c37da8d4548994ed3f2bd78046, type: 2}
-  - {fileID: 11400000, guid: 2d43d2b7cc5ef5541b4923bc62c9c350, type: 2}
-  - {fileID: 11400000, guid: be6536198238398478b9c36c49229c5c, type: 2}
-  - {fileID: 11400000, guid: db0f19464a16d414aae5db2289de8f26, type: 2}
-  - {fileID: 11400000, guid: 60d85e4176909d04885a8efe2de4c32b, type: 2}
-  - {fileID: 11400000, guid: c28088f249b213c49bc8e3593c131a77, type: 2}
-  - {fileID: 11400000, guid: f39d6248efdd180469d09fe17850acf0, type: 2}
-  - {fileID: 11400000, guid: 5f465c7cfa2344a48ad6515e67fb0a84, type: 2}
-  - {fileID: 11400000, guid: 8f46925a97fe7ac4fae4ac7aaf194054, type: 2}
-  - {fileID: 11400000, guid: 08f97656c1af2434486a769e209207ae, type: 2}
-  - {fileID: 11400000, guid: 408495b62cc774144bf651ccc3b0e14f, type: 2}
-  - {fileID: 11400000, guid: 56c25543c8c10eb4c839882a3db3a0d0, type: 2}
-  - {fileID: 11400000, guid: a24c036783e3e2c438573d8b60d5463d, type: 2}
+  - {fileID: 11400000, guid: 6624d62532894cd47ac287ac95733b4a, type: 2}
   Tier: 9
   DropChancesSerializedDictionary:
     _serializedList:

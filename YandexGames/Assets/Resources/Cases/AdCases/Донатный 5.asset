@@ -26,24 +26,12 @@ MonoBehaviour:
   LootCountRange: {x: 3, y: 4}
   CoinsRange: {x: 7000000, y: 15000000}
   CardPool:
-  - {fileID: 11400000, guid: 762171c37da8d4548994ed3f2bd78046, type: 2}
-  - {fileID: 11400000, guid: 2d43d2b7cc5ef5541b4923bc62c9c350, type: 2}
-  - {fileID: 11400000, guid: be6536198238398478b9c36c49229c5c, type: 2}
-  - {fileID: 11400000, guid: db0f19464a16d414aae5db2289de8f26, type: 2}
-  - {fileID: 11400000, guid: 60d85e4176909d04885a8efe2de4c32b, type: 2}
-  - {fileID: 11400000, guid: 8049a45960e75c14392ee130046c815f, type: 2}
-  - {fileID: 11400000, guid: 6a977b7f1a9a8594196376758e874bc6, type: 2}
-  - {fileID: 11400000, guid: c9c850d038016544c90dbbf3a2de7d30, type: 2}
-  - {fileID: 11400000, guid: e1e51c254b6dd574d9ad1d314d78511f, type: 2}
+  - {fileID: 11400000, guid: ae4c96dd482cb5241a7021b94bf34990, type: 2}
   Tier: 4
   DropChancesSerializedDictionary:
     _serializedList:
-    - Key: 2
-      Value: 60
     - Key: 3
-      Value: 25
-    - Key: 4
-      Value: 15
+      Value: 100
   AdsCount: 1
   IsTotalAdsCount: 0
   references:

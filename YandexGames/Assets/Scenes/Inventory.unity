@@ -1235,7 +1235,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0410\u041C\u041D\u042F\u041C\u042B"
+  m_text: "\u0425\u041E\u041C\u042F\u041A\u0418"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8b1dd78bb3c4fa4985086eef2ad6ca4, type: 2}
   m_sharedMaterial: {fileID: -5058395181055495084, guid: b8b1dd78bb3c4fa4985086eef2ad6ca4, type: 2}
@@ -1933,7 +1933,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 4.0076}
+  m_AnchoredPosition: {x: 0, y: 4.0076294}
   m_SizeDelta: {x: 0, y: 8.0153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &850158998
@@ -3055,6 +3055,10 @@ PrefabInstance:
     - target: {fileID: 5609958654887920845, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 27.961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873899205128782747, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
+      propertyPath: m_text
+      value: "\u0425\u041E\u041C\u042F\u041A\u0418"
       objectReference: {fileID: 0}
     - target: {fileID: 5873899205128782747, guid: 4f1d04993ebc1da4e937af07f791710e, type: 3}
       propertyPath: m_HorizontalAlignment

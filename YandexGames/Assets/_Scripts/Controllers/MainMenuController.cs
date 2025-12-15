@@ -139,7 +139,7 @@ namespace _Scripts.Controllers
         {
             _caseManager.InitializeCases(_casesContainer, CaseLocationType.MainScreen);
             _caseManager.InitializeAdCases(_adCasesContainer);
-            _caseManager.InitializeLimitedCase(_limitedCaseContainer);
+            // _caseManager.InitializeLimitedCase(_limitedCaseContainer);
         }
 
         private void OnShopButtonClicked() => Debug.Log("Shop button clicked");

@@ -27,12 +27,7 @@ MonoBehaviour:
   LootCountRange: {x: 4, y: 6}
   CoinsRange: {x: 1, y: 10}
   CardPool:
-  - {fileID: 11400000, guid: e82af0a372b309941905cee8fb335f9c, type: 2}
-  - {fileID: 11400000, guid: d5a92a4c3958aa24a975704fd2fb22a4, type: 2}
-  - {fileID: 11400000, guid: 296cb1ac9fd57df4f9d7b1488e11fbd8, type: 2}
-  - {fileID: 11400000, guid: cebcb06b66356ab4fa2e7716e7bf5f82, type: 2}
-  - {fileID: 11400000, guid: 724a295a31d505f45895611ee424f2d5, type: 2}
-  - {fileID: 11400000, guid: 447f051a4b51d024eba92cede9acead8, type: 2}
+  - {fileID: 11400000, guid: 93c6b7a62b5c7c94b8a9acc14abf541b, type: 2}
   Tier: 6
   DropChancesSerializedDictionary:
     _serializedList:
