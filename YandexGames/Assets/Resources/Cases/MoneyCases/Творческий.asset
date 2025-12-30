@@ -22,7 +22,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  CaseImage: {fileID: 21300000, guid: 5e4ce9620fa271c4aa0d49e44e7c0f99, type: 3}
+  CaseImage: {fileID: 21300000, guid: cb4c0de791d5c5349a83d4615900deaf, type: 3}
   LootCountRange: {x: 3, y: 5}
   CoinsRange: {x: 10000, y: 30000}
   CardPool:

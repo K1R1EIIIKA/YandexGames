@@ -31,9 +31,9 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  BedImage: {fileID: 21300000, guid: 01f2e5343bc470f41a961a8211f5b1f5, type: 3}
+  BedImage: {fileID: 21300000, guid: 3552216dbec1f7543bfe2c1136e4df39, type: 3}
   Rarity: 3
-  Price: 1e+19
+  Price: 0
   BuffType: 4
   references:
     version: 2

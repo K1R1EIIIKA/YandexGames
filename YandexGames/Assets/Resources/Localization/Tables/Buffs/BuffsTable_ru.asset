@@ -107,15 +107,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2826530169282560
-    m_Localized: "\u0411\u0435\u0437\u0443\u043C\u043D\u044B\u0439 \u0410\u043C\u043D\u044F\u043C"
+    m_Localized: "\u0411\u0435\u0437\u0443\u043C\u043D\u044B\u0439 \u0425\u043E\u043C\u044F\u043A"
     m_Metadata:
       m_Items: []
   - m_Id: 2826414947557376
-    m_Localized: "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u0410\u043C\u043D\u044F\u043C"
+    m_Localized: "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u0425\u043E\u043C\u044F\u043A"
     m_Metadata:
       m_Items: []
   - m_Id: 2826491577491456
-    m_Localized: "\u041C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0439 \u0410\u043C\u043D\u044F\u043C"
+    m_Localized: "\u041C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0439 \u0425\u043E\u043C\u044F\u043A"
     m_Metadata:
       m_Items: []
   - m_Id: 16332593715732480

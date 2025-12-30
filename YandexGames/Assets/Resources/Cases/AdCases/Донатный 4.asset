@@ -22,16 +22,41 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  CaseImage: {fileID: 21300000, guid: 38dc19abdd4717647903f20b10c85ea3, type: 3}
+  CaseImage: {fileID: 21300000, guid: 20f5f2562d07a0045871ac016696187a, type: 3}
   LootCountRange: {x: 3, y: 4}
   CoinsRange: {x: 500000, y: 1000000}
   CardPool:
   - {fileID: 11400000, guid: ae4c96dd482cb5241a7021b94bf34990, type: 2}
+  - {fileID: 11400000, guid: 93c6b7a62b5c7c94b8a9acc14abf541b, type: 2}
+  - {fileID: 11400000, guid: b0a4360270fd01045ab3e8bb871e51d9, type: 2}
+  - {fileID: 11400000, guid: 90071e68c2770494e9a9e8534e59c02d, type: 2}
+  - {fileID: 11400000, guid: 9299d15e8ce662b469715ff71979c751, type: 2}
+  - {fileID: 11400000, guid: 5e5e42a5fe11e964a9d3a78d41694cc9, type: 2}
+  - {fileID: 11400000, guid: 676295ec2ba950542aca53c472b8ca56, type: 2}
+  - {fileID: 11400000, guid: e6d69a9a2bed848469c8ab66e5a662d8, type: 2}
+  - {fileID: 11400000, guid: 6624d62532894cd47ac287ac95733b4a, type: 2}
+  - {fileID: 11400000, guid: ea485efda290c984981489a3e206b410, type: 2}
+  - {fileID: 11400000, guid: fa7c3c67e5b7f0e45a2835e75abb4a74, type: 2}
+  - {fileID: 11400000, guid: e4c160b652b29424ca1439242838635e, type: 2}
+  - {fileID: 11400000, guid: a5367f9a6729bf04a9f4c59f2979855a, type: 2}
+  - {fileID: 11400000, guid: 792222c221cb1e74982c40bb25e4c5b6, type: 2}
+  - {fileID: 11400000, guid: df3b7696f22185944be61f119be371fd, type: 2}
+  - {fileID: 11400000, guid: 3af1f7e5f7c869e41b76771802fb0c23, type: 2}
+  - {fileID: 11400000, guid: 7d24aba2cea9daf41b9e625092e0490a, type: 2}
+  - {fileID: 11400000, guid: 155a3d21206045e4cb69bf3da9e9de14, type: 2}
+  - {fileID: 11400000, guid: b76eb6fe52cc509439f853c441325396, type: 2}
+  - {fileID: 11400000, guid: 6388c5c870097444595d810c2736b677, type: 2}
   Tier: 3
   DropChancesSerializedDictionary:
     _serializedList:
+    - Key: 0
+      Value: 5
+    - Key: 1
+      Value: 10
+    - Key: 2
+      Value: 50
     - Key: 3
-      Value: 100
+      Value: 35
   AdsCount: 1
   IsTotalAdsCount: 0
   references:

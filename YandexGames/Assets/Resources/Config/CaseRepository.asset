@@ -15,7 +15,6 @@ MonoBehaviour:
   _mainScreenCases:
   - {fileID: 11400000, guid: 56dea338cd630a147b4835c2a30d855a, type: 2}
   - {fileID: 11400000, guid: f72474826e375fb4486b009d1e1752a5, type: 2}
-  - {fileID: 11400000, guid: c3eacdcc93f669a4ea7538490cf1513e, type: 2}
   - {fileID: 11400000, guid: 4605fbe531378494d992e7ead31f4e72, type: 2}
   _shopCases: []
   _specialCases: []
@@ -31,28 +30,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f356acf2bd5b34b48a99e932cfe0657b, type: 2}
   - {fileID: 11400000, guid: 75d94ed62e550654586d7a6a9aea116d, type: 2}
   - {fileID: 11400000, guid: e60de1891ab2ceb408aad7d21660353f, type: 2}
-  _bigAdCases:
-  - {fileID: 11400000, guid: bbbe4554b1dd151409689de293fc6a67, type: 2}
-  - {fileID: 11400000, guid: fd23a1d7de2ea8949a70b9a390abe037, type: 2}
-  - {fileID: 11400000, guid: 0343aadbef402f44c8b224a420aa0e9f, type: 2}
-  - {fileID: 11400000, guid: a0bfe2564d9e0044b9c0c2cb43456f68, type: 2}
-  - {fileID: 11400000, guid: 99b601e59dbb0ce4c883339e941f9fdb, type: 2}
-  - {fileID: 11400000, guid: 16f57f4225fbe6143ac7b4e40e7cecd8, type: 2}
-  - {fileID: 11400000, guid: d80ab041d4a906c40864dd491c7a99fc, type: 2}
-  - {fileID: 11400000, guid: 269239ed101c2174eae69d2758b67364, type: 2}
-  - {fileID: 11400000, guid: e30df5eb95f65a740963dcd556b65e0d, type: 2}
-  - {fileID: 11400000, guid: d38da92ddf29d934292bf3c8eefe4c40, type: 2}
-  - {fileID: 11400000, guid: 959318485af25fb40b2585edb98c21ee, type: 2}
-  _caseOpenedCases:
-  - {fileID: 11400000, guid: 8c25308e3d4059d448f49db8c9b99b7c, type: 2}
-  - {fileID: 11400000, guid: 1763cb47ab1263c42aaeec94d78f0532, type: 2}
-  - {fileID: 11400000, guid: 7cc0f277819eaeb448d9e2d524b594d3, type: 2}
-  - {fileID: 11400000, guid: e68b7e498a15bd44db546652dde45572, type: 2}
-  - {fileID: 11400000, guid: ae8253d5125835949aedd4e6777e386e, type: 2}
-  - {fileID: 11400000, guid: c2642cff7ec83aa4e8f95cca05cf1c74, type: 2}
-  - {fileID: 11400000, guid: fd262d4844cbaf049992badffd8a8f1e, type: 2}
-  - {fileID: 11400000, guid: e843126c749893e4295e82e3554598d7, type: 2}
-  - {fileID: 11400000, guid: 61cf8e3384920bb49b18ab608ecf511e, type: 2}
-  - {fileID: 11400000, guid: b54e3c417ff762145935beb190b2f6cd, type: 2}
-  - {fileID: 11400000, guid: d93224c033840434895a9ab3ff7f8f62, type: 2}
+  _bigAdCases: []
+  _caseOpenedCases: []
   _limitedCase: {fileID: 0}

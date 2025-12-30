@@ -22,7 +22,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  CaseImage: {fileID: 21300000, guid: bb986d98fba685c4bb6f558d316bfa7b, type: 3}
+  CaseImage: {fileID: 21300000, guid: f48dde027f9eada46afd86b9c7d6ca9a, type: 3}
   LootCountRange: {x: 3, y: 5}
   CoinsRange: {x: 70, y: 210}
   CardPool:
@@ -31,6 +31,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e6d69a9a2bed848469c8ab66e5a662d8, type: 2}
   - {fileID: 11400000, guid: fa7c3c67e5b7f0e45a2835e75abb4a74, type: 2}
   - {fileID: 11400000, guid: ea485efda290c984981489a3e206b410, type: 2}
+  - {fileID: 11400000, guid: e4c160b652b29424ca1439242838635e, type: 2}
+  - {fileID: 11400000, guid: a5367f9a6729bf04a9f4c59f2979855a, type: 2}
+  - {fileID: 11400000, guid: 792222c221cb1e74982c40bb25e4c5b6, type: 2}
   Tier: 1
   DropChancesSerializedDictionary:
     _serializedList:
